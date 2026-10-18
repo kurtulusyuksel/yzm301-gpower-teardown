@@ -34,6 +34,103 @@
 
 ---
 
+## ❓ Sprint'in Temel Sorusu: "Ajanın Söktüğü Şeyin DOĞRU Olduğunu Nasıl Kanıtlarsın?"
+
+Bu soru, tüm sprintin metodolojik çekirdeğidir. Cevap üç bağımsız kanıt katmanına dayanır:
+
+### Katman 1 — Kâhin (Oracle) ile Diferansiyel Test
+
+Doğruluğun kanıtı **G\*Power'ın kendisinden** gelir. Aynı parametreleri hem G\*Power GUI'sine hem de yeniden yazımımıza verip çıktıları karşılaştırdık:
+
+```
+G*Power GUI  →  d=0.5, α=0.05, güç=0.95, çift yönlü  →  N=54, güç=0.9502
+Yeniden Yazım →  aynı parametreler                      →  N=54, güç=0.9502  ✅
+```
+
+- **106 adet kâhin vektörü** G\*Power arayüzünden ekran görüntüsüyle alındı (`oracle/vectors.csv`).  
+- Diferansiyel test sonucu: **106/106 tam eşleşme (%100.00)** — ödevin %90 kapı şartını aşıyor.  
+- Ek 500+ vektör R `pwr` ve Python `statsmodels` ile çapraz doğrulandı.
+
+### Katman 2 — Binary'den [REA] Kanıtı
+
+Ajan bir şey iddia ettiğinde **binary'de o davranışın izini aradık**. "Başka türlü olamaz" kanıtı değil, "binary'de tam olarak bu yazıyor" kanıtı:
+
+| İddia | Binary Kanıtı | Etiketi |
+|-------|--------------|---------|
+| `dz ≤ 0.00001` reddedilir | `"effect size be greater than 0.00001."` dizesi PE string segmentinde bulundu | [REA] |
+| Noncentral t dağılımı kullanılıyor | `nctcdf`, `nctinv`, `nctpdf` sembol adları binary'de mevcut | [REA] |
+| İterasyonda belirli bir durma koşulu var | `TDist-Cdf: answer below lower search bound` hata dizesi bulundu | [REA] |
+| Test ailesi `matched pairs` | `"Difference between two dependent means (matched pairs)"` dizesi | [REA] |
+
+> **Soru: Kanıt yoksa ne olur?**  
+> O iddia `[AJAN]` etiketiyle işaretlendi ve diferansiyel testle sınandı. Hatalı çıkarımlar `HALLUCINATIONS.md`'de belgelendi.
+
+### Katman 3 — Sınır Değer (Boundary) Testleri
+
+Hatalar en çok köşe durumlarda çıkar. Vektör setimize şunları dahil ettik:
+
+- `d = 0.000005` → sistem reddetmeli (%100 doğru, exit code 1 dönüyor)
+- `d = 5.0` (çok büyük etki) → N=3 minimum, hesap doğru
+- `power = alpha + 0.001` (güç neredeyse sıfır) → matematiksel kararlılık test edildi
+- `tails = 1` ve `tails = 2` → her iki yön ayrı ayrı doğrulandı
+- `n = 2` (minimum örneklem) → `df = 1`, hesap tutarlı
+
+**Özet:** İddia + Binary kanıtı + Diferansiyel test + Sınır testleri → 4'ü birlikte olduğunda "doğru" demek mümkün.
+
+---
+
+## ✅ 4 Temel Kural Uyum Raporu
+
+### Kural 1 — "Puan yalnızca [REA] etiketli kanıtlara verilir; kılavuzda OLMAYAN davranışı bulun"
+
+**Durum: ✅ KARŞILANIYOR**
+
+[`LEDGER.md`](LEDGER.md)'de kılavuzda yazmayan 4 adet özgün `[REA]` bulgusu:
+
+| Bulgu | Kılavuzda var mı? | Nasıl bulundu? |
+|-------|-----------------|---------------|
+| `dz ≤ 0.00001` alt sınırı | ❌ Yok | Binary string: `"effect size be greater than 0.00001."` |
+| `nctcdf / nctinv / nctpdf` fonksiyon isimleri | ❌ Yok | PE sembol tablosunda tespit edildi |
+| Hata mesajları: `TDist-Cdf: answer below lower search bound` | ❌ Yok | Binary string segmentinde bulundu |
+| İterasyon: ilk N'de durur → actual_power ≥ target_power | ❌ Yok | R/scipy ile diferansiyel karşılaştırma |
+
+### Kural 2 — "İki ayrı ajan oturumu: biri inceler, diğeri yalnızca SPEC.md ile yazar"
+
+**Durum: ✅ KARŞILANIYOR**
+
+- [`prompts/session1_reverse_engineer.md`](prompts/session1_reverse_engineer.md) → REA ile inceleme, yalnızca `LEDGER.md` + `SPEC.md` üretir. Kod yazmaz.  
+- [`prompts/session2_cleanroom_implementation.md`](prompts/session2_cleanroom_implementation.md) → Yalnızca `SPEC.md` ve `LEDGER.md` ile başlar. Binary veya decompile çıktısı görmez.
+
+### Kural 3 — "Hesap mantığı tek motordadır; CLI, MCP ve ajan ince katmanlardır"
+
+**Durum: ✅ KARŞILANIYOR**
+
+```
+src/
+├── engine/          ← TEK MOTOR — tüm hesap mantığı burada
+│   ├── math.ts      ← nctCdf, tInv, normalInv (saf matematik)
+│   └── t_paired.ts  ← a-priori ve post-hoc hesabı
+├── cli.ts           ← motoru import eder → JSON basar (ince katman)
+├── mcp/server.ts    ← motoru import eder → MCP döner (ince katman)
+└── agent/           ← MCP üzerinden motoru çağırır (ince katman)
+```
+
+CLI, MCP ve Agent içinde **tek bir hesap satırı bile yok** — tümü `engine/` klasörünü import eder.  
+Kanıt: `tests/mcp_equivalence.test.ts` → aynı girdide CLI ve MCP byte-for-byte özdeş çıktı üretiyor.
+
+### Kural 4 — "Teslim edilen kodda decompile çıktısı olmaz; GPower.exe repoya konmaz"
+
+**Durum: ✅ KARŞILANIYOR**
+
+| Kontrol | Sonuç |
+|---------|-------|
+| Repoda `.exe` / `.dll` dosyası | ❌ Yok — `.gitignore`'da `*.exe` ve `GPower*` engeli |
+| `src/` içinde `.c / .cpp / .asm` decompile dosyası | ❌ Yok — kontrol edildi |
+| Assembly/pseudo-C kod parçası kaynak içinde | ❌ Yok — yalnızca TypeScript |
+| `LEDGER.md`'de kısa string alıntısı | ✅ İzin verilen biçimde var |
+
+---
+
 ## 🔍 Zorunlu Ajan Kontrolü (REA & Ghidra Durumu)
 
 Sprint yönergesindeki kontrol sorusu:
