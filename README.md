@@ -1,4 +1,10 @@
-# G*Power Eşleştirilmiş t-Testi (t-paired) Teardown ve Yeniden Yazım Projesi
+# G*Power t-paired — Temiz Oda Yeniden Yazımı (YZM301 Sprint)
+
+> ⚠️ **EĞİTİM AMACI BEYANı / EDUCATIONAL PURPOSE NOTICE**  
+> Bu depo **YZM301 Yazılım Mühendisliği** dersi kapsamında verilen **"Teardown Sprint" ödevi** için hazırlanmıştır.  
+> Tamamen **eğitim ve araştırma amaçlıdır**; ticari amaç taşımamaktadır.  
+> `GPowerNT.exe` bu repoya **dahil edilmemiştir** (.gitignore ile engellenmiştir).  
+> Bkz. → [LEGAL.md](LEGAL.md) | Atıflar: Faul, Erdfelder, Lang & Buchner (2007, 2009)
 
 > **YZM301 · TEARDOWN SPRINT: G\*Power'ı Sök, Kanıtla, Yeniden Yaz, Ajan Çağına Taşı**  
 > **Hedef Puan: 110 / 110 (Temel CLI: 85 + MCP Sunucusu: 15 + AI Ajanı: 10)**  
