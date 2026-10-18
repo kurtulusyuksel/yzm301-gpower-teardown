@@ -12,6 +12,92 @@
 
 ---
 
+## 🗺️ Ne Yapıldı? — Hocanın 6 Adımının Tamamı
+
+Ödev yönergesindeki **"NE YAPACAKSINIZ?"** başlığının 6 adımı eksiksiz tamamlandı:
+
+### Adım 1 — 🔍 Sök: G\*Power'ı REA ile İnceleyip Hesap Motorunu Bul
+
+| Yapılan | Dosya / Etiket |
+|---------|---------------|
+| `GPowerNT.exe` SHA-256 ile kimlik doğrulandı | [LEDGER.md §1](LEDGER.md) — [REA] |
+| `"Difference between two dependent means (matched pairs)"` dizesi PE string segmentinde bulundu | [LEDGER.md §2](LEDGER.md) — [REA] |
+| Hesap çekirdeği tespit edildi: `nctcdf`, `nctinv`, `nctpdf` sembolleri | [LEDGER.md §3](LEDGER.md) — [REA] |
+| **Kılavuzda olmayan** alt sınır bulundu: `dz ≤ 0.00001` reddi | [LEDGER.md §3](LEDGER.md) — [REA] |
+| **Kılavuzda olmayan** durma koşulu: ilk tam eşleşen N'de dur, actual_power ≥ target_power | [LEDGER.md §3](LEDGER.md) — [REA] |
+
+### Adım 2 — 📋 Kanıtla: Her İddiayı Bir Kanıta Bağla (Kanıt Defteri)
+
+[LEDGER.md](LEDGER.md) dosyası üç etiket sistemiyle tutuldu:
+
+- **[REA]** → Binary'den kanıtlandı (fonksiyon adı veya dize referansı) — **puan buradan gelir**
+- **[DOK]** → Kılavuzda veya yayımlanmış makalede yer alıyor
+- **[AJAN]** → Ajanın çıkarımı, kanıtsız → diferansiyel testle sınandı
+
+Hatalı çıkarımlar → [HALLUCINATIONS.md](HALLUCINATIONS.md) (3 yanılgı belgelendi)
+
+### Adım 3 — 📄 Spec Çıkar: Kanıtlardan Kabul Kriterli SPEC.md Yaz
+
+[SPEC.md](SPEC.md) — **Gherkin formatında 9 senaryo:**
+
+```gherkin
+Scenario: A-priori hesap — standart parametreler
+  Given tails=2, dz=0.50, alpha=0.05, power=0.95
+  When calculate a-priori
+  Then n_total=54, actual_power=0.9502, df=53
+
+Scenario: Geçersiz etki büyüklüğü reddi  [REA kanıtı]
+  Given dz=0.000005
+  When calculate
+  Then hata "greater than 0.00001", exit code=1
+```
+
+### Adım 4 — 🔨 Yeniden Yaz: Temiz Oda Kuralıyla TypeScript'te
+
+İki **ayrı** ajan oturumu (`prompts/` klasörü):
+
+| Oturum | Görevi | Neye baktı |
+|--------|--------|-----------|
+| [Session 1](prompts/session1_reverse_engineer.md) | REA ile inceleme + SPEC.md/LEDGER.md üret | Binary + kılavuz |
+| [Session 2](prompts/session2_cleanroom_implementation.md) | Cleanroom yazım | **Yalnızca SPEC.md + LEDGER.md** |
+
+Cleanroom çıktısı → tek motor:
+
+```
+src/engine/math.ts      ← nctCdf, tInv, normalInv (saf matematik)
+src/engine/t_paired.ts  ← a-priori ve post-hoc hesap motoru
+```
+
+### Adım 5 — 🧪 Diferansiyel Test: Aynı Girdileri Her İkisine Ver, Farkı Ölç
+
+```
+G*Power GUI   →  d=0.5, α=0.05, güç=0.95  →  N=54, güç=0.9502
+Yeniden Yazım →  aynı parametreler          →  N=54, güç=0.9502  ✅ TAM EŞLEŞME
+```
+
+| Test | Sonuç |
+|------|-------|
+| 106 oracle vektörü (G\*Power arayüzünden ekran görüntüsüyle alındı) | **106/106 tam eşleşme — %100.00** |
+| R `pwr` + Python `statsmodels` çapraz doğrulama | 500+ vektör, yuvarlama farkı belgelendi |
+| Sınır değer testleri (d çok küçük, d çok büyük, n=2, tails=1/2) | 8 köşe durum — tümü doğru |
+| **Kapı şartı: %90 tam eşleşme** | **✅ %100 ile aşıldı** |
+
+Fark varsa ne olur? → Yuvarlama farkı: R/Python kesirli N verir, G\*Power yukarı yuvarlar → [LEDGER.md §3](LEDGER.md)'de belgelendi.
+
+Test dosyaları: [tests/differential.test.ts](tests/differential.test.ts), [tests/mcp_equivalence.test.ts](tests/mcp_equivalence.test.ts)
+
+### Adım 6 — 🤖 Ajan Çağına Taşı: CLI + MCP + AI Ajanı
+
+| Katman | Puan | Dosya |
+|--------|------|-------|
+| ✅ **CLI** — `gpower-clone --test t-paired ...` | Temel, 85 puan | [src/cli.ts](src/cli.ts) |
+| ✅ **MCP Sunucusu** — stdio protokolü, ince adaptör | +15 → 100 puan | [src/mcp/server.ts](src/mcp/server.ts) |
+| ✅ **AI Ajanı** — Türkçe klinik sorular, MCP üzerinden | +10 → 110 puan | [src/agent/clinical_agent.ts](src/agent/clinical_agent.ts) |
+
+**Her arayüz bir maliyet transferidir:** GUI yolu 34.500 token ↔ MCP yolu 2.333 token → **%93.24 daha az token, 3.200× daha hızlı**
+
+---
+
 ## 🏆 Tamamlanan Katmanlar ve Puan Özeti
 
 * [x] **Temel Katman (CLI) — 85 Puan:**
