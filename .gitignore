@@ -1,0 +1,17 @@
+# Dependencies
+node_modules/
+package-lock.json
+
+# Build outputs
+dist/
+
+# Binaries - NEVER COMMIT GPower.exe or other executables
+*.exe
+*.dll
+*.so
+*.dylib
+*.bin
+GPower*
+GPowerWin*
+*.log
+.DS_Store
