@@ -168,7 +168,7 @@ export async function runClinicalAgent(query: string): Promise<ClinicalAgentResp
       `• Serbestlik Derecesi (df): ${calcResult.df}\n` +
       `• Kritik t Değeri: ${calcResult.critical}\n` +
       `• Merkezi Olmayanlık Parametresi (ncp): ${calcResult.ncp}\n` +
-      `Hesaplama G*Power hesaplama motoruyla tam uyumlu olarak doğrulanmıştır.`;
+      `Hesaplama yerel motorla yapılmıştır. G*Power GUI karşılaştırmaları sınırlı bir test kümesinde belgelenmiştir; tüm girdiler için eşdeğerlik garantisi değildir.`;
   } else {
     explanation =
       `Sayın Araştırmacı,\n` +
@@ -217,9 +217,9 @@ if (isDirectRun || process.argv.length > 2) {
     console.log("=== KLİNİK AI AJAN RAPORU ===");
     console.log("Soru:", res.query);
     console.log("\nÇıkarılan Parametreler:", JSON.stringify(res.extractedParameters, null, 2));
-    console.log("\nMCP Araç Çağrı Kaydı:", JSON.stringify(res.toolCallLog, null, 2));
+    console.log("\nYerel Motor Çağrı Kaydı:", JSON.stringify(res.toolCallLog, null, 2));
     console.log("\nHekim Yanıtı:\n" + res.physicianExplanation);
-    console.log("\nHarcanan Token:", res.tokenUsage);
+    console.log("\nTahmini Token (API ?l??m? de?ildir):", res.tokenUsage);
   });
 }
 

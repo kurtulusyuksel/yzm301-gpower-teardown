@@ -1,3 +1,5 @@
+> Bu dosya oturum talimatı taslağıdır; oturumun gerçekleştiğine ilişkin günlük değildir.
+
 # Oturum 1: İnceleme ve Tersine Mühendislik İlk Prompt'u
 
 ```markdown

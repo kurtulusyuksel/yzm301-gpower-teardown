@@ -1,0 +1,91 @@
+{
+  "source": "G*Power 3.1.9.7 GUI",
+  "count": 12,
+  "passed": 11,
+  "matchRate": 0.9166666666666666,
+  "knownLimitations": 1,
+  "precision": "exact after rounding GUI values to 4 decimals; N and df exact",
+  "differences": [
+    {
+      "id": "GUI-01",
+      "n_total": 0,
+      "df": 0,
+      "actual_power": 0.00003999999999992898,
+      "critical": 0.00002999999999997449,
+      "ncp": 0.000002000000000279556
+    },
+    {
+      "id": "GUI-02",
+      "n_total": 0,
+      "df": 0,
+      "actual_power": 0.000011999999999900979,
+      "critical": 0.00004599999999976845,
+      "ncp": 0.00003460000000021779
+    },
+    {
+      "id": "GUI-03",
+      "n_total": 0,
+      "df": 0,
+      "actual_power": 0.000011999999999900979,
+      "critical": 0.00004599999999976845,
+      "ncp": 0.00003460000000021779
+    },
+    {
+      "id": "GUI-04",
+      "n_total": 0,
+      "df": 0,
+      "actual_power": 0.000027299999999952362,
+      "critical": 0.00004679999999979145,
+      "ncp": 0.0000450999999999091
+    },
+    {
+      "id": "GUI-05",
+      "matched": "rejection"
+    },
+    {
+      "id": "GUI-06",
+      "n_total": 0,
+      "df": 0,
+      "actual_power": 0.000007100000000009876,
+      "critical": 0.00004729999999941725,
+      "ncp": 0.000025399999999953238
+    },
+    {
+      "id": "GUI-07",
+      "n_total": 0,
+      "df": 0,
+      "actual_power": 0,
+      "critical": 0.00004729999999941725,
+      "ncp": 0.00001732051
+    },
+    {
+      "id": "GUI-08",
+      "n_total": 0,
+      "df": 0,
+      "actual_power": 0,
+      "critical": 0.00004729999999941725,
+      "ncp": 0.000008660254
+    },
+    {
+      "id": "GUI-09",
+      "matched": "rejection"
+    },
+    {
+      "id": "GUI-10",
+      "matched": false,
+      "limitation": "Original G*Power result exceeds the local 1,000,000-pair search limit; retained as a known incompatibility, not a match."
+    },
+    {
+      "id": "GUI-11",
+      "matched": "rejection"
+    },
+    {
+      "id": "GUI-12",
+      "n_total": 0,
+      "df": 0,
+      "actual_power": 0.00002399999999991298,
+      "critical": 0.000004699999999857596,
+      "ncp": 0.00002880000000260452
+    }
+  ]
+}

@@ -2,7 +2,7 @@
   "name": "gpower-paired-clone",
   "version": "1.0.0",
   "type": "module",
-  "description": "Cleanroom reverse-engineered G*Power implementation for paired t-tests (CLI, MCP, and AI Agent)",
+  "description": "Paired t-test power analysis with CLI, MCP, and retained G*Power comparison evidence",
 
   "main": "dist/cli.js",
   "bin": {
@@ -14,7 +14,12 @@
     "mcp": "tsx src/mcp/server.ts",
     "agent": "tsx src/agent/clinical_agent.ts",
     "eval": "tsx src/agent/benchmark_eval.ts",
-    "test": "tsx tests/differential.test.ts && tsx tests/mcp_equivalence.test.ts"
+    "test": "tsx tests/differential.test.ts && tsx tests/gpower_gui.test.ts && tsx tests/mcp_equivalence.test.ts && tsx tests/cleanroom_equivalence.test.ts",
+    "test:gui": "tsx tests/gpower_gui.test.ts",
+    "test:gui:strict": "tsx tests/gpower_gui.test.ts --require-full-match",
+    "test:cleanroom": "tsx tests/cleanroom_equivalence.test.ts",
+    "cleanroom:cli": "tsx cleanroom/cli.ts",
+    "cleanroom:build": "tsc cleanroom/t_paired.ts cleanroom/cli.ts --target es2020 --module es2020 --strict --outDir cleanroom/build --skipLibCheck"
   },
   "keywords": [
     "gpower",

@@ -1,0 +1,384 @@
+{
+  "subject_sha256": "c63e6a133eb6372932f810c08cc33dc35a06d1ddb658f897bd6c34a754efc812",
+  "method": "Follow aligned uint32 pointer entries from RTTI-associated table until first value outside observed .text range; structural interpretation, not dynamic call trace.",
+  "start": "0x5cac60",
+  "entries": [
+    {
+      "slot": 0,
+      "slot_address": "0x5cac60",
+      "target": "0x4981c0"
+    },
+    {
+      "slot": 1,
+      "slot_address": "0x5cac64",
+      "target": "0x496830"
+    },
+    {
+      "slot": 2,
+      "slot_address": "0x5cac68",
+      "target": "0x4d2370"
+    },
+    {
+      "slot": 3,
+      "slot_address": "0x5cac6c",
+      "target": "0x4dc9d0"
+    },
+    {
+      "slot": 4,
+      "slot_address": "0x5cac70",
+      "target": "0x497720"
+    },
+    {
+      "slot": 5,
+      "slot_address": "0x5cac74",
+      "target": "0x497700"
+    },
+    {
+      "slot": 6,
+      "slot_address": "0x5cac78",
+      "target": "0x4976d0"
+    },
+    {
+      "slot": 7,
+      "slot_address": "0x5cac7c",
+      "target": "0x497940"
+    },
+    {
+      "slot": 8,
+      "slot_address": "0x5cac80",
+      "target": "0x497c90"
+    },
+    {
+      "slot": 9,
+      "slot_address": "0x5cac84",
+      "target": "0x497cd0"
+    },
+    {
+      "slot": 10,
+      "slot_address": "0x5cac88",
+      "target": "0x496670"
+    },
+    {
+      "slot": 11,
+      "slot_address": "0x5cac8c",
+      "target": "0x4966e0"
+    },
+    {
+      "slot": 12,
+      "slot_address": "0x5cac90",
+      "target": "0x4bdee0"
+    },
+    {
+      "slot": 13,
+      "slot_address": "0x5cac94",
+      "target": "0x4d38b0"
+    },
+    {
+      "slot": 14,
+      "slot_address": "0x5cac98",
+      "target": "0x4960b0"
+    },
+    {
+      "slot": 15,
+      "slot_address": "0x5cac9c",
+      "target": "0x496130"
+    },
+    {
+      "slot": 16,
+      "slot_address": "0x5caca0",
+      "target": "0x496570"
+    },
+    {
+      "slot": 17,
+      "slot_address": "0x5caca4",
+      "target": "0x4965e0"
+    },
+    {
+      "slot": 18,
+      "slot_address": "0x5caca8",
+      "target": "0x496aa0"
+    },
+    {
+      "slot": 19,
+      "slot_address": "0x5cacac",
+      "target": "0x4dc0b0"
+    },
+    {
+      "slot": 20,
+      "slot_address": "0x5cacb0",
+      "target": "0x4dbdc0"
+    },
+    {
+      "slot": 21,
+      "slot_address": "0x5cacb4",
+      "target": "0x4dc130"
+    },
+    {
+      "slot": 22,
+      "slot_address": "0x5cacb8",
+      "target": "0x497660"
+    },
+    {
+      "slot": 23,
+      "slot_address": "0x5cacbc",
+      "target": "0x497660"
+    },
+    {
+      "slot": 24,
+      "slot_address": "0x5cacc0",
+      "target": "0x497660"
+    },
+    {
+      "slot": 25,
+      "slot_address": "0x5cacc4",
+      "target": "0x49a210"
+    },
+    {
+      "slot": 26,
+      "slot_address": "0x5cacc8",
+      "target": "0x4bae00"
+    },
+    {
+      "slot": 27,
+      "slot_address": "0x5caccc",
+      "target": "0x496bc0"
+    },
+    {
+      "slot": 28,
+      "slot_address": "0x5cacd0",
+      "target": "0x496d00"
+    },
+    {
+      "slot": 29,
+      "slot_address": "0x5cacd4",
+      "target": "0x496a20"
+    },
+    {
+      "slot": 30,
+      "slot_address": "0x5cacd8",
+      "target": "0x4dcf10"
+    },
+    {
+      "slot": 31,
+      "slot_address": "0x5cacdc",
+      "target": "0x4d2a30"
+    },
+    {
+      "slot": 32,
+      "slot_address": "0x5cace0",
+      "target": "0x47d270"
+    },
+    {
+      "slot": 33,
+      "slot_address": "0x5cace4",
+      "target": "0x4596f0"
+    },
+    {
+      "slot": 34,
+      "slot_address": "0x5cace8",
+      "target": "0x497220"
+    },
+    {
+      "slot": 35,
+      "slot_address": "0x5cacec",
+      "target": "0x497220"
+    },
+    {
+      "slot": 36,
+      "slot_address": "0x5cacf0",
+      "target": "0x497220"
+    },
+    {
+      "slot": 37,
+      "slot_address": "0x5cacf4",
+      "target": "0x4596f0"
+    },
+    {
+      "slot": 38,
+      "slot_address": "0x5cacf8",
+      "target": "0x4596f0"
+    },
+    {
+      "slot": 39,
+      "slot_address": "0x5cacfc",
+      "target": "0x4d2830"
+    },
+    {
+      "slot": 40,
+      "slot_address": "0x5cad00",
+      "target": "0x4d2a20"
+    },
+    {
+      "slot": 41,
+      "slot_address": "0x5cad04",
+      "target": "0x4d2950"
+    },
+    {
+      "slot": 42,
+      "slot_address": "0x5cad08",
+      "target": "0x40a5c0"
+    },
+    {
+      "slot": 43,
+      "slot_address": "0x5cad0c",
+      "target": "0x4d2b00"
+    },
+    {
+      "slot": 44,
+      "slot_address": "0x5cad10",
+      "target": "0x497680"
+    },
+    {
+      "slot": 45,
+      "slot_address": "0x5cad14",
+      "target": "0x4971c0"
+    },
+    {
+      "slot": 46,
+      "slot_address": "0x5cad18",
+      "target": "0x4dc230"
+    },
+    {
+      "slot": 47,
+      "slot_address": "0x5cad1c",
+      "target": "0x498780"
+    },
+    {
+      "slot": 48,
+      "slot_address": "0x5cad20",
+      "target": "0x488e70"
+    },
+    {
+      "slot": 49,
+      "slot_address": "0x5cad24",
+      "target": "0x4dcd60"
+    },
+    {
+      "slot": 50,
+      "slot_address": "0x5cad28",
+      "target": "0x4dc2a0"
+    },
+    {
+      "slot": 51,
+      "slot_address": "0x5cad2c",
+      "target": "0x4dace0"
+    },
+    {
+      "slot": 52,
+      "slot_address": "0x5cad30",
+      "target": "0x4db730"
+    },
+    {
+      "slot": 53,
+      "slot_address": "0x5cad34",
+      "target": "0x489720"
+    },
+    {
+      "slot": 54,
+      "slot_address": "0x5cad38",
+      "target": "0x48c870"
+    },
+    {
+      "slot": 55,
+      "slot_address": "0x5cad3c",
+      "target": "0x48c110"
+    },
+    {
+      "slot": 56,
+      "slot_address": "0x5cad40",
+      "target": "0x4858c0"
+    },
+    {
+      "slot": 57,
+      "slot_address": "0x5cad44",
+      "target": "0x486630"
+    },
+    {
+      "slot": 58,
+      "slot_address": "0x5cad48",
+      "target": "0x485830"
+    },
+    {
+      "slot": 59,
+      "slot_address": "0x5cad4c",
+      "target": "0x4971d0"
+    },
+    {
+      "slot": 60,
+      "slot_address": "0x5cad50",
+      "target": "0x497290"
+    },
+    {
+      "slot": 61,
+      "slot_address": "0x5cad54",
+      "target": "0x497760"
+    },
+    {
+      "slot": 62,
+      "slot_address": "0x5cad58",
+      "target": "0x4972a0"
+    },
+    {
+      "slot": 63,
+      "slot_address": "0x5cad5c",
+      "target": "0x4d9310"
+    },
+    {
+      "slot": 64,
+      "slot_address": "0x5cad60",
+      "target": "0x4886f0"
+    },
+    {
+      "slot": 65,
+      "slot_address": "0x5cad64",
+      "target": "0x4db990"
+    },
+    {
+      "slot": 66,
+      "slot_address": "0x5cad68",
+      "target": "0x487460"
+    },
+    {
+      "slot": 67,
+      "slot_address": "0x5cad6c",
+      "target": "0x488010"
+    },
+    {
+      "slot": 68,
+      "slot_address": "0x5cad70",
+      "target": "0x4bde30"
+    },
+    {
+      "slot": 69,
+      "slot_address": "0x5cad74",
+      "target": "0x4d37f0"
+    },
+    {
+      "slot": 70,
+      "slot_address": "0x5cad78",
+      "target": "0x4d3830"
+    },
+    {
+      "slot": 71,
+      "slot_address": "0x5cad7c",
+      "target": "0x4968d0"
+    },
+    {
+      "slot": 72,
+      "slot_address": "0x5cad80",
+      "target": "0x497710"
+    },
+    {
+      "slot": 73,
+      "slot_address": "0x5cad84",
+      "target": "0x4db950"
+    },
+    {
+      "slot": 74,
+      "slot_address": "0x5cad88",
+      "target": "0x4dc1b0"
+    }
+  ],
+  "following_slot": "0x5cad8c",
+  "following_value": "0x5ef6f8"
+}

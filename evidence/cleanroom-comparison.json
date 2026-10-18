@@ -1,0 +1,1273 @@
+{
+  "subject": "Independent implementation vs existing main engine and approved fixtures",
+  "total": 118,
+  "passed": 118,
+  "cliChecksPassed": 3,
+  "note": "Contract agreement includes matched rejections. GUI-10 remains a known G*Power incompatibility in both local implementations; this is not a claim of full G*Power equivalence.",
+  "rows": [
+    {
+      "id": "GUI-01",
+      "agreement": "numeric",
+      "differences": {
+        "n_total": 0,
+        "df": 0,
+        "actual_power": 0,
+        "critical": 0,
+        "ncp": 0
+      }
+    },
+    {
+      "id": "GUI-02",
+      "agreement": "numeric",
+      "differences": {
+        "n_total": 0,
+        "df": 0,
+        "actual_power": 0,
+        "critical": 0,
+        "ncp": 0
+      }
+    },
+    {
+      "id": "GUI-03",
+      "agreement": "numeric",
+      "differences": {
+        "n_total": 0,
+        "df": 0,
+        "actual_power": 0,
+        "critical": 0,
+        "ncp": 0
+      }
+    },
+    {
+      "id": "GUI-04",
+      "agreement": "numeric",
+      "differences": {
+        "n_total": 0,
+        "df": 0,
+        "actual_power": 0,
+        "critical": 0,
+        "ncp": 0
+      }
+    },
+    {
+      "id": "GUI-05",
+      "agreement": "both reject"
+    },
+    {
+      "id": "GUI-06",
+      "agreement": "numeric",
+      "differences": {
+        "n_total": 0,
+        "df": 0,
+        "actual_power": 0,
+        "critical": 0,
+        "ncp": 0
+      }
+    },
+    {
+      "id": "GUI-07",
+      "agreement": "numeric",
+      "differences": {
+        "n_total": 0,
+        "df": 0,
+        "actual_power": 0,
+        "critical": 0,
+        "ncp": 0
+      }
+    },
+    {
+      "id": "GUI-08",
+      "agreement": "numeric",
+      "differences": {
+        "n_total": 0,
+        "df": 0,
+        "actual_power": 0,
+        "critical": 0,
+        "ncp": 0
+      }
+    },
+    {
+      "id": "GUI-09",
+      "agreement": "both reject"
+    },
+    {
+      "id": "GUI-10",
+      "agreement": "both reject",
+      "gpowerMismatch": "Original G*Power result exceeds the local 1,000,000-pair search limit; retained as a known incompatibility, not a match."
+    },
+    {
+      "id": "GUI-11",
+      "agreement": "both reject"
+    },
+    {
+      "id": "GUI-12",
+      "agreement": "numeric",
+      "differences": {
+        "n_total": 0,
+        "df": 0,
+        "actual_power": 0,
+        "critical": 0,
+        "ncp": 0
+      }
+    },
+    {
+      "id": "SCIPY-1",
+      "agreement": "numeric",
+      "differences": {
+        "n_total": 0,
+        "df": 0,
+        "actual_power": 0,
+        "critical": 0,
+        "ncp": 0
+      }
+    },
+    {
+      "id": "SCIPY-2",
+      "agreement": "numeric",
+      "differences": {
+        "n_total": 0,
+        "df": 0,
+        "actual_power": 0,
+        "critical": 0,
+        "ncp": 0
+      }
+    },
+    {
+      "id": "SCIPY-3",
+      "agreement": "numeric",
+      "differences": {
+        "n_total": 0,
+        "df": 0,
+        "actual_power": 0,
+        "critical": 0,
+        "ncp": 0
+      }
+    },
+    {
+      "id": "SCIPY-4",
+      "agreement": "numeric",
+      "differences": {
+        "n_total": 0,
+        "df": 0,
+        "actual_power": 0,
+        "critical": 0,
+        "ncp": 0
+      }
+    },
+    {
+      "id": "SCIPY-5",
+      "agreement": "numeric",
+      "differences": {
+        "n_total": 0,
+        "df": 0,
+        "actual_power": 0,
+        "critical": 0,
+        "ncp": 0
+      }
+    },
+    {
+      "id": "SCIPY-6",
+      "agreement": "numeric",
+      "differences": {
+        "n_total": 0,
+        "df": 0,
+        "actual_power": 0,
+        "critical": 0,
+        "ncp": 0
+      }
+    },
+    {
+      "id": "SCIPY-7",
+      "agreement": "numeric",
+      "differences": {
+        "n_total": 0,
+        "df": 0,
+        "actual_power": 0,
+        "critical": 0,
+        "ncp": 0
+      }
+    },
+    {
+      "id": "SCIPY-8",
+      "agreement": "numeric",
+      "differences": {
+        "n_total": 0,
+        "df": 0,
+        "actual_power": 0,
+        "critical": 0,
+        "ncp": 0
+      }
+    },
+    {
+      "id": "SCIPY-9",
+      "agreement": "numeric",
+      "differences": {
+        "n_total": 0,
+        "df": 0,
+        "actual_power": 0,
+        "critical": 0,
+        "ncp": 0
+      }
+    },
+    {
+      "id": "SCIPY-10",
+      "agreement": "numeric",
+      "differences": {
+        "n_total": 0,
+        "df": 0,
+        "actual_power": 0,
+        "critical": 0,
+        "ncp": 0
+      }
+    },
+    {
+      "id": "SCIPY-11",
+      "agreement": "numeric",
+      "differences": {
+        "n_total": 0,
+        "df": 0,
+        "actual_power": 0,
+        "critical": 0,
+        "ncp": 0
+      }
+    },
+    {
+      "id": "SCIPY-12",
+      "agreement": "numeric",
+      "differences": {
+        "n_total": 0,
+        "df": 0,
+        "actual_power": 0,
+        "critical": 0,
+        "ncp": 0
+      }
+    },
+    {
+      "id": "SCIPY-13",
+      "agreement": "numeric",
+      "differences": {
+        "n_total": 0,
+        "df": 0,
+        "actual_power": 0,
+        "critical": 0,
+        "ncp": 0
+      }
+    },
+    {
+      "id": "SCIPY-14",
+      "agreement": "numeric",
+      "differences": {
+        "n_total": 0,
+        "df": 0,
+        "actual_power": 0,
+        "critical": 0,
+        "ncp": 0
+      }
+    },
+    {
+      "id": "SCIPY-15",
+      "agreement": "numeric",
+      "differences": {
+        "n_total": 0,
+        "df": 0,
+        "actual_power": 0,
+        "critical": 0,
+        "ncp": 0
+      }
+    },
+    {
+      "id": "SCIPY-16",
+      "agreement": "numeric",
+      "differences": {
+        "n_total": 0,
+        "df": 0,
+        "actual_power": 0,
+        "critical": 0,
+        "ncp": 0
+      }
+    },
+    {
+      "id": "SCIPY-17",
+      "agreement": "numeric",
+      "differences": {
+        "n_total": 0,
+        "df": 0,
+        "actual_power": 0,
+        "critical": 0,
+        "ncp": 0
+      }
+    },
+    {
+      "id": "SCIPY-18",
+      "agreement": "numeric",
+      "differences": {
+        "n_total": 0,
+        "df": 0,
+        "actual_power": 0,
+        "critical": 0,
+        "ncp": 0
+      }
+    },
+    {
+      "id": "SCIPY-19",
+      "agreement": "numeric",
+      "differences": {
+        "n_total": 0,
+        "df": 0,
+        "actual_power": 0,
+        "critical": 0,
+        "ncp": 0
+      }
+    },
+    {
+      "id": "SCIPY-20",
+      "agreement": "numeric",
+      "differences": {
+        "n_total": 0,
+        "df": 0,
+        "actual_power": 0,
+        "critical": 0,
+        "ncp": 0
+      }
+    },
+    {
+      "id": "SCIPY-21",
+      "agreement": "numeric",
+      "differences": {
+        "n_total": 0,
+        "df": 0,
+        "actual_power": 0,
+        "critical": 0,
+        "ncp": 0
+      }
+    },
+    {
+      "id": "SCIPY-22",
+      "agreement": "numeric",
+      "differences": {
+        "n_total": 0,
+        "df": 0,
+        "actual_power": 0,
+        "critical": 0,
+        "ncp": 0
+      }
+    },
+    {
+      "id": "SCIPY-23",
+      "agreement": "numeric",
+      "differences": {
+        "n_total": 0,
+        "df": 0,
+        "actual_power": 0,
+        "critical": 0,
+        "ncp": 0
+      }
+    },
+    {
+      "id": "SCIPY-24",
+      "agreement": "numeric",
+      "differences": {
+        "n_total": 0,
+        "df": 0,
+        "actual_power": 0,
+        "critical": 0,
+        "ncp": 0
+      }
+    },
+    {
+      "id": "SCIPY-25",
+      "agreement": "numeric",
+      "differences": {
+        "n_total": 0,
+        "df": 0,
+        "actual_power": 0,
+        "critical": 0,
+        "ncp": 0
+      }
+    },
+    {
+      "id": "SCIPY-26",
+      "agreement": "numeric",
+      "differences": {
+        "n_total": 0,
+        "df": 0,
+        "actual_power": 0,
+        "critical": 0,
+        "ncp": 0
+      }
+    },
+    {
+      "id": "SCIPY-27",
+      "agreement": "numeric",
+      "differences": {
+        "n_total": 0,
+        "df": 0,
+        "actual_power": 0,
+        "critical": 0,
+        "ncp": 0
+      }
+    },
+    {
+      "id": "SCIPY-28",
+      "agreement": "numeric",
+      "differences": {
+        "n_total": 0,
+        "df": 0,
+        "actual_power": 0,
+        "critical": 0,
+        "ncp": 0
+      }
+    },
+    {
+      "id": "SCIPY-29",
+      "agreement": "numeric",
+      "differences": {
+        "n_total": 0,
+        "df": 0,
+        "actual_power": 0,
+        "critical": 0,
+        "ncp": 0
+      }
+    },
+    {
+      "id": "SCIPY-30",
+      "agreement": "numeric",
+      "differences": {
+        "n_total": 0,
+        "df": 0,
+        "actual_power": 0,
+        "critical": 0,
+        "ncp": 0
+      }
+    },
+    {
+      "id": "SCIPY-31",
+      "agreement": "numeric",
+      "differences": {
+        "n_total": 0,
+        "df": 0,
+        "actual_power": 0,
+        "critical": 0,
+        "ncp": 0
+      }
+    },
+    {
+      "id": "SCIPY-32",
+      "agreement": "numeric",
+      "differences": {
+        "n_total": 0,
+        "df": 0,
+        "actual_power": 0,
+        "critical": 0,
+        "ncp": 0
+      }
+    },
+    {
+      "id": "SCIPY-33",
+      "agreement": "numeric",
+      "differences": {
+        "n_total": 0,
+        "df": 0,
+        "actual_power": 0,
+        "critical": 0,
+        "ncp": 0
+      }
+    },
+    {
+      "id": "SCIPY-34",
+      "agreement": "numeric",
+      "differences": {
+        "n_total": 0,
+        "df": 0,
+        "actual_power": 0,
+        "critical": 0,
+        "ncp": 0
+      }
+    },
+    {
+      "id": "SCIPY-35",
+      "agreement": "numeric",
+      "differences": {
+        "n_total": 0,
+        "df": 0,
+        "actual_power": 0,
+        "critical": 0,
+        "ncp": 0
+      }
+    },
+    {
+      "id": "SCIPY-36",
+      "agreement": "numeric",
+      "differences": {
+        "n_total": 0,
+        "df": 0,
+        "actual_power": 0,
+        "critical": 0,
+        "ncp": 0
+      }
+    },
+    {
+      "id": "SCIPY-37",
+      "agreement": "numeric",
+      "differences": {
+        "n_total": 0,
+        "df": 0,
+        "actual_power": 0,
+        "critical": 0,
+        "ncp": 0
+      }
+    },
+    {
+      "id": "SCIPY-38",
+      "agreement": "numeric",
+      "differences": {
+        "n_total": 0,
+        "df": 0,
+        "actual_power": 0,
+        "critical": 0,
+        "ncp": 0
+      }
+    },
+    {
+      "id": "SCIPY-39",
+      "agreement": "numeric",
+      "differences": {
+        "n_total": 0,
+        "df": 0,
+        "actual_power": 0,
+        "critical": 0,
+        "ncp": 0
+      }
+    },
+    {
+      "id": "SCIPY-40",
+      "agreement": "numeric",
+      "differences": {
+        "n_total": 0,
+        "df": 0,
+        "actual_power": 0,
+        "critical": 0,
+        "ncp": 0
+      }
+    },
+    {
+      "id": "SCIPY-41",
+      "agreement": "numeric",
+      "differences": {
+        "n_total": 0,
+        "df": 0,
+        "actual_power": 0,
+        "critical": 0,
+        "ncp": 0
+      }
+    },
+    {
+      "id": "SCIPY-42",
+      "agreement": "numeric",
+      "differences": {
+        "n_total": 0,
+        "df": 0,
+        "actual_power": 0,
+        "critical": 0,
+        "ncp": 0
+      }
+    },
+    {
+      "id": "SCIPY-43",
+      "agreement": "numeric",
+      "differences": {
+        "n_total": 0,
+        "df": 0,
+        "actual_power": 0,
+        "critical": 0,
+        "ncp": 0
+      }
+    },
+    {
+      "id": "SCIPY-44",
+      "agreement": "numeric",
+      "differences": {
+        "n_total": 0,
+        "df": 0,
+        "actual_power": 0,
+        "critical": 0,
+        "ncp": 0
+      }
+    },
+    {
+      "id": "SCIPY-45",
+      "agreement": "numeric",
+      "differences": {
+        "n_total": 0,
+        "df": 0,
+        "actual_power": 0,
+        "critical": 0,
+        "ncp": 0
+      }
+    },
+    {
+      "id": "SCIPY-46",
+      "agreement": "numeric",
+      "differences": {
+        "n_total": 0,
+        "df": 0,
+        "actual_power": 0,
+        "critical": 0,
+        "ncp": 0
+      }
+    },
+    {
+      "id": "SCIPY-47",
+      "agreement": "numeric",
+      "differences": {
+        "n_total": 0,
+        "df": 0,
+        "actual_power": 0,
+        "critical": 0,
+        "ncp": 0
+      }
+    },
+    {
+      "id": "SCIPY-48",
+      "agreement": "numeric",
+      "differences": {
+        "n_total": 0,
+        "df": 0,
+        "actual_power": 0,
+        "critical": 0,
+        "ncp": 0
+      }
+    },
+    {
+      "id": "SCIPY-49",
+      "agreement": "numeric",
+      "differences": {
+        "n_total": 0,
+        "df": 0,
+        "actual_power": 0,
+        "critical": 0,
+        "ncp": 0
+      }
+    },
+    {
+      "id": "SCIPY-50",
+      "agreement": "numeric",
+      "differences": {
+        "n_total": 0,
+        "df": 0,
+        "actual_power": 0,
+        "critical": 0,
+        "ncp": 0
+      }
+    },
+    {
+      "id": "SCIPY-51",
+      "agreement": "numeric",
+      "differences": {
+        "n_total": 0,
+        "df": 0,
+        "actual_power": 0,
+        "critical": 0,
+        "ncp": 0
+      }
+    },
+    {
+      "id": "SCIPY-52",
+      "agreement": "numeric",
+      "differences": {
+        "n_total": 0,
+        "df": 0,
+        "actual_power": 0,
+        "critical": 0,
+        "ncp": 0
+      }
+    },
+    {
+      "id": "SCIPY-53",
+      "agreement": "numeric",
+      "differences": {
+        "n_total": 0,
+        "df": 0,
+        "actual_power": 0,
+        "critical": 0,
+        "ncp": 0
+      }
+    },
+    {
+      "id": "SCIPY-54",
+      "agreement": "numeric",
+      "differences": {
+        "n_total": 0,
+        "df": 0,
+        "actual_power": 0,
+        "critical": 0,
+        "ncp": 0
+      }
+    },
+    {
+      "id": "SCIPY-55",
+      "agreement": "numeric",
+      "differences": {
+        "n_total": 0,
+        "df": 0,
+        "actual_power": 0,
+        "critical": 0,
+        "ncp": 0
+      }
+    },
+    {
+      "id": "SCIPY-56",
+      "agreement": "numeric",
+      "differences": {
+        "n_total": 0,
+        "df": 0,
+        "actual_power": 0,
+        "critical": 0,
+        "ncp": 0
+      }
+    },
+    {
+      "id": "SCIPY-57",
+      "agreement": "numeric",
+      "differences": {
+        "n_total": 0,
+        "df": 0,
+        "actual_power": 0,
+        "critical": 0,
+        "ncp": 0
+      }
+    },
+    {
+      "id": "SCIPY-58",
+      "agreement": "numeric",
+      "differences": {
+        "n_total": 0,
+        "df": 0,
+        "actual_power": 0,
+        "critical": 0,
+        "ncp": 0
+      }
+    },
+    {
+      "id": "SCIPY-59",
+      "agreement": "numeric",
+      "differences": {
+        "n_total": 0,
+        "df": 0,
+        "actual_power": 0,
+        "critical": 0,
+        "ncp": 0
+      }
+    },
+    {
+      "id": "SCIPY-60",
+      "agreement": "numeric",
+      "differences": {
+        "n_total": 0,
+        "df": 0,
+        "actual_power": 0,
+        "critical": 0,
+        "ncp": 0
+      }
+    },
+    {
+      "id": "SCIPY-61",
+      "agreement": "numeric",
+      "differences": {
+        "n_total": 0,
+        "df": 0,
+        "actual_power": 0,
+        "critical": 0,
+        "ncp": 0
+      }
+    },
+    {
+      "id": "SCIPY-62",
+      "agreement": "numeric",
+      "differences": {
+        "n_total": 0,
+        "df": 0,
+        "actual_power": 0,
+        "critical": 0,
+        "ncp": 0
+      }
+    },
+    {
+      "id": "SCIPY-63",
+      "agreement": "numeric",
+      "differences": {
+        "n_total": 0,
+        "df": 0,
+        "actual_power": 0,
+        "critical": 0,
+        "ncp": 0
+      }
+    },
+    {
+      "id": "SCIPY-64",
+      "agreement": "numeric",
+      "differences": {
+        "n_total": 0,
+        "df": 0,
+        "actual_power": 0,
+        "critical": 0,
+        "ncp": 0
+      }
+    },
+    {
+      "id": "SCIPY-65",
+      "agreement": "numeric",
+      "differences": {
+        "n_total": 0,
+        "df": 0,
+        "actual_power": 0,
+        "critical": 0,
+        "ncp": 0
+      }
+    },
+    {
+      "id": "SCIPY-66",
+      "agreement": "numeric",
+      "differences": {
+        "n_total": 0,
+        "df": 0,
+        "actual_power": 0,
+        "critical": 0,
+        "ncp": 0
+      }
+    },
+    {
+      "id": "SCIPY-67",
+      "agreement": "numeric",
+      "differences": {
+        "n_total": 0,
+        "df": 0,
+        "actual_power": 0,
+        "critical": 0,
+        "ncp": 0
+      }
+    },
+    {
+      "id": "SCIPY-68",
+      "agreement": "numeric",
+      "differences": {
+        "n_total": 0,
+        "df": 0,
+        "actual_power": 0,
+        "critical": 0,
+        "ncp": 0
+      }
+    },
+    {
+      "id": "SCIPY-69",
+      "agreement": "numeric",
+      "differences": {
+        "n_total": 0,
+        "df": 0,
+        "actual_power": 0,
+        "critical": 0,
+        "ncp": 0
+      }
+    },
+    {
+      "id": "SCIPY-70",
+      "agreement": "numeric",
+      "differences": {
+        "n_total": 0,
+        "df": 0,
+        "actual_power": 0,
+        "critical": 0,
+        "ncp": 0
+      }
+    },
+    {
+      "id": "SCIPY-71",
+      "agreement": "numeric",
+      "differences": {
+        "n_total": 0,
+        "df": 0,
+        "actual_power": 0,
+        "critical": 0,
+        "ncp": 0
+      }
+    },
+    {
+      "id": "SCIPY-72",
+      "agreement": "numeric",
+      "differences": {
+        "n_total": 0,
+        "df": 0,
+        "actual_power": 0,
+        "critical": 0,
+        "ncp": 0
+      }
+    },
+    {
+      "id": "SCIPY-73",
+      "agreement": "numeric",
+      "differences": {
+        "n_total": 0,
+        "df": 0,
+        "actual_power": 0,
+        "critical": 0,
+        "ncp": 0
+      }
+    },
+    {
+      "id": "SCIPY-74",
+      "agreement": "numeric",
+      "differences": {
+        "n_total": 0,
+        "df": 0,
+        "actual_power": 0,
+        "critical": 0,
+        "ncp": 0
+      }
+    },
+    {
+      "id": "SCIPY-75",
+      "agreement": "numeric",
+      "differences": {
+        "n_total": 0,
+        "df": 0,
+        "actual_power": 0,
+        "critical": 0,
+        "ncp": 0
+      }
+    },
+    {
+      "id": "SCIPY-76",
+      "agreement": "numeric",
+      "differences": {
+        "n_total": 0,
+        "df": 0,
+        "actual_power": 0,
+        "critical": 0,
+        "ncp": 0
+      }
+    },
+    {
+      "id": "SCIPY-77",
+      "agreement": "numeric",
+      "differences": {
+        "n_total": 0,
+        "df": 0,
+        "actual_power": 0,
+        "critical": 0,
+        "ncp": 0
+      }
+    },
+    {
+      "id": "SCIPY-78",
+      "agreement": "numeric",
+      "differences": {
+        "n_total": 0,
+        "df": 0,
+        "actual_power": 0,
+        "critical": 0,
+        "ncp": 0
+      }
+    },
+    {
+      "id": "SCIPY-79",
+      "agreement": "numeric",
+      "differences": {
+        "n_total": 0,
+        "df": 0,
+        "actual_power": 0,
+        "critical": 0,
+        "ncp": 0
+      }
+    },
+    {
+      "id": "SCIPY-80",
+      "agreement": "numeric",
+      "differences": {
+        "n_total": 0,
+        "df": 0,
+        "actual_power": 0,
+        "critical": 0,
+        "ncp": 0
+      }
+    },
+    {
+      "id": "SCIPY-81",
+      "agreement": "numeric",
+      "differences": {
+        "n_total": 0,
+        "df": 0,
+        "actual_power": 0,
+        "critical": 0,
+        "ncp": 0
+      }
+    },
+    {
+      "id": "SCIPY-82",
+      "agreement": "numeric",
+      "differences": {
+        "n_total": 0,
+        "df": 0,
+        "actual_power": 0,
+        "critical": 0,
+        "ncp": 0
+      }
+    },
+    {
+      "id": "SCIPY-83",
+      "agreement": "numeric",
+      "differences": {
+        "n_total": 0,
+        "df": 0,
+        "actual_power": 0,
+        "critical": 0,
+        "ncp": 0
+      }
+    },
+    {
+      "id": "SCIPY-84",
+      "agreement": "numeric",
+      "differences": {
+        "n_total": 0,
+        "df": 0,
+        "actual_power": 0,
+        "critical": 0,
+        "ncp": 0
+      }
+    },
+    {
+      "id": "SCIPY-85",
+      "agreement": "numeric",
+      "differences": {
+        "n_total": 0,
+        "df": 0,
+        "actual_power": 0,
+        "critical": 0,
+        "ncp": 0
+      }
+    },
+    {
+      "id": "SCIPY-86",
+      "agreement": "numeric",
+      "differences": {
+        "n_total": 0,
+        "df": 0,
+        "actual_power": 0,
+        "critical": 0,
+        "ncp": 0
+      }
+    },
+    {
+      "id": "SCIPY-87",
+      "agreement": "numeric",
+      "differences": {
+        "n_total": 0,
+        "df": 0,
+        "actual_power": 0,
+        "critical": 0,
+        "ncp": 0
+      }
+    },
+    {
+      "id": "SCIPY-88",
+      "agreement": "numeric",
+      "differences": {
+        "n_total": 0,
+        "df": 0,
+        "actual_power": 0,
+        "critical": 0,
+        "ncp": 0
+      }
+    },
+    {
+      "id": "SCIPY-89",
+      "agreement": "numeric",
+      "differences": {
+        "n_total": 0,
+        "df": 0,
+        "actual_power": 0,
+        "critical": 0,
+        "ncp": 0
+      }
+    },
+    {
+      "id": "SCIPY-90",
+      "agreement": "numeric",
+      "differences": {
+        "n_total": 0,
+        "df": 0,
+        "actual_power": 0,
+        "critical": 0,
+        "ncp": 0
+      }
+    },
+    {
+      "id": "SCIPY-91",
+      "agreement": "numeric",
+      "differences": {
+        "n_total": 0,
+        "df": 0,
+        "actual_power": 0,
+        "critical": 0,
+        "ncp": 0
+      }
+    },
+    {
+      "id": "SCIPY-92",
+      "agreement": "numeric",
+      "differences": {
+        "n_total": 0,
+        "df": 0,
+        "actual_power": 0,
+        "critical": 0,
+        "ncp": 0
+      }
+    },
+    {
+      "id": "SCIPY-93",
+      "agreement": "numeric",
+      "differences": {
+        "n_total": 0,
+        "df": 0,
+        "actual_power": 0,
+        "critical": 0,
+        "ncp": 0
+      }
+    },
+    {
+      "id": "SCIPY-94",
+      "agreement": "numeric",
+      "differences": {
+        "n_total": 0,
+        "df": 0,
+        "actual_power": 0,
+        "critical": 0,
+        "ncp": 0
+      }
+    },
+    {
+      "id": "SCIPY-95",
+      "agreement": "numeric",
+      "differences": {
+        "n_total": 0,
+        "df": 0,
+        "actual_power": 0,
+        "critical": 0,
+        "ncp": 0
+      }
+    },
+    {
+      "id": "SCIPY-96",
+      "agreement": "numeric",
+      "differences": {
+        "n_total": 0,
+        "df": 0,
+        "actual_power": 0,
+        "critical": 0,
+        "ncp": 0
+      }
+    },
+    {
+      "id": "SCIPY-97",
+      "agreement": "numeric",
+      "differences": {
+        "n_total": 0,
+        "df": 0,
+        "actual_power": 0,
+        "critical": 0,
+        "ncp": 0
+      }
+    },
+    {
+      "id": "SCIPY-98",
+      "agreement": "numeric",
+      "differences": {
+        "n_total": 0,
+        "df": 0,
+        "actual_power": 0,
+        "critical": 0,
+        "ncp": 0
+      }
+    },
+    {
+      "id": "SCIPY-99",
+      "agreement": "numeric",
+      "differences": {
+        "n_total": 0,
+        "df": 0,
+        "actual_power": 0,
+        "critical": 0,
+        "ncp": 0
+      }
+    },
+    {
+      "id": "SCIPY-100",
+      "agreement": "numeric",
+      "differences": {
+        "n_total": 0,
+        "df": 0,
+        "actual_power": 0,
+        "critical": 0,
+        "ncp": 0
+      }
+    },
+    {
+      "id": "SCIPY-101",
+      "agreement": "numeric",
+      "differences": {
+        "n_total": 0,
+        "df": 0,
+        "actual_power": 0,
+        "critical": 0,
+        "ncp": 0
+      }
+    },
+    {
+      "id": "SCIPY-102",
+      "agreement": "numeric",
+      "differences": {
+        "n_total": 0,
+        "df": 0,
+        "actual_power": 0,
+        "critical": 0,
+        "ncp": 0
+      }
+    },
+    {
+      "id": "SCIPY-103",
+      "agreement": "numeric",
+      "differences": {
+        "n_total": 0,
+        "df": 0,
+        "actual_power": 0,
+        "critical": 0,
+        "ncp": 0
+      }
+    },
+    {
+      "id": "SCIPY-104",
+      "agreement": "numeric",
+      "differences": {
+        "n_total": 0,
+        "df": 0,
+        "actual_power": 0,
+        "critical": 0,
+        "ncp": 0
+      }
+    },
+    {
+      "id": "SCIPY-105",
+      "agreement": "numeric",
+      "differences": {
+        "n_total": 0,
+        "df": 0,
+        "actual_power": 0,
+        "critical": 0,
+        "ncp": 0
+      }
+    },
+    {
+      "id": "SCIPY-106",
+      "agreement": "both reject"
+    }
+  ]
+}

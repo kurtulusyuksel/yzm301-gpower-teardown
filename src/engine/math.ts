@@ -265,7 +265,11 @@ export function nctCdf(t: number, df: number, delta: number): number {
   const logNorm = -(0.5 * df - 1.0) * Math.LN2 - logGamma(0.5 * df);
 
   let total = 0.0;
-  const nPoints = 96;
+  // A fixed grid misses the narrow normal-CDF transition at small df and large
+  // noncentrality (GUI-12). Bound the change in its argument per integration
+  // step, retain an even Simpson grid, and cap work for extreme inputs.
+  const requiredIntervals = Math.ceil((b - a) * Math.max(1, Math.abs(t) / sqrtDf) / 0.1);
+  const nPoints = Math.min(32768, Math.max(96, requiredIntervals + requiredIntervals % 2));
 
   // Composite Simpson's / Gauss quadrature across [a, b]
   const step = (b - a) / nPoints;

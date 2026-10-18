@@ -1,0 +1,6 @@
+# These files carry recorded byte-level SHA-256 hashes. Preserve their exact bytes.
+/SPEC.md -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
+/oracle/gpower-gui.json -text
+/oracle/vectors.csv -text
+/evidence/** -text -whitespace
+/cleanroom/** -text

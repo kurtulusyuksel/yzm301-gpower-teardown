@@ -1,0 +1,4 @@
+
+> gpower-paired-clone@1.0.0 cleanroom:build
+> tsc cleanroom/t_paired.ts cleanroom/cli.ts --target es2020 --module es2020 --strict --outDir cleanroom/build --skipLibCheck
+

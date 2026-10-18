@@ -1,0 +1,5 @@
+
+> gpower-paired-clone@1.0.0 test:cleanroom
+> tsx tests/cleanroom_equivalence.test.ts
+
+Independent clean-room comparison: 118/118 contract checks passed. Original G*Power range limitation remains explicit.

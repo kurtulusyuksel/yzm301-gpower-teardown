@@ -2,12 +2,12 @@ import { PairedTTestInput, PairedTTestOutput } from './types.js';
 import { tInv, nctCdf } from './math.js';
 
 /**
- * Validates inputs according to G*Power mathematical and binary-proven boundary constraints:
- * [REA] "effect size be greater than 0.00001"
+ * Input contract; observed GUI boundaries are recorded in evidence/gui-*.json.
+ * A-priori floor: GUI-09 rejects 0.000005, GUI-10 accepts exactly 0.00001.
  * [DOK] alpha in (0, 1)
  * [DOK] tails in {1, 2}
  * [DOK] a-priori: power in (alpha, 1)
- * [DOK] post-hoc: n >= 2 (integer)
+ * [GUI-05/06] post-hoc: n >= 3 (integer)
  */
 export function validatePairedInput(input: PairedTTestInput): void {
   if (input.test !== 't-paired') {
@@ -18,8 +18,14 @@ export function validatePairedInput(input: PairedTTestInput): void {
     throw new Error(`Invalid tails: ${input.tails}. Tails must be 1 or 2.`);
   }
 
-  if (isNaN(input.dz) || input.dz <= 0.00001) {
-    throw new Error(`Invalid effect size dz (${input.dz}). Effect size must be greater than 0.00001.`);
+  if (!Number.isFinite(input.dz) || (input.mode === 'post-hoc' ? input.dz <= 0 : input.dz < 0.00001)) {
+    if (input.mode === 'post-hoc') {
+      throw new Error(`Invalid effect size dz (${input.dz}). Effect size must be greater than 0.`);
+    }
+    throw new Error(`Invalid effect size dz (${input.dz}). Effect size must be at least 0.00001 for a-priori analysis.`);
+  }
+  if (input.mode === 'a-priori' && input.dz > 20) {
+    throw new Error(`Invalid effect size dz (${input.dz}). A-priori effect size must be at most 20.`);
   }
 
   if (isNaN(input.alpha) || input.alpha <= 0 || input.alpha >= 1) {
@@ -31,8 +37,8 @@ export function validatePairedInput(input: PairedTTestInput): void {
       throw new Error(`Invalid power (${input.power}). For a-priori analysis, target power must be between alpha (${input.alpha}) and 1.0.`);
     }
   } else if (input.mode === 'post-hoc') {
-    if (input.n === undefined || isNaN(input.n) || input.n < 2 || !Number.isInteger(input.n)) {
-      throw new Error(`Invalid sample size n (${input.n}). For post-hoc analysis, total pairs n must be an integer >= 2.`);
+    if (input.n === undefined || input.n < 3 || input.n > 2147483646 || !Number.isInteger(input.n)) {
+      throw new Error(`Invalid sample size n (${input.n}). For post-hoc analysis, total pairs n must be an integer in [3, 2147483646].`);
     }
   } else {
     throw new Error(`Invalid calculation mode: '${input.mode}'. Must be 'a-priori' or 'post-hoc'.`);

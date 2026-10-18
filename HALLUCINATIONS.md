@@ -1,33 +1,17 @@
-# HALLUCINATIONS.md: Halüsinasyon ve Yanılgı Günlüğü
+# Yanlış çıkarımlar ve yakalayan kanıtlar
 
-Bu belge, yapay zeka ajanının tersine mühendislik ve geliştirme sürecinde yanlış çıkardığı, varsaydığı veya halüsinasyon gördüğü noktaları, bunların nasıl fark edildiğini ve hangi testler tarafından yakalandığını belgeler.
+Bu günlük yalnızca bu denetimde yeniden üretilebilen hataları kaydeder. Önceki sürümdeki ajan konuşmaları ve düzeltme geçmişi ham oturum kayıtları bulunmadığından tarihsel olay olarak sunulmaz.
 
----
+| Yanlış iddia | Gerçek kanıt | Düzeltme / test |
+|---|---|---|
+| 106 vektör G*Power ekranından alındı | generate_oracle.py SciPy kullanıyor; 106 satıra bağlı ekran kaydı yok | SciPy kümesi ayrı; gerçek GUI kayıtları oracle/gpower-gui.json içinde |
+| Bütün alanlar dört ondalıkta %100 eşit | İlk sürümde kesin eşitlik 105/106 idi; sayısal çözünürlük düzeltmesinden sonra 106/106 | İki ölçü ayrı raporlanıyor |
+| Post-hoc N=2 kabul edilir | GUI-05 N=2 reddi; GUI-06 N=3 kabulü | Alt sınır 3 olarak düzeltildi; gpower_gui.test.ts |
+| dz <= 0.00001 bütün modlarda reddedilir | GUI-07/08: post-hoc N=3 ile dz=0.00001 ve 0.000005 kabulü | Post-hoc küçük pozitif etki kabul edilir; a-priori yerel sınırı ayrı belgelenir |
+| A-priori tam 0.00001 reddedilir | GUI-10 tam eşikte N=129940148212 üretir; GUI-09 bunun altını reddeder | Eşik kontrolü < olarak düzeltildi; büyük N yerel arama sınırı uyumsuzluğu olarak kaydedildi |
+| nctcdf/nctinv/nctpdf kesin fonksiyon sembolleridir | REA bu adları dize olarak buluyor; prosedür araması matematik fonksiyonlarını bu adlarla göstermiyor | Dize kanıtı ile fonksiyon kimliği ayrıldı |
+| Minimal N sonucu artan sırada aramayı kanıtlar | GUI-02/03 N=54 gücü 0.950212; GUI-04 N=53 gücü 0.9465273 | Bu örnekte eşik doğrulanır; orijinal arama algoritması iddia edilmez |
+| MCP testi gerçek sunucuya bağlanır | Eski test doğrudan motoru çağırıyordu | Yeni test stdio istemcisiyle sunucuya bağlanıyor |
+| Token/süre tasarrufu ölçülmüştür | GUI maliyeti sabit varsayım; demo tokenları karakter tahmini | AGENT_COST.md ve demo başlıkları düzeltildi |
 
-### Halüsinasyon 1: İki Bağımsız Grup Yanılgısı ($n_1$ ve $n_2$ Ayrımı)
-* **Ajanın İddiası:**  
-  Ajan, standart t-testi mantığıyla her zaman iki grup ($n_1$ ve $n_2$) olması gerektiğini ve toplam örneklem büyüklüğünün $n_1 + n_2$ olarak raporlanması gerektiğini öne sürdü. CLI çıktısına `{"n1": 54, "n2": 54, "n_total": 108}` koymayı önerdi.
-* **Nasıl Fark Edildi?**  
-  Eşleştirilmiş (paired / dependent) t-testinde her denekten iki ölçüm (önce ve sonra) alınır. Dolayısıyla denek sayısı $N$'dir ve serbestlik derecesi $df = N - 1$'dir. G*Power arayüzünde de yalnızca tek bir "Total sample size" parametresi bulunmaktadır. $n_1$ ve $n_2$ ayrımı bağımsız iki grup (independent two-sample) t-testine aittir.
-* **Hangi Test Yakaladı?**  
-  `tests/differential.test.ts` içindeki ilk referans vektör testi. Ajanın önerdiği formülle $df = 2N - 2 = 106$ hesaplanırken, G*Power kâhininde $df = 53$ olduğu doğrulanarak model düzeltildi.
-
----
-
-### Halüsinasyon 2: İki Yönlü Testte Sol Kuyruk Olasılığının İhmal Edilmesi
-* **Ajanın İddiası:**  
-  Ajan, pozitif merkezi olmayanlık parametresinde ($\delta > 0$) sol kuyruk olasılığının ($F(-t_{\text{crit}}; df, \delta)$) sıfıra çok yakın olduğunu ve hesaplama yükünden kaçınmak için gücün sadece $1 - F(t_{\text{crit}}; df, \delta)$ formülüyle bulunabileceğini iddia etti.
-* **Nasıl Fark Edildi?**  
-  Etki büyüklüğünün ve örneklemin küçük olduğu sınır değerlerinde ($d_z = 0.2, N = 10$) sol kuyruk olasılığının 0.0004 düzeyinde katkı yaptığı ve bu terim eklenmediğinde G*Power'ın ekrandaki 4 basamaklı çıktısıyla 0.0004'lük bir diferansiyel fark oluştuğu görüldü.
-* **Hangi Test Yakaladı?**  
-  `oracle/vectors.csv` içindeki küçük etki büyüklüğü sınır vektörü testi (`boundary_small_dz`). İki kuyruğun birden hesaplanması formüle entegre edilerek uyuşmazlık %0'a indirildi.
-
----
-
-### Halüsinasyon 3: Reel Sayı Çözücü vs Ayrık Tamsayı Arama (Ceil vs Round)
-* **Ajanın İddiası:**  
-  Ajan, R'daki `pwr.t.test` veya SciPy fsolve gibi kök bulucuların reel sayı döndürdüğünü ($N = 53.41$) ve en yakın tamsayıya yuvarlamanın (`Math.round`) yeterli olacağını savundu.
-* **Nasıl Fark Edildi?**  
-  Eğer $N = 53.41$ en yakın tamsayıya yuvarlanıp $N = 53$ alınırsa, gerçekleşen güç %94.88'de kalmakta ve araştırmacının talep ettiği minimum %95 güç şartı ihlal edilmektedir. G*Power kuralı: Hedeflenen gücü kesinlikle garanti eden en küçük tamsayı seçilmelidir ($N = 54$, gerçekleşen güç = %95.02).
-* **Hangi Test Yakaladı?**  
-  `tests/differential.test.ts` A-priori tamsayı N eşleşme testi. Tamsayı arama algoritması `Math.ceil` / artan tamsayı döngüsü kuralına göre güncellendi.
+Son gerçek geri bildirim: İlk bağımsız sürüm a-priori alt sınırını da 3 almıştı. GUI-12, büyük etkide N=2 gerektiğini gösterdi; yalnız SPEC ve sayısal sonuç aktarılıp bağımsız sürüm düzeltildi. Aynı vaka eski ana motorun sabit integrasyon ızgarasında .9746/.9735240 güç farkını yakaladı; sayısal çözünürlük düzeltilip tüm referanslar yeniden çalıştırıldı. GUI-11 ayrıca a-priori etki üst sınırı 20'yi ortaya çıkardı. Bunlar varsayımsal geçmiş anlatıları değil, saklanan yeni GUI kayıtları ve iki gerçek uygulayıcı turuyla izlenebilir bulgulardır.

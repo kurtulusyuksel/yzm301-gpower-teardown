@@ -32,7 +32,7 @@ const GPOWER_PAIRED_TOOL: Tool = {
       },
       dz: {
         type: 'number',
-        description: "Cohen's dz effect size (|mean difference| / standard deviation of differences). Must be > 0.00001."
+        description: "Cohen's dz effect size. Post-hoc: > 0; a-priori: [0.00001, 20]. Local a-priori search is limited to 1,000,000 pairs."
       },
       alpha: {
         type: 'number',
@@ -44,7 +44,7 @@ const GPOWER_PAIRED_TOOL: Tool = {
       },
       n: {
         type: 'number',
-        description: 'Total number of pairs for post-hoc analysis (integer >= 2).'
+        description: 'Total number of pairs for post-hoc analysis (integer in [3, 2147483646]).'
       }
     },
     required: ['mode', 'tails', 'dz', 'alpha']

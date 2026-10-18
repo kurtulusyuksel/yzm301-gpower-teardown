@@ -1,9 +1,9 @@
 # Dependencies
 node_modules/
-package-lock.json
 
 # Build outputs
 dist/
+cleanroom/build/
 
 # Binaries - NEVER COMMIT GPower.exe or other executables
 *.exe
@@ -13,5 +13,9 @@ dist/
 *.bin
 GPower*
 GPowerWin*
+# Retain project-owned tests and evidence; broad binary-name rules match these on Windows.
+!tests/gpower_gui.test.ts
+!oracle/gpower-gui.json
+!evidence/gpower-analysis.json
 *.log
 .DS_Store

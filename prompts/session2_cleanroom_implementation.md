@@ -1,3 +1,5 @@
+> Bu dosya oturum talimatı taslağıdır; oturumun gerçekleştiğine ilişkin günlük değildir.
+
 # Oturum 2: Temiz Oda Yeniden Yazım İlk Prompt'u
 
 ```markdown

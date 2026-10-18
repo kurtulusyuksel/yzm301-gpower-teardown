@@ -1,15 +1,11 @@
-import { execSync } from 'child_process';
-import { calculatePairedTTest } from '../src/engine/t_paired.js';
+import { execFileSync } from 'child_process';
+import { Client } from '@modelcontextprotocol/sdk/client/index.js';
+import { StdioClientTransport } from '@modelcontextprotocol/sdk/client/stdio.js';
 import { PairedTTestInput } from '../src/engine/types.js';
 
 function runCli(args: string[]): any {
-  const cmd = `npx tsx src/cli.ts ${args.join(' ')}`;
-  const out = execSync(cmd, { encoding: 'utf-8' }).trim();
+  const out = execFileSync(process.execPath, ['--import', 'tsx', 'src/cli.ts', ...args], { encoding: 'utf-8' }).trim();
   return JSON.parse(out);
-}
-
-function runMcpEngine(input: PairedTTestInput): any {
-  return calculatePairedTTest(input);
 }
 
 async function testEquivalence() {
@@ -22,28 +18,47 @@ async function testEquivalence() {
     { test: 't-paired', mode: 'a-priori', tails: 1, dz: 0.8, alpha: 0.05, power: 0.80 },
     { test: 't-paired', mode: 'a-priori', tails: 2, dz: 0.2, alpha: 0.01, power: 0.90 },
     { test: 't-paired', mode: 'post-hoc', tails: 2, dz: 0.5, alpha: 0.05, n: 54 },
-    { test: 't-paired', mode: 'post-hoc', tails: 1, dz: 0.4, alpha: 0.05, n: 30 }
+    { test: 't-paired', mode: 'post-hoc', tails: 1, dz: 0.4, alpha: 0.05, n: 30 },
+    { test: 't-paired', mode: 'post-hoc', tails: 2, dz: 0.00001, alpha: 0.05, n: 3 },
+    { test: 't-paired', mode: 'post-hoc', tails: 2, dz: 0.000005, alpha: 0.05, n: 3 },
+    { test: 't-paired', mode: 'a-priori', tails: 2, dz: 20, alpha: 0.05, power: 0.95 }
   ];
 
   let passed = 0;
+  const client = new Client({ name: 'equivalence-test', version: '1.0.0' });
+  const transport = new StdioClientTransport({
+    command: process.execPath,
+    args: ['--import', 'tsx', 'src/mcp/server.ts']
+  });
 
+  try {
+  await client.connect(transport);
+  const listed = await client.listTools();
+  if (!listed.tools.some(tool => tool.name === 'calculate_paired_power')) {
+    throw new Error('MCP tool not advertised');
+  }
   for (let i = 0; i < testCases.length; i++) {
     const tc = testCases[i];
     const cliArgs = [
-      `--test ${tc.test}`,
-      `--mode ${tc.mode}`,
-      `--tails ${tc.tails}`,
-      `--dz ${tc.dz}`,
-      `--alpha ${tc.alpha}`
+      '--test', tc.test,
+      '--mode', tc.mode,
+      '--tails', String(tc.tails),
+      '--dz', String(tc.dz),
+      '--alpha', String(tc.alpha)
     ];
     if (tc.mode === 'a-priori') {
-      cliArgs.push(`--power ${tc.power}`);
+      cliArgs.push('--power', String(tc.power));
     } else {
-      cliArgs.push(`--n ${tc.n}`);
+      cliArgs.push('--n', String(tc.n));
     }
 
     const cliResult = runCli(cliArgs);
-    const mcpResult = runMcpEngine(tc);
+    const response = await client.callTool({ name: 'calculate_paired_power', arguments: { ...tc } });
+    if (response.isError) throw new Error(JSON.stringify(response));
+    const content = response.content as Array<{ type: string; text?: string }>;
+    const payload = content.find(item => item.type === 'text');
+    if (!payload?.text) throw new Error('Missing MCP result');
+    const mcpResult = JSON.parse(payload.text);
 
     const matches =
       cliResult.n_total === mcpResult.n_total &&
@@ -58,6 +73,10 @@ async function testEquivalence() {
     } else {
       console.error(`[FAIL] Case ${i + 1} mismatch:`, { cliResult, mcpResult });
     }
+  }
+  } finally {
+    await client.close();
+    await transport.close();
   }
 
   console.log("\n-------------------------------------------------------------------------");

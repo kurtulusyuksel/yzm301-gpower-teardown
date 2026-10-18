@@ -1,7 +1,8 @@
 import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
-import { calculatePairedTTest } from '../src/engine/t_paired.js';
+import { calculatePairedTTest, computePowerForN } from '../src/engine/t_paired.js';
+import assert from 'node:assert/strict';
 import { PairedTTestInput } from '../src/engine/types.js';
 
 const __filename = fileURLToPath(import.meta.url);
@@ -31,7 +32,7 @@ function parseCsv(content: string): OracleRow[] {
     const cols = lines[i].split(',');
     if (cols.length < 12) continue;
 
-    rows.append ? null : rows.push({
+    rows.push({
       category: cols[0],
       mode: cols[1] as any,
       tails: parseInt(cols[2], 10) as 1 | 2,
@@ -61,6 +62,8 @@ async function runDifferentialTests() {
 
   console.log(`Toplam Yüklenen Kâhin Vektör Sayısı: ${vectors.length}\n`);
 
+  if (vectors.length === 0) throw new Error('Referans veri seti boş.');
+  let exactMatches = 0;
   let exactNMatches = 0;
   let dfMatches = 0;
   let powerCloseMatches = 0;
@@ -81,7 +84,18 @@ async function runDifferentialTests() {
       n: vec.n_input
     };
 
-    const result = calculatePairedTTest(input);
+    // SciPy's N=2 is mathematically valid, but G*Power GUI rejects that input.
+    // Keep the reference unchanged and test the internal math plus public rejection separately.
+    let result;
+    if (input.mode === 'post-hoc' && input.n === 2) {
+      assert.throws(() => calculatePairedTTest(input), /integer in \[3, 2147483646\]/);
+      const raw = computePowerForN(2, input.tails, input.dz, input.alpha);
+      const round = (v: number) => Math.round(v * 10000) / 10000;
+      result = { n_total: 2, actual_power: round(raw.actualPower), critical: round(raw.criticalT), df: raw.df, ncp: round(raw.ncp) };
+      console.log('N=2 referansı: yalnız iç matematik testi; genel API girdiyi G*Power gibi reddeder.');
+    } else {
+      result = calculatePairedTTest(input);
+    }
 
     const nMatch = result.n_total === vec.expected_n;
     const dfMatch = result.df === vec.df;
@@ -95,7 +109,8 @@ async function runDifferentialTests() {
     if (critDiff <= 0.001) criticalCloseMatches++;
     if (ncpDiff <= 0.001) ncpCloseMatches++;
 
-    if (!nMatch || powerDiff > 0.001) {
+    if (nMatch && dfMatch && powerDiff === 0 && critDiff === 0 && ncpDiff === 0) exactMatches++;
+    if (!nMatch || !dfMatch || !Number.isFinite(powerDiff) || !Number.isFinite(critDiff) || !Number.isFinite(ncpDiff) || powerDiff > 0.001 || critDiff > 0.001 || ncpDiff > 0.001) {
       mismatches.push({
         index: idx + 1,
         mode: vec.mode,
@@ -126,13 +141,15 @@ async function runDifferentialTests() {
     console.warn(`⚠️ ${mismatches.length} vektörde uyuşmazlık tespit edildi:`);
     console.table(mismatches);
   } else {
-    console.log("🎉 BÜTÜN VEKTÖRLER (%100) G*POWER KÂHİNİ İLE TAM EŞLEŞTİ!");
+    console.log("🎉 BÜTÜN VEKTÖRLER (%100) REFERANS VERİSİYLE BELİRTİLEN TOLERANSTA UYUMLU!");
   }
 
   console.log("=========================================================================\n");
 
-  if (matchRate < 90.0) {
-    console.error(`❌ KAPI ŞARTI SAĞLANAMADI: Uyum oranı %90'ın altında (%${matchRate.toFixed(2)})!`);
+  console.log(`Dört ondalıkta bütün alanları kesin eşit vektör: ${exactMatches}/${vectors.length}`);
+  console.log("Kaynak: SciPy referansı; G*Power GUI doğrulaması değildir.");
+  if (mismatches.length > 0 || matchRate < 90.0) {
+    console.error(`❌ REFERANS DENETİMİ BAŞARISIZ: Alan uyuşmazlığı veya düşük N uyumu (%${matchRate.toFixed(2)})!`);
     process.exit(1);
   } else {
     console.log(`✅ KAPI ŞARTI BAŞARIYLA GEÇİLDİ (%${matchRate.toFixed(2)} >= %90.0)!\n`);

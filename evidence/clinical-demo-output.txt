@@ -1,0 +1,33 @@
+
+> gpower-paired-clone@1.0.0 eval
+> tsx src/agent/benchmark_eval.ts
+
+=========================================================================
+  YZM301 TEARDOWN SPRINT: 10-SORULUK KLİNİK DEĞERLENDİRME VE BENCHMARK  
+=========================================================================
+
+┌─────────┬────┬─────────────────────────────────────────────────────────┬────────────┬───────────┬─────────┬──────────────────┬───────────┬─────────────┐
+│ (index) │ id │ questionSummary                                         │ mode       │ expectedN │ actualN │ match            │ mcpTokens │ tokenSaving │
+├─────────┼────┼─────────────────────────────────────────────────────────┼────────────┼───────────┼─────────┼──────────────────┼───────────┼─────────────┤
+│ 0       │ 1  │ 'Yeni antihipertansif ilacın sistolik kan basıncına...' │ 'a-priori' │ 54        │ 54      │ '✅ TAM EŞLEŞTİ' │ 280       │ '91.9%'     │
+│ 1       │ 2  │ 'Tip 2 diyabet hastalarında 12 haftalık diyet progr...' │ 'a-priori' │ 199       │ 199     │ '✅ TAM EŞLEŞTİ' │ 278       │ '91.9%'     │
+│ 2       │ 3  │ 'Diz osteoartritinde intraartiküler enjeksiyonun ağ...' │ 'a-priori' │ 15        │ 15      │ '✅ TAM EŞLEŞTİ' │ 285       │ '91.7%'     │
+│ 3       │ 4  │ 'Kronik astım atağı geçiren 40 hastada inhaler teda...' │ 'post-hoc' │ 40        │ 40      │ '✅ TAM EŞLEŞTİ' │ 198       │ '94.3%'     │
+│ 4       │ 5  │ 'Majör depresyon hastalarında psikoterapi öncesi ve...' │ 'a-priori' │ 55        │ 55      │ '✅ TAM EŞLEŞTİ' │ 270       │ '92.2%'     │
+│ 5       │ 6  │ 'Yoğun bakımda mekanik ventilatördeki 25 hastada pr...' │ 'post-hoc' │ 25        │ 25      │ '✅ TAM EŞLEŞTİ' │ 188       │ '94.6%'     │
+│ 6       │ 7  │ 'Migren profilaksisinde yeni monoklonal antikor ted...' │ 'a-priori' │ 31        │ 31      │ '✅ TAM EŞLEŞTİ' │ 280       │ '91.9%'     │
+│ 7       │ 8  │ 'Kardiyak rehabilitasyon programına katılan 60 hast...' │ 'post-hoc' │ 60        │ 60      │ '✅ TAM EŞLEŞTİ' │ 196       │ '94.3%'     │
+│ 8       │ 9  │ 'Dermatoloji kliniğinde sedef hastalığı PASI skoru ...' │ 'a-priori' │ 24        │ 24      │ '✅ TAM EŞLEŞTİ' │ 266       │ '92.3%'     │
+│ 9       │ 10 │ 'Katarakt cerrahisi öncesi ve sonrası görme keskinl...' │ 'a-priori' │ 21        │ 21      │ '✅ TAM EŞLEŞTİ' │ 265       │ '92.3%'     │
+└─────────┴────┴─────────────────────────────────────────────────────────┴────────────┴───────────┴─────────┴──────────────────┴───────────┴─────────────┘
+
+-------------------------------------------------------------------------
+🎯 Doğru Seçim ve Hesaplama Oranı: 10/10 (%100.0)
+-------------------------------------------------------------------------
+📊 VARSAYIMSAL TOKEN VE MALİYET KARŞILAŞTIRMASI (10 Soru Toplamı):
+• Yerel Demo Tahmini Token : 2.506 tokens
+• GUI (Ekran Görüntüsü)   : 34.500 tokens
+• Toplam Token Tasarrufu   : %92.74 TASARRUF!
+• Ortalama Yanıt Süresi    : Yerel motor = 2.0ms | GUI = 4500ms (GUI süresi varsayımdır)
+=========================================================================
+

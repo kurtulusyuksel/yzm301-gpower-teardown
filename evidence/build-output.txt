@@ -1,0 +1,4 @@
+
+> gpower-paired-clone@1.0.0 build
+> tsc
+

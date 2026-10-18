@@ -151,7 +151,12 @@ export async function runBenchmark() {
     const mcpDuration = Date.now() - startMcp;
 
     const actualN = agentResp.toolCallLog.rawResult.n_total;
-    const isCorrect = actualN === c.expectedN;
+    const parsed = agentResp.extractedParameters;
+    const isCorrect = actualN === c.expectedN &&
+      parsed.test === c.expectedFamily && parsed.mode === c.expectedMode &&
+      parsed.tails === c.expectedTails && parsed.dz === c.expectedDz &&
+      parsed.alpha === c.expectedAlpha &&
+      (c.expectedMode === 'post-hoc' ? parsed.n === c.expectedN : parsed.power === c.expectedTargetPower);
     if (isCorrect) correctCount++;
 
     // Simulated GUI interaction:
@@ -187,12 +192,13 @@ export async function runBenchmark() {
   console.log("\n-------------------------------------------------------------------------");
   console.log(`🎯 Doğru Seçim ve Hesaplama Oranı: ${correctCount}/${EVALUATION_SET.length} (%${((correctCount / EVALUATION_SET.length) * 100).toFixed(1)})`);
   console.log("-------------------------------------------------------------------------");
-  console.log("📊 ÖLÇÜLMÜŞ TOKEN VE MALİYET KARŞILAŞTIRMASI (10 Soru Toplamı):");
-  console.log(`• MCP Katmanı Toplam Token : ${totalMcpTokens.toLocaleString()} tokens`);
+  console.log("📊 VARSAYIMSAL TOKEN VE MALİYET KARŞILAŞTIRMASI (10 Soru Toplamı):");
+  console.log(`• Yerel Demo Tahmini Token : ${totalMcpTokens.toLocaleString()} tokens`);
   console.log(`• GUI (Ekran Görüntüsü)   : ${totalGuiTokens.toLocaleString()} tokens`);
   console.log(`• Toplam Token Tasarrufu   : %${(((totalGuiTokens - totalMcpTokens) / totalGuiTokens) * 100).toFixed(2)} TASARRUF!`);
-  console.log(`• Ortalama Yanıt Süresi    : MCP = ${(totalMcpTimeMs / 10).toFixed(1)}ms | GUI = ${(totalGuiTimeMs / 10).toFixed(0)}ms (99.8% daha hızlı)`);
+  console.log(`• Ortalama Yanıt Süresi    : Yerel motor = ${(totalMcpTimeMs / 10).toFixed(1)}ms | GUI = ${(totalGuiTimeMs / 10).toFixed(0)}ms (GUI süresi varsayımdır)`);
   console.log("=========================================================================\n");
+  if (correctCount !== EVALUATION_SET.length) process.exitCode = 1;
 }
 
 if (import.meta.url === `file://${process.argv[1]}` || process.argv.length >= 2) {

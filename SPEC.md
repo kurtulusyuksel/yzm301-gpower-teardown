@@ -1,145 +1,58 @@
-# SPEC.md: G*Power Paired t-Test (t-paired) Kabul Kriterleri ve Şartnamesi
+﻿# SPEC — Eşleştirilmiş ortalama t-testi
 
-Bu belge, YZM301 Teardown Sprint kapsamında G*Power 3.1.9.7 yazılımının **"Difference between two dependent means (matched pairs)"** test ailesinin temiz oda (clean-room) ortamında yeniden yazımı için belirlenen kabul kriterlerini ve sözleşmelerini Gherkin formatında tanımlar.
+Sürüm: 18 Ekim 2026. Hedef: G*Power 3.1.9.7, t tests → Means: Difference between two dependent means (matched pairs).
 
----
+## Kapsam ve anlam
 
-## Özellik (Feature): Eşleştirilmiş Ortalama t-Testi Hesaplama Motoru (t-paired)
+Aynı hastanın tedavi öncesi ve sonrası tansiyonu karşılaştırılır. N hasta/eşleşmiş çift sayısıdır; iki ölçüm alınması N'yi ikiye katlamaz. Bu araç ham tansiyon verisinden p-değeri hesaplayan bir t-testi uygulaması değildir; planlama için gerekli örneklem ve mevcut örneklemin gücünü hesaplar. Kullanıcı farkların ortalaması ve standart sapmasından dz sağlar.
 
-Klinik araştırmacılar ve hekimler için tedavi öncesi-sonrası veya eşleştirilmiş çiftler üzerinde istatistiksel güç ve örneklem büyüklüğü hesabı yapılmalıdır.
+İşlevsel sözleşme istatistiksel yeniden yazımdır. Orijinal programın kaynak kodunu veya tam iç algoritmasını tarif ettiğimiz iddia edilmez. Kanıt kimlikleri LEDGER.md içindedir.
 
----
+## Sayısal sözleşme
 
-### Senaryo 1: Standart İki Yönlü A Priori Örneklem Büyüklüğü Hesabı (Orta Etki)
+- df = N - 1; delta = dz * sqrt(N).
+- Tek yön: critical = t_quantile(1-alpha, df); power = 1 - nct_cdf(critical, df, delta).
+- Çift yön: critical = t_quantile(1-alpha/2, df); power = 1 - nct_cdf(critical, df, delta) + nct_cdf(-critical, df, delta).
+- N ve df tamsayı; diğer JSON alanları dört ondalığa yuvarlanır. GUI karşılaştırması da GUI'nin ham değerini dört ondalığa yuvarlar. SciPy ek doğrulaması ayrıca 0.001 tolerans kullanır.
+- A-priori hedef: N >= 2 üzerinde hedef gücü sağlayan en küçük tamsayı. Bu alt sınır post-hoc giriş sınırından ayrıdır: GUI-12 a-priori N=2 üretir. GUI-02/03/04 standart örnekte eşiği doğrular; orijinal programın arama sırası bu sonuçtan çıkarılamaz.
+
+## Kabul senaryoları
+
+| Kimlik | Girdi | Kabul kriteri | Kanıt / test |
+|---|---|---|---|
+| AC-01 | a-priori, tails=2, dz=0.5, alpha=0.05, power=0.95 | N=54, df=53, power=0.9502, critical=2.0057, ncp=3.6742 | GUI-02; gpower_gui.test.ts |
+| AC-02 | a-priori, tails=1, dz=0.5, alpha=0.05, power=0.95 | N=45, df=44, power=0.9512, critical=1.6802, ncp=3.3541 | GUI-01 (arayüz metni kaydı); gpower_gui.test.ts |
+| AC-03 | post-hoc, tails=2, dz=0.5, alpha=0.05, n=54 | AC-01 ile aynı sayısal alanlar | GUI-03; gpower_gui.test.ts |
+| AC-04 | post-hoc, tails=2, dz=0.5, alpha=0.05, n=53 | power=0.9465 < 0.95, df=52, critical=2.0066, ncp=3.6401 | GUI-04; gpower_gui.test.ts |
+| AC-05 | post-hoc, tails=2, dz=0.5, alpha=0.05, n=2 | JSON hata; CLI çıkış kodu 1 | GUI-05; gpower_gui.test.ts |
+| AC-06 | post-hoc, tails=2, dz=0.5, alpha=0.05, n=3 | df=2, power=0.0841, critical=4.3027, ncp=0.8660 | GUI-06; gpower_gui.test.ts |
+| AC-07 | post-hoc, tails=2, alpha=0.05, n=3, dz=0.00001 veya 0.000005 | Kabul; power=0.0500, df=2; alt sınır bu moda genellenmez | GUI-07/08; gpower_gui.test.ts |
+| AC-08 | Aynı desteklenen girdiler CLI ve MCP aracına verilir | Ayrıştırılmış beş JSON sonuç alanı eşittir | mcp_equivalence.test.ts; gerçek stdio sunucusu |
+| AC-09 | tails=3 veya alpha=1.5 | JSON hata ve sıfırdan farklı CLI çıkışı | Yerel API sözleşmesi; G*Power gözlemi diye etiketlenmez |
+| AC-10 | a-priori, tails=2, dz=0.000005, alpha=0.05, power=0.95 | Etki büyüklüğü hatası; CLI çıkış kodu 1 | GUI-09; gpower_gui.test.ts |
+| AC-11 | a-priori, tails=2, dz=0.00001, alpha=0.05, power=0.95 | G*Power N=129940148212 üretir; yerel motor arama sınırı hatası verir | GUI-10; bilinen uyumsuzluk, eşleşme sayılmaz |
+| AC-12 | a-priori, tails=2, dz=100, alpha=0.05, power=0.95 | Etki büyüklüğü aralık hatası; CLI exit=1 | GUI-11 |
+| AC-13 | a-priori, tails=2, dz=20, alpha=0.05, power=0.95 | N=2, df=1, power=0.9735, critical=12.7062, ncp=28.2843 | GUI-12; post-hoc alt sınırı a-priori aramaya uygulanmaz |
+
 ```gherkin
-Özellik: A Priori Örneklem Büyüklüğü (N) Hesabı
-  Senaryo: İki yönlü testte orta etki büyüklüğü ile örneklem arama
-    Diyelim ki test tipi "t-paired"
-    Ve analiz modu "a-priori"
-    Ve hipotez yönü kuyruk sayısı (tails) 2
-    Ve etki büyüklüğü (dz) 0.50
-    Ve tip I hata payı (alpha) 0.05
-    Ve hedeflenen güç (power) 0.95
-    Hesaplama motoru çalıştırıldığında
-    O zaman toplam eşleşmiş çift sayısı (n_total) 54 olmalı
-    Ve gerçekleşen güç (actual_power) 0.9502 olmalı
-    Ve kritik t değeri (critical) 2.0057 olmalı
-    Ve serbestlik derecesi (df) 53 olmalı
-    Ve merkezi olmayanlık parametresi (ncp) 3.6742 olmalı
+Feature: Önce ve sonra tansiyon için örneklem planlama
+  Scenario: Standart çift yönlü hesap
+    Given dz=0.5, alpha=0.05, tails=2 ve hedef güç=0.95
+    When a-priori CLI hesabı çalıştırılır
+    Then toplam hasta sayısı 54 ve df 53 olmalı
+    And gerçekleşen güç dört ondalıkta 0.9502 olmalı
+    And 53 hastanın gücü 0.95 altında kalmalı
 ```
 
----
+## Giriş ve arayüz sözleşmesi
 
-### Senaryo 2: Tek Yönlü A Priori Örneklem Büyüklüğü Hesabı
-```gherkin
-Özellik: Tek Yönlü Yönelimli Hipotez Testi
-  Senaryo: İyileşme yönünde tek yönlü hipotezde örneklem hesabı
-    Diyelim ki test tipi "t-paired"
-    Ve analiz modu "a-priori"
-    Ve kuyruk sayısı (tails) 1
-    Ve etki büyüklüğü (dz) 0.50
-    Ve tip I hata payı (alpha) 0.05
-    Ve hedeflenen güç (power) 0.95
-    Hesaplama motoru çalıştırıldığında
-    O zaman toplam çift sayısı (n_total) 45 olmalı
-    Ve gerçekleşen güç (actual_power) 0.9512 olmalı
-    Ve kritik t değeri (critical) 1.6802 olmalı
-    Ve serbestlik derecesi (df) 44 olmalı
-    Ve merkezi olmayanlık parametresi (ncp) 3.3541 olmalı
-```
+CLI: `gpower-clone --test t-paired --mode a-priori --tails 2 --d 0.5 --alpha 0.05 --power 0.95`.
+Başarı stdout üzerinde tek satır JSON ve exit=0; hata JSON ve exit=1. MCP aracı `calculate_paired_power`; hesap mantığı tek ortak motorda tutulur.
 
----
+Post-hoc sözleşmesi: pozitif sonlu dz; N tamsayı ve [3, 2147483646] aralığında. Alt sınır ve üst sınır metni GUI-05'te gözlenmiştir; üst sınırdaki sayısal doğruluk bu küçük test kümesiyle kanıtlanmaz. Alpha (0,1), tails {1,2}.
 
-### Senaryo 3: Post Hoc Gerçekleşen Güç Hesabı
-```gherkin
-Özellik: Gerçekleşen Güç (Achieved Power) Hesabı
-  Senaryo: Mevcut denek sayısı ve etki büyüklüğü ile ulaşılan gücü bulma
-    Diyelim ki test tipi "t-paired"
-    Ve analiz modu "post-hoc"
-    Ve kuyruk sayısı (tails) 2
-    Ve etki büyüklüğü (dz) 0.50
-    Ve tip I hata payı (alpha) 0.05
-    Ve toplam çift sayısı (n) 54
-    Hesaplama motoru çalıştırıldığında
-    O zaman gerçekleşen güç (actual_power) 0.9502 olmalı
-    Ve kritik t değeri (critical) 2.0057 olmalı
-    Ve serbestlik derecesi (df) 53 olmalı
-    Ve merkezi olmayanlık parametresi (ncp) 3.6742 olmalı
-```
+A-priori etki aralığı: 0.00001 <= dz <= 20; GUI-09 eşik altını reddeder, GUI-10 alt eşiği, GUI-12 üst eşiği kabul eder. GUI-11 dz=100 için aralık hatası verir. A-priori N araması 2'den başlar; post-hoc N>=3 kontrolü bu aramaya taşınmaz. Yerel arama üst sınırı 1.000.000 çift ve hedef güç sözleşmesi alpha < power < 1 olarak kalır. GUI-10 orijinal programın bu arama sınırını aştığını kanıtlar; bu nedenle tüm uçlarda eşdeğerlik iddia edilmez.
 
----
+## Temiz oda ve bonuslar
 
-### Senaryo 4: Sınır Değeri - Çok Küçük Etki Büyüklüğü (Extreme Boundary)
-```gherkin
-Özellik: Ekstrem Sınır Değerleri
-  Senaryo: dz = 0.05 gibi çok küçük etki büyüklüğünde iterasyon
-    Diyelim ki test tipi "t-paired"
-    Ve analiz modu "a-priori"
-    Ve kuyruk sayısı 2
-    Ve etki büyüklüğü (dz) 0.05
-    Ve alpha 0.05
-    Ve hedef güç 0.80
-    Hesaplama motoru çalıştırıldığında
-    O zaman arama motoru taşma yapmadan minimal N tamsayısına ulaşmalı
-    Ve n_total 3142 olmalı
-    Ve actual_power >= 0.80 olmalı
-```
-
----
-
-### Senaryo 5: [REA] Kanıtlı Sınır Değeri Kısıtı (dz <= 0.00001)
-```gherkin
-Özellik: G*Power Binary Kısıt Denetimi
-  Senaryo: Binary'de tespit edilen 0.00001 altındaki etki büyüklüğünün reddi
-    Diyelim ki etki büyüklüğü (dz) 0.00001 veya daha küçük girildi
-    Hesaplama motoru çalıştırıldığında
-    O zaman motor hata fırlatmalı: "Invalid effect size dz. Effect size must be greater than 0.00001."
-    Ve CLI sıfırdan farklı çıkış kodu (exit code 1) döndürmeli
-```
-
----
-
-### Senaryo 6: Hatalı Girdi Parametreleri Denetimi
-```gherkin
-Özellik: Giriş Doğrulama ve Güvenlik
-  Senaryo: Geçersiz kuyruk veya alpha değeri girilmesi
-    Diyelim ki kuyruk sayısı (tails) 3 veya alpha 1.5 girildi
-    Hesaplama motoru çalıştırıldığında
-    O zaman JSON hata çıktısı üretilmeli: {"error": "<açıklama>"}
-    Ve çıkış kodu 1 olmalı
-```
-
----
-
-### Senaryo 7: CLI ve JSON Çıktı Sözleşmesi
-```gherkin
-Özellik: CLI Entegrasyon Sözleşmesi
-  Senaryo: Standart CLI argümanlarıyla tek satır JSON çıktısı alma
-    Diyelim ki komut satırından `gpower-clone --test t-paired --mode a-priori --tails 2 --d 0.5 --alpha 0.05 --power 0.95` çalıştırıldı
-    O zaman standart çıktı (stdout) üzerinde tam olarak tek satır JSON basılmalı
-    Ve çıkış kodu 0 olmalı
-    Ve format: {"n_total":54,"actual_power":0.9502,"critical":2.0057,"df":53,"ncp":3.6742}
-```
-
----
-
-### Senaryo 8: MCP ve Motor Eşdeğerliği (Thin Adapter)
-```gherkin
-Özellik: DRY ve İnce Adaptör Mimarisi
-  Senaryo: MCP katmanının motor mantığını çoğaltmadan aynı çıktıyı üretmesi
-    Diyelim ki aynı parametreler hem CLI hem MCP `calculate_paired_power` aracına verildi
-    O zaman iki çıktının n_total, actual_power, critical, df ve ncp alanları byte-for-byte özdeş olmalı
-```
-
----
-
-### Senaryo 9: Doğal Dil Klinik AI Ajanı
-```gherkin
-Özellik: Hekim Diliyle Doğal Dil Arayüzü
-  Senaryo: Türkçe klinik soru sorulduğunda motorun çağrılması
-    Diyelim ki hekim "Tansiyon ilacı denemesinde öncesi ve sonrası fark için dz=0.5, alfa=0.05, güç=0.95 için kaç hasta gerekir?" diye sordu
-    O zaman ajan test ailesini "t-paired" olarak seçmeli
-    Ve parametreleri (tails=2, dz=0.5, alpha=0.05, power=0.95) doğru çıkarmalı
-    Ve hesaplamayı kendisi uydurmadan (halüsinasyon yapmadan) MCP motorunu çağırarak N=54 olarak hekime sunmalı
-    Ve harcanan token sayısı GUI ekran görüntüsü yöntemine göre en az %80 daha düşük olmalı
-```
+Temiz oda için süreç ve sınırlamalar CLEANROOM.md içindedir. Tarihsel bağımsız oturum kaydı yoktur. Mevcut Türkçe kurallı demo LLM ajanı değildir. Gerçek AI ajanı ve gerçek token maliyet ölçümü bonus hedefidir; kabul edilmiş özellik olarak sunulmaz.

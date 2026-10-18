@@ -1,0 +1,9 @@
+{
+  "result": {
+    "path": "C:\\Users\\kurtulus\\Downloads\\GPowerWin_3.1.9.7\\GPower_3.1.9.7_143\\GPowerNT.exe",
+    "format": "pe",
+    "kind": "executable",
+    "sha256": "c63e6a133eb6372932f810c08cc33dc35a06d1ddb658f897bd6c34a754efc812",
+    "architecture": "x86"
+  }
+}

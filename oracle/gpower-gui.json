@@ -1,0 +1,255 @@
+[
+  {
+    "id": "GUI-01",
+    "capturedAt": "2026-10-18T18:32:51.662Z",
+    "source": "G*Power 3.1.9.7 Windows GUI",
+    "evidence": "evidence/gui-01-one-tail.json",
+    "evidence_sha256": "f165833e8fd32878eb19252e16f252248ef10d5b9621e43d0141d2b1a3857a1c",
+    "input": {
+      "test": "t-paired",
+      "mode": "a-priori",
+      "tails": 1,
+      "dz": 0.5,
+      "alpha": 0.05,
+      "power": 0.95
+    },
+    "expected": {
+      "n_total": 45,
+      "actual_power": 0.95124,
+      "critical": 1.68023,
+      "df": 44,
+      "ncp": 3.354102
+    }
+  },
+  {
+    "id": "GUI-02",
+    "capturedAt": "2026-10-18T18:35:00.094Z",
+    "source": "G*Power 3.1.9.7 Windows GUI",
+    "evidence": "evidence/gui-02-two-tail.json",
+    "evidence_sha256": "1fddec2f03025477c201d6f47c1911bbb6c9d488581f04873ae1de4fb9298027",
+    "input": {
+      "test": "t-paired",
+      "mode": "a-priori",
+      "tails": 2,
+      "dz": 0.5,
+      "alpha": 0.05,
+      "power": 0.95
+    },
+    "expected": {
+      "n_total": 54,
+      "actual_power": 0.950212,
+      "critical": 2.005746,
+      "df": 53,
+      "ncp": 3.6742346
+    }
+  },
+  {
+    "id": "GUI-03",
+    "capturedAt": "2026-10-18T18:37:34.615Z",
+    "source": "G*Power 3.1.9.7 Windows GUI",
+    "evidence": "evidence/gui-03-posthoc54.json",
+    "evidence_sha256": "dda010633354fd4e8a15a4efe11afbf3dc22ab98250b3a8c910df46a107cf599",
+    "input": {
+      "test": "t-paired",
+      "mode": "post-hoc",
+      "tails": 2,
+      "dz": 0.5,
+      "alpha": 0.05,
+      "n": 54
+    },
+    "expected": {
+      "n_total": 54,
+      "actual_power": 0.950212,
+      "critical": 2.005746,
+      "df": 53,
+      "ncp": 3.6742346
+    }
+  },
+  {
+    "id": "GUI-04",
+    "capturedAt": "2026-10-18T18:38:36.052Z",
+    "source": "G*Power 3.1.9.7 Windows GUI",
+    "evidence": "evidence/gui-04-posthoc53.json",
+    "evidence_sha256": "3332b7f47b3f3a7a3c5c2f10ff8cd0192d07d6a47101381bcdeaa3493c081a85",
+    "input": {
+      "test": "t-paired",
+      "mode": "post-hoc",
+      "tails": 2,
+      "dz": 0.5,
+      "alpha": 0.05,
+      "n": 53
+    },
+    "expected": {
+      "n_total": 53,
+      "actual_power": 0.9465273,
+      "critical": 2.0066468,
+      "df": 52,
+      "ncp": 3.6400549
+    }
+  },
+  {
+    "id": "GUI-05",
+    "capturedAt": "2026-10-18T18:39:31.357Z",
+    "source": "G*Power 3.1.9.7 Windows GUI",
+    "evidence": "evidence/gui-05-min-n-error.json",
+    "evidence_sha256": "85adbbdd1920c0fd742177d3716f45226f31ba3bc82d5b011db85dbce8a5fd9d",
+    "input": {
+      "test": "t-paired",
+      "mode": "post-hoc",
+      "tails": 2,
+      "dz": 0.5,
+      "alpha": 0.05,
+      "n": 2
+    },
+    "expected": {
+      "error": "Total sample size is outside the admissible range (3, 2147483646)"
+    }
+  },
+  {
+    "id": "GUI-06",
+    "capturedAt": "2026-10-18T18:41:07.823Z",
+    "source": "G*Power 3.1.9.7 Windows GUI",
+    "evidence": "evidence/gui-06-posthoc3.json",
+    "evidence_sha256": "c46ff9967a6c27eef6243f2db809b113ea9ab6118bea692a112227f2d4bf9b29",
+    "input": {
+      "test": "t-paired",
+      "mode": "post-hoc",
+      "tails": 2,
+      "dz": 0.5,
+      "alpha": 0.05,
+      "n": 3
+    },
+    "expected": {
+      "n_total": 3,
+      "actual_power": 0.0841071,
+      "critical": 4.3026527,
+      "df": 2,
+      "ncp": 0.8660254
+    }
+  },
+  {
+    "id": "GUI-07",
+    "capturedAt": "2026-10-18T18:41:50.289Z",
+    "source": "G*Power 3.1.9.7 Windows GUI",
+    "evidence": "evidence/gui-07-dz-limit.json",
+    "evidence_sha256": "27fd4fdd70c9867c70ce9ad4c71126985ccbbdf6c06b6da9a7ab5a6d0f83dac1",
+    "input": {
+      "test": "t-paired",
+      "mode": "post-hoc",
+      "tails": 2,
+      "dz": 0.00001,
+      "alpha": 0.05,
+      "n": 3
+    },
+    "expected": {
+      "n_total": 3,
+      "actual_power": 0.05,
+      "critical": 4.3026527,
+      "df": 2,
+      "ncp": 0.00001732051
+    }
+  },
+  {
+    "id": "GUI-08",
+    "capturedAt": "2026-10-18T18:42:32.244Z",
+    "source": "G*Power 3.1.9.7 Windows GUI",
+    "evidence": "evidence/gui-08-dz-below.json",
+    "evidence_sha256": "e11e5c250f0388973b34eaa992dd771ed7de562119634107264d8211a8f2feb8",
+    "input": {
+      "test": "t-paired",
+      "mode": "post-hoc",
+      "tails": 2,
+      "dz": 0.000005,
+      "alpha": 0.05,
+      "n": 3
+    },
+    "expected": {
+      "n_total": 3,
+      "actual_power": 0.05,
+      "critical": 4.3026527,
+      "df": 2,
+      "ncp": 0.000008660254
+    }
+  },
+  {
+    "id": "GUI-09",
+    "capturedAt": "2026-10-18T18:49:07.599Z",
+    "source": "G*Power 3.1.9.7 Windows GUI",
+    "evidence": "evidence/gui-09-apriori-dz-error.json",
+    "evidence_sha256": "0dcdb38a2c7aaebda52cab5d641bbf4ba4c0a29ed745019012f1e30464a07066",
+    "input": {
+      "test": "t-paired",
+      "mode": "a-priori",
+      "tails": 2,
+      "dz": 0.000005,
+      "alpha": 0.05,
+      "power": 0.95
+    },
+    "expected": {
+      "error": "In an a priori analysis, the absolute value of the effect size be greater than 0.00001."
+    }
+  },
+  {
+    "id": "GUI-10",
+    "capturedAt": "2026-10-18T18:50:17.224Z",
+    "source": "G*Power 3.1.9.7 Windows GUI",
+    "evidence": "evidence/gui-10-apriori-exact-limit.json",
+    "evidence_sha256": "79f32593a6aa52fd0911343e50a89b9c1e77a86d0bb2ad7c686a783ed8b1fd81",
+    "input": {
+      "test": "t-paired",
+      "mode": "a-priori",
+      "tails": 2,
+      "dz": 0.00001,
+      "alpha": 0.05,
+      "power": 0.95
+    },
+    "expected": {
+      "n_total": 129940148212,
+      "actual_power": 0.9500029,
+      "critical": 1.959964,
+      "df": 129940148211,
+      "ncp": 3.6047212
+    },
+    "limitation": "Original G*Power result exceeds the local 1,000,000-pair search limit; retained as a known incompatibility, not a match."
+  },
+  {
+    "id": "GUI-11",
+    "capturedAt": "2026-10-18T19:12:55.622Z",
+    "source": "G*Power 3.1.9.7 Windows GUI",
+    "evidence": "evidence/gui-11-dz-upper-error.json",
+    "evidence_sha256": "f57535c0fc8a97410f77d20a583c44a71013b978663d8d58dc2fc1449bce3966",
+    "input": {
+      "test": "t-paired",
+      "mode": "a-priori",
+      "tails": 2,
+      "dz": 100,
+      "alpha": 0.05,
+      "power": 0.95
+    },
+    "expected": {
+      "error": "Effect size d is outside the admissible range (-20, 20)."
+    }
+  },
+  {
+    "id": "GUI-12",
+    "capturedAt": "2026-10-18T19:14:04.036Z",
+    "source": "G*Power 3.1.9.7 Windows GUI",
+    "evidence": "evidence/gui-12-apriori-minimum.json",
+    "evidence_sha256": "9942c4bc006e84f99db06ee49713d0b77ba492d339555cb85921096467991b7c",
+    "input": {
+      "test": "t-paired",
+      "mode": "a-priori",
+      "tails": 2,
+      "dz": 20,
+      "alpha": 0.05,
+      "power": 0.95
+    },
+    "expected": {
+      "n_total": 2,
+      "actual_power": 0.973524,
+      "critical": 12.7062047,
+      "df": 1,
+      "ncp": 28.2842712
+    }
+  }
+]

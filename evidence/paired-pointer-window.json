@@ -1,0 +1,484 @@
+{
+  "method": "PE section mapping and little-endian uint32 data reads; no instruction decoding",
+  "subject_sha256": "c63e6a133eb6372932f810c08cc33dc35a06d1ddb658f897bd6c34a754efc812",
+  "image_base": "0x400000",
+  "section": ".rdata",
+  "start_address": "0x5cac80",
+  "file_offset": "0x1c9c80",
+  "byte_length": 256,
+  "anchor": "REA paired descriptor incoming data reference at 0x5cacd8",
+  "limitation": "Adjacency alone does not prove a virtual table boundary or callback semantics.",
+  "pointers": [
+    {
+      "address": "0x5cac80",
+      "file_offset": "0x1c9c80",
+      "value": "0x497c90"
+    },
+    {
+      "address": "0x5cac84",
+      "file_offset": "0x1c9c84",
+      "value": "0x497cd0"
+    },
+    {
+      "address": "0x5cac88",
+      "file_offset": "0x1c9c88",
+      "value": "0x496670"
+    },
+    {
+      "address": "0x5cac8c",
+      "file_offset": "0x1c9c8c",
+      "value": "0x4966e0"
+    },
+    {
+      "address": "0x5cac90",
+      "file_offset": "0x1c9c90",
+      "value": "0x4bdee0"
+    },
+    {
+      "address": "0x5cac94",
+      "file_offset": "0x1c9c94",
+      "value": "0x4d38b0"
+    },
+    {
+      "address": "0x5cac98",
+      "file_offset": "0x1c9c98",
+      "value": "0x4960b0"
+    },
+    {
+      "address": "0x5cac9c",
+      "file_offset": "0x1c9c9c",
+      "value": "0x496130"
+    },
+    {
+      "address": "0x5caca0",
+      "file_offset": "0x1c9ca0",
+      "value": "0x496570"
+    },
+    {
+      "address": "0x5caca4",
+      "file_offset": "0x1c9ca4",
+      "value": "0x4965e0"
+    },
+    {
+      "address": "0x5caca8",
+      "file_offset": "0x1c9ca8",
+      "value": "0x496aa0"
+    },
+    {
+      "address": "0x5cacac",
+      "file_offset": "0x1c9cac",
+      "value": "0x4dc0b0"
+    },
+    {
+      "address": "0x5cacb0",
+      "file_offset": "0x1c9cb0",
+      "value": "0x4dbdc0"
+    },
+    {
+      "address": "0x5cacb4",
+      "file_offset": "0x1c9cb4",
+      "value": "0x4dc130"
+    },
+    {
+      "address": "0x5cacb8",
+      "file_offset": "0x1c9cb8",
+      "value": "0x497660"
+    },
+    {
+      "address": "0x5cacbc",
+      "file_offset": "0x1c9cbc",
+      "value": "0x497660"
+    },
+    {
+      "address": "0x5cacc0",
+      "file_offset": "0x1c9cc0",
+      "value": "0x497660"
+    },
+    {
+      "address": "0x5cacc4",
+      "file_offset": "0x1c9cc4",
+      "value": "0x49a210"
+    },
+    {
+      "address": "0x5cacc8",
+      "file_offset": "0x1c9cc8",
+      "value": "0x4bae00"
+    },
+    {
+      "address": "0x5caccc",
+      "file_offset": "0x1c9ccc",
+      "value": "0x496bc0"
+    },
+    {
+      "address": "0x5cacd0",
+      "file_offset": "0x1c9cd0",
+      "value": "0x496d00"
+    },
+    {
+      "address": "0x5cacd4",
+      "file_offset": "0x1c9cd4",
+      "value": "0x496a20"
+    },
+    {
+      "address": "0x5cacd8",
+      "file_offset": "0x1c9cd8",
+      "value": "0x4dcf10"
+    },
+    {
+      "address": "0x5cacdc",
+      "file_offset": "0x1c9cdc",
+      "value": "0x4d2a30"
+    },
+    {
+      "address": "0x5cace0",
+      "file_offset": "0x1c9ce0",
+      "value": "0x47d270"
+    },
+    {
+      "address": "0x5cace4",
+      "file_offset": "0x1c9ce4",
+      "value": "0x4596f0"
+    },
+    {
+      "address": "0x5cace8",
+      "file_offset": "0x1c9ce8",
+      "value": "0x497220"
+    },
+    {
+      "address": "0x5cacec",
+      "file_offset": "0x1c9cec",
+      "value": "0x497220"
+    },
+    {
+      "address": "0x5cacf0",
+      "file_offset": "0x1c9cf0",
+      "value": "0x497220"
+    },
+    {
+      "address": "0x5cacf4",
+      "file_offset": "0x1c9cf4",
+      "value": "0x4596f0"
+    },
+    {
+      "address": "0x5cacf8",
+      "file_offset": "0x1c9cf8",
+      "value": "0x4596f0"
+    },
+    {
+      "address": "0x5cacfc",
+      "file_offset": "0x1c9cfc",
+      "value": "0x4d2830"
+    },
+    {
+      "address": "0x5cad00",
+      "file_offset": "0x1c9d00",
+      "value": "0x4d2a20"
+    },
+    {
+      "address": "0x5cad04",
+      "file_offset": "0x1c9d04",
+      "value": "0x4d2950"
+    },
+    {
+      "address": "0x5cad08",
+      "file_offset": "0x1c9d08",
+      "value": "0x40a5c0"
+    },
+    {
+      "address": "0x5cad0c",
+      "file_offset": "0x1c9d0c",
+      "value": "0x4d2b00"
+    },
+    {
+      "address": "0x5cad10",
+      "file_offset": "0x1c9d10",
+      "value": "0x497680"
+    },
+    {
+      "address": "0x5cad14",
+      "file_offset": "0x1c9d14",
+      "value": "0x4971c0"
+    },
+    {
+      "address": "0x5cad18",
+      "file_offset": "0x1c9d18",
+      "value": "0x4dc230"
+    },
+    {
+      "address": "0x5cad1c",
+      "file_offset": "0x1c9d1c",
+      "value": "0x498780"
+    },
+    {
+      "address": "0x5cad20",
+      "file_offset": "0x1c9d20",
+      "value": "0x488e70"
+    },
+    {
+      "address": "0x5cad24",
+      "file_offset": "0x1c9d24",
+      "value": "0x4dcd60"
+    },
+    {
+      "address": "0x5cad28",
+      "file_offset": "0x1c9d28",
+      "value": "0x4dc2a0"
+    },
+    {
+      "address": "0x5cad2c",
+      "file_offset": "0x1c9d2c",
+      "value": "0x4dace0"
+    },
+    {
+      "address": "0x5cad30",
+      "file_offset": "0x1c9d30",
+      "value": "0x4db730"
+    },
+    {
+      "address": "0x5cad34",
+      "file_offset": "0x1c9d34",
+      "value": "0x489720"
+    },
+    {
+      "address": "0x5cad38",
+      "file_offset": "0x1c9d38",
+      "value": "0x48c870"
+    },
+    {
+      "address": "0x5cad3c",
+      "file_offset": "0x1c9d3c",
+      "value": "0x48c110"
+    },
+    {
+      "address": "0x5cad40",
+      "file_offset": "0x1c9d40",
+      "value": "0x4858c0"
+    },
+    {
+      "address": "0x5cad44",
+      "file_offset": "0x1c9d44",
+      "value": "0x486630"
+    },
+    {
+      "address": "0x5cad48",
+      "file_offset": "0x1c9d48",
+      "value": "0x485830"
+    },
+    {
+      "address": "0x5cad4c",
+      "file_offset": "0x1c9d4c",
+      "value": "0x4971d0"
+    },
+    {
+      "address": "0x5cad50",
+      "file_offset": "0x1c9d50",
+      "value": "0x497290"
+    },
+    {
+      "address": "0x5cad54",
+      "file_offset": "0x1c9d54",
+      "value": "0x497760"
+    },
+    {
+      "address": "0x5cad58",
+      "file_offset": "0x1c9d58",
+      "value": "0x4972a0"
+    },
+    {
+      "address": "0x5cad5c",
+      "file_offset": "0x1c9d5c",
+      "value": "0x4d9310"
+    },
+    {
+      "address": "0x5cad60",
+      "file_offset": "0x1c9d60",
+      "value": "0x4886f0"
+    },
+    {
+      "address": "0x5cad64",
+      "file_offset": "0x1c9d64",
+      "value": "0x4db990"
+    },
+    {
+      "address": "0x5cad68",
+      "file_offset": "0x1c9d68",
+      "value": "0x487460"
+    },
+    {
+      "address": "0x5cad6c",
+      "file_offset": "0x1c9d6c",
+      "value": "0x488010"
+    },
+    {
+      "address": "0x5cad70",
+      "file_offset": "0x1c9d70",
+      "value": "0x4bde30"
+    },
+    {
+      "address": "0x5cad74",
+      "file_offset": "0x1c9d74",
+      "value": "0x4d37f0"
+    },
+    {
+      "address": "0x5cad78",
+      "file_offset": "0x1c9d78",
+      "value": "0x4d3830"
+    },
+    {
+      "address": "0x5cad7c",
+      "file_offset": "0x1c9d7c",
+      "value": "0x4968d0"
+    }
+  ],
+  "rtti_candidate": {
+    "observed_ascii_name": ".?AVPowerTPairedMean@@",
+    "name_address": "0x60ce90",
+    "type_descriptor_candidate": "0x60ce88",
+    "chains": [
+      {
+        "candidate_locator": "0x5ef6a0",
+        "locator_file_offset": "0x1ee6a0",
+        "locator_uint32_fields": [
+          "0x0",
+          "0x0",
+          "0x0",
+          "0x60ce88",
+          "0x5ef6b4"
+        ],
+        "locator_pointer_address": "0x5cac5c",
+        "candidate_dispatch_table": "0x5cac60",
+        "table_first_32_pointers": [
+          {
+            "slot_address": "0x5cac60",
+            "value": "0x4981c0"
+          },
+          {
+            "slot_address": "0x5cac64",
+            "value": "0x496830"
+          },
+          {
+            "slot_address": "0x5cac68",
+            "value": "0x4d2370"
+          },
+          {
+            "slot_address": "0x5cac6c",
+            "value": "0x4dc9d0"
+          },
+          {
+            "slot_address": "0x5cac70",
+            "value": "0x497720"
+          },
+          {
+            "slot_address": "0x5cac74",
+            "value": "0x497700"
+          },
+          {
+            "slot_address": "0x5cac78",
+            "value": "0x4976d0"
+          },
+          {
+            "slot_address": "0x5cac7c",
+            "value": "0x497940"
+          },
+          {
+            "slot_address": "0x5cac80",
+            "value": "0x497c90"
+          },
+          {
+            "slot_address": "0x5cac84",
+            "value": "0x497cd0"
+          },
+          {
+            "slot_address": "0x5cac88",
+            "value": "0x496670"
+          },
+          {
+            "slot_address": "0x5cac8c",
+            "value": "0x4966e0"
+          },
+          {
+            "slot_address": "0x5cac90",
+            "value": "0x4bdee0"
+          },
+          {
+            "slot_address": "0x5cac94",
+            "value": "0x4d38b0"
+          },
+          {
+            "slot_address": "0x5cac98",
+            "value": "0x4960b0"
+          },
+          {
+            "slot_address": "0x5cac9c",
+            "value": "0x496130"
+          },
+          {
+            "slot_address": "0x5caca0",
+            "value": "0x496570"
+          },
+          {
+            "slot_address": "0x5caca4",
+            "value": "0x4965e0"
+          },
+          {
+            "slot_address": "0x5caca8",
+            "value": "0x496aa0"
+          },
+          {
+            "slot_address": "0x5cacac",
+            "value": "0x4dc0b0"
+          },
+          {
+            "slot_address": "0x5cacb0",
+            "value": "0x4dbdc0"
+          },
+          {
+            "slot_address": "0x5cacb4",
+            "value": "0x4dc130"
+          },
+          {
+            "slot_address": "0x5cacb8",
+            "value": "0x497660"
+          },
+          {
+            "slot_address": "0x5cacbc",
+            "value": "0x497660"
+          },
+          {
+            "slot_address": "0x5cacc0",
+            "value": "0x497660"
+          },
+          {
+            "slot_address": "0x5cacc4",
+            "value": "0x49a210"
+          },
+          {
+            "slot_address": "0x5cacc8",
+            "value": "0x4bae00"
+          },
+          {
+            "slot_address": "0x5caccc",
+            "value": "0x496bc0"
+          },
+          {
+            "slot_address": "0x5cacd0",
+            "value": "0x496d00"
+          },
+          {
+            "slot_address": "0x5cacd4",
+            "value": "0x496a20"
+          },
+          {
+            "slot_address": "0x5cacd8",
+            "value": "0x4dcf10"
+          },
+          {
+            "slot_address": "0x5cacdc",
+            "value": "0x4d2a30"
+          }
+        ]
+      }
+    ],
+    "interpretation": "Candidate MSVC RTTI locator and dispatch table inferred from name and pointer layout; data relations are observed, dynamic execution is not traced."
+  }
+}

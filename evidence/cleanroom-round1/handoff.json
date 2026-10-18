@@ -1,0 +1,35 @@
+﻿{
+    "created_at_utc":  "2026-10-18T19:07:13.1563125Z",
+    "analyst_session":  "/root",
+    "implementer_session":  "/root/cleanroom_implementation",
+    "context_inheritance":  "none",
+    "authorization":  "User explicitly approved a separate clean-room implementation agent.",
+    "allowed_task_inputs":  [
+                                {
+                                    "path":  "SPEC.md",
+                                    "sha256":  "9049b3c0ec0b45a02da422053940a632fa20c9826419527a7cba5a1185997c30"
+                                },
+                                {
+                                    "path":  "oracle/gpower-gui.json",
+                                    "sha256":  "25d17efdd8e6098871672714aee87d731ece462fa25a8f64f027b686a7a48e04"
+                                },
+                                {
+                                    "path":  "oracle/vectors.csv",
+                                    "sha256":  "7a13c3ae5392b673e3ebfc4333fef8e86733a7c662de582609c57189048dafd3"
+                                }
+                            ],
+    "denied_task_material":  [
+                                 "src/",
+                                 "tests/",
+                                 "README.md",
+                                 "LEDGER.md",
+                                 "evidence/",
+                                 "prompts/",
+                                 "original binary",
+                                 "decompiler output"
+                             ],
+    "output_scope":  "cleanroom/",
+    "existing_program_policy":  "Preserve the existing program; compare the independent candidate before any replacement.",
+    "isolation":  "Separate agent context with an explicit read whitelist; shared filesystem, not OS-level access isolation.",
+    "status":  "implementation in progress"
+}
