@@ -4,6 +4,9 @@ node_modules/
 # Build outputs
 dist/
 cleanroom/build/
+spec-only/build/
+demo/frames/
+statsmodels-import-error.txt
 
 # Binaries - NEVER COMMIT GPower.exe or other executables
 *.exe
@@ -16,6 +19,8 @@ GPowerWin*
 # Retain project-owned tests and evidence; broad binary-name rules match these on Windows.
 !tests/gpower_gui.test.ts
 !oracle/gpower-gui.json
+!oracle/gpower-expanded.json
+!oracle/gpower-expanded.csv
 !evidence/gpower-analysis.json
 *.log
 .DS_Store

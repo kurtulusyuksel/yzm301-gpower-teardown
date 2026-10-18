@@ -13,5 +13,6 @@ Bu günlük yalnızca bu denetimde yeniden üretilebilen hataları kaydeder. Ön
 | Minimal N sonucu artan sırada aramayı kanıtlar | GUI-02/03 N=54 gücü 0.950212; GUI-04 N=53 gücü 0.9465273 | Bu örnekte eşik doğrulanır; orijinal arama algoritması iddia edilmez |
 | MCP testi gerçek sunucuya bağlanır | Eski test doğrudan motoru çağırıyordu | Yeni test stdio istemcisiyle sunucuya bağlanıyor |
 | Token/süre tasarrufu ölçülmüştür | GUI maliyeti sabit varsayım; demo tokenları karakter tahmini | AGENT_COST.md ve demo başlıkları düzeltildi |
+| CLI tamsayı N kontrolü kesirli komut satırı girdisini de reddeder | CLI parseInt ile 3.5 değerini 3'e kesiyordu; motorun integer kontrolüne kesir ulaşmıyordu | src/cli.ts Number kullanır; tests/cli_validation.test.ts N=3.5 ve sayı sonuna eklenen metinleri reddeder |
 
 Son gerçek geri bildirim: İlk bağımsız sürüm a-priori alt sınırını da 3 almıştı. GUI-12, büyük etkide N=2 gerektiğini gösterdi; yalnız SPEC ve sayısal sonuç aktarılıp bağımsız sürüm düzeltildi. Aynı vaka eski ana motorun sabit integrasyon ızgarasında .9746/.9735240 güç farkını yakaladı; sayısal çözünürlük düzeltilip tüm referanslar yeniden çalıştırıldı. GUI-11 ayrıca a-priori etki üst sınırı 20'yi ortaya çıkardı. Bunlar varsayımsal geçmiş anlatıları değil, saklanan yeni GUI kayıtları ve iki gerçek uygulayıcı turuyla izlenebilir bulgulardır.

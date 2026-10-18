@@ -1,10 +1,22 @@
-﻿# G*Power — eşleştirilmiş ortalama t-testi
+﻿# PairedLab — eşleştirilmiş ortalama t-testi
 
 **Eğitim ve araştırma amaçlı ders projesidir.** G*Power'ın resmi veya onaylı bir sürümü değildir. Orijinal program ve kaynak kodu dağıtılmaz; inceleme kapsamı, atıflar ve paylaşım açıklaması [LEGAL.md](LEGAL.md) içindedir.
 
 YZM301 Teardown Sprint projesi. İncelenen hesap: **t tests → Means: Difference between two dependent means (matched pairs)**. Proje; REA/Ghidra incelemesi, kanıt defteri, kabul kriterleri, TypeScript hesaplama katmanı, bağımsız temiz oda uygulaması, CLI ve stdio MCP sunucusunu içerir.
 
-## Önce ve sonra tansiyon örneği
+## Teslim özeti
+
+**Teslim katmanları:** CLI temel katmanı ve MCP bonus uygulaması vardır; AI ajanı bonusu sunulmaz. Puan ve gizli test kapısı öğretim elemanının değerlendirmesine bağlıdır. Açık teslim eksikleri [SUBMISSION.md](SUBMISSION.md) içinde belirtilir.
+
+**Sürümler:** G*Power 3.1.9.7 Windows; REA 6.5.0; Ghidra 12.1.2; JDK 21; Node.js 22.23.2; PairedLab paket sürümü 1.0.0.
+
+**İncelenen GPowerNT.exe SHA-256:** `c63e6a133eb6372932f810c08cc33dc35a06d1ddb658f897bd6c34a754efc812` (2.287.616 bayt). Binary paylaşılmaz; [kimlik kaydı](evidence/rea-artifact.json).
+
+**60 saniyelik CLI demo:** [MP4 video](demo/cli-demo.mp4) · [kayıt ve yeniden üretim](demo/README.md). Gerçek komut çıktılarının terminal kaydı görselleştirmesidir; masaüstü ekran çekimi değildir.
+
+**Atıf:** Faul, Erdfelder, Lang ve Buchner (2007), [doi:10.3758/BF03193146](https://doi.org/10.3758/BF03193146); Faul, Erdfelder, Buchner ve Lang (2009), [doi:10.3758/BRM.41.4.1149](https://doi.org/10.3758/BRM.41.4.1149). Orijinal G*Power yazarlarına ait haklar saklıdır.
+
+### Klinik örnek
 
 Aynı hastaların tedavi öncesi ve sonrası tansiyonu ölçülür. Örnek varsayım: farkların ortalaması 10, farkların standart sapması 20 ise dz=10/20=0.5. Çift yön, alpha=.05, hedef güç=.95 için sonuç **54 hasta/eşleşmiş çift** olur. Bu 108 ayrı hasta değildir; 54 hastadan ikişer ölçüm alınır. Araç ham veriden p-değeri hesaplamaz; güç ve örneklem planlar.
 
@@ -15,8 +27,8 @@ Aynı hastaların tedavi öncesi ve sonrası tansiyonu ölçülür. Örnek varsa
 | 1. REA + Ghidra ile sök | REA 6.5.0 / Ghidra 12.1.2 çalıştırıldı. Binary kimliği, PowerTPairedMean sınıfı, dispatch adayları ve TDist-Cdf çekirdek bölgesi adreslerle kaydedildi. Dolaylı çağrı çözümünün kapsamı LEDGER.md içinde açıkça belirtilir. |
 | 2. Kanıt defteri | LEDGER.md: iddia → ham kayıt/adres → SPEC kabul kriteri. |
 | 3. SPEC | SPEC.md: gerçek GUI vakalarıyla bağlantılı kabul kriterleri ve çalışma sınırları. |
-| 4. Temiz oda yeniden yazım | Ayrı bağlamdaki uygulayıcı yalnız SPEC ve sayısal vektörlerle cleanroom/ altında bağımsız hesaplama katmanı ve CLI geliştirdi. İki doğrulama turu, girdi özetleri ve oturum kaydı CLEANROOM.md içinde. |
-| 5. Diferansiyel test | 12 gerçek G*Power GUI vakası: 11 eşleşme, 1 açık büyük-N sınır farkı (%91.67). Ayrıca 106 SciPy referansı ve bağımsız motorla 118 sözleşme kontrolü. |
+| 4. Temiz oda yeniden yazım | spec-only/ uygulayıcısı yeni bağlamda yalnız SPEC okudu; gerçek ilk prompt ve oturum kayıtlı. cleanroom/ ayrıca SPEC ve vektörlerle geliştirilmiş önceki bağımsız uygulamadır. Ayrım ve özetler CLEANROOM.md içinde. |
+| 5. Diferansiyel test | Genişletilmiş 32 gerçek GUI vakası (31 ekran görüntülü): 31 eşleşme, 1 açık büyük-N sınır farkı. Ayrıca 600 statsmodels referansı, 106 SciPy referansı ve iki kılavuz örneği. |
 | 6. CLI ve bonuslar | CLI ve bağımsız temiz oda CLI'si çalışıyor. MCP gerçek stdio bağlantısıyla 8 vakada doğrulandı. Türkçe demo kural tabanlıdır; LLM ajanı bonusu kapsam dışındadır. |
 
 ## Kurulum ve kullanım
@@ -27,6 +39,7 @@ Node.js 22 ile doğrulandı.
 npm ci
 npm run build
 npm run cleanroom:build
+npm run spec-only:build
 npm test
 
 # CLI
@@ -35,6 +48,9 @@ npm run cli -- --test t-paired --mode post-hoc --tails 2 --d 0.5 --alpha 0.05 --
 
 # Bağımsız temiz oda CLI'si
 npm run cleanroom:cli -- --test t-paired --mode a-priori --tails 2 --d 0.5 --alpha 0.05 --power 0.95
+
+# Yalnız SPEC ile geliştirilen uygulamanın CLI'si
+npm run spec-only:cli -- --test t-paired --mode a-priori --tails 2 --d 0.5 --alpha 0.05 --power 0.95
 
 npm run mcp
 npm run agent -- "dz=0.5, alfa=0.05, %95 güç için kaç hasta gerekir?"
@@ -49,7 +65,17 @@ Standart sonuç:
 
 CLI ve MCP, `src/engine/` altındaki ortak hesaplama katmanını kullanır. `cleanroom/` bağımsız yeniden yazımı ve kendi CLI'sini içerir. İki uygulama aynı kabul verileriyle karşılaştırılır.
 
+`spec-only/` yalnız SPEC okuyarak başlatılmış ek bağımsız uygulamadır; uygulayıcısı referans dosyalarını görmemiştir. Üst oturum bu uygulamayı geliştirme sonrasında tutulmuş GUI ve statsmodels verileriyle sınar. [Gerçek ilk prompt](spec-only/FIRST_PROMPT.md).
+
 ## Test sonuçları
+
+- Genişletilmiş GUI: **31/32 (%96.875)**; [CSV](oracle/gpower-expanded.csv), [JSON](oracle/gpower-expanded.json), [ekran görüntüleri](oracle/screenshots/), [fark raporu](evidence/expanded-gui-comparison.json). 31 vaka ekran görüntülüdür; GUI-01 yalnız metindir. Beklenen giriş retleri eşleşme sayısına dahildir; GUI-10 dahil değildir.
+- Ölçek doğrulaması: **600 statsmodels vektörü**; N/df tam, diğer alanlar dört ondalıkta eşit. [Veri](oracle/statsmodels-vectors.csv), [üretici](scripts/generate-statsmodels.py), [rapor](evidence/statsmodels-comparison.json). Bunlar G*Power GUI kaydı değildir. Kesirli N yukarı yuvarlanır, N ve N-1 güçleriyle minimum eşik ayrıca denetlenir.
+- Resmi kılavuz §19.3'ün iki örneği: [test](tests/manual.test.ts), [rapor](evidence/manual-comparison.json).
+- Yalnız-SPEC uygulaması: 32 GUI + 600 statsmodels girdisi üzerinden 632 sözleşme kontrolü ve 3 gerçek CLI kontrolü; [rapor](evidence/spec-only-comparison.json). Beklenen retler ve bilinen büyük-N sınırı sayıda bulunur; tüm girdilerde G*Power eşdeğerliği iddia edilmez.
+- CLI girdi doğrulaması: kesirli N, geçersiz sayı metni ve güç ≤ alpha dahil 10 hata vakası; [test](tests/cli_validation.test.ts).
+
+Önceki temiz oda devrine ait dondurulmuş 12 vakalık küme ayrıca korunur:
 
 - `npm run test:gui`: 12 gerçek GUI kaydının 11'i eşleşir; GUI-10 yerel arama sınırını aşar. N/df kesin; diğer alanlar GUI'nin dört ondalığa yuvarlanmış değeriyle kesin eşittir. Arayüz kaydının SHA-256 özeti ve CLI de denetlenir. Ham farklar evidence/gui-differential-results.json içindedir.
 - SciPy: 106/106 toleranslı ve dört ondalıkta kesin eşleşme. N=2 satırı matematiksel iç fonksiyon üzerinden, ayrıca post-hoc genel API reddiyle test edilir; diğer 105 satır genel API'den geçer.
@@ -69,6 +95,23 @@ Sayısal integrasyon çözünürlüğü küçük N ve büyük etki durumlarını
 
 ## Kanıt ve süreç belgeleri
 
+### MCP araç sözleşmesi
+
+Taşıma stdio; başlatma `npm run mcp`. Araç adı: `calculate_paired_power`. Hesaplar ortak `src/engine/` katmanından gelir.
+
+| Girdi | Tür | Kural |
+|---|---|---|
+| mode | string | `a-priori` veya `post-hoc`; zorunlu |
+| tails | number | 1 veya 2; zorunlu |
+| dz | number | Pozitif sonlu etki; a-priori için [0.00001,20]; zorunlu |
+| alpha | number | (0,1); zorunlu |
+| power | number | A-priori için zorunlu; alpha < power < 1 |
+| n | integer | Post-hoc için zorunlu; [3,2147483646] çift |
+
+Başarı cevabı MCP `content` listesindeki `type: text` öğesinde JSON taşır: `n_total` (çift sayısı, integer), `actual_power` (number), `critical` (number), `df` (integer), `ncp` (number). Sayısal alanlar dört ondalığa yuvarlanır. Hata cevabı `isError: true` ve `content[].text` içinde `{"error":"açıklama"}` içerir. CLI hatası sıfırdan farklı çıkış koduyla JSON verir. A-priori yerel arama sınırı 1.000.000 çifttir. [Gerçek CLI/MCP denklik testi](tests/mcp_equivalence.test.ts).
+
+### Kanıt bağlantıları
+
 - [LEDGER.md](LEDGER.md): binary adresleri, REA ve GUI kayıtları.
 - [SPEC.md](SPEC.md): kabul kriterleri.
 - [CLEANROOM.md](CLEANROOM.md) ve [uygulayıcı oturumu](cleanroom/SESSION.md): gerçek temiz oda süreci.
@@ -78,3 +121,7 @@ Sayısal integrasyon çözünürlüğü küçük N ve büyük etki durumlarını
 - [AGENT_COST.md](AGENT_COST.md): maliyet varsayımlarının sınırları.
 
 `node scripts/build-gui-vectors.mjs` saklanan arayüz kayıtlarından GUI vektörlerini üretir; GUI'yi yeniden çalıştırmaz. REA sorguları scripts/rea-evidence.mjs içindedir. GPowerNT.exe depoya eklenmez. Eğitim amacı ve atıflar: [LEGAL.md](LEGAL.md).
+
+Genişletilmiş CSV/JSON için `node scripts/build-expanded-gui.mjs`; statsmodels kümesi için `python scripts/generate-statsmodels.py` kullanılır. Python bu ek veri üretiminde kullanılır; uygulamanın çalışma zamanı bağımlılığı değildir.
+
+REA sağlık denetimi: [ham rapor](evidence/rea-doctor-submission.json), [rapor sayfası](evidence/rea-health.html). Ghidra, hedef binary ve mevcut Antigravity kaydı için healthy=true. Bu, Codex kaydının kurulu olduğunu veya tüm isteğe bağlı sağlayıcıların hazır olduğunu göstermez. Ajan cevabının ekran görüntüsü henüz eklenmedi; ham rapor bunun yerine konuşma ekran görüntüsü diye sunulmaz.

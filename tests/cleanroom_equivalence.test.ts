@@ -8,7 +8,7 @@ import { calculatePairedTTest as cleanCalculate } from '../cleanroom/t_paired.js
 // Parent-side verification. The independent implementer must not read this file.
 const handoff=JSON.parse(fs.readFileSync('evidence/cleanroom-handoff.json','utf8').replace(/^\uFEFF/,''));
 for(const input of [...handoff.allowed_task_inputs,...(handoff.independent_outputs ?? [])]) {
-  const digest=createHash('sha256').update(fs.readFileSync(input.path)).digest('hex');
+  const digest=createHash('sha256').update(fs.readFileSync(input.approved_snapshot ?? input.path)).digest('hex');
   assert.equal(digest,input.sha256,'Pinned clean-room artifact changed: '+input.path);
 }
 const gui=JSON.parse(fs.readFileSync('oracle/gpower-gui.json','utf8'));

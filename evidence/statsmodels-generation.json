@@ -1,0 +1,9 @@
+{
+  "source": "statsmodels TTestPower (not G*Power GUI)",
+  "count": 600,
+  "python": "3.12.12",
+  "statsmodels": "0.14.2",
+  "scipy": "1.18.1",
+  "rounding": "ceil fractional N, then verify power(N)>=target and power(N-1)<target",
+  "documentation": "https://www.statsmodels.org/stable/generated/statsmodels.stats.power.TTestPower.html"
+}

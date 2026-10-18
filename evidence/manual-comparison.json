@@ -1,0 +1,50 @@
+{
+  "source": "https://www.psychologie.hhu.de/fileadmin/redaktion/Fakultaeten/Mathematisch-Naturwissenschaftliche_Fakultaet/Psychologie/AAP/gpower/GPowerManual.pdf",
+  "section": "19.3, printed page 48",
+  "results": [
+    {
+      "id": "DOK-01",
+      "implementation": "src/engine",
+      "actual": {
+        "n_total": 50,
+        "actual_power": 0.8321,
+        "critical": 2.0096,
+        "df": 49,
+        "ncp": 2.9814
+      }
+    },
+    {
+      "id": "DOK-01",
+      "implementation": "cleanroom",
+      "actual": {
+        "n_total": 50,
+        "df": 49,
+        "ncp": 2.9814,
+        "critical": 2.0096,
+        "actual_power": 0.8321
+      }
+    },
+    {
+      "id": "DOK-02",
+      "implementation": "src/engine",
+      "actual": {
+        "n_total": 50,
+        "actual_power": 0.5004,
+        "critical": 2.0096,
+        "df": 49,
+        "ncp": 2
+      }
+    },
+    {
+      "id": "DOK-02",
+      "implementation": "cleanroom",
+      "actual": {
+        "n_total": 50,
+        "df": 49,
+        "ncp": 2,
+        "critical": 2.0096,
+        "actual_power": 0.5004
+      }
+    }
+  ]
+}

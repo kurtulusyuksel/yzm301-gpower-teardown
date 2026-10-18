@@ -1,0 +1,56 @@
+{
+  "created_at_utc": "2026-10-18T19:43:41.601368+00:00",
+  "implementer_session": "/root/spec_only_implementation",
+  "context_inheritance": "none",
+  "allowed_task_inputs": [
+    {
+      "path": "SPEC.md",
+      "sha256": "b3849a0e6abbd4969d8321db7320ae53dfbeb985614934d33ac98c17ed9ca027"
+    }
+  ],
+  "scope": "spec-only/",
+  "isolation": "Separate context, procedural read whitelist on shared filesystem; not OS access isolation",
+  "first_prompt": "spec-only/FIRST_PROMPT.md",
+  "status": "completed: parent held-out verification passed",
+  "independent_outputs": [
+    {
+      "path": "spec-only/cli-success-output.json",
+      "sha256": "cec7ffc6e58109ef1d95f54a0606e654791873226c1e196e334783c258de9cae"
+    },
+    {
+      "path": "spec-only/cli.ts",
+      "sha256": "19f6c51ce563c969c0262aeb8b41483110210dd89de1144e3cd4ab86e46933bd"
+    },
+    {
+      "path": "spec-only/engine.ts",
+      "sha256": "4b5cd2c9cf3112c632e2cfd56483cd95efb1c91fb371489aede4afe0c528ab59"
+    },
+    {
+      "path": "spec-only/FIRST_PROMPT.md",
+      "sha256": "e78cd59258e4c4e27668af994955b9b23439d6c5fc74803aeed82b6102dd6afb"
+    },
+    {
+      "path": "spec-only/selftest-output.jsonl",
+      "sha256": "54564acdd66b6d70516670ca0ce99de9420fba1806d79be456bd32e0599d565a"
+    },
+    {
+      "path": "spec-only/selftest.mjs",
+      "sha256": "d4febbbd2bd6e56e80a298ac269f0f3d726cc66e1a9225388dd7fb4821648adb"
+    },
+    {
+      "path": "spec-only/SESSION.md",
+      "sha256": "c2b89c38c3ed91d01ad6bf4a7b764e18a6dff0f472fcd187aa0a8033a975a51b"
+    },
+    {
+      "path": "spec-only/USAGE.md",
+      "sha256": "cfd27e8e52b6fc081eac3b053e0ce325d2aa3c3cda743dd74b535783a36a3fcc"
+    }
+  ],
+  "parent_validation": {
+    "contract_checks": 632,
+    "cli_checks": 3,
+    "report": "evidence/spec-only-comparison.json",
+    "known_gpower_limitations": 1
+  },
+  "completed_at_utc": "2026-10-18T19:52:35.963925+00:00"
+}

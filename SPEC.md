@@ -55,4 +55,70 @@ A-priori etki aralığı: 0.00001 <= dz <= 20; GUI-09 eşik altını reddeder, G
 
 ## Temiz oda ve bonuslar
 
-Temiz oda için süreç ve sınırlamalar CLEANROOM.md içindedir. Tarihsel bağımsız oturum kaydı yoktur. Mevcut Türkçe kurallı demo LLM ajanı değildir. Gerçek AI ajanı ve gerçek token maliyet ölçümü bonus hedefidir; kabul edilmiş özellik olarak sunulmaz.
+Temiz oda için süreç ve sınırlamalar CLEANROOM.md içindedir. Süreç kanıtı cleanroom/ uygulamasını kapsar. Türkçe kurallı demo LLM ajanı değildir. Gerçek AI ajanı ve gerçek token maliyet ölçümü bonus hedefidir; kabul edilmiş özellik olarak sunulmaz.
+
+## Gherkin kabul kriterleri — genişletilmiş teslim
+
+Bu bölüm uygulama tamamlandıktan sonra teslim biçimini genişletir. Uygulayıcıya verilen SPEC'in değişmemiş baytları `evidence/cleanroom-round2/approved-spec.md` içinde korunur; devir kaydındaki özgün SHA-256 bu arşive uygulanır.
+
+```gherkin
+Feature: Eşleştirilmiş ortalama t-testi sözleşmesi
+  Scenario Outline: AC-01, AC-02 ve AC-13 için en küçük örneklem
+    Given tails <tails>, dz <dz>, alpha 0.05 ve hedef güç 0.95
+    When a-priori hesabı çalıştırılır
+    Then n_total <n> ve df <df> olmalı
+    And actual_power dört ondalıkta <actual> olmalı
+    And critical <critical> ve ncp <ncp> olmalı
+    Examples:
+      | tails | dz  | n  | df | actual | critical | ncp     |
+      | 2     | 0.5 | 54 | 53 | 0.9502 | 2.0057   | 3.6742  |
+      | 1     | 0.5 | 45 | 44 | 0.9512 | 1.6802   | 3.3541  |
+      | 2     | 20  | 2  | 1  | 0.9735 | 12.7062  | 28.2843 |
+
+  Scenario Outline: AC-03, AC-04 ve AC-06 post-hoc sonuçları
+    Given tails 2, dz 0.5 ve alpha 0.05
+    When <n> çift için post-hoc hesabı çalıştırılır
+    Then actual_power <actual>, df <df>, critical <critical> ve ncp <ncp> olmalı
+    Examples:
+      | n  | actual | df | critical | ncp    |
+      | 54 | 0.9502 | 53 | 2.0057   | 3.6742 |
+      | 53 | 0.9465 | 52 | 2.0066   | 3.6401 |
+      | 3  | 0.0841 | 2  | 4.3027   | 0.8660 |
+
+  Scenario Outline: AC-07 küçük pozitif etki post-hoc için kabul edilir
+    Given tails 2, alpha 0.05 ve dz <dz>
+    When 3 çift için post-hoc hesabı çalıştırılır
+    Then actual_power 0.0500 ve df 2 olmalı
+    Examples:
+      | dz       |
+      | 0.00001  |
+      | 0.000005 |
+
+  Scenario Outline: AC-05, AC-09, AC-10 ve AC-12 geçersiz girdiler
+    Given geçerli standart girdide <alan> değeri <deger> yapılır
+    When <mod> CLI hesabı çalıştırılır
+    Then tek JSON hata nesnesi ve sıfırdan farklı çıkış kodu alınmalı
+    Examples:
+      | mod      | alan  | deger    |
+      | post-hoc | n     | 2        |
+      | post-hoc | n     | 3.5      |
+      | a-priori | tails | 3        |
+      | a-priori | alpha | 1.5      |
+      | a-priori | dz    | 0.000005 |
+      | a-priori | dz    | 100      |
+      | a-priori | power | 0.05     |
+      | a-priori | power | 0.04     |
+
+  Scenario: AC-08 CLI ve MCP aynı hesaplama katmanını kullanır
+    Given desteklenen aynı giriş CLI ve calculate_paired_power aracına verilir
+    When gerçek stdio MCP bağlantısı üzerinden hesap yapılır
+    Then n_total, actual_power, critical, df ve ncp alanları eşit olmalı
+
+  Scenario: AC-11 bilinen büyük-N uyumsuzluğu başarı sayılmaz
+    Given tails 2, dz 0.00001, alpha 0.05 ve hedef güç 0.95
+    When G*Power N 129940148212 üretir
+    Then yerel uygulamaların 1000000 çift sınırı hatası uyumsuzluk olarak raporlanmalı
+    And bu vaka eşleşme sayısına eklenmemeli
+```
+
+Eşit olmayan grup oranı bu aileye uygulanmaz: N eşleşmiş çift sayısıdır; iki bağımsız grup tahsisi yapılmaz. Resmi CONTRACT.md bağlantısının içeriği sağlanmadığından bu dosya, hocanın harici sözleşmesiyle birebir uyum kanıtı değildir.

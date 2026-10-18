@@ -26,6 +26,14 @@ npm run test:cleanroom
 
 İkinci tur, src/engine/ katmanında küçük N ve büyük etki için integrasyon çözünürlüğünün artırılması gerektiğini de gösterdi. Sayısal çözünürlük formül korunarak iyileştirildi. Bu değişiklik bağımsız uygulayıcıya kod veya algoritma olarak verilmedi.
 
-## Sınırlar
+## Yalnız SPEC ile başlayan ek uygulama
+
+Hocanın ayrıntılı yönergesindeki “yeni oturumda yalnız SPEC” şartı için `/root/spec_only_implementation` ayrı bağlamı başlatıldı. Bu uygulayıcıya yalnız SPEC.md okuma izni verildi; oracle dosyaları, inceleme konuşması, kaynak kodu, kanıt defteri ve Ghidra çıktıları aktarılmadı. Ürün `spec-only/` altındadır. Gerçek ilk talimat [FIRST_PROMPT.md](spec-only/FIRST_PROMPT.md), süreç [SESSION.md](spec-only/SESSION.md), girdi ve çıktı SHA-256 kayıtları [devir dosyası](evidence/spec-only-handoff.json) içindedir.
+
+Bu uygulama tamamlandıktan sonra üst oturum, uygulayıcının görmediği GUI ve statsmodels verileriyle karşılaştırma yapar: [tests/spec_only.test.ts](tests/spec_only.test.ts). Kaynak düzeyinde paylaşım yapılmaz. Bu ayrım da ortak dosya sisteminde bağlam ve okuma listesiyle sağlanır; OS erişim engeli değildir. CLI `npm run spec-only:cli -- ...`, derleme `npm run spec-only:build` ile çalışır. Üretim CLI/MCP kaynakları bu uygulamayla değiştirilmez.
+
+İlk iki turun özgün SPEC'i `evidence/cleanroom-round2/approved-spec.md` içinde korunur. Teslim için Gherkin genişletmesi yapılan güncel SPEC'in özeti yalnız-SPEC devir kaydında ayrıca sabitlenmiştir.
+
+## Ortak çalışma sınırları
 
 Bu belgedeki temiz oda süreç kanıtları cleanroom/ uygulamasını kapsar. GUI-10 iki yerel uygulamanın 1.000.000 çift arama sınırını aşar; tam G*Power eşdeğerliği iddia edilmez. Bağımsız uygulamanın MCP adaptörü yoktur; kendi CLI'si vardır. MCP sunucusu ayrı stdio testleriyle doğrulanır.

@@ -1,0 +1,13 @@
+{"version":2,"width":108,"height":28,"timestamp":1792352412,"title":"PairedLab: paired t-test CLI demonstration","env":{"TERM":"xterm-256color","SHELL":"node"},"note":"Actual CLI subprocess stdout/stderr recorded; display pauses are scripted."}
+[0.000050400000000010434,"o","PairedLab | YZM301 | Educational paired-means t-test reimplementation\r\n"]
+[0.00020020000000000947,"o","Synthetic example: before/after blood pressure, dz = 10 / 20 = 0.5.\r\nN means patients / matched pairs.\r\n\r\n"]
+[5.005621099999999,"o","\r\nRequired pairs, two-sided, alpha=.05, target=.95\r\n$ node --import tsx src/cli.ts --test t-paired --tails 2 --d .5 --alpha .05 --mode a-priori --power .95\r\n"]
+[5.4758484,"o","{\"n_total\":54,\"actual_power\":0.9502,\"critical\":2.0057,\"df\":53,\"ncp\":3.6742}\r\nexit=0\r\n"]
+[18.0016192,"o","\r\nAchieved power for 54 matched pairs\r\n$ node --import tsx src/cli.ts --test t-paired --tails 2 --d .5 --alpha .05 --mode post-hoc --n 54\r\n"]
+[18.4238709,"o","{\"n_total\":54,\"actual_power\":0.9502,\"critical\":2.0057,\"df\":53,\"ncp\":3.6742}\r\nexit=0\r\n"]
+[31.0060802,"o","\r\nIndependent clean-room CLI: same planning question\r\n$ node --import tsx cleanroom/cli.ts --test t-paired --tails 2 --d .5 --alpha .05 --mode a-priori --power .95\r\n"]
+[31.6943774,"o","{\"n_total\":54,\"df\":53,\"ncp\":3.6742,\"critical\":2.0057,\"actual_power\":0.9502}\r\nexit=0\r\n"]
+[44.0074456,"o","\r\nInvalid post-hoc N=2: JSON error and nonzero exit\r\n$ node --import tsx src/cli.ts --test t-paired --tails 2 --d .5 --alpha .05 --mode post-hoc --n 2\r\n"]
+[44.4048346,"o","{\"error\":\"Invalid sample size n (2). For post-hoc analysis, total pairs n must be an integer in [3, 2147483646].\"}\r\nexit=1\r\n"]
+[57.0133561,"o","\r\nReference evidence and known limits: README.md and LEDGER.md\r\n"]
+[60.009568400000006,"o","End of 60-second CLI demonstration.\r\n"]

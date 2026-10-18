@@ -1,0 +1,6 @@
+{
+  "source": "statsmodels, not G*Power GUI",
+  "vectors": 600,
+  "implementations": 2,
+  "differences": []
+}

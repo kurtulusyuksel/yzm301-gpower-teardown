@@ -4,3 +4,9 @@
 /oracle/vectors.csv -text
 /evidence/** -text -whitespace
 /cleanroom/** -text
+/spec-only/** -text -whitespace
+/oracle/screenshots/** -text
+/oracle/gpower-expanded.json -text
+/oracle/gpower-expanded.csv -text
+/oracle/statsmodels-vectors.csv -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
+/demo/** -text -whitespace

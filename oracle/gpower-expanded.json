@@ -1,0 +1,902 @@
+[
+  {
+    "id": "GUI-01",
+    "capturedAt": "2026-10-18T18:32:51.662Z",
+    "source": "G*Power 3.1.9.7 Windows GUI",
+    "evidence": "evidence/gui-01-one-tail.json",
+    "evidence_sha256": "f165833e8fd32878eb19252e16f252248ef10d5b9621e43d0141d2b1a3857a1c",
+    "input": {
+      "test": "t-paired",
+      "mode": "a-priori",
+      "tails": 1,
+      "dz": 0.5,
+      "alpha": 0.05,
+      "power": 0.95
+    },
+    "expected": {
+      "n_total": 45,
+      "actual_power": 0.95124,
+      "critical": 1.68023,
+      "df": 44,
+      "ncp": 3.354102
+    },
+    "screenshots": []
+  },
+  {
+    "id": "GUI-02",
+    "capturedAt": "2026-10-18T18:35:00.094Z",
+    "source": "G*Power 3.1.9.7 Windows GUI",
+    "evidence": "evidence/gui-02-two-tail.json",
+    "evidence_sha256": "1fddec2f03025477c201d6f47c1911bbb6c9d488581f04873ae1de4fb9298027",
+    "input": {
+      "test": "t-paired",
+      "mode": "a-priori",
+      "tails": 2,
+      "dz": 0.5,
+      "alpha": 0.05,
+      "power": 0.95
+    },
+    "expected": {
+      "n_total": 54,
+      "actual_power": 0.950212,
+      "critical": 2.005746,
+      "df": 53,
+      "ncp": 3.6742346
+    },
+    "screenshots": [
+      {
+        "path": "oracle/screenshots/gui-02-0.jpg",
+        "sha256": "3e8b66e444ae4b8d92378dc813117e33bffe0d3b1d536d6a58c991db267890b1"
+      }
+    ]
+  },
+  {
+    "id": "GUI-03",
+    "capturedAt": "2026-10-18T18:37:34.615Z",
+    "source": "G*Power 3.1.9.7 Windows GUI",
+    "evidence": "evidence/gui-03-posthoc54.json",
+    "evidence_sha256": "dda010633354fd4e8a15a4efe11afbf3dc22ab98250b3a8c910df46a107cf599",
+    "input": {
+      "test": "t-paired",
+      "mode": "post-hoc",
+      "tails": 2,
+      "dz": 0.5,
+      "alpha": 0.05,
+      "n": 54
+    },
+    "expected": {
+      "n_total": 54,
+      "actual_power": 0.950212,
+      "critical": 2.005746,
+      "df": 53,
+      "ncp": 3.6742346
+    },
+    "screenshots": [
+      {
+        "path": "oracle/screenshots/gui-03-0.jpg",
+        "sha256": "2beef442804c717eca6f4101a5ad58f29f6a0f792b1e0fa6e9a46d133dc48b97"
+      },
+      {
+        "path": "oracle/screenshots/gui-03-1.jpg",
+        "sha256": "fcb9dbb8b25c6073376e7c0063469f85ca253012d8bf1bbfd7d02c3e52fefbf8"
+      },
+      {
+        "path": "oracle/screenshots/gui-03-2.jpg",
+        "sha256": "61a9bdbb315bc7bb4074ca5c1fb84063026fdfbe4459ffbadd61943f946debe1"
+      }
+    ]
+  },
+  {
+    "id": "GUI-04",
+    "capturedAt": "2026-10-18T18:38:36.052Z",
+    "source": "G*Power 3.1.9.7 Windows GUI",
+    "evidence": "evidence/gui-04-posthoc53.json",
+    "evidence_sha256": "3332b7f47b3f3a7a3c5c2f10ff8cd0192d07d6a47101381bcdeaa3493c081a85",
+    "input": {
+      "test": "t-paired",
+      "mode": "post-hoc",
+      "tails": 2,
+      "dz": 0.5,
+      "alpha": 0.05,
+      "n": 53
+    },
+    "expected": {
+      "n_total": 53,
+      "actual_power": 0.9465273,
+      "critical": 2.0066468,
+      "df": 52,
+      "ncp": 3.6400549
+    },
+    "screenshots": [
+      {
+        "path": "oracle/screenshots/gui-04-0.jpg",
+        "sha256": "9bf7c11dd105c46029d81af8bcd80c81e170016935b2495749c5e0262968cfdf"
+      }
+    ]
+  },
+  {
+    "id": "GUI-05",
+    "capturedAt": "2026-10-18T18:39:31.357Z",
+    "source": "G*Power 3.1.9.7 Windows GUI",
+    "evidence": "evidence/gui-05-min-n-error.json",
+    "evidence_sha256": "85adbbdd1920c0fd742177d3716f45226f31ba3bc82d5b011db85dbce8a5fd9d",
+    "input": {
+      "test": "t-paired",
+      "mode": "post-hoc",
+      "tails": 2,
+      "dz": 0.5,
+      "alpha": 0.05,
+      "n": 2
+    },
+    "expected": {
+      "error": "Total sample size is outside the admissible range (3, 2147483646)"
+    },
+    "screenshots": [
+      {
+        "path": "oracle/screenshots/gui-05-0.jpg",
+        "sha256": "ec8a4a468b3894261d2ed9614ebd8a9e6a89285e057d0a8f85d8767ffd93e697"
+      },
+      {
+        "path": "oracle/screenshots/gui-05-1.jpg",
+        "sha256": "d2a5c0519a34c115f72792dfe494bbe322df381c9b3b789b057fdeb5e6c783b7"
+      }
+    ]
+  },
+  {
+    "id": "GUI-06",
+    "capturedAt": "2026-10-18T18:41:07.823Z",
+    "source": "G*Power 3.1.9.7 Windows GUI",
+    "evidence": "evidence/gui-06-posthoc3.json",
+    "evidence_sha256": "c46ff9967a6c27eef6243f2db809b113ea9ab6118bea692a112227f2d4bf9b29",
+    "input": {
+      "test": "t-paired",
+      "mode": "post-hoc",
+      "tails": 2,
+      "dz": 0.5,
+      "alpha": 0.05,
+      "n": 3
+    },
+    "expected": {
+      "n_total": 3,
+      "actual_power": 0.0841071,
+      "critical": 4.3026527,
+      "df": 2,
+      "ncp": 0.8660254
+    },
+    "screenshots": [
+      {
+        "path": "oracle/screenshots/gui-06-0.jpg",
+        "sha256": "12c5704629dfca3f34fe0ed8383c402198182d876744248dcb4c2d175f4d0120"
+      }
+    ]
+  },
+  {
+    "id": "GUI-07",
+    "capturedAt": "2026-10-18T18:41:50.289Z",
+    "source": "G*Power 3.1.9.7 Windows GUI",
+    "evidence": "evidence/gui-07-dz-limit.json",
+    "evidence_sha256": "27fd4fdd70c9867c70ce9ad4c71126985ccbbdf6c06b6da9a7ab5a6d0f83dac1",
+    "input": {
+      "test": "t-paired",
+      "mode": "post-hoc",
+      "tails": 2,
+      "dz": 0.00001,
+      "alpha": 0.05,
+      "n": 3
+    },
+    "expected": {
+      "n_total": 3,
+      "actual_power": 0.05,
+      "critical": 4.3026527,
+      "df": 2,
+      "ncp": 0.00001732051
+    },
+    "screenshots": [
+      {
+        "path": "oracle/screenshots/gui-07-0.jpg",
+        "sha256": "6871f5ae97df638230a2852f43c25735910b191fd2db5809460cf7f3c0759376"
+      }
+    ]
+  },
+  {
+    "id": "GUI-08",
+    "capturedAt": "2026-10-18T18:42:32.244Z",
+    "source": "G*Power 3.1.9.7 Windows GUI",
+    "evidence": "evidence/gui-08-dz-below.json",
+    "evidence_sha256": "e11e5c250f0388973b34eaa992dd771ed7de562119634107264d8211a8f2feb8",
+    "input": {
+      "test": "t-paired",
+      "mode": "post-hoc",
+      "tails": 2,
+      "dz": 0.000005,
+      "alpha": 0.05,
+      "n": 3
+    },
+    "expected": {
+      "n_total": 3,
+      "actual_power": 0.05,
+      "critical": 4.3026527,
+      "df": 2,
+      "ncp": 0.000008660254
+    },
+    "screenshots": [
+      {
+        "path": "oracle/screenshots/gui-08-0.jpg",
+        "sha256": "4a518f39feb28c49a140ccb8c70ee6aa37663a724b0022e129576fb1f03c0028"
+      }
+    ]
+  },
+  {
+    "id": "GUI-09",
+    "capturedAt": "2026-10-18T18:49:07.599Z",
+    "source": "G*Power 3.1.9.7 Windows GUI",
+    "evidence": "evidence/gui-09-apriori-dz-error.json",
+    "evidence_sha256": "0dcdb38a2c7aaebda52cab5d641bbf4ba4c0a29ed745019012f1e30464a07066",
+    "input": {
+      "test": "t-paired",
+      "mode": "a-priori",
+      "tails": 2,
+      "dz": 0.000005,
+      "alpha": 0.05,
+      "power": 0.95
+    },
+    "expected": {
+      "error": "In an a priori analysis, the absolute value of the effect size be greater than 0.00001."
+    },
+    "screenshots": [
+      {
+        "path": "oracle/screenshots/gui-09-0.jpg",
+        "sha256": "740d6c0fc068cab0c6b9e42ce90207eb01c4d12e4290b26c43bfd4aa16b49acc"
+      },
+      {
+        "path": "oracle/screenshots/gui-09-1.jpg",
+        "sha256": "e491c1cb2875ff12865c56feb4ac08f98d73d314c7b1343666cabdd1fea2a332"
+      }
+    ]
+  },
+  {
+    "id": "GUI-10",
+    "capturedAt": "2026-10-18T18:50:17.224Z",
+    "source": "G*Power 3.1.9.7 Windows GUI",
+    "evidence": "evidence/gui-10-apriori-exact-limit.json",
+    "evidence_sha256": "79f32593a6aa52fd0911343e50a89b9c1e77a86d0bb2ad7c686a783ed8b1fd81",
+    "input": {
+      "test": "t-paired",
+      "mode": "a-priori",
+      "tails": 2,
+      "dz": 0.00001,
+      "alpha": 0.05,
+      "power": 0.95
+    },
+    "expected": {
+      "n_total": 129940148212,
+      "actual_power": 0.9500029,
+      "critical": 1.959964,
+      "df": 129940148211,
+      "ncp": 3.6047212
+    },
+    "limitation": "Original G*Power result exceeds the local 1,000,000-pair search limit; retained as a known incompatibility, not a match.",
+    "screenshots": [
+      {
+        "path": "oracle/screenshots/gui-10-0.jpg",
+        "sha256": "e124651aeb4cd20afe2cdcd8a7998dafe82dbb9166b0d26f847ab077e544f48d"
+      }
+    ]
+  },
+  {
+    "id": "GUI-11",
+    "capturedAt": "2026-10-18T19:12:55.622Z",
+    "source": "G*Power 3.1.9.7 Windows GUI",
+    "evidence": "evidence/gui-11-dz-upper-error.json",
+    "evidence_sha256": "f57535c0fc8a97410f77d20a583c44a71013b978663d8d58dc2fc1449bce3966",
+    "input": {
+      "test": "t-paired",
+      "mode": "a-priori",
+      "tails": 2,
+      "dz": 100,
+      "alpha": 0.05,
+      "power": 0.95
+    },
+    "expected": {
+      "error": "Effect size d is outside the admissible range (-20, 20)."
+    },
+    "screenshots": [
+      {
+        "path": "oracle/screenshots/gui-11-0.jpg",
+        "sha256": "6fe470b6a6572482f8bffc5b334598be9befe15037f37ab6485f5f3e71d08f4e"
+      },
+      {
+        "path": "oracle/screenshots/gui-11-1.jpg",
+        "sha256": "6f69dc74fa5b23c76b727d2dd91e1d390dc9eaec4e78ab950ead0b7c51072edc"
+      }
+    ]
+  },
+  {
+    "id": "GUI-12",
+    "capturedAt": "2026-10-18T19:14:04.036Z",
+    "source": "G*Power 3.1.9.7 Windows GUI",
+    "evidence": "evidence/gui-12-apriori-minimum.json",
+    "evidence_sha256": "9942c4bc006e84f99db06ee49713d0b77ba492d339555cb85921096467991b7c",
+    "input": {
+      "test": "t-paired",
+      "mode": "a-priori",
+      "tails": 2,
+      "dz": 20,
+      "alpha": 0.05,
+      "power": 0.95
+    },
+    "expected": {
+      "n_total": 2,
+      "actual_power": 0.973524,
+      "critical": 12.7062047,
+      "df": 1,
+      "ncp": 28.2842712
+    },
+    "screenshots": [
+      {
+        "path": "oracle/screenshots/gui-12-0.jpg",
+        "sha256": "54c79313e3e65d03c78d240968dc42c494499dc2337ab2f5df5a1f65cf2a830c"
+      }
+    ]
+  },
+  {
+    "id": "GUI-13",
+    "capturedAt": "2026-10-18T19:37:11.077Z",
+    "source": "G*Power 3.1.9.7 Windows GUI",
+    "evidence": "evidence/gui-expanded/gui-13.json",
+    "evidence_sha256": "aaf760fdb6edd84a26da4d9c7be60df46356a380a080afa767a40c89067a9cef",
+    "input": {
+      "test": "t-paired",
+      "mode": "a-priori",
+      "tails": 2,
+      "dz": 0.1,
+      "alpha": 0.05,
+      "power": 0.95
+    },
+    "expected": {
+      "n_total": 1302,
+      "actual_power": 0.9500867,
+      "critical": 1.9617891,
+      "df": 1301,
+      "ncp": 3.6083237
+    },
+    "screenshots": [
+      {
+        "path": "oracle/screenshots/gui-13-0.jpg",
+        "sha256": "4f0c860528037ab7ce4fefba5b69462b45c86c40aec519c755457cec5699f0d6"
+      }
+    ]
+  },
+  {
+    "id": "GUI-14",
+    "capturedAt": "2026-10-18T19:37:50.036Z",
+    "source": "G*Power 3.1.9.7 Windows GUI",
+    "evidence": "evidence/gui-expanded/gui-14.json",
+    "evidence_sha256": "63488345695263658eb195416fb75e79816fb8fe6727ac9eecb13f8ecff9bd5d",
+    "input": {
+      "test": "t-paired",
+      "mode": "a-priori",
+      "tails": 2,
+      "dz": 0.15,
+      "alpha": 0.05,
+      "power": 0.95
+    },
+    "expected": {
+      "n_total": 580,
+      "actual_power": 0.9501712,
+      "critical": 1.9640696,
+      "df": 579,
+      "ncp": 3.6124784
+    },
+    "screenshots": [
+      {
+        "path": "oracle/screenshots/gui-14-0.jpg",
+        "sha256": "9ace385318bf283cead30aaad492d9b38a2da7fb0a0f09b76b7a2fe42b2cbe1e"
+      }
+    ]
+  },
+  {
+    "id": "GUI-15",
+    "capturedAt": "2026-10-18T19:38:30.896Z",
+    "source": "G*Power 3.1.9.7 Windows GUI",
+    "evidence": "evidence/gui-expanded/gui-15.json",
+    "evidence_sha256": "538e370eacbdbc5644a561f3ef8f9e814665a7c1360ef2fcb158fa54bb00324e",
+    "input": {
+      "test": "t-paired",
+      "mode": "a-priori",
+      "tails": 2,
+      "dz": 0.2,
+      "alpha": 0.05,
+      "power": 0.95
+    },
+    "expected": {
+      "n_total": 327,
+      "actual_power": 0.9501171,
+      "critical": 1.9672675,
+      "df": 326,
+      "ncp": 3.6166283
+    },
+    "screenshots": [
+      {
+        "path": "oracle/screenshots/gui-15-0.jpg",
+        "sha256": "3ac5a9a38934cd2b3db9d27964281c45567dca5bda618733a3ec2ae33e86e73a"
+      }
+    ]
+  },
+  {
+    "id": "GUI-16",
+    "capturedAt": "2026-10-18T19:38:58.038Z",
+    "source": "G*Power 3.1.9.7 Windows GUI",
+    "evidence": "evidence/gui-expanded/gui-16.json",
+    "evidence_sha256": "1336cfa04b1e622644c720643ea1560a542b8b437930a7c90bc574dee81426f9",
+    "input": {
+      "test": "t-paired",
+      "mode": "a-priori",
+      "tails": 2,
+      "dz": 0.25,
+      "alpha": 0.05,
+      "power": 0.95
+    },
+    "expected": {
+      "n_total": 210,
+      "actual_power": 0.950137,
+      "critical": 1.9713795,
+      "df": 209,
+      "ncp": 3.6228442
+    },
+    "screenshots": [
+      {
+        "path": "oracle/screenshots/gui-16-0.jpg",
+        "sha256": "64b3636e81100e578743dd39f6192c5057da162d705f636e594b5c4a2f22cadf"
+      }
+    ]
+  },
+  {
+    "id": "GUI-17",
+    "capturedAt": "2026-10-18T19:39:29.766Z",
+    "source": "G*Power 3.1.9.7 Windows GUI",
+    "evidence": "evidence/gui-expanded/gui-17.json",
+    "evidence_sha256": "583ccbb450cc7c148ab044c173b38a711e1df8967d198dc229023f66bde0e921",
+    "input": {
+      "test": "t-paired",
+      "mode": "a-priori",
+      "tails": 2,
+      "dz": 0.3,
+      "alpha": 0.05,
+      "power": 0.95
+    },
+    "expected": {
+      "n_total": 147,
+      "actual_power": 0.9508665,
+      "critical": 1.9763457,
+      "df": 146,
+      "ncp": 3.6373067
+    },
+    "screenshots": [
+      {
+        "path": "oracle/screenshots/gui-17-0.jpg",
+        "sha256": "1f2ecb67eb5a9086337a259f43268b8c48f5421fa19c49e6b07d554b1fcd0d18"
+      }
+    ]
+  },
+  {
+    "id": "GUI-18",
+    "capturedAt": "2026-10-18T19:39:56.951Z",
+    "source": "G*Power 3.1.9.7 Windows GUI",
+    "evidence": "evidence/gui-expanded/gui-18.json",
+    "evidence_sha256": "ff6693468a4a51758c640927962656896236bd735d6253469aacc6d00643e1c1",
+    "input": {
+      "test": "t-paired",
+      "mode": "a-priori",
+      "tails": 2,
+      "dz": 0.35,
+      "alpha": 0.05,
+      "power": 0.95
+    },
+    "expected": {
+      "n_total": 109,
+      "actual_power": 0.9516895,
+      "critical": 1.9821735,
+      "df": 108,
+      "ncp": 3.6541073
+    },
+    "screenshots": [
+      {
+        "path": "oracle/screenshots/gui-18-0.jpg",
+        "sha256": "999f46ce91c4553f8ba10bb93373cfdc312c608365bcaf3fff3c371574af311b"
+      }
+    ]
+  },
+  {
+    "id": "GUI-19",
+    "capturedAt": "2026-10-18T19:40:42.502Z",
+    "source": "G*Power 3.1.9.7 Windows GUI",
+    "evidence": "evidence/gui-expanded/gui-19.json",
+    "evidence_sha256": "fe5e2047f911568a98fd6c4250effcac58398f8623f19dd25eba3fbdd2ba1af1",
+    "input": {
+      "test": "t-paired",
+      "mode": "a-priori",
+      "tails": 2,
+      "dz": 0.4,
+      "alpha": 0.05,
+      "power": 0.95
+    },
+    "expected": {
+      "n_total": 84,
+      "actual_power": 0.9518794,
+      "critical": 1.9889598,
+      "df": 83,
+      "ncp": 3.6660606
+    },
+    "screenshots": [
+      {
+        "path": "oracle/screenshots/gui-19-0.jpg",
+        "sha256": "60ea80386bf3d86f7984fa5865d4b11857154d37e2a917a497fec537b7052c1d"
+      }
+    ]
+  },
+  {
+    "id": "GUI-20",
+    "capturedAt": "2026-10-18T19:41:22.006Z",
+    "source": "G*Power 3.1.9.7 Windows GUI",
+    "evidence": "evidence/gui-expanded/gui-20.json",
+    "evidence_sha256": "69fd3919514a93c7d1187365d06c7f33c0c48c7b15624c665f43953e4395e13c",
+    "input": {
+      "test": "t-paired",
+      "mode": "a-priori",
+      "tails": 2,
+      "dz": 0.45,
+      "alpha": 0.05,
+      "power": 0.95
+    },
+    "expected": {
+      "n_total": 67,
+      "actual_power": 0.9524746,
+      "critical": 1.9965644,
+      "df": 66,
+      "ncp": 3.6834087
+    },
+    "screenshots": [
+      {
+        "path": "oracle/screenshots/gui-20-0.jpg",
+        "sha256": "61cdaff22dee7aa5ab962c9a30b32528af8e56a8a07f57015f9501e8f841a469"
+      }
+    ]
+  },
+  {
+    "id": "GUI-21",
+    "capturedAt": "2026-10-18T19:42:28.057Z",
+    "source": "G*Power 3.1.9.7 Windows GUI",
+    "evidence": "evidence/gui-expanded/gui-21.json",
+    "evidence_sha256": "52621abc5a2ec30e232c149159e250354ca64666dda7441080c6b393dcfd2268",
+    "input": {
+      "test": "t-paired",
+      "mode": "a-priori",
+      "tails": 2,
+      "dz": 0.55,
+      "alpha": 0.05,
+      "power": 0.95
+    },
+    "expected": {
+      "n_total": 45,
+      "actual_power": 0.9503118,
+      "critical": 2.0153676,
+      "df": 44,
+      "ncp": 3.6895122
+    },
+    "screenshots": [
+      {
+        "path": "oracle/screenshots/gui-21-0.jpg",
+        "sha256": "19bf42ce4433e67c3aa8c68a48a2fd7db44d733e50fc70b0a48c9e970a90c13e"
+      }
+    ]
+  },
+  {
+    "id": "GUI-22",
+    "capturedAt": "2026-10-18T19:43:08.785Z",
+    "source": "G*Power 3.1.9.7 Windows GUI",
+    "evidence": "evidence/gui-expanded/gui-22.json",
+    "evidence_sha256": "cd7efa137d596a239ad62cc4aded9faa3d78909b6aa965ef549a45d2c741ed78",
+    "input": {
+      "test": "t-paired",
+      "mode": "a-priori",
+      "tails": 2,
+      "dz": 0.6,
+      "alpha": 0.05,
+      "power": 0.95
+    },
+    "expected": {
+      "n_total": 39,
+      "actual_power": 0.9545588,
+      "critical": 2.0243942,
+      "df": 38,
+      "ncp": 3.7469988
+    },
+    "screenshots": [
+      {
+        "path": "oracle/screenshots/gui-22-0.jpg",
+        "sha256": "5653884ceede6b6e0f3b1d30817a2a46f84bdbb537e87cec5ce593b22f707500"
+      }
+    ]
+  },
+  {
+    "id": "GUI-23",
+    "capturedAt": "2026-10-18T19:43:49.722Z",
+    "source": "G*Power 3.1.9.7 Windows GUI",
+    "evidence": "evidence/gui-expanded/gui-23.json",
+    "evidence_sha256": "8115674d5d1dd7a2a17373d00ef11509d772d2e4d4377eeccf02f4391d6a2a9c",
+    "input": {
+      "test": "t-paired",
+      "mode": "a-priori",
+      "tails": 2,
+      "dz": 0.65,
+      "alpha": 0.05,
+      "power": 0.95
+    },
+    "expected": {
+      "n_total": 33,
+      "actual_power": 0.9515194,
+      "critical": 2.0369333,
+      "df": 32,
+      "ncp": 3.7339657
+    },
+    "screenshots": [
+      {
+        "path": "oracle/screenshots/gui-23-0.jpg",
+        "sha256": "83e838eafeae9eeb4ad04c604f32a971a14a8978ef4607321b87800f0a7e096b"
+      }
+    ]
+  },
+  {
+    "id": "GUI-24",
+    "capturedAt": "2026-10-18T19:44:32.220Z",
+    "source": "G*Power 3.1.9.7 Windows GUI",
+    "evidence": "evidence/gui-expanded/gui-24.json",
+    "evidence_sha256": "48f68713b3d67a766cb0f6efe4e20deb6b27d48f54c3fca24dc7931087dc4b0b",
+    "input": {
+      "test": "t-paired",
+      "mode": "a-priori",
+      "tails": 2,
+      "dz": 0.7,
+      "alpha": 0.05,
+      "power": 0.95
+    },
+    "expected": {
+      "n_total": 29,
+      "actual_power": 0.9532752,
+      "critical": 2.0484071,
+      "df": 28,
+      "ncp": 3.7696154
+    },
+    "screenshots": [
+      {
+        "path": "oracle/screenshots/gui-24-0.jpg",
+        "sha256": "e7fbf5d4cc36f837516d600a209558cc6fdeeacb81cf07304aa6857529c5e4a2"
+      }
+    ]
+  },
+  {
+    "id": "GUI-25",
+    "capturedAt": "2026-10-18T19:45:07.243Z",
+    "source": "G*Power 3.1.9.7 Windows GUI",
+    "evidence": "evidence/gui-expanded/gui-25.json",
+    "evidence_sha256": "20217bb4c5fe442ee2772f21e7fbee1ce1aa4f7e44b66531166e9d41d2b26f9a",
+    "input": {
+      "test": "t-paired",
+      "mode": "a-priori",
+      "tails": 2,
+      "dz": 0.75,
+      "alpha": 0.05,
+      "power": 0.95
+    },
+    "expected": {
+      "n_total": 26,
+      "actual_power": 0.9567049,
+      "critical": 2.0595386,
+      "df": 25,
+      "ncp": 3.8242646
+    },
+    "screenshots": [
+      {
+        "path": "oracle/screenshots/gui-25-0.jpg",
+        "sha256": "641e665f091d894f51c3f37fdab142cce943faa9b65f0a13fd1defbbd2028616"
+      }
+    ]
+  },
+  {
+    "id": "GUI-26",
+    "capturedAt": "2026-10-18T19:45:42.590Z",
+    "source": "G*Power 3.1.9.7 Windows GUI",
+    "evidence": "evidence/gui-expanded/gui-26.json",
+    "evidence_sha256": "ee0ec40bc9a66853759f5d330248d5e78920000d20083ace9129c9131a952793",
+    "input": {
+      "test": "t-paired",
+      "mode": "a-priori",
+      "tails": 2,
+      "dz": 0.8,
+      "alpha": 0.05,
+      "power": 0.95
+    },
+    "expected": {
+      "n_total": 23,
+      "actual_power": 0.9558497,
+      "critical": 2.0738731,
+      "df": 22,
+      "ncp": 3.8366652
+    },
+    "screenshots": [
+      {
+        "path": "oracle/screenshots/gui-26-0.jpg",
+        "sha256": "e62c1b588dca692c228792f78a41d8d643d2f64ef3149b8f335a56caee558974"
+      }
+    ]
+  },
+  {
+    "id": "GUI-27",
+    "capturedAt": "2026-10-18T19:46:16.122Z",
+    "source": "G*Power 3.1.9.7 Windows GUI",
+    "evidence": "evidence/gui-expanded/gui-27.json",
+    "evidence_sha256": "3509d4492568b24ad6f1482789e166a1564a63ad7f028f86153296c4ef5e590f",
+    "input": {
+      "test": "t-paired",
+      "mode": "a-priori",
+      "tails": 2,
+      "dz": 0.9,
+      "alpha": 0.05,
+      "power": 0.95
+    },
+    "expected": {
+      "n_total": 19,
+      "actual_power": 0.9596224,
+      "critical": 2.100922,
+      "df": 18,
+      "ncp": 3.923009
+    },
+    "screenshots": [
+      {
+        "path": "oracle/screenshots/gui-27-0.jpg",
+        "sha256": "38d5e69d9c17baaede7c8fdd771ed68317d529cfc4a08322824cffa7be1ccfe4"
+      }
+    ]
+  },
+  {
+    "id": "GUI-28",
+    "capturedAt": "2026-10-18T19:46:42.337Z",
+    "source": "G*Power 3.1.9.7 Windows GUI",
+    "evidence": "evidence/gui-expanded/gui-28.json",
+    "evidence_sha256": "e9e0718e1319a22ebb5f00352aa57e0c7b80622bb495d3f804262c2547b9f416",
+    "input": {
+      "test": "t-paired",
+      "mode": "a-priori",
+      "tails": 2,
+      "dz": 1,
+      "alpha": 0.05,
+      "power": 0.95
+    },
+    "expected": {
+      "n_total": 16,
+      "actual_power": 0.9618851,
+      "critical": 2.1314495,
+      "df": 15,
+      "ncp": 4
+    },
+    "screenshots": [
+      {
+        "path": "oracle/screenshots/gui-28-0.jpg",
+        "sha256": "5f180f8eca6523840f7e3337c5f88a7e65fa5dca0e5fe4fd9412ed36bc9615f2"
+      }
+    ]
+  },
+  {
+    "id": "GUI-29",
+    "capturedAt": "2026-10-18T19:47:35.886Z",
+    "source": "G*Power 3.1.9.7 Windows GUI",
+    "evidence": "evidence/gui-expanded/gui-29.json",
+    "evidence_sha256": "f12e8aeedbad29aada390334eddb49c87f5cf99029666ec4639aee6351dc1e6e",
+    "input": {
+      "test": "t-paired",
+      "mode": "a-priori",
+      "tails": 2,
+      "dz": 1.1,
+      "alpha": 0.05,
+      "power": 0.95
+    },
+    "expected": {
+      "n_total": 13,
+      "actual_power": 0.9528223,
+      "critical": 2.1788128,
+      "df": 12,
+      "ncp": 3.9661064
+    },
+    "screenshots": [
+      {
+        "path": "oracle/screenshots/gui-29-0.jpg",
+        "sha256": "0a818f1795d99e3c89e5c6eb4940e29bc860965da747d1b1b9d27611820d80ea"
+      }
+    ]
+  },
+  {
+    "id": "GUI-30",
+    "capturedAt": "2026-10-18T19:48:14.504Z",
+    "source": "G*Power 3.1.9.7 Windows GUI",
+    "evidence": "evidence/gui-expanded/gui-30.json",
+    "evidence_sha256": "b6c3cff83b03c6f7b8bf0762f5d4709c31c629e8ebc665bc38fd66068a450bce",
+    "input": {
+      "test": "t-paired",
+      "mode": "a-priori",
+      "tails": 2,
+      "dz": 1.2,
+      "alpha": 0.05,
+      "power": 0.95
+    },
+    "expected": {
+      "n_total": 12,
+      "actual_power": 0.9650759,
+      "critical": 2.2009852,
+      "df": 11,
+      "ncp": 4.1569219
+    },
+    "screenshots": [
+      {
+        "path": "oracle/screenshots/gui-30-0.jpg",
+        "sha256": "83d2ad25bb8f487d14b575d5f26e2e0392665dcabb7547ccd5a13324d2d09334"
+      }
+    ]
+  },
+  {
+    "id": "GUI-31",
+    "capturedAt": "2026-10-18T19:48:45.601Z",
+    "source": "G*Power 3.1.9.7 Windows GUI",
+    "evidence": "evidence/gui-expanded/gui-31.json",
+    "evidence_sha256": "8dec67214a6ecc9e039a087021bb63c79fee93bdb9cd0fc8c4ba800e2632e7a1",
+    "input": {
+      "test": "t-paired",
+      "mode": "a-priori",
+      "tails": 2,
+      "dz": 1.5,
+      "alpha": 0.05,
+      "power": 0.95
+    },
+    "expected": {
+      "n_total": 8,
+      "actual_power": 0.9509518,
+      "critical": 2.3646243,
+      "df": 7,
+      "ncp": 4.2426407
+    },
+    "screenshots": [
+      {
+        "path": "oracle/screenshots/gui-31-0.jpg",
+        "sha256": "7108de0013d0ea300339e463fe1a991bcb15136ba5bf4c103cf21d468c8cd015"
+      }
+    ]
+  },
+  {
+    "id": "GUI-32",
+    "capturedAt": "2026-10-18T19:49:18.585Z",
+    "source": "G*Power 3.1.9.7 Windows GUI",
+    "evidence": "evidence/gui-expanded/gui-32.json",
+    "evidence_sha256": "1e5b2b8151f701621deed56e9979978b4c724f69b3c29fc3926df06e9415afbb",
+    "input": {
+      "test": "t-paired",
+      "mode": "a-priori",
+      "tails": 2,
+      "dz": 2,
+      "alpha": 0.05,
+      "power": 0.95
+    },
+    "expected": {
+      "n_total": 6,
+      "actual_power": 0.9705036,
+      "critical": 2.5705818,
+      "df": 5,
+      "ncp": 4.8989795
+    },
+    "screenshots": [
+      {
+        "path": "oracle/screenshots/gui-32-0.jpg",
+        "sha256": "eabd81bec35dafab7673c3b432b49961c8ecc8ec7995cf66222bf29c0a562104"
+      }
+    ]
+  }
+]

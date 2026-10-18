@@ -1,0 +1,729 @@
+{
+  "source": "G*Power GUI",
+  "count": 32,
+  "withScreenshots": 31,
+  "matchedPerImplementation": 31,
+  "knownLimitationsPerImplementation": 1,
+  "rows": [
+    {
+      "id": "GUI-01",
+      "implementation": "src/engine",
+      "matched": true,
+      "deltas": {
+        "n_total": 0,
+        "actual_power": -0.00003999999999992898,
+        "critical": -0.00002999999999997449,
+        "df": 0,
+        "ncp": -0.000002000000000279556
+      }
+    },
+    {
+      "id": "GUI-01",
+      "implementation": "cleanroom",
+      "matched": true,
+      "deltas": {
+        "n_total": 0,
+        "actual_power": -0.00003999999999992898,
+        "critical": -0.00002999999999997449,
+        "df": 0,
+        "ncp": -0.000002000000000279556
+      }
+    },
+    {
+      "id": "GUI-02",
+      "implementation": "src/engine",
+      "matched": true,
+      "deltas": {
+        "n_total": 0,
+        "actual_power": -0.000011999999999900979,
+        "critical": -0.00004599999999976845,
+        "df": 0,
+        "ncp": -0.00003460000000021779
+      }
+    },
+    {
+      "id": "GUI-02",
+      "implementation": "cleanroom",
+      "matched": true,
+      "deltas": {
+        "n_total": 0,
+        "actual_power": -0.000011999999999900979,
+        "critical": -0.00004599999999976845,
+        "df": 0,
+        "ncp": -0.00003460000000021779
+      }
+    },
+    {
+      "id": "GUI-03",
+      "implementation": "src/engine",
+      "matched": true,
+      "deltas": {
+        "n_total": 0,
+        "actual_power": -0.000011999999999900979,
+        "critical": -0.00004599999999976845,
+        "df": 0,
+        "ncp": -0.00003460000000021779
+      }
+    },
+    {
+      "id": "GUI-03",
+      "implementation": "cleanroom",
+      "matched": true,
+      "deltas": {
+        "n_total": 0,
+        "actual_power": -0.000011999999999900979,
+        "critical": -0.00004599999999976845,
+        "df": 0,
+        "ncp": -0.00003460000000021779
+      }
+    },
+    {
+      "id": "GUI-04",
+      "implementation": "src/engine",
+      "matched": true,
+      "deltas": {
+        "n_total": 0,
+        "actual_power": -0.000027299999999952362,
+        "critical": -0.00004679999999979145,
+        "df": 0,
+        "ncp": 0.0000450999999999091
+      }
+    },
+    {
+      "id": "GUI-04",
+      "implementation": "cleanroom",
+      "matched": true,
+      "deltas": {
+        "n_total": 0,
+        "actual_power": -0.000027299999999952362,
+        "critical": -0.00004679999999979145,
+        "df": 0,
+        "ncp": 0.0000450999999999091
+      }
+    },
+    {
+      "id": "GUI-05",
+      "implementation": "src/engine",
+      "matched": true,
+      "kind": "rejection"
+    },
+    {
+      "id": "GUI-05",
+      "implementation": "cleanroom",
+      "matched": true,
+      "kind": "rejection"
+    },
+    {
+      "id": "GUI-06",
+      "implementation": "src/engine",
+      "matched": true,
+      "deltas": {
+        "n_total": 0,
+        "actual_power": -0.000007100000000009876,
+        "critical": 0.00004729999999941725,
+        "df": 0,
+        "ncp": -0.000025399999999953238
+      }
+    },
+    {
+      "id": "GUI-06",
+      "implementation": "cleanroom",
+      "matched": true,
+      "deltas": {
+        "n_total": 0,
+        "actual_power": -0.000007100000000009876,
+        "critical": 0.00004729999999941725,
+        "df": 0,
+        "ncp": -0.000025399999999953238
+      }
+    },
+    {
+      "id": "GUI-07",
+      "implementation": "src/engine",
+      "matched": true,
+      "deltas": {
+        "n_total": 0,
+        "actual_power": 0,
+        "critical": 0.00004729999999941725,
+        "df": 0,
+        "ncp": -0.00001732051
+      }
+    },
+    {
+      "id": "GUI-07",
+      "implementation": "cleanroom",
+      "matched": true,
+      "deltas": {
+        "n_total": 0,
+        "actual_power": 0,
+        "critical": 0.00004729999999941725,
+        "df": 0,
+        "ncp": -0.00001732051
+      }
+    },
+    {
+      "id": "GUI-08",
+      "implementation": "src/engine",
+      "matched": true,
+      "deltas": {
+        "n_total": 0,
+        "actual_power": 0,
+        "critical": 0.00004729999999941725,
+        "df": 0,
+        "ncp": -0.000008660254
+      }
+    },
+    {
+      "id": "GUI-08",
+      "implementation": "cleanroom",
+      "matched": true,
+      "deltas": {
+        "n_total": 0,
+        "actual_power": 0,
+        "critical": 0.00004729999999941725,
+        "df": 0,
+        "ncp": -0.000008660254
+      }
+    },
+    {
+      "id": "GUI-09",
+      "implementation": "src/engine",
+      "matched": true,
+      "kind": "rejection"
+    },
+    {
+      "id": "GUI-09",
+      "implementation": "cleanroom",
+      "matched": true,
+      "kind": "rejection"
+    },
+    {
+      "id": "GUI-10",
+      "implementation": "src/engine",
+      "matched": false,
+      "reason": "Original G*Power result exceeds the local 1,000,000-pair search limit; retained as a known incompatibility, not a match."
+    },
+    {
+      "id": "GUI-10",
+      "implementation": "cleanroom",
+      "matched": false,
+      "reason": "Original G*Power result exceeds the local 1,000,000-pair search limit; retained as a known incompatibility, not a match."
+    },
+    {
+      "id": "GUI-11",
+      "implementation": "src/engine",
+      "matched": true,
+      "kind": "rejection"
+    },
+    {
+      "id": "GUI-11",
+      "implementation": "cleanroom",
+      "matched": true,
+      "kind": "rejection"
+    },
+    {
+      "id": "GUI-12",
+      "implementation": "src/engine",
+      "matched": true,
+      "deltas": {
+        "n_total": 0,
+        "actual_power": -0.00002399999999991298,
+        "critical": -0.000004699999999857596,
+        "df": 0,
+        "ncp": 0.00002880000000260452
+      }
+    },
+    {
+      "id": "GUI-12",
+      "implementation": "cleanroom",
+      "matched": true,
+      "deltas": {
+        "n_total": 0,
+        "actual_power": -0.00002399999999991298,
+        "critical": -0.000004699999999857596,
+        "df": 0,
+        "ncp": 0.00002880000000260452
+      }
+    },
+    {
+      "id": "GUI-13",
+      "implementation": "src/engine",
+      "matched": true,
+      "deltas": {
+        "n_total": 0,
+        "actual_power": 0.000013299999999993872,
+        "critical": 0.000010899999999924859,
+        "df": 0,
+        "ncp": -0.00002370000000029293
+      }
+    },
+    {
+      "id": "GUI-13",
+      "implementation": "cleanroom",
+      "matched": true,
+      "deltas": {
+        "n_total": 0,
+        "actual_power": 0.000013299999999993872,
+        "critical": 0.000010899999999924859,
+        "df": 0,
+        "ncp": -0.00002370000000029293
+      }
+    },
+    {
+      "id": "GUI-14",
+      "implementation": "src/engine",
+      "matched": true,
+      "deltas": {
+        "n_total": 0,
+        "actual_power": 0.000028800000000051007,
+        "critical": 0.000030399999999985994,
+        "df": 0,
+        "ncp": 0.000021599999999732944
+      }
+    },
+    {
+      "id": "GUI-14",
+      "implementation": "cleanroom",
+      "matched": true,
+      "deltas": {
+        "n_total": 0,
+        "actual_power": 0.000028800000000051007,
+        "critical": 0.000030399999999985994,
+        "df": 0,
+        "ncp": 0.000021599999999732944
+      }
+    },
+    {
+      "id": "GUI-15",
+      "implementation": "src/engine",
+      "matched": true,
+      "deltas": {
+        "n_total": 0,
+        "actual_power": -0.000017100000000103144,
+        "critical": 0.00003250000000010189,
+        "df": 0,
+        "ncp": -0.000028299999999870096
+      }
+    },
+    {
+      "id": "GUI-15",
+      "implementation": "cleanroom",
+      "matched": true,
+      "deltas": {
+        "n_total": 0,
+        "actual_power": -0.000017100000000103144,
+        "critical": 0.00003250000000010189,
+        "df": 0,
+        "ncp": -0.000028299999999870096
+      }
+    },
+    {
+      "id": "GUI-16",
+      "implementation": "src/engine",
+      "matched": true,
+      "deltas": {
+        "n_total": 0,
+        "actual_power": -0.00003700000000006476,
+        "critical": 0.00002049999999997887,
+        "df": 0,
+        "ncp": -0.000044200000000049755
+      }
+    },
+    {
+      "id": "GUI-16",
+      "implementation": "cleanroom",
+      "matched": true,
+      "deltas": {
+        "n_total": 0,
+        "actual_power": -0.00003700000000006476,
+        "critical": 0.00002049999999997887,
+        "df": 0,
+        "ncp": -0.000044200000000049755
+      }
+    },
+    {
+      "id": "GUI-17",
+      "implementation": "src/engine",
+      "matched": true,
+      "deltas": {
+        "n_total": 0,
+        "actual_power": 0.000033500000000019625,
+        "critical": -0.00004570000000003738,
+        "df": 0,
+        "ncp": -0.000006699999999693063
+      }
+    },
+    {
+      "id": "GUI-17",
+      "implementation": "cleanroom",
+      "matched": true,
+      "deltas": {
+        "n_total": 0,
+        "actual_power": 0.000033500000000019625,
+        "critical": -0.00004570000000003738,
+        "df": 0,
+        "ncp": -0.000006699999999693063
+      }
+    },
+    {
+      "id": "GUI-18",
+      "implementation": "src/engine",
+      "matched": true,
+      "deltas": {
+        "n_total": 0,
+        "actual_power": 0.000010500000000024379,
+        "critical": 0.000026499999999929358,
+        "df": 0,
+        "ncp": -0.000007300000000043383
+      }
+    },
+    {
+      "id": "GUI-18",
+      "implementation": "cleanroom",
+      "matched": true,
+      "deltas": {
+        "n_total": 0,
+        "actual_power": 0.000010500000000024379,
+        "critical": 0.000026499999999929358,
+        "df": 0,
+        "ncp": -0.000007300000000043383
+      }
+    },
+    {
+      "id": "GUI-19",
+      "implementation": "src/engine",
+      "matched": true,
+      "deltas": {
+        "n_total": 0,
+        "actual_power": 0.000020599999999926233,
+        "critical": 0.00004020000000015678,
+        "df": 0,
+        "ncp": 0.00003940000000035582
+      }
+    },
+    {
+      "id": "GUI-19",
+      "implementation": "cleanroom",
+      "matched": true,
+      "deltas": {
+        "n_total": 0,
+        "actual_power": 0.000020599999999926233,
+        "critical": 0.00004020000000015678,
+        "df": 0,
+        "ncp": 0.00003940000000035582
+      }
+    },
+    {
+      "id": "GUI-20",
+      "implementation": "src/engine",
+      "matched": true,
+      "deltas": {
+        "n_total": 0,
+        "actual_power": 0.00002540000000006426,
+        "critical": 0.00003559999999991348,
+        "df": 0,
+        "ncp": -0.000008700000000416708
+      }
+    },
+    {
+      "id": "GUI-20",
+      "implementation": "cleanroom",
+      "matched": true,
+      "deltas": {
+        "n_total": 0,
+        "actual_power": 0.00002540000000006426,
+        "critical": 0.00003559999999991348,
+        "df": 0,
+        "ncp": -0.000008700000000416708
+      }
+    },
+    {
+      "id": "GUI-21",
+      "implementation": "src/engine",
+      "matched": true,
+      "deltas": {
+        "n_total": 0,
+        "actual_power": -0.00001180000000000625,
+        "critical": 0.00003240000000026555,
+        "df": 0,
+        "ncp": -0.000012200000000017752
+      }
+    },
+    {
+      "id": "GUI-21",
+      "implementation": "cleanroom",
+      "matched": true,
+      "deltas": {
+        "n_total": 0,
+        "actual_power": -0.00001180000000000625,
+        "critical": 0.00003240000000026555,
+        "df": 0,
+        "ncp": -0.000012200000000017752
+      }
+    },
+    {
+      "id": "GUI-22",
+      "implementation": "src/engine",
+      "matched": true,
+      "deltas": {
+        "n_total": 0,
+        "actual_power": 0.00004119999999996349,
+        "critical": 0.000005799999999833716,
+        "df": 0,
+        "ncp": 0.0000011999999998124622
+      }
+    },
+    {
+      "id": "GUI-22",
+      "implementation": "cleanroom",
+      "matched": true,
+      "deltas": {
+        "n_total": 0,
+        "actual_power": 0.00004119999999996349,
+        "critical": 0.000005799999999833716,
+        "df": 0,
+        "ncp": 0.0000011999999998124622
+      }
+    },
+    {
+      "id": "GUI-23",
+      "implementation": "src/engine",
+      "matched": true,
+      "deltas": {
+        "n_total": 0,
+        "actual_power": -0.00001940000000000275,
+        "critical": -0.00003329999999968081,
+        "df": 0,
+        "ncp": 0.000034299999999820585
+      }
+    },
+    {
+      "id": "GUI-23",
+      "implementation": "cleanroom",
+      "matched": true,
+      "deltas": {
+        "n_total": 0,
+        "actual_power": -0.00001940000000000275,
+        "critical": -0.00003329999999968081,
+        "df": 0,
+        "ncp": 0.000034299999999820585
+      }
+    },
+    {
+      "id": "GUI-24",
+      "implementation": "src/engine",
+      "matched": true,
+      "deltas": {
+        "n_total": 0,
+        "actual_power": 0.000024800000000047007,
+        "critical": -0.0000070999999999266095,
+        "df": 0,
+        "ncp": -0.00001540000000010977
+      }
+    },
+    {
+      "id": "GUI-24",
+      "implementation": "cleanroom",
+      "matched": true,
+      "deltas": {
+        "n_total": 0,
+        "actual_power": 0.000024800000000047007,
+        "critical": -0.0000070999999999266095,
+        "df": 0,
+        "ncp": -0.00001540000000010977
+      }
+    },
+    {
+      "id": "GUI-25",
+      "implementation": "src/engine",
+      "matched": true,
+      "deltas": {
+        "n_total": 0,
+        "actual_power": -0.000004899999999974369,
+        "critical": -0.00003860000000033281,
+        "df": 0,
+        "ncp": 0.000035400000000240794
+      }
+    },
+    {
+      "id": "GUI-25",
+      "implementation": "cleanroom",
+      "matched": true,
+      "deltas": {
+        "n_total": 0,
+        "actual_power": -0.000004899999999974369,
+        "critical": -0.00003860000000033281,
+        "df": 0,
+        "ncp": 0.000035400000000240794
+      }
+    },
+    {
+      "id": "GUI-26",
+      "implementation": "src/engine",
+      "matched": true,
+      "deltas": {
+        "n_total": 0,
+        "actual_power": -0.00004970000000004138,
+        "critical": 0.00002689999999994086,
+        "df": 0,
+        "ncp": 0.000034799999999890474
+      }
+    },
+    {
+      "id": "GUI-26",
+      "implementation": "cleanroom",
+      "matched": true,
+      "deltas": {
+        "n_total": 0,
+        "actual_power": -0.00004970000000004138,
+        "critical": 0.00002689999999994086,
+        "df": 0,
+        "ncp": 0.000034799999999890474
+      }
+    },
+    {
+      "id": "GUI-27",
+      "implementation": "src/engine",
+      "matched": true,
+      "deltas": {
+        "n_total": 0,
+        "actual_power": -0.000022399999999977993,
+        "critical": -0.00002199999999996649,
+        "df": 0,
+        "ncp": -0.000008999999999925734
+      }
+    },
+    {
+      "id": "GUI-27",
+      "implementation": "cleanroom",
+      "matched": true,
+      "deltas": {
+        "n_total": 0,
+        "actual_power": -0.000022399999999977993,
+        "critical": -0.00002199999999996649,
+        "df": 0,
+        "ncp": -0.000008999999999925734
+      }
+    },
+    {
+      "id": "GUI-28",
+      "implementation": "src/engine",
+      "matched": true,
+      "deltas": {
+        "n_total": 0,
+        "actual_power": 0.000014899999999928859,
+        "critical": -0.00004949999999981358,
+        "df": 0,
+        "ncp": 0
+      }
+    },
+    {
+      "id": "GUI-28",
+      "implementation": "cleanroom",
+      "matched": true,
+      "deltas": {
+        "n_total": 0,
+        "actual_power": 0.000014899999999928859,
+        "critical": -0.00004949999999981358,
+        "df": 0,
+        "ncp": 0
+      }
+    },
+    {
+      "id": "GUI-29",
+      "implementation": "src/engine",
+      "matched": true,
+      "deltas": {
+        "n_total": 0,
+        "actual_power": -0.00002230000000003063,
+        "critical": -0.000012800000000368073,
+        "df": 0,
+        "ncp": -0.000006400000000184036
+      }
+    },
+    {
+      "id": "GUI-29",
+      "implementation": "cleanroom",
+      "matched": true,
+      "deltas": {
+        "n_total": 0,
+        "actual_power": -0.00002230000000003063,
+        "critical": -0.000012800000000368073,
+        "df": 0,
+        "ncp": -0.000006400000000184036
+      }
+    },
+    {
+      "id": "GUI-30",
+      "implementation": "src/engine",
+      "matched": true,
+      "deltas": {
+        "n_total": 0,
+        "actual_power": 0.000024099999999971367,
+        "critical": 0.00001480000000020354,
+        "df": 0,
+        "ncp": -0.00002190000000013015
+      }
+    },
+    {
+      "id": "GUI-30",
+      "implementation": "cleanroom",
+      "matched": true,
+      "deltas": {
+        "n_total": 0,
+        "actual_power": 0.000024099999999971367,
+        "critical": 0.00001480000000020354,
+        "df": 0,
+        "ncp": -0.00002190000000013015
+      }
+    },
+    {
+      "id": "GUI-31",
+      "implementation": "src/engine",
+      "matched": true,
+      "deltas": {
+        "n_total": 0,
+        "actual_power": 0.00004819999999994273,
+        "critical": -0.000024300000000199162,
+        "df": 0,
+        "ncp": -0.00004069999999956053
+      }
+    },
+    {
+      "id": "GUI-31",
+      "implementation": "cleanroom",
+      "matched": true,
+      "deltas": {
+        "n_total": 0,
+        "actual_power": 0.00004819999999994273,
+        "critical": -0.000024300000000199162,
+        "df": 0,
+        "ncp": -0.00004069999999956053
+      }
+    },
+    {
+      "id": "GUI-32",
+      "implementation": "src/engine",
+      "matched": true,
+      "deltas": {
+        "n_total": 0,
+        "actual_power": -0.000003599999999992498,
+        "critical": 0.00001820000000041233,
+        "df": 0,
+        "ncp": 0.000020499999999756824
+      }
+    },
+    {
+      "id": "GUI-32",
+      "implementation": "cleanroom",
+      "matched": true,
+      "deltas": {
+        "n_total": 0,
+        "actual_power": -0.000003599999999992498,
+        "critical": 0.00001820000000041233,
+        "df": 0,
+        "ncp": 0.000020499999999756824
+      }
+    }
+  ]
+}

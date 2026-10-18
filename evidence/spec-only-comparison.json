@@ -1,0 +1,6302 @@
+{
+  "count": 632,
+  "cliChecks": 3,
+  "results": [
+    {
+      "id": "GUI-01",
+      "actual": {
+        "n_total": 45,
+        "actual_power": 0.9512,
+        "critical": 1.6802,
+        "df": 44,
+        "ncp": 3.3541
+      }
+    },
+    {
+      "id": "GUI-02",
+      "actual": {
+        "n_total": 54,
+        "actual_power": 0.9502,
+        "critical": 2.0057,
+        "df": 53,
+        "ncp": 3.6742
+      }
+    },
+    {
+      "id": "GUI-03",
+      "actual": {
+        "n_total": 54,
+        "actual_power": 0.9502,
+        "critical": 2.0057,
+        "df": 53,
+        "ncp": 3.6742
+      }
+    },
+    {
+      "id": "GUI-04",
+      "actual": {
+        "n_total": 53,
+        "actual_power": 0.9465,
+        "critical": 2.0066,
+        "df": 52,
+        "ncp": 3.6401
+      }
+    },
+    {
+      "id": "GUI-05",
+      "kind": "expected input rejection"
+    },
+    {
+      "id": "GUI-06",
+      "actual": {
+        "n_total": 3,
+        "actual_power": 0.0841,
+        "critical": 4.3027,
+        "df": 2,
+        "ncp": 0.866
+      }
+    },
+    {
+      "id": "GUI-07",
+      "actual": {
+        "n_total": 3,
+        "actual_power": 0.05,
+        "critical": 4.3027,
+        "df": 2,
+        "ncp": 0
+      }
+    },
+    {
+      "id": "GUI-08",
+      "actual": {
+        "n_total": 3,
+        "actual_power": 0.05,
+        "critical": 4.3027,
+        "df": 2,
+        "ncp": 0
+      }
+    },
+    {
+      "id": "GUI-09",
+      "kind": "expected input rejection"
+    },
+    {
+      "id": "GUI-10",
+      "kind": "known limitation"
+    },
+    {
+      "id": "GUI-11",
+      "kind": "expected input rejection"
+    },
+    {
+      "id": "GUI-12",
+      "actual": {
+        "n_total": 2,
+        "actual_power": 0.9735,
+        "critical": 12.7062,
+        "df": 1,
+        "ncp": 28.2843
+      }
+    },
+    {
+      "id": "GUI-13",
+      "actual": {
+        "n_total": 1302,
+        "actual_power": 0.9501,
+        "critical": 1.9618,
+        "df": 1301,
+        "ncp": 3.6083
+      }
+    },
+    {
+      "id": "GUI-14",
+      "actual": {
+        "n_total": 580,
+        "actual_power": 0.9502,
+        "critical": 1.9641,
+        "df": 579,
+        "ncp": 3.6125
+      }
+    },
+    {
+      "id": "GUI-15",
+      "actual": {
+        "n_total": 327,
+        "actual_power": 0.9501,
+        "critical": 1.9673,
+        "df": 326,
+        "ncp": 3.6166
+      }
+    },
+    {
+      "id": "GUI-16",
+      "actual": {
+        "n_total": 210,
+        "actual_power": 0.9501,
+        "critical": 1.9714,
+        "df": 209,
+        "ncp": 3.6228
+      }
+    },
+    {
+      "id": "GUI-17",
+      "actual": {
+        "n_total": 147,
+        "actual_power": 0.9509,
+        "critical": 1.9763,
+        "df": 146,
+        "ncp": 3.6373
+      }
+    },
+    {
+      "id": "GUI-18",
+      "actual": {
+        "n_total": 109,
+        "actual_power": 0.9517,
+        "critical": 1.9822,
+        "df": 108,
+        "ncp": 3.6541
+      }
+    },
+    {
+      "id": "GUI-19",
+      "actual": {
+        "n_total": 84,
+        "actual_power": 0.9519,
+        "critical": 1.989,
+        "df": 83,
+        "ncp": 3.6661
+      }
+    },
+    {
+      "id": "GUI-20",
+      "actual": {
+        "n_total": 67,
+        "actual_power": 0.9525,
+        "critical": 1.9966,
+        "df": 66,
+        "ncp": 3.6834
+      }
+    },
+    {
+      "id": "GUI-21",
+      "actual": {
+        "n_total": 45,
+        "actual_power": 0.9503,
+        "critical": 2.0154,
+        "df": 44,
+        "ncp": 3.6895
+      }
+    },
+    {
+      "id": "GUI-22",
+      "actual": {
+        "n_total": 39,
+        "actual_power": 0.9546,
+        "critical": 2.0244,
+        "df": 38,
+        "ncp": 3.747
+      }
+    },
+    {
+      "id": "GUI-23",
+      "actual": {
+        "n_total": 33,
+        "actual_power": 0.9515,
+        "critical": 2.0369,
+        "df": 32,
+        "ncp": 3.734
+      }
+    },
+    {
+      "id": "GUI-24",
+      "actual": {
+        "n_total": 29,
+        "actual_power": 0.9533,
+        "critical": 2.0484,
+        "df": 28,
+        "ncp": 3.7696
+      }
+    },
+    {
+      "id": "GUI-25",
+      "actual": {
+        "n_total": 26,
+        "actual_power": 0.9567,
+        "critical": 2.0595,
+        "df": 25,
+        "ncp": 3.8243
+      }
+    },
+    {
+      "id": "GUI-26",
+      "actual": {
+        "n_total": 23,
+        "actual_power": 0.9558,
+        "critical": 2.0739,
+        "df": 22,
+        "ncp": 3.8367
+      }
+    },
+    {
+      "id": "GUI-27",
+      "actual": {
+        "n_total": 19,
+        "actual_power": 0.9596,
+        "critical": 2.1009,
+        "df": 18,
+        "ncp": 3.923
+      }
+    },
+    {
+      "id": "GUI-28",
+      "actual": {
+        "n_total": 16,
+        "actual_power": 0.9619,
+        "critical": 2.1314,
+        "df": 15,
+        "ncp": 4
+      }
+    },
+    {
+      "id": "GUI-29",
+      "actual": {
+        "n_total": 13,
+        "actual_power": 0.9528,
+        "critical": 2.1788,
+        "df": 12,
+        "ncp": 3.9661
+      }
+    },
+    {
+      "id": "GUI-30",
+      "actual": {
+        "n_total": 12,
+        "actual_power": 0.9651,
+        "critical": 2.201,
+        "df": 11,
+        "ncp": 4.1569
+      }
+    },
+    {
+      "id": "GUI-31",
+      "actual": {
+        "n_total": 8,
+        "actual_power": 0.951,
+        "critical": 2.3646,
+        "df": 7,
+        "ncp": 4.2426
+      }
+    },
+    {
+      "id": "GUI-32",
+      "actual": {
+        "n_total": 6,
+        "actual_power": 0.9705,
+        "critical": 2.5706,
+        "df": 5,
+        "ncp": 4.899
+      }
+    },
+    {
+      "id": "STATSMODELS-32",
+      "actual": {
+        "n_total": 669,
+        "actual_power": 0.6006,
+        "critical": 2.3319,
+        "df": 668,
+        "ncp": 2.5865
+      }
+    },
+    {
+      "id": "STATSMODELS-33",
+      "actual": {
+        "n_total": 669,
+        "actual_power": 0.6006,
+        "critical": 2.3319,
+        "df": 668,
+        "ncp": 2.5865
+      }
+    },
+    {
+      "id": "STATSMODELS-34",
+      "actual": {
+        "n_total": 816,
+        "actual_power": 0.7004,
+        "critical": 2.3309,
+        "df": 815,
+        "ncp": 2.8566
+      }
+    },
+    {
+      "id": "STATSMODELS-35",
+      "actual": {
+        "n_total": 816,
+        "actual_power": 0.7004,
+        "critical": 2.3309,
+        "df": 815,
+        "ncp": 2.8566
+      }
+    },
+    {
+      "id": "STATSMODELS-36",
+      "actual": {
+        "n_total": 1007,
+        "actual_power": 0.8003,
+        "critical": 2.3301,
+        "df": 1006,
+        "ncp": 3.1733
+      }
+    },
+    {
+      "id": "STATSMODELS-37",
+      "actual": {
+        "n_total": 1007,
+        "actual_power": 0.8003,
+        "critical": 2.3301,
+        "df": 1006,
+        "ncp": 3.1733
+      }
+    },
+    {
+      "id": "STATSMODELS-38",
+      "actual": {
+        "n_total": 1305,
+        "actual_power": 0.9001,
+        "critical": 2.3292,
+        "df": 1304,
+        "ncp": 3.6125
+      }
+    },
+    {
+      "id": "STATSMODELS-39",
+      "actual": {
+        "n_total": 1305,
+        "actual_power": 0.9001,
+        "critical": 2.3292,
+        "df": 1304,
+        "ncp": 3.6125
+      }
+    },
+    {
+      "id": "STATSMODELS-40",
+      "actual": {
+        "n_total": 1580,
+        "actual_power": 0.95,
+        "critical": 2.3287,
+        "df": 1579,
+        "ncp": 3.9749
+      }
+    },
+    {
+      "id": "STATSMODELS-41",
+      "actual": {
+        "n_total": 1580,
+        "actual_power": 0.95,
+        "critical": 2.3287,
+        "df": 1579,
+        "ncp": 3.9749
+      }
+    },
+    {
+      "id": "STATSMODELS-42",
+      "actual": {
+        "n_total": 492,
+        "actual_power": 0.6002,
+        "critical": 1.9648,
+        "df": 491,
+        "ncp": 2.2181
+      }
+    },
+    {
+      "id": "STATSMODELS-43",
+      "actual": {
+        "n_total": 492,
+        "actual_power": 0.6002,
+        "critical": 1.9648,
+        "df": 491,
+        "ncp": 2.2181
+      }
+    },
+    {
+      "id": "STATSMODELS-44",
+      "actual": {
+        "n_total": 620,
+        "actual_power": 0.7006,
+        "critical": 1.9638,
+        "df": 619,
+        "ncp": 2.49
+      }
+    },
+    {
+      "id": "STATSMODELS-45",
+      "actual": {
+        "n_total": 620,
+        "actual_power": 0.7006,
+        "critical": 1.9638,
+        "df": 619,
+        "ncp": 2.49
+      }
+    },
+    {
+      "id": "STATSMODELS-46",
+      "actual": {
+        "n_total": 787,
+        "actual_power": 0.8001,
+        "critical": 1.963,
+        "df": 786,
+        "ncp": 2.8054
+      }
+    },
+    {
+      "id": "STATSMODELS-47",
+      "actual": {
+        "n_total": 787,
+        "actual_power": 0.8001,
+        "critical": 1.963,
+        "df": 786,
+        "ncp": 2.8054
+      }
+    },
+    {
+      "id": "STATSMODELS-48",
+      "actual": {
+        "n_total": 1053,
+        "actual_power": 0.9001,
+        "critical": 1.9622,
+        "df": 1052,
+        "ncp": 3.245
+      }
+    },
+    {
+      "id": "STATSMODELS-49",
+      "actual": {
+        "n_total": 1053,
+        "actual_power": 0.9001,
+        "critical": 1.9622,
+        "df": 1052,
+        "ncp": 3.245
+      }
+    },
+    {
+      "id": "STATSMODELS-50",
+      "actual": {
+        "n_total": 1302,
+        "actual_power": 0.9501,
+        "critical": 1.9618,
+        "df": 1301,
+        "ncp": 3.6083
+      }
+    },
+    {
+      "id": "STATSMODELS-51",
+      "actual": {
+        "n_total": 1302,
+        "actual_power": 0.9501,
+        "critical": 1.9618,
+        "df": 1301,
+        "ncp": 3.6083
+      }
+    },
+    {
+      "id": "STATSMODELS-52",
+      "actual": {
+        "n_total": 362,
+        "actual_power": 0.6003,
+        "critical": 1.6491,
+        "df": 361,
+        "ncp": 1.9026
+      }
+    },
+    {
+      "id": "STATSMODELS-53",
+      "actual": {
+        "n_total": 362,
+        "actual_power": 0.6003,
+        "critical": 1.6491,
+        "df": 361,
+        "ncp": 1.9026
+      }
+    },
+    {
+      "id": "STATSMODELS-54",
+      "actual": {
+        "n_total": 472,
+        "actual_power": 0.7001,
+        "critical": 1.6481,
+        "df": 471,
+        "ncp": 2.1726
+      }
+    },
+    {
+      "id": "STATSMODELS-55",
+      "actual": {
+        "n_total": 472,
+        "actual_power": 0.7001,
+        "critical": 1.6481,
+        "df": 471,
+        "ncp": 2.1726
+      }
+    },
+    {
+      "id": "STATSMODELS-56",
+      "actual": {
+        "n_total": 620,
+        "actual_power": 0.8002,
+        "critical": 1.6473,
+        "df": 619,
+        "ncp": 2.49
+      }
+    },
+    {
+      "id": "STATSMODELS-57",
+      "actual": {
+        "n_total": 620,
+        "actual_power": 0.8002,
+        "critical": 1.6473,
+        "df": 619,
+        "ncp": 2.49
+      }
+    },
+    {
+      "id": "STATSMODELS-58",
+      "actual": {
+        "n_total": 858,
+        "actual_power": 0.9001,
+        "critical": 1.6466,
+        "df": 857,
+        "ncp": 2.9292
+      }
+    },
+    {
+      "id": "STATSMODELS-59",
+      "actual": {
+        "n_total": 858,
+        "actual_power": 0.9001,
+        "critical": 1.6466,
+        "df": 857,
+        "ncp": 2.9292
+      }
+    },
+    {
+      "id": "STATSMODELS-60",
+      "actual": {
+        "n_total": 1084,
+        "actual_power": 0.9501,
+        "critical": 1.6463,
+        "df": 1083,
+        "ncp": 3.2924
+      }
+    },
+    {
+      "id": "STATSMODELS-61",
+      "actual": {
+        "n_total": 1084,
+        "actual_power": 0.9501,
+        "critical": 1.6463,
+        "df": 1083,
+        "ncp": 3.2924
+      }
+    },
+    {
+      "id": "STATSMODELS-62",
+      "actual": {
+        "n_total": 299,
+        "actual_power": 0.6009,
+        "critical": 2.3389,
+        "df": 298,
+        "ncp": 2.5937
+      }
+    },
+    {
+      "id": "STATSMODELS-63",
+      "actual": {
+        "n_total": 299,
+        "actual_power": 0.6009,
+        "critical": 2.3389,
+        "df": 298,
+        "ncp": 2.5937
+      }
+    },
+    {
+      "id": "STATSMODELS-64",
+      "actual": {
+        "n_total": 364,
+        "actual_power": 0.7001,
+        "critical": 2.3367,
+        "df": 363,
+        "ncp": 2.8618
+      }
+    },
+    {
+      "id": "STATSMODELS-65",
+      "actual": {
+        "n_total": 364,
+        "actual_power": 0.7001,
+        "critical": 2.3367,
+        "df": 363,
+        "ncp": 2.8618
+      }
+    },
+    {
+      "id": "STATSMODELS-66",
+      "actual": {
+        "n_total": 449,
+        "actual_power": 0.8002,
+        "critical": 2.3347,
+        "df": 448,
+        "ncp": 3.1784
+      }
+    },
+    {
+      "id": "STATSMODELS-67",
+      "actual": {
+        "n_total": 449,
+        "actual_power": 0.8002,
+        "critical": 2.3347,
+        "df": 448,
+        "ncp": 3.1784
+      }
+    },
+    {
+      "id": "STATSMODELS-68",
+      "actual": {
+        "n_total": 582,
+        "actual_power": 0.9004,
+        "critical": 2.3328,
+        "df": 581,
+        "ncp": 3.6187
+      }
+    },
+    {
+      "id": "STATSMODELS-69",
+      "actual": {
+        "n_total": 582,
+        "actual_power": 0.9004,
+        "critical": 2.3328,
+        "df": 581,
+        "ncp": 3.6187
+      }
+    },
+    {
+      "id": "STATSMODELS-70",
+      "actual": {
+        "n_total": 704,
+        "actual_power": 0.9501,
+        "critical": 2.3317,
+        "df": 703,
+        "ncp": 3.9799
+      }
+    },
+    {
+      "id": "STATSMODELS-71",
+      "actual": {
+        "n_total": 704,
+        "actual_power": 0.9501,
+        "critical": 2.3317,
+        "df": 703,
+        "ncp": 3.9799
+      }
+    },
+    {
+      "id": "STATSMODELS-72",
+      "actual": {
+        "n_total": 220,
+        "actual_power": 0.6007,
+        "critical": 1.9709,
+        "df": 219,
+        "ncp": 2.2249
+      }
+    },
+    {
+      "id": "STATSMODELS-73",
+      "actual": {
+        "n_total": 220,
+        "actual_power": 0.6007,
+        "critical": 1.9709,
+        "df": 219,
+        "ncp": 2.2249
+      }
+    },
+    {
+      "id": "STATSMODELS-74",
+      "actual": {
+        "n_total": 277,
+        "actual_power": 0.7012,
+        "critical": 1.9686,
+        "df": 276,
+        "ncp": 2.4965
+      }
+    },
+    {
+      "id": "STATSMODELS-75",
+      "actual": {
+        "n_total": 277,
+        "actual_power": 0.7012,
+        "critical": 1.9686,
+        "df": 276,
+        "ncp": 2.4965
+      }
+    },
+    {
+      "id": "STATSMODELS-76",
+      "actual": {
+        "n_total": 351,
+        "actual_power": 0.8003,
+        "critical": 1.9668,
+        "df": 350,
+        "ncp": 2.8102
+      }
+    },
+    {
+      "id": "STATSMODELS-77",
+      "actual": {
+        "n_total": 351,
+        "actual_power": 0.8003,
+        "critical": 1.9668,
+        "df": 350,
+        "ncp": 2.8102
+      }
+    },
+    {
+      "id": "STATSMODELS-78",
+      "actual": {
+        "n_total": 469,
+        "actual_power": 0.9,
+        "critical": 1.965,
+        "df": 468,
+        "ncp": 3.2485
+      }
+    },
+    {
+      "id": "STATSMODELS-79",
+      "actual": {
+        "n_total": 469,
+        "actual_power": 0.9,
+        "critical": 1.965,
+        "df": 468,
+        "ncp": 3.2485
+      }
+    },
+    {
+      "id": "STATSMODELS-80",
+      "actual": {
+        "n_total": 580,
+        "actual_power": 0.9502,
+        "critical": 1.9641,
+        "df": 579,
+        "ncp": 3.6125
+      }
+    },
+    {
+      "id": "STATSMODELS-81",
+      "actual": {
+        "n_total": 580,
+        "actual_power": 0.9502,
+        "critical": 1.9641,
+        "df": 579,
+        "ncp": 3.6125
+      }
+    },
+    {
+      "id": "STATSMODELS-82",
+      "actual": {
+        "n_total": 162,
+        "actual_power": 0.6011,
+        "critical": 1.6544,
+        "df": 161,
+        "ncp": 1.9092
+      }
+    },
+    {
+      "id": "STATSMODELS-83",
+      "actual": {
+        "n_total": 162,
+        "actual_power": 0.6011,
+        "critical": 1.6544,
+        "df": 161,
+        "ncp": 1.9092
+      }
+    },
+    {
+      "id": "STATSMODELS-84",
+      "actual": {
+        "n_total": 211,
+        "actual_power": 0.7009,
+        "critical": 1.6521,
+        "df": 210,
+        "ncp": 2.1789
+      }
+    },
+    {
+      "id": "STATSMODELS-85",
+      "actual": {
+        "n_total": 211,
+        "actual_power": 0.7009,
+        "critical": 1.6521,
+        "df": 210,
+        "ncp": 2.1789
+      }
+    },
+    {
+      "id": "STATSMODELS-86",
+      "actual": {
+        "n_total": 277,
+        "actual_power": 0.8011,
+        "critical": 1.6504,
+        "df": 276,
+        "ncp": 2.4965
+      }
+    },
+    {
+      "id": "STATSMODELS-87",
+      "actual": {
+        "n_total": 277,
+        "actual_power": 0.8011,
+        "critical": 1.6504,
+        "df": 276,
+        "ncp": 2.4965
+      }
+    },
+    {
+      "id": "STATSMODELS-88",
+      "actual": {
+        "n_total": 382,
+        "actual_power": 0.9,
+        "critical": 1.6489,
+        "df": 381,
+        "ncp": 2.9317
+      }
+    },
+    {
+      "id": "STATSMODELS-89",
+      "actual": {
+        "n_total": 382,
+        "actual_power": 0.9,
+        "critical": 1.6489,
+        "df": 381,
+        "ncp": 2.9317
+      }
+    },
+    {
+      "id": "STATSMODELS-90",
+      "actual": {
+        "n_total": 483,
+        "actual_power": 0.9502,
+        "critical": 1.648,
+        "df": 482,
+        "ncp": 3.2966
+      }
+    },
+    {
+      "id": "STATSMODELS-91",
+      "actual": {
+        "n_total": 483,
+        "actual_power": 0.9502,
+        "critical": 1.648,
+        "df": 482,
+        "ncp": 3.2966
+      }
+    },
+    {
+      "id": "STATSMODELS-92",
+      "actual": {
+        "n_total": 170,
+        "actual_power": 0.6027,
+        "critical": 2.3486,
+        "df": 169,
+        "ncp": 2.6077
+      }
+    },
+    {
+      "id": "STATSMODELS-93",
+      "actual": {
+        "n_total": 170,
+        "actual_power": 0.6027,
+        "critical": 2.3486,
+        "df": 169,
+        "ncp": 2.6077
+      }
+    },
+    {
+      "id": "STATSMODELS-94",
+      "actual": {
+        "n_total": 206,
+        "actual_power": 0.7003,
+        "critical": 2.3447,
+        "df": 205,
+        "ncp": 2.8705
+      }
+    },
+    {
+      "id": "STATSMODELS-95",
+      "actual": {
+        "n_total": 206,
+        "actual_power": 0.7003,
+        "critical": 2.3447,
+        "df": 205,
+        "ncp": 2.8705
+      }
+    },
+    {
+      "id": "STATSMODELS-96",
+      "actual": {
+        "n_total": 254,
+        "actual_power": 0.8007,
+        "critical": 2.3412,
+        "df": 253,
+        "ncp": 3.1875
+      }
+    },
+    {
+      "id": "STATSMODELS-97",
+      "actual": {
+        "n_total": 254,
+        "actual_power": 0.8007,
+        "critical": 2.3412,
+        "df": 253,
+        "ncp": 3.1875
+      }
+    },
+    {
+      "id": "STATSMODELS-98",
+      "actual": {
+        "n_total": 329,
+        "actual_power": 0.9008,
+        "critical": 2.3378,
+        "df": 328,
+        "ncp": 3.6277
+      }
+    },
+    {
+      "id": "STATSMODELS-99",
+      "actual": {
+        "n_total": 329,
+        "actual_power": 0.9008,
+        "critical": 2.3378,
+        "df": 328,
+        "ncp": 3.6277
+      }
+    },
+    {
+      "id": "STATSMODELS-100",
+      "actual": {
+        "n_total": 397,
+        "actual_power": 0.95,
+        "critical": 2.3358,
+        "df": 396,
+        "ncp": 3.985
+      }
+    },
+    {
+      "id": "STATSMODELS-101",
+      "actual": {
+        "n_total": 397,
+        "actual_power": 0.95,
+        "critical": 2.3358,
+        "df": 396,
+        "ncp": 3.985
+      }
+    },
+    {
+      "id": "STATSMODELS-102",
+      "actual": {
+        "n_total": 125,
+        "actual_power": 0.6021,
+        "critical": 1.9793,
+        "df": 124,
+        "ncp": 2.2361
+      }
+    },
+    {
+      "id": "STATSMODELS-103",
+      "actual": {
+        "n_total": 125,
+        "actual_power": 0.6021,
+        "critical": 1.9793,
+        "df": 124,
+        "ncp": 2.2361
+      }
+    },
+    {
+      "id": "STATSMODELS-104",
+      "actual": {
+        "n_total": 157,
+        "actual_power": 0.7021,
+        "critical": 1.9753,
+        "df": 156,
+        "ncp": 2.506
+      }
+    },
+    {
+      "id": "STATSMODELS-105",
+      "actual": {
+        "n_total": 157,
+        "actual_power": 0.7021,
+        "critical": 1.9753,
+        "df": 156,
+        "ncp": 2.506
+      }
+    },
+    {
+      "id": "STATSMODELS-106",
+      "actual": {
+        "n_total": 199,
+        "actual_power": 0.8017,
+        "critical": 1.972,
+        "df": 198,
+        "ncp": 2.8213
+      }
+    },
+    {
+      "id": "STATSMODELS-107",
+      "actual": {
+        "n_total": 199,
+        "actual_power": 0.8017,
+        "critical": 1.972,
+        "df": 198,
+        "ncp": 2.8213
+      }
+    },
+    {
+      "id": "STATSMODELS-108",
+      "actual": {
+        "n_total": 265,
+        "actual_power": 0.9004,
+        "critical": 1.969,
+        "df": 264,
+        "ncp": 3.2558
+      }
+    },
+    {
+      "id": "STATSMODELS-109",
+      "actual": {
+        "n_total": 265,
+        "actual_power": 0.9004,
+        "critical": 1.969,
+        "df": 264,
+        "ncp": 3.2558
+      }
+    },
+    {
+      "id": "STATSMODELS-110",
+      "actual": {
+        "n_total": 327,
+        "actual_power": 0.9501,
+        "critical": 1.9673,
+        "df": 326,
+        "ncp": 3.6166
+      }
+    },
+    {
+      "id": "STATSMODELS-111",
+      "actual": {
+        "n_total": 327,
+        "actual_power": 0.9501,
+        "critical": 1.9673,
+        "df": 326,
+        "ncp": 3.6166
+      }
+    },
+    {
+      "id": "STATSMODELS-112",
+      "actual": {
+        "n_total": 92,
+        "actual_power": 0.6023,
+        "critical": 1.6618,
+        "df": 91,
+        "ncp": 1.9183
+      }
+    },
+    {
+      "id": "STATSMODELS-113",
+      "actual": {
+        "n_total": 92,
+        "actual_power": 0.6023,
+        "critical": 1.6618,
+        "df": 91,
+        "ncp": 1.9183
+      }
+    },
+    {
+      "id": "STATSMODELS-114",
+      "actual": {
+        "n_total": 120,
+        "actual_power": 0.7032,
+        "critical": 1.6578,
+        "df": 119,
+        "ncp": 2.1909
+      }
+    },
+    {
+      "id": "STATSMODELS-115",
+      "actual": {
+        "n_total": 120,
+        "actual_power": 0.7032,
+        "critical": 1.6578,
+        "df": 119,
+        "ncp": 2.1909
+      }
+    },
+    {
+      "id": "STATSMODELS-116",
+      "actual": {
+        "n_total": 156,
+        "actual_power": 0.8002,
+        "critical": 1.6547,
+        "df": 155,
+        "ncp": 2.498
+      }
+    },
+    {
+      "id": "STATSMODELS-117",
+      "actual": {
+        "n_total": 156,
+        "actual_power": 0.8002,
+        "critical": 1.6547,
+        "df": 155,
+        "ncp": 2.498
+      }
+    },
+    {
+      "id": "STATSMODELS-118",
+      "actual": {
+        "n_total": 216,
+        "actual_power": 0.9007,
+        "critical": 1.652,
+        "df": 215,
+        "ncp": 2.9394
+      }
+    },
+    {
+      "id": "STATSMODELS-119",
+      "actual": {
+        "n_total": 216,
+        "actual_power": 0.9007,
+        "critical": 1.652,
+        "df": 215,
+        "ncp": 2.9394
+      }
+    },
+    {
+      "id": "STATSMODELS-120",
+      "actual": {
+        "n_total": 272,
+        "actual_power": 0.9501,
+        "critical": 1.6505,
+        "df": 271,
+        "ncp": 3.2985
+      }
+    },
+    {
+      "id": "STATSMODELS-121",
+      "actual": {
+        "n_total": 272,
+        "actual_power": 0.9501,
+        "critical": 1.6505,
+        "df": 271,
+        "ncp": 3.2985
+      }
+    },
+    {
+      "id": "STATSMODELS-122",
+      "actual": {
+        "n_total": 77,
+        "actual_power": 0.6023,
+        "critical": 2.3764,
+        "df": 76,
+        "ncp": 2.6325
+      }
+    },
+    {
+      "id": "STATSMODELS-123",
+      "actual": {
+        "n_total": 77,
+        "actual_power": 0.6023,
+        "critical": 2.3764,
+        "df": 76,
+        "ncp": 2.6325
+      }
+    },
+    {
+      "id": "STATSMODELS-124",
+      "actual": {
+        "n_total": 94,
+        "actual_power": 0.7053,
+        "critical": 2.3671,
+        "df": 93,
+        "ncp": 2.9086
+      }
+    },
+    {
+      "id": "STATSMODELS-125",
+      "actual": {
+        "n_total": 94,
+        "actual_power": 0.7053,
+        "critical": 2.3671,
+        "df": 93,
+        "ncp": 2.9086
+      }
+    },
+    {
+      "id": "STATSMODELS-126",
+      "actual": {
+        "n_total": 115,
+        "actual_power": 0.803,
+        "critical": 2.3595,
+        "df": 114,
+        "ncp": 3.2171
+      }
+    },
+    {
+      "id": "STATSMODELS-127",
+      "actual": {
+        "n_total": 115,
+        "actual_power": 0.803,
+        "critical": 2.3595,
+        "df": 114,
+        "ncp": 3.2171
+      }
+    },
+    {
+      "id": "STATSMODELS-128",
+      "actual": {
+        "n_total": 148,
+        "actual_power": 0.9014,
+        "critical": 2.352,
+        "df": 147,
+        "ncp": 3.6497
+      }
+    },
+    {
+      "id": "STATSMODELS-129",
+      "actual": {
+        "n_total": 148,
+        "actual_power": 0.9014,
+        "critical": 2.352,
+        "df": 147,
+        "ncp": 3.6497
+      }
+    },
+    {
+      "id": "STATSMODELS-130",
+      "actual": {
+        "n_total": 178,
+        "actual_power": 0.9501,
+        "critical": 2.3476,
+        "df": 177,
+        "ncp": 4.0025
+      }
+    },
+    {
+      "id": "STATSMODELS-131",
+      "actual": {
+        "n_total": 178,
+        "actual_power": 0.9501,
+        "critical": 2.3476,
+        "df": 177,
+        "ncp": 4.0025
+      }
+    },
+    {
+      "id": "STATSMODELS-132",
+      "actual": {
+        "n_total": 57,
+        "actual_power": 0.6049,
+        "critical": 2.0032,
+        "df": 56,
+        "ncp": 2.265
+      }
+    },
+    {
+      "id": "STATSMODELS-133",
+      "actual": {
+        "n_total": 57,
+        "actual_power": 0.6049,
+        "critical": 2.0032,
+        "df": 56,
+        "ncp": 2.265
+      }
+    },
+    {
+      "id": "STATSMODELS-134",
+      "actual": {
+        "n_total": 71,
+        "actual_power": 0.703,
+        "critical": 1.9944,
+        "df": 70,
+        "ncp": 2.5278
+      }
+    },
+    {
+      "id": "STATSMODELS-135",
+      "actual": {
+        "n_total": 71,
+        "actual_power": 0.703,
+        "critical": 1.9944,
+        "df": 70,
+        "ncp": 2.5278
+      }
+    },
+    {
+      "id": "STATSMODELS-136",
+      "actual": {
+        "n_total": 90,
+        "actual_power": 0.8038,
+        "critical": 1.987,
+        "df": 89,
+        "ncp": 2.846
+      }
+    },
+    {
+      "id": "STATSMODELS-137",
+      "actual": {
+        "n_total": 90,
+        "actual_power": 0.8038,
+        "critical": 1.987,
+        "df": 89,
+        "ncp": 2.846
+      }
+    },
+    {
+      "id": "STATSMODELS-138",
+      "actual": {
+        "n_total": 119,
+        "actual_power": 0.9008,
+        "critical": 1.9803,
+        "df": 118,
+        "ncp": 3.2726
+      }
+    },
+    {
+      "id": "STATSMODELS-139",
+      "actual": {
+        "n_total": 119,
+        "actual_power": 0.9008,
+        "critical": 1.9803,
+        "df": 118,
+        "ncp": 3.2726
+      }
+    },
+    {
+      "id": "STATSMODELS-140",
+      "actual": {
+        "n_total": 147,
+        "actual_power": 0.9509,
+        "critical": 1.9763,
+        "df": 146,
+        "ncp": 3.6373
+      }
+    },
+    {
+      "id": "STATSMODELS-141",
+      "actual": {
+        "n_total": 147,
+        "actual_power": 0.9509,
+        "critical": 1.9763,
+        "df": 146,
+        "ncp": 3.6373
+      }
+    },
+    {
+      "id": "STATSMODELS-142",
+      "actual": {
+        "n_total": 42,
+        "actual_power": 0.6053,
+        "critical": 1.6829,
+        "df": 41,
+        "ncp": 1.9442
+      }
+    },
+    {
+      "id": "STATSMODELS-143",
+      "actual": {
+        "n_total": 42,
+        "actual_power": 0.6053,
+        "critical": 1.6829,
+        "df": 41,
+        "ncp": 1.9442
+      }
+    },
+    {
+      "id": "STATSMODELS-144",
+      "actual": {
+        "n_total": 54,
+        "actual_power": 0.7024,
+        "critical": 1.6741,
+        "df": 53,
+        "ncp": 2.2045
+      }
+    },
+    {
+      "id": "STATSMODELS-145",
+      "actual": {
+        "n_total": 54,
+        "actual_power": 0.7024,
+        "critical": 1.6741,
+        "df": 53,
+        "ncp": 2.2045
+      }
+    },
+    {
+      "id": "STATSMODELS-146",
+      "actual": {
+        "n_total": 71,
+        "actual_power": 0.8047,
+        "critical": 1.6669,
+        "df": 70,
+        "ncp": 2.5278
+      }
+    },
+    {
+      "id": "STATSMODELS-147",
+      "actual": {
+        "n_total": 71,
+        "actual_power": 0.8047,
+        "critical": 1.6669,
+        "df": 70,
+        "ncp": 2.5278
+      }
+    },
+    {
+      "id": "STATSMODELS-148",
+      "actual": {
+        "n_total": 97,
+        "actual_power": 0.9013,
+        "critical": 1.6609,
+        "df": 96,
+        "ncp": 2.9547
+      }
+    },
+    {
+      "id": "STATSMODELS-149",
+      "actual": {
+        "n_total": 97,
+        "actual_power": 0.9013,
+        "critical": 1.6609,
+        "df": 96,
+        "ncp": 2.9547
+      }
+    },
+    {
+      "id": "STATSMODELS-150",
+      "actual": {
+        "n_total": 122,
+        "actual_power": 0.9505,
+        "critical": 1.6575,
+        "df": 121,
+        "ncp": 3.3136
+      }
+    },
+    {
+      "id": "STATSMODELS-151",
+      "actual": {
+        "n_total": 122,
+        "actual_power": 0.9505,
+        "critical": 1.6575,
+        "df": 121,
+        "ncp": 3.3136
+      }
+    },
+    {
+      "id": "STATSMODELS-152",
+      "actual": {
+        "n_total": 45,
+        "actual_power": 0.608,
+        "critical": 2.4141,
+        "df": 44,
+        "ncp": 2.6833
+      }
+    },
+    {
+      "id": "STATSMODELS-153",
+      "actual": {
+        "n_total": 45,
+        "actual_power": 0.608,
+        "critical": 2.4141,
+        "df": 44,
+        "ncp": 2.6833
+      }
+    },
+    {
+      "id": "STATSMODELS-154",
+      "actual": {
+        "n_total": 54,
+        "actual_power": 0.7046,
+        "critical": 2.3988,
+        "df": 53,
+        "ncp": 2.9394
+      }
+    },
+    {
+      "id": "STATSMODELS-155",
+      "actual": {
+        "n_total": 54,
+        "actual_power": 0.7046,
+        "critical": 2.3988,
+        "df": 53,
+        "ncp": 2.9394
+      }
+    },
+    {
+      "id": "STATSMODELS-156",
+      "actual": {
+        "n_total": 66,
+        "actual_power": 0.8038,
+        "critical": 2.3851,
+        "df": 65,
+        "ncp": 3.2496
+      }
+    },
+    {
+      "id": "STATSMODELS-157",
+      "actual": {
+        "n_total": 66,
+        "actual_power": 0.8038,
+        "critical": 2.3851,
+        "df": 65,
+        "ncp": 3.2496
+      }
+    },
+    {
+      "id": "STATSMODELS-158",
+      "actual": {
+        "n_total": 85,
+        "actual_power": 0.9035,
+        "critical": 2.3716,
+        "df": 84,
+        "ncp": 3.6878
+      }
+    },
+    {
+      "id": "STATSMODELS-159",
+      "actual": {
+        "n_total": 85,
+        "actual_power": 0.9035,
+        "critical": 2.3716,
+        "df": 84,
+        "ncp": 3.6878
+      }
+    },
+    {
+      "id": "STATSMODELS-160",
+      "actual": {
+        "n_total": 102,
+        "actual_power": 0.9514,
+        "critical": 2.3638,
+        "df": 101,
+        "ncp": 4.0398
+      }
+    },
+    {
+      "id": "STATSMODELS-161",
+      "actual": {
+        "n_total": 102,
+        "actual_power": 0.9514,
+        "critical": 2.3638,
+        "df": 101,
+        "ncp": 4.0398
+      }
+    },
+    {
+      "id": "STATSMODELS-162",
+      "actual": {
+        "n_total": 33,
+        "actual_power": 0.6059,
+        "critical": 2.0369,
+        "df": 32,
+        "ncp": 2.2978
+      }
+    },
+    {
+      "id": "STATSMODELS-163",
+      "actual": {
+        "n_total": 33,
+        "actual_power": 0.6059,
+        "critical": 2.0369,
+        "df": 32,
+        "ncp": 2.2978
+      }
+    },
+    {
+      "id": "STATSMODELS-164",
+      "actual": {
+        "n_total": 41,
+        "actual_power": 0.7052,
+        "critical": 2.0211,
+        "df": 40,
+        "ncp": 2.5612
+      }
+    },
+    {
+      "id": "STATSMODELS-165",
+      "actual": {
+        "n_total": 41,
+        "actual_power": 0.7052,
+        "critical": 2.0211,
+        "df": 40,
+        "ncp": 2.5612
+      }
+    },
+    {
+      "id": "STATSMODELS-166",
+      "actual": {
+        "n_total": 52,
+        "actual_power": 0.8078,
+        "critical": 2.0076,
+        "df": 51,
+        "ncp": 2.8844
+      }
+    },
+    {
+      "id": "STATSMODELS-167",
+      "actual": {
+        "n_total": 52,
+        "actual_power": 0.8078,
+        "critical": 2.0076,
+        "df": 51,
+        "ncp": 2.8844
+      }
+    },
+    {
+      "id": "STATSMODELS-168",
+      "actual": {
+        "n_total": 68,
+        "actual_power": 0.9016,
+        "critical": 1.996,
+        "df": 67,
+        "ncp": 3.2985
+      }
+    },
+    {
+      "id": "STATSMODELS-169",
+      "actual": {
+        "n_total": 68,
+        "actual_power": 0.9016,
+        "critical": 1.996,
+        "df": 67,
+        "ncp": 3.2985
+      }
+    },
+    {
+      "id": "STATSMODELS-170",
+      "actual": {
+        "n_total": 84,
+        "actual_power": 0.9519,
+        "critical": 1.989,
+        "df": 83,
+        "ncp": 3.6661
+      }
+    },
+    {
+      "id": "STATSMODELS-171",
+      "actual": {
+        "n_total": 84,
+        "actual_power": 0.9519,
+        "critical": 1.989,
+        "df": 83,
+        "ncp": 3.6661
+      }
+    },
+    {
+      "id": "STATSMODELS-172",
+      "actual": {
+        "n_total": 24,
+        "actual_power": 0.6013,
+        "critical": 1.7139,
+        "df": 23,
+        "ncp": 1.9596
+      }
+    },
+    {
+      "id": "STATSMODELS-173",
+      "actual": {
+        "n_total": 24,
+        "actual_power": 0.6013,
+        "critical": 1.7139,
+        "df": 23,
+        "ncp": 1.9596
+      }
+    },
+    {
+      "id": "STATSMODELS-174",
+      "actual": {
+        "n_total": 31,
+        "actual_power": 0.7025,
+        "critical": 1.6973,
+        "df": 30,
+        "ncp": 2.2271
+      }
+    },
+    {
+      "id": "STATSMODELS-175",
+      "actual": {
+        "n_total": 31,
+        "actual_power": 0.7025,
+        "critical": 1.6973,
+        "df": 30,
+        "ncp": 2.2271
+      }
+    },
+    {
+      "id": "STATSMODELS-176",
+      "actual": {
+        "n_total": 41,
+        "actual_power": 0.8086,
+        "critical": 1.6839,
+        "df": 40,
+        "ncp": 2.5612
+      }
+    },
+    {
+      "id": "STATSMODELS-177",
+      "actual": {
+        "n_total": 41,
+        "actual_power": 0.8086,
+        "critical": 1.6839,
+        "df": 40,
+        "ncp": 2.5612
+      }
+    },
+    {
+      "id": "STATSMODELS-178",
+      "actual": {
+        "n_total": 55,
+        "actual_power": 0.9005,
+        "critical": 1.6736,
+        "df": 54,
+        "ncp": 2.9665
+      }
+    },
+    {
+      "id": "STATSMODELS-179",
+      "actual": {
+        "n_total": 55,
+        "actual_power": 0.9005,
+        "critical": 1.6736,
+        "df": 54,
+        "ncp": 2.9665
+      }
+    },
+    {
+      "id": "STATSMODELS-180",
+      "actual": {
+        "n_total": 70,
+        "actual_power": 0.9524,
+        "critical": 1.6672,
+        "df": 69,
+        "ncp": 3.3466
+      }
+    },
+    {
+      "id": "STATSMODELS-181",
+      "actual": {
+        "n_total": 70,
+        "actual_power": 0.9524,
+        "critical": 1.6672,
+        "df": 69,
+        "ncp": 3.3466
+      }
+    },
+    {
+      "id": "STATSMODELS-182",
+      "actual": {
+        "n_total": 30,
+        "actual_power": 0.6118,
+        "critical": 2.462,
+        "df": 29,
+        "ncp": 2.7386
+      }
+    },
+    {
+      "id": "STATSMODELS-183",
+      "actual": {
+        "n_total": 30,
+        "actual_power": 0.6118,
+        "critical": 2.462,
+        "df": 29,
+        "ncp": 2.7386
+      }
+    },
+    {
+      "id": "STATSMODELS-184",
+      "actual": {
+        "n_total": 36,
+        "actual_power": 0.7112,
+        "critical": 2.4377,
+        "df": 35,
+        "ncp": 3
+      }
+    },
+    {
+      "id": "STATSMODELS-185",
+      "actual": {
+        "n_total": 36,
+        "actual_power": 0.7112,
+        "critical": 2.4377,
+        "df": 35,
+        "ncp": 3
+      }
+    },
+    {
+      "id": "STATSMODELS-186",
+      "actual": {
+        "n_total": 43,
+        "actual_power": 0.8012,
+        "critical": 2.4185,
+        "df": 42,
+        "ncp": 3.2787
+      }
+    },
+    {
+      "id": "STATSMODELS-187",
+      "actual": {
+        "n_total": 43,
+        "actual_power": 0.8012,
+        "critical": 2.4185,
+        "df": 42,
+        "ncp": 3.2787
+      }
+    },
+    {
+      "id": "STATSMODELS-188",
+      "actual": {
+        "n_total": 55,
+        "actual_power": 0.9011,
+        "critical": 2.3974,
+        "df": 54,
+        "ncp": 3.7081
+      }
+    },
+    {
+      "id": "STATSMODELS-189",
+      "actual": {
+        "n_total": 55,
+        "actual_power": 0.9011,
+        "critical": 2.3974,
+        "df": 54,
+        "ncp": 3.7081
+      }
+    },
+    {
+      "id": "STATSMODELS-190",
+      "actual": {
+        "n_total": 66,
+        "actual_power": 0.9506,
+        "critical": 2.3851,
+        "df": 65,
+        "ncp": 4.062
+      }
+    },
+    {
+      "id": "STATSMODELS-191",
+      "actual": {
+        "n_total": 66,
+        "actual_power": 0.9506,
+        "critical": 2.3851,
+        "df": 65,
+        "ncp": 4.062
+      }
+    },
+    {
+      "id": "STATSMODELS-192",
+      "actual": {
+        "n_total": 22,
+        "actual_power": 0.6092,
+        "critical": 2.0796,
+        "df": 21,
+        "ncp": 2.3452
+      }
+    },
+    {
+      "id": "STATSMODELS-193",
+      "actual": {
+        "n_total": 22,
+        "actual_power": 0.6092,
+        "critical": 2.0796,
+        "df": 21,
+        "ncp": 2.3452
+      }
+    },
+    {
+      "id": "STATSMODELS-194",
+      "actual": {
+        "n_total": 27,
+        "actual_power": 0.7058,
+        "critical": 2.0555,
+        "df": 26,
+        "ncp": 2.5981
+      }
+    },
+    {
+      "id": "STATSMODELS-195",
+      "actual": {
+        "n_total": 27,
+        "actual_power": 0.7058,
+        "critical": 2.0555,
+        "df": 26,
+        "ncp": 2.5981
+      }
+    },
+    {
+      "id": "STATSMODELS-196",
+      "actual": {
+        "n_total": 34,
+        "actual_power": 0.8078,
+        "critical": 2.0345,
+        "df": 33,
+        "ncp": 2.9155
+      }
+    },
+    {
+      "id": "STATSMODELS-197",
+      "actual": {
+        "n_total": 34,
+        "actual_power": 0.8078,
+        "critical": 2.0345,
+        "df": 33,
+        "ncp": 2.9155
+      }
+    },
+    {
+      "id": "STATSMODELS-198",
+      "actual": {
+        "n_total": 44,
+        "actual_power": 0.9,
+        "critical": 2.0167,
+        "df": 43,
+        "ncp": 3.3166
+      }
+    },
+    {
+      "id": "STATSMODELS-199",
+      "actual": {
+        "n_total": 44,
+        "actual_power": 0.9,
+        "critical": 2.0167,
+        "df": 43,
+        "ncp": 3.3166
+      }
+    },
+    {
+      "id": "STATSMODELS-200",
+      "actual": {
+        "n_total": 54,
+        "actual_power": 0.9502,
+        "critical": 2.0057,
+        "df": 53,
+        "ncp": 3.6742
+      }
+    },
+    {
+      "id": "STATSMODELS-201",
+      "actual": {
+        "n_total": 54,
+        "actual_power": 0.9502,
+        "critical": 2.0057,
+        "df": 53,
+        "ncp": 3.6742
+      }
+    },
+    {
+      "id": "STATSMODELS-202",
+      "actual": {
+        "n_total": 16,
+        "actual_power": 0.604,
+        "critical": 1.7531,
+        "df": 15,
+        "ncp": 2
+      }
+    },
+    {
+      "id": "STATSMODELS-203",
+      "actual": {
+        "n_total": 16,
+        "actual_power": 0.604,
+        "critical": 1.7531,
+        "df": 15,
+        "ncp": 2
+      }
+    },
+    {
+      "id": "STATSMODELS-204",
+      "actual": {
+        "n_total": 21,
+        "actual_power": 0.7149,
+        "critical": 1.7247,
+        "df": 20,
+        "ncp": 2.2913
+      }
+    },
+    {
+      "id": "STATSMODELS-205",
+      "actual": {
+        "n_total": 21,
+        "actual_power": 0.7149,
+        "critical": 1.7247,
+        "df": 20,
+        "ncp": 2.2913
+      }
+    },
+    {
+      "id": "STATSMODELS-206",
+      "actual": {
+        "n_total": 27,
+        "actual_power": 0.8118,
+        "critical": 1.7056,
+        "df": 26,
+        "ncp": 2.5981
+      }
+    },
+    {
+      "id": "STATSMODELS-207",
+      "actual": {
+        "n_total": 27,
+        "actual_power": 0.8118,
+        "critical": 1.7056,
+        "df": 26,
+        "ncp": 2.5981
+      }
+    },
+    {
+      "id": "STATSMODELS-208",
+      "actual": {
+        "n_total": 36,
+        "actual_power": 0.9026,
+        "critical": 1.6896,
+        "df": 35,
+        "ncp": 3
+      }
+    },
+    {
+      "id": "STATSMODELS-209",
+      "actual": {
+        "n_total": 36,
+        "actual_power": 0.9026,
+        "critical": 1.6896,
+        "df": 35,
+        "ncp": 3
+      }
+    },
+    {
+      "id": "STATSMODELS-210",
+      "actual": {
+        "n_total": 45,
+        "actual_power": 0.9512,
+        "critical": 1.6802,
+        "df": 44,
+        "ncp": 3.3541
+      }
+    },
+    {
+      "id": "STATSMODELS-211",
+      "actual": {
+        "n_total": 45,
+        "actual_power": 0.9512,
+        "critical": 1.6802,
+        "df": 44,
+        "ncp": 3.3541
+      }
+    },
+    {
+      "id": "STATSMODELS-212",
+      "actual": {
+        "n_total": 19,
+        "actual_power": 0.6151,
+        "critical": 2.5524,
+        "df": 18,
+        "ncp": 2.8333
+      }
+    },
+    {
+      "id": "STATSMODELS-213",
+      "actual": {
+        "n_total": 19,
+        "actual_power": 0.6151,
+        "critical": 2.5524,
+        "df": 18,
+        "ncp": 2.8333
+      }
+    },
+    {
+      "id": "STATSMODELS-214",
+      "actual": {
+        "n_total": 23,
+        "actual_power": 0.7248,
+        "critical": 2.5083,
+        "df": 22,
+        "ncp": 3.1173
+      }
+    },
+    {
+      "id": "STATSMODELS-215",
+      "actual": {
+        "n_total": 23,
+        "actual_power": 0.7248,
+        "critical": 2.5083,
+        "df": 22,
+        "ncp": 3.1173
+      }
+    },
+    {
+      "id": "STATSMODELS-216",
+      "actual": {
+        "n_total": 27,
+        "actual_power": 0.8087,
+        "critical": 2.4786,
+        "df": 26,
+        "ncp": 3.3775
+      }
+    },
+    {
+      "id": "STATSMODELS-217",
+      "actual": {
+        "n_total": 27,
+        "actual_power": 0.8087,
+        "critical": 2.4786,
+        "df": 26,
+        "ncp": 3.3775
+      }
+    },
+    {
+      "id": "STATSMODELS-218",
+      "actual": {
+        "n_total": 34,
+        "actual_power": 0.9042,
+        "critical": 2.4448,
+        "df": 33,
+        "ncp": 3.7901
+      }
+    },
+    {
+      "id": "STATSMODELS-219",
+      "actual": {
+        "n_total": 34,
+        "actual_power": 0.9042,
+        "critical": 2.4448,
+        "df": 33,
+        "ncp": 3.7901
+      }
+    },
+    {
+      "id": "STATSMODELS-220",
+      "actual": {
+        "n_total": 41,
+        "actual_power": 0.9547,
+        "critical": 2.4233,
+        "df": 40,
+        "ncp": 4.162
+      }
+    },
+    {
+      "id": "STATSMODELS-221",
+      "actual": {
+        "n_total": 41,
+        "actual_power": 0.9547,
+        "critical": 2.4233,
+        "df": 40,
+        "ncp": 4.162
+      }
+    },
+    {
+      "id": "STATSMODELS-222",
+      "actual": {
+        "n_total": 14,
+        "actual_power": 0.6142,
+        "critical": 2.1604,
+        "df": 13,
+        "ncp": 2.4321
+      }
+    },
+    {
+      "id": "STATSMODELS-223",
+      "actual": {
+        "n_total": 14,
+        "actual_power": 0.6142,
+        "critical": 2.1604,
+        "df": 13,
+        "ncp": 2.4321
+      }
+    },
+    {
+      "id": "STATSMODELS-224",
+      "actual": {
+        "n_total": 17,
+        "actual_power": 0.7111,
+        "critical": 2.1199,
+        "df": 16,
+        "ncp": 2.68
+      }
+    },
+    {
+      "id": "STATSMODELS-225",
+      "actual": {
+        "n_total": 17,
+        "actual_power": 0.7111,
+        "critical": 2.1199,
+        "df": 16,
+        "ncp": 2.68
+      }
+    },
+    {
+      "id": "STATSMODELS-226",
+      "actual": {
+        "n_total": 21,
+        "actual_power": 0.8087,
+        "critical": 2.086,
+        "df": 20,
+        "ncp": 2.9787
+      }
+    },
+    {
+      "id": "STATSMODELS-227",
+      "actual": {
+        "n_total": 21,
+        "actual_power": 0.8087,
+        "critical": 2.086,
+        "df": 20,
+        "ncp": 2.9787
+      }
+    },
+    {
+      "id": "STATSMODELS-228",
+      "actual": {
+        "n_total": 27,
+        "actual_power": 0.9015,
+        "critical": 2.0555,
+        "df": 26,
+        "ncp": 3.3775
+      }
+    },
+    {
+      "id": "STATSMODELS-229",
+      "actual": {
+        "n_total": 27,
+        "actual_power": 0.9015,
+        "critical": 2.0555,
+        "df": 26,
+        "ncp": 3.3775
+      }
+    },
+    {
+      "id": "STATSMODELS-230",
+      "actual": {
+        "n_total": 33,
+        "actual_power": 0.9515,
+        "critical": 2.0369,
+        "df": 32,
+        "ncp": 3.734
+      }
+    },
+    {
+      "id": "STATSMODELS-231",
+      "actual": {
+        "n_total": 33,
+        "actual_power": 0.9515,
+        "critical": 2.0369,
+        "df": 32,
+        "ncp": 3.734
+      }
+    },
+    {
+      "id": "STATSMODELS-232",
+      "actual": {
+        "n_total": 11,
+        "actual_power": 0.6413,
+        "critical": 1.8125,
+        "df": 10,
+        "ncp": 2.1558
+      }
+    },
+    {
+      "id": "STATSMODELS-233",
+      "actual": {
+        "n_total": 11,
+        "actual_power": 0.6413,
+        "critical": 1.8125,
+        "df": 10,
+        "ncp": 2.1558
+      }
+    },
+    {
+      "id": "STATSMODELS-234",
+      "actual": {
+        "n_total": 13,
+        "actual_power": 0.7135,
+        "critical": 1.7823,
+        "df": 12,
+        "ncp": 2.3436
+      }
+    },
+    {
+      "id": "STATSMODELS-235",
+      "actual": {
+        "n_total": 13,
+        "actual_power": 0.7135,
+        "critical": 1.7823,
+        "df": 12,
+        "ncp": 2.3436
+      }
+    },
+    {
+      "id": "STATSMODELS-236",
+      "actual": {
+        "n_total": 17,
+        "actual_power": 0.821,
+        "critical": 1.7459,
+        "df": 16,
+        "ncp": 2.68
+      }
+    },
+    {
+      "id": "STATSMODELS-237",
+      "actual": {
+        "n_total": 17,
+        "actual_power": 0.821,
+        "critical": 1.7459,
+        "df": 16,
+        "ncp": 2.68
+      }
+    },
+    {
+      "id": "STATSMODELS-238",
+      "actual": {
+        "n_total": 22,
+        "actual_power": 0.9038,
+        "critical": 1.7207,
+        "df": 21,
+        "ncp": 3.0488
+      }
+    },
+    {
+      "id": "STATSMODELS-239",
+      "actual": {
+        "n_total": 22,
+        "actual_power": 0.9038,
+        "critical": 1.7207,
+        "df": 21,
+        "ncp": 3.0488
+      }
+    },
+    {
+      "id": "STATSMODELS-240",
+      "actual": {
+        "n_total": 28,
+        "actual_power": 0.956,
+        "critical": 1.7033,
+        "df": 27,
+        "ncp": 3.4395
+      }
+    },
+    {
+      "id": "STATSMODELS-241",
+      "actual": {
+        "n_total": 28,
+        "actual_power": 0.956,
+        "critical": 1.7033,
+        "df": 27,
+        "ncp": 3.4395
+      }
+    },
+    {
+      "id": "STATSMODELS-242",
+      "actual": {
+        "n_total": 14,
+        "actual_power": 0.6379,
+        "critical": 2.6503,
+        "df": 13,
+        "ncp": 2.9933
+      }
+    },
+    {
+      "id": "STATSMODELS-243",
+      "actual": {
+        "n_total": 14,
+        "actual_power": 0.6379,
+        "critical": 2.6503,
+        "df": 13,
+        "ncp": 2.9933
+      }
+    },
+    {
+      "id": "STATSMODELS-244",
+      "actual": {
+        "n_total": 16,
+        "actual_power": 0.7194,
+        "critical": 2.6025,
+        "df": 15,
+        "ncp": 3.2
+      }
+    },
+    {
+      "id": "STATSMODELS-245",
+      "actual": {
+        "n_total": 16,
+        "actual_power": 0.7194,
+        "critical": 2.6025,
+        "df": 15,
+        "ncp": 3.2
+      }
+    },
+    {
+      "id": "STATSMODELS-246",
+      "actual": {
+        "n_total": 19,
+        "actual_power": 0.8143,
+        "critical": 2.5524,
+        "df": 18,
+        "ncp": 3.4871
+      }
+    },
+    {
+      "id": "STATSMODELS-247",
+      "actual": {
+        "n_total": 19,
+        "actual_power": 0.8143,
+        "critical": 2.5524,
+        "df": 18,
+        "ncp": 3.4871
+      }
+    },
+    {
+      "id": "STATSMODELS-248",
+      "actual": {
+        "n_total": 24,
+        "actual_power": 0.9126,
+        "critical": 2.4999,
+        "df": 23,
+        "ncp": 3.9192
+      }
+    },
+    {
+      "id": "STATSMODELS-249",
+      "actual": {
+        "n_total": 24,
+        "actual_power": 0.9126,
+        "critical": 2.4999,
+        "df": 23,
+        "ncp": 3.9192
+      }
+    },
+    {
+      "id": "STATSMODELS-250",
+      "actual": {
+        "n_total": 28,
+        "actual_power": 0.9545,
+        "critical": 2.4727,
+        "df": 27,
+        "ncp": 4.2332
+      }
+    },
+    {
+      "id": "STATSMODELS-251",
+      "actual": {
+        "n_total": 28,
+        "actual_power": 0.9545,
+        "critical": 2.4727,
+        "df": 27,
+        "ncp": 4.2332
+      }
+    },
+    {
+      "id": "STATSMODELS-252",
+      "actual": {
+        "n_total": 10,
+        "actual_power": 0.6162,
+        "critical": 2.2622,
+        "df": 9,
+        "ncp": 2.5298
+      }
+    },
+    {
+      "id": "STATSMODELS-253",
+      "actual": {
+        "n_total": 10,
+        "actual_power": 0.6162,
+        "critical": 2.2622,
+        "df": 9,
+        "ncp": 2.5298
+      }
+    },
+    {
+      "id": "STATSMODELS-254",
+      "actual": {
+        "n_total": 12,
+        "actual_power": 0.7137,
+        "critical": 2.201,
+        "df": 11,
+        "ncp": 2.7713
+      }
+    },
+    {
+      "id": "STATSMODELS-255",
+      "actual": {
+        "n_total": 12,
+        "actual_power": 0.7137,
+        "critical": 2.201,
+        "df": 11,
+        "ncp": 2.7713
+      }
+    },
+    {
+      "id": "STATSMODELS-256",
+      "actual": {
+        "n_total": 15,
+        "actual_power": 0.8213,
+        "critical": 2.1448,
+        "df": 14,
+        "ncp": 3.0984
+      }
+    },
+    {
+      "id": "STATSMODELS-257",
+      "actual": {
+        "n_total": 15,
+        "actual_power": 0.8213,
+        "critical": 2.1448,
+        "df": 14,
+        "ncp": 3.0984
+      }
+    },
+    {
+      "id": "STATSMODELS-258",
+      "actual": {
+        "n_total": 19,
+        "actual_power": 0.9092,
+        "critical": 2.1009,
+        "df": 18,
+        "ncp": 3.4871
+      }
+    },
+    {
+      "id": "STATSMODELS-259",
+      "actual": {
+        "n_total": 19,
+        "actual_power": 0.9092,
+        "critical": 2.1009,
+        "df": 18,
+        "ncp": 3.4871
+      }
+    },
+    {
+      "id": "STATSMODELS-260",
+      "actual": {
+        "n_total": 23,
+        "actual_power": 0.9558,
+        "critical": 2.0739,
+        "df": 22,
+        "ncp": 3.8367
+      }
+    },
+    {
+      "id": "STATSMODELS-261",
+      "actual": {
+        "n_total": 23,
+        "actual_power": 0.9558,
+        "critical": 2.0739,
+        "df": 22,
+        "ncp": 3.8367
+      }
+    },
+    {
+      "id": "STATSMODELS-262",
+      "actual": {
+        "n_total": 8,
+        "actual_power": 0.6527,
+        "critical": 1.8946,
+        "df": 7,
+        "ncp": 2.2627
+      }
+    },
+    {
+      "id": "STATSMODELS-263",
+      "actual": {
+        "n_total": 8,
+        "actual_power": 0.6527,
+        "critical": 1.8946,
+        "df": 7,
+        "ncp": 2.2627
+      }
+    },
+    {
+      "id": "STATSMODELS-264",
+      "actual": {
+        "n_total": 9,
+        "actual_power": 0.7074,
+        "critical": 1.8595,
+        "df": 8,
+        "ncp": 2.4
+      }
+    },
+    {
+      "id": "STATSMODELS-265",
+      "actual": {
+        "n_total": 9,
+        "actual_power": 0.7074,
+        "critical": 1.8595,
+        "df": 8,
+        "ncp": 2.4
+      }
+    },
+    {
+      "id": "STATSMODELS-266",
+      "actual": {
+        "n_total": 12,
+        "actual_power": 0.829,
+        "critical": 1.7959,
+        "df": 11,
+        "ncp": 2.7713
+      }
+    },
+    {
+      "id": "STATSMODELS-267",
+      "actual": {
+        "n_total": 12,
+        "actual_power": 0.829,
+        "critical": 1.7959,
+        "df": 11,
+        "ncp": 2.7713
+      }
+    },
+    {
+      "id": "STATSMODELS-268",
+      "actual": {
+        "n_total": 15,
+        "actual_power": 0.903,
+        "critical": 1.7613,
+        "df": 14,
+        "ncp": 3.0984
+      }
+    },
+    {
+      "id": "STATSMODELS-269",
+      "actual": {
+        "n_total": 15,
+        "actual_power": 0.903,
+        "critical": 1.7613,
+        "df": 14,
+        "ncp": 3.0984
+      }
+    },
+    {
+      "id": "STATSMODELS-270",
+      "actual": {
+        "n_total": 19,
+        "actual_power": 0.9561,
+        "critical": 1.7341,
+        "df": 18,
+        "ncp": 3.4871
+      }
+    },
+    {
+      "id": "STATSMODELS-271",
+      "actual": {
+        "n_total": 19,
+        "actual_power": 0.9561,
+        "critical": 1.7341,
+        "df": 18,
+        "ncp": 3.4871
+      }
+    },
+    {
+      "id": "STATSMODELS-272",
+      "actual": {
+        "n_total": 10,
+        "actual_power": 0.6389,
+        "critical": 2.8214,
+        "df": 9,
+        "ncp": 3.1623
+      }
+    },
+    {
+      "id": "STATSMODELS-273",
+      "actual": {
+        "n_total": 10,
+        "actual_power": 0.6389,
+        "critical": 2.8214,
+        "df": 9,
+        "ncp": 3.1623
+      }
+    },
+    {
+      "id": "STATSMODELS-274",
+      "actual": {
+        "n_total": 11,
+        "actual_power": 0.7034,
+        "critical": 2.7638,
+        "df": 10,
+        "ncp": 3.3166
+      }
+    },
+    {
+      "id": "STATSMODELS-275",
+      "actual": {
+        "n_total": 11,
+        "actual_power": 0.7034,
+        "critical": 2.7638,
+        "df": 10,
+        "ncp": 3.3166
+      }
+    },
+    {
+      "id": "STATSMODELS-276",
+      "actual": {
+        "n_total": 13,
+        "actual_power": 0.8058,
+        "critical": 2.681,
+        "df": 12,
+        "ncp": 3.6056
+      }
+    },
+    {
+      "id": "STATSMODELS-277",
+      "actual": {
+        "n_total": 13,
+        "actual_power": 0.8058,
+        "critical": 2.681,
+        "df": 12,
+        "ncp": 3.6056
+      }
+    },
+    {
+      "id": "STATSMODELS-278",
+      "actual": {
+        "n_total": 16,
+        "actual_power": 0.9034,
+        "critical": 2.6025,
+        "df": 15,
+        "ncp": 4
+      }
+    },
+    {
+      "id": "STATSMODELS-279",
+      "actual": {
+        "n_total": 16,
+        "actual_power": 0.9034,
+        "critical": 2.6025,
+        "df": 15,
+        "ncp": 4
+      }
+    },
+    {
+      "id": "STATSMODELS-280",
+      "actual": {
+        "n_total": 19,
+        "actual_power": 0.9548,
+        "critical": 2.5524,
+        "df": 18,
+        "ncp": 4.3589
+      }
+    },
+    {
+      "id": "STATSMODELS-281",
+      "actual": {
+        "n_total": 19,
+        "actual_power": 0.9548,
+        "critical": 2.5524,
+        "df": 18,
+        "ncp": 4.3589
+      }
+    },
+    {
+      "id": "STATSMODELS-282",
+      "actual": {
+        "n_total": 7,
+        "actual_power": 0.6005,
+        "critical": 2.4469,
+        "df": 6,
+        "ncp": 2.6458
+      }
+    },
+    {
+      "id": "STATSMODELS-283",
+      "actual": {
+        "n_total": 7,
+        "actual_power": 0.6005,
+        "critical": 2.4469,
+        "df": 6,
+        "ncp": 2.6458
+      }
+    },
+    {
+      "id": "STATSMODELS-284",
+      "actual": {
+        "n_total": 9,
+        "actual_power": 0.748,
+        "critical": 2.306,
+        "df": 8,
+        "ncp": 3
+      }
+    },
+    {
+      "id": "STATSMODELS-285",
+      "actual": {
+        "n_total": 9,
+        "actual_power": 0.748,
+        "critical": 2.306,
+        "df": 8,
+        "ncp": 3
+      }
+    },
+    {
+      "id": "STATSMODELS-286",
+      "actual": {
+        "n_total": 10,
+        "actual_power": 0.8031,
+        "critical": 2.2622,
+        "df": 9,
+        "ncp": 3.1623
+      }
+    },
+    {
+      "id": "STATSMODELS-287",
+      "actual": {
+        "n_total": 10,
+        "actual_power": 0.8031,
+        "critical": 2.2622,
+        "df": 9,
+        "ncp": 3.1623
+      }
+    },
+    {
+      "id": "STATSMODELS-288",
+      "actual": {
+        "n_total": 13,
+        "actual_power": 0.9107,
+        "critical": 2.1788,
+        "df": 12,
+        "ncp": 3.6056
+      }
+    },
+    {
+      "id": "STATSMODELS-289",
+      "actual": {
+        "n_total": 13,
+        "actual_power": 0.9107,
+        "critical": 2.1788,
+        "df": 12,
+        "ncp": 3.6056
+      }
+    },
+    {
+      "id": "STATSMODELS-290",
+      "actual": {
+        "n_total": 16,
+        "actual_power": 0.9619,
+        "critical": 2.1314,
+        "df": 15,
+        "ncp": 4
+      }
+    },
+    {
+      "id": "STATSMODELS-291",
+      "actual": {
+        "n_total": 16,
+        "actual_power": 0.9619,
+        "critical": 2.1314,
+        "df": 15,
+        "ncp": 4
+      }
+    },
+    {
+      "id": "STATSMODELS-292",
+      "actual": {
+        "n_total": 6,
+        "actual_power": 0.6769,
+        "critical": 2.015,
+        "df": 5,
+        "ncp": 2.4495
+      }
+    },
+    {
+      "id": "STATSMODELS-293",
+      "actual": {
+        "n_total": 6,
+        "actual_power": 0.6769,
+        "critical": 2.015,
+        "df": 5,
+        "ncp": 2.4495
+      }
+    },
+    {
+      "id": "STATSMODELS-294",
+      "actual": {
+        "n_total": 7,
+        "actual_power": 0.7544,
+        "critical": 1.9432,
+        "df": 6,
+        "ncp": 2.6458
+      }
+    },
+    {
+      "id": "STATSMODELS-295",
+      "actual": {
+        "n_total": 7,
+        "actual_power": 0.7544,
+        "critical": 1.9432,
+        "df": 6,
+        "ncp": 2.6458
+      }
+    },
+    {
+      "id": "STATSMODELS-296",
+      "actual": {
+        "n_total": 8,
+        "actual_power": 0.815,
+        "critical": 1.8946,
+        "df": 7,
+        "ncp": 2.8284
+      }
+    },
+    {
+      "id": "STATSMODELS-297",
+      "actual": {
+        "n_total": 8,
+        "actual_power": 0.815,
+        "critical": 1.8946,
+        "df": 7,
+        "ncp": 2.8284
+      }
+    },
+    {
+      "id": "STATSMODELS-298",
+      "actual": {
+        "n_total": 11,
+        "actual_power": 0.9245,
+        "critical": 1.8125,
+        "df": 10,
+        "ncp": 3.3166
+      }
+    },
+    {
+      "id": "STATSMODELS-299",
+      "actual": {
+        "n_total": 11,
+        "actual_power": 0.9245,
+        "critical": 1.8125,
+        "df": 10,
+        "ncp": 3.3166
+      }
+    },
+    {
+      "id": "STATSMODELS-300",
+      "actual": {
+        "n_total": 13,
+        "actual_power": 0.9597,
+        "critical": 1.7823,
+        "df": 12,
+        "ncp": 3.6056
+      }
+    },
+    {
+      "id": "STATSMODELS-301",
+      "actual": {
+        "n_total": 13,
+        "actual_power": 0.9597,
+        "critical": 1.7823,
+        "df": 12,
+        "ncp": 3.6056
+      }
+    },
+    {
+      "id": "STATSMODELS-302",
+      "actual": {
+        "n_total": 6,
+        "actual_power": 0.6359,
+        "critical": 3.3649,
+        "df": 5,
+        "ncp": 3.6742
+      }
+    },
+    {
+      "id": "STATSMODELS-303",
+      "actual": {
+        "n_total": 6,
+        "actual_power": 0.6359,
+        "critical": 3.3649,
+        "df": 5,
+        "ncp": 3.6742
+      }
+    },
+    {
+      "id": "STATSMODELS-304",
+      "actual": {
+        "n_total": 7,
+        "actual_power": 0.7644,
+        "critical": 3.1427,
+        "df": 6,
+        "ncp": 3.9686
+      }
+    },
+    {
+      "id": "STATSMODELS-305",
+      "actual": {
+        "n_total": 7,
+        "actual_power": 0.7644,
+        "critical": 3.1427,
+        "df": 6,
+        "ncp": 3.9686
+      }
+    },
+    {
+      "id": "STATSMODELS-306",
+      "actual": {
+        "n_total": 8,
+        "actual_power": 0.8553,
+        "critical": 2.998,
+        "df": 7,
+        "ncp": 4.2426
+      }
+    },
+    {
+      "id": "STATSMODELS-307",
+      "actual": {
+        "n_total": 8,
+        "actual_power": 0.8553,
+        "critical": 2.998,
+        "df": 7,
+        "ncp": 4.2426
+      }
+    },
+    {
+      "id": "STATSMODELS-308",
+      "actual": {
+        "n_total": 9,
+        "actual_power": 0.9148,
+        "critical": 2.8965,
+        "df": 8,
+        "ncp": 4.5
+      }
+    },
+    {
+      "id": "STATSMODELS-309",
+      "actual": {
+        "n_total": 9,
+        "actual_power": 0.9148,
+        "critical": 2.8965,
+        "df": 8,
+        "ncp": 4.5
+      }
+    },
+    {
+      "id": "STATSMODELS-310",
+      "actual": {
+        "n_total": 10,
+        "actual_power": 0.9515,
+        "critical": 2.8214,
+        "df": 9,
+        "ncp": 4.7434
+      }
+    },
+    {
+      "id": "STATSMODELS-311",
+      "actual": {
+        "n_total": 10,
+        "actual_power": 0.9515,
+        "critical": 2.8214,
+        "df": 9,
+        "ncp": 4.7434
+      }
+    },
+    {
+      "id": "STATSMODELS-312",
+      "actual": {
+        "n_total": 5,
+        "actual_power": 0.7107,
+        "critical": 2.7764,
+        "df": 4,
+        "ncp": 3.3541
+      }
+    },
+    {
+      "id": "STATSMODELS-313",
+      "actual": {
+        "n_total": 5,
+        "actual_power": 0.7107,
+        "critical": 2.7764,
+        "df": 4,
+        "ncp": 3.3541
+      }
+    },
+    {
+      "id": "STATSMODELS-314",
+      "actual": {
+        "n_total": 5,
+        "actual_power": 0.7107,
+        "critical": 2.7764,
+        "df": 4,
+        "ncp": 3.3541
+      }
+    },
+    {
+      "id": "STATSMODELS-315",
+      "actual": {
+        "n_total": 5,
+        "actual_power": 0.7107,
+        "critical": 2.7764,
+        "df": 4,
+        "ncp": 3.3541
+      }
+    },
+    {
+      "id": "STATSMODELS-316",
+      "actual": {
+        "n_total": 6,
+        "actual_power": 0.8325,
+        "critical": 2.5706,
+        "df": 5,
+        "ncp": 3.6742
+      }
+    },
+    {
+      "id": "STATSMODELS-317",
+      "actual": {
+        "n_total": 6,
+        "actual_power": 0.8325,
+        "critical": 2.5706,
+        "df": 5,
+        "ncp": 3.6742
+      }
+    },
+    {
+      "id": "STATSMODELS-318",
+      "actual": {
+        "n_total": 7,
+        "actual_power": 0.9077,
+        "critical": 2.4469,
+        "df": 6,
+        "ncp": 3.9686
+      }
+    },
+    {
+      "id": "STATSMODELS-319",
+      "actual": {
+        "n_total": 7,
+        "actual_power": 0.9077,
+        "critical": 2.4469,
+        "df": 6,
+        "ncp": 3.9686
+      }
+    },
+    {
+      "id": "STATSMODELS-320",
+      "actual": {
+        "n_total": 8,
+        "actual_power": 0.951,
+        "critical": 2.3646,
+        "df": 7,
+        "ncp": 4.2426
+      }
+    },
+    {
+      "id": "STATSMODELS-321",
+      "actual": {
+        "n_total": 8,
+        "actual_power": 0.951,
+        "critical": 2.3646,
+        "df": 7,
+        "ncp": 4.2426
+      }
+    },
+    {
+      "id": "STATSMODELS-322",
+      "actual": {
+        "n_total": 4,
+        "actual_power": 0.7353,
+        "critical": 2.3534,
+        "df": 3,
+        "ncp": 3
+      }
+    },
+    {
+      "id": "STATSMODELS-323",
+      "actual": {
+        "n_total": 4,
+        "actual_power": 0.7353,
+        "critical": 2.3534,
+        "df": 3,
+        "ncp": 3
+      }
+    },
+    {
+      "id": "STATSMODELS-324",
+      "actual": {
+        "n_total": 4,
+        "actual_power": 0.7353,
+        "critical": 2.3534,
+        "df": 3,
+        "ncp": 3
+      }
+    },
+    {
+      "id": "STATSMODELS-325",
+      "actual": {
+        "n_total": 4,
+        "actual_power": 0.7353,
+        "critical": 2.3534,
+        "df": 3,
+        "ncp": 3
+      }
+    },
+    {
+      "id": "STATSMODELS-326",
+      "actual": {
+        "n_total": 5,
+        "actual_power": 0.8619,
+        "critical": 2.1318,
+        "df": 4,
+        "ncp": 3.3541
+      }
+    },
+    {
+      "id": "STATSMODELS-327",
+      "actual": {
+        "n_total": 5,
+        "actual_power": 0.8619,
+        "critical": 2.1318,
+        "df": 4,
+        "ncp": 3.3541
+      }
+    },
+    {
+      "id": "STATSMODELS-328",
+      "actual": {
+        "n_total": 6,
+        "actual_power": 0.9309,
+        "critical": 2.015,
+        "df": 5,
+        "ncp": 3.6742
+      }
+    },
+    {
+      "id": "STATSMODELS-329",
+      "actual": {
+        "n_total": 6,
+        "actual_power": 0.9309,
+        "critical": 2.015,
+        "df": 5,
+        "ncp": 3.6742
+      }
+    },
+    {
+      "id": "STATSMODELS-330",
+      "actual": {
+        "n_total": 7,
+        "actual_power": 0.9665,
+        "critical": 1.9432,
+        "df": 6,
+        "ncp": 3.9686
+      }
+    },
+    {
+      "id": "STATSMODELS-331",
+      "actual": {
+        "n_total": 7,
+        "actual_power": 0.9665,
+        "critical": 1.9432,
+        "df": 6,
+        "ncp": 3.9686
+      }
+    },
+    {
+      "id": "STATSMODELS-332",
+      "actual": {
+        "n_total": 804,
+        "actual_power": 0.6002,
+        "critical": 2.582,
+        "df": 803,
+        "ncp": 2.8355
+      }
+    },
+    {
+      "id": "STATSMODELS-333",
+      "actual": {
+        "n_total": 804,
+        "actual_power": 0.6002,
+        "critical": 2.582,
+        "df": 803,
+        "ncp": 2.8355
+      }
+    },
+    {
+      "id": "STATSMODELS-334",
+      "actual": {
+        "n_total": 965,
+        "actual_power": 0.7003,
+        "critical": 2.5809,
+        "df": 964,
+        "ncp": 3.1064
+      }
+    },
+    {
+      "id": "STATSMODELS-335",
+      "actual": {
+        "n_total": 965,
+        "actual_power": 0.7003,
+        "critical": 2.5809,
+        "df": 964,
+        "ncp": 3.1064
+      }
+    },
+    {
+      "id": "STATSMODELS-336",
+      "actual": {
+        "n_total": 1172,
+        "actual_power": 0.8003,
+        "critical": 2.58,
+        "df": 1171,
+        "ncp": 3.4234
+      }
+    },
+    {
+      "id": "STATSMODELS-337",
+      "actual": {
+        "n_total": 1172,
+        "actual_power": 0.8003,
+        "critical": 2.58,
+        "df": 1171,
+        "ncp": 3.4234
+      }
+    },
+    {
+      "id": "STATSMODELS-338",
+      "actual": {
+        "n_total": 1492,
+        "actual_power": 0.9002,
+        "critical": 2.5791,
+        "df": 1491,
+        "ncp": 3.8626
+      }
+    },
+    {
+      "id": "STATSMODELS-339",
+      "actual": {
+        "n_total": 1492,
+        "actual_power": 0.9002,
+        "critical": 2.5791,
+        "df": 1491,
+        "ncp": 3.8626
+      }
+    },
+    {
+      "id": "STATSMODELS-340",
+      "actual": {
+        "n_total": 1785,
+        "actual_power": 0.95,
+        "critical": 2.5786,
+        "df": 1784,
+        "ncp": 4.2249
+      }
+    },
+    {
+      "id": "STATSMODELS-341",
+      "actual": {
+        "n_total": 1785,
+        "actual_power": 0.95,
+        "critical": 2.5786,
+        "df": 1784,
+        "ncp": 4.2249
+      }
+    },
+    {
+      "id": "STATSMODELS-342",
+      "actual": {
+        "n_total": 625,
+        "actual_power": 0.6001,
+        "critical": 2.2468,
+        "df": 624,
+        "ncp": 2.5
+      }
+    },
+    {
+      "id": "STATSMODELS-343",
+      "actual": {
+        "n_total": 625,
+        "actual_power": 0.6001,
+        "critical": 2.2468,
+        "df": 624,
+        "ncp": 2.5
+      }
+    },
+    {
+      "id": "STATSMODELS-344",
+      "actual": {
+        "n_total": 768,
+        "actual_power": 0.7003,
+        "critical": 2.2458,
+        "df": 767,
+        "ncp": 2.7713
+      }
+    },
+    {
+      "id": "STATSMODELS-345",
+      "actual": {
+        "n_total": 768,
+        "actual_power": 0.7003,
+        "critical": 2.2458,
+        "df": 767,
+        "ncp": 2.7713
+      }
+    },
+    {
+      "id": "STATSMODELS-346",
+      "actual": {
+        "n_total": 954,
+        "actual_power": 0.8004,
+        "critical": 2.245,
+        "df": 953,
+        "ncp": 3.0887
+      }
+    },
+    {
+      "id": "STATSMODELS-347",
+      "actual": {
+        "n_total": 954,
+        "actual_power": 0.8004,
+        "critical": 2.245,
+        "df": 953,
+        "ncp": 3.0887
+      }
+    },
+    {
+      "id": "STATSMODELS-348",
+      "actual": {
+        "n_total": 1244,
+        "actual_power": 0.9001,
+        "critical": 2.2441,
+        "df": 1243,
+        "ncp": 3.527
+      }
+    },
+    {
+      "id": "STATSMODELS-349",
+      "actual": {
+        "n_total": 1244,
+        "actual_power": 0.9001,
+        "critical": 2.2441,
+        "df": 1243,
+        "ncp": 3.527
+      }
+    },
+    {
+      "id": "STATSMODELS-350",
+      "actual": {
+        "n_total": 1513,
+        "actual_power": 0.95,
+        "critical": 2.2436,
+        "df": 1512,
+        "ncp": 3.8897
+      }
+    },
+    {
+      "id": "STATSMODELS-351",
+      "actual": {
+        "n_total": 1513,
+        "actual_power": 0.95,
+        "critical": 2.2436,
+        "df": 1512,
+        "ncp": 3.8897
+      }
+    },
+    {
+      "id": "STATSMODELS-352",
+      "actual": {
+        "n_total": 492,
+        "actual_power": 0.6002,
+        "critical": 1.9648,
+        "df": 491,
+        "ncp": 2.2181
+      }
+    },
+    {
+      "id": "STATSMODELS-353",
+      "actual": {
+        "n_total": 492,
+        "actual_power": 0.6002,
+        "critical": 1.9648,
+        "df": 491,
+        "ncp": 2.2181
+      }
+    },
+    {
+      "id": "STATSMODELS-354",
+      "actual": {
+        "n_total": 620,
+        "actual_power": 0.7006,
+        "critical": 1.9638,
+        "df": 619,
+        "ncp": 2.49
+      }
+    },
+    {
+      "id": "STATSMODELS-355",
+      "actual": {
+        "n_total": 620,
+        "actual_power": 0.7006,
+        "critical": 1.9638,
+        "df": 619,
+        "ncp": 2.49
+      }
+    },
+    {
+      "id": "STATSMODELS-356",
+      "actual": {
+        "n_total": 787,
+        "actual_power": 0.8001,
+        "critical": 1.963,
+        "df": 786,
+        "ncp": 2.8054
+      }
+    },
+    {
+      "id": "STATSMODELS-357",
+      "actual": {
+        "n_total": 787,
+        "actual_power": 0.8001,
+        "critical": 1.963,
+        "df": 786,
+        "ncp": 2.8054
+      }
+    },
+    {
+      "id": "STATSMODELS-358",
+      "actual": {
+        "n_total": 1053,
+        "actual_power": 0.9001,
+        "critical": 1.9622,
+        "df": 1052,
+        "ncp": 3.245
+      }
+    },
+    {
+      "id": "STATSMODELS-359",
+      "actual": {
+        "n_total": 1053,
+        "actual_power": 0.9001,
+        "critical": 1.9622,
+        "df": 1052,
+        "ncp": 3.245
+      }
+    },
+    {
+      "id": "STATSMODELS-360",
+      "actual": {
+        "n_total": 1302,
+        "actual_power": 0.9501,
+        "critical": 1.9618,
+        "df": 1301,
+        "ncp": 3.6083
+      }
+    },
+    {
+      "id": "STATSMODELS-361",
+      "actual": {
+        "n_total": 1302,
+        "actual_power": 0.9501,
+        "critical": 1.9618,
+        "df": 1301,
+        "ncp": 3.6083
+      }
+    },
+    {
+      "id": "STATSMODELS-362",
+      "actual": {
+        "n_total": 360,
+        "actual_power": 0.6014,
+        "critical": 2.5896,
+        "df": 359,
+        "ncp": 2.846
+      }
+    },
+    {
+      "id": "STATSMODELS-363",
+      "actual": {
+        "n_total": 360,
+        "actual_power": 0.6014,
+        "critical": 2.5896,
+        "df": 359,
+        "ncp": 2.846
+      }
+    },
+    {
+      "id": "STATSMODELS-364",
+      "actual": {
+        "n_total": 431,
+        "actual_power": 0.7006,
+        "critical": 2.5873,
+        "df": 430,
+        "ncp": 3.1141
+      }
+    },
+    {
+      "id": "STATSMODELS-365",
+      "actual": {
+        "n_total": 431,
+        "actual_power": 0.7006,
+        "critical": 2.5873,
+        "df": 430,
+        "ncp": 3.1141
+      }
+    },
+    {
+      "id": "STATSMODELS-366",
+      "actual": {
+        "n_total": 523,
+        "actual_power": 0.8006,
+        "critical": 2.5853,
+        "df": 522,
+        "ncp": 3.4304
+      }
+    },
+    {
+      "id": "STATSMODELS-367",
+      "actual": {
+        "n_total": 523,
+        "actual_power": 0.8006,
+        "critical": 2.5853,
+        "df": 522,
+        "ncp": 3.4304
+      }
+    },
+    {
+      "id": "STATSMODELS-368",
+      "actual": {
+        "n_total": 665,
+        "actual_power": 0.9002,
+        "critical": 2.5833,
+        "df": 664,
+        "ncp": 3.8681
+      }
+    },
+    {
+      "id": "STATSMODELS-369",
+      "actual": {
+        "n_total": 665,
+        "actual_power": 0.9002,
+        "critical": 2.5833,
+        "df": 664,
+        "ncp": 3.8681
+      }
+    },
+    {
+      "id": "STATSMODELS-370",
+      "actual": {
+        "n_total": 796,
+        "actual_power": 0.9503,
+        "critical": 2.582,
+        "df": 795,
+        "ncp": 4.232
+      }
+    },
+    {
+      "id": "STATSMODELS-371",
+      "actual": {
+        "n_total": 796,
+        "actual_power": 0.9503,
+        "critical": 2.582,
+        "df": 795,
+        "ncp": 4.232
+      }
+    },
+    {
+      "id": "STATSMODELS-372",
+      "actual": {
+        "n_total": 280,
+        "actual_power": 0.6015,
+        "critical": 2.2536,
+        "df": 279,
+        "ncp": 2.51
+      }
+    },
+    {
+      "id": "STATSMODELS-373",
+      "actual": {
+        "n_total": 280,
+        "actual_power": 0.6015,
+        "critical": 2.2536,
+        "df": 279,
+        "ncp": 2.51
+      }
+    },
+    {
+      "id": "STATSMODELS-374",
+      "actual": {
+        "n_total": 343,
+        "actual_power": 0.7007,
+        "critical": 2.2513,
+        "df": 342,
+        "ncp": 2.778
+      }
+    },
+    {
+      "id": "STATSMODELS-375",
+      "actual": {
+        "n_total": 343,
+        "actual_power": 0.7007,
+        "critical": 2.2513,
+        "df": 342,
+        "ncp": 2.778
+      }
+    },
+    {
+      "id": "STATSMODELS-376",
+      "actual": {
+        "n_total": 425,
+        "actual_power": 0.8,
+        "critical": 2.2494,
+        "df": 424,
+        "ncp": 3.0923
+      }
+    },
+    {
+      "id": "STATSMODELS-377",
+      "actual": {
+        "n_total": 425,
+        "actual_power": 0.8,
+        "critical": 2.2494,
+        "df": 424,
+        "ncp": 3.0923
+      }
+    },
+    {
+      "id": "STATSMODELS-378",
+      "actual": {
+        "n_total": 555,
+        "actual_power": 0.9005,
+        "critical": 2.2475,
+        "df": 554,
+        "ncp": 3.5338
+      }
+    },
+    {
+      "id": "STATSMODELS-379",
+      "actual": {
+        "n_total": 555,
+        "actual_power": 0.9005,
+        "critical": 2.2475,
+        "df": 554,
+        "ncp": 3.5338
+      }
+    },
+    {
+      "id": "STATSMODELS-380",
+      "actual": {
+        "n_total": 674,
+        "actual_power": 0.9501,
+        "critical": 2.2464,
+        "df": 673,
+        "ncp": 3.8942
+      }
+    },
+    {
+      "id": "STATSMODELS-381",
+      "actual": {
+        "n_total": 674,
+        "actual_power": 0.9501,
+        "critical": 2.2464,
+        "df": 673,
+        "ncp": 3.8942
+      }
+    },
+    {
+      "id": "STATSMODELS-382",
+      "actual": {
+        "n_total": 220,
+        "actual_power": 0.6007,
+        "critical": 1.9709,
+        "df": 219,
+        "ncp": 2.2249
+      }
+    },
+    {
+      "id": "STATSMODELS-383",
+      "actual": {
+        "n_total": 220,
+        "actual_power": 0.6007,
+        "critical": 1.9709,
+        "df": 219,
+        "ncp": 2.2249
+      }
+    },
+    {
+      "id": "STATSMODELS-384",
+      "actual": {
+        "n_total": 277,
+        "actual_power": 0.7012,
+        "critical": 1.9686,
+        "df": 276,
+        "ncp": 2.4965
+      }
+    },
+    {
+      "id": "STATSMODELS-385",
+      "actual": {
+        "n_total": 277,
+        "actual_power": 0.7012,
+        "critical": 1.9686,
+        "df": 276,
+        "ncp": 2.4965
+      }
+    },
+    {
+      "id": "STATSMODELS-386",
+      "actual": {
+        "n_total": 351,
+        "actual_power": 0.8003,
+        "critical": 1.9668,
+        "df": 350,
+        "ncp": 2.8102
+      }
+    },
+    {
+      "id": "STATSMODELS-387",
+      "actual": {
+        "n_total": 351,
+        "actual_power": 0.8003,
+        "critical": 1.9668,
+        "df": 350,
+        "ncp": 2.8102
+      }
+    },
+    {
+      "id": "STATSMODELS-388",
+      "actual": {
+        "n_total": 469,
+        "actual_power": 0.9,
+        "critical": 1.965,
+        "df": 468,
+        "ncp": 3.2485
+      }
+    },
+    {
+      "id": "STATSMODELS-389",
+      "actual": {
+        "n_total": 469,
+        "actual_power": 0.9,
+        "critical": 1.965,
+        "df": 468,
+        "ncp": 3.2485
+      }
+    },
+    {
+      "id": "STATSMODELS-390",
+      "actual": {
+        "n_total": 580,
+        "actual_power": 0.9502,
+        "critical": 1.9641,
+        "df": 579,
+        "ncp": 3.6125
+      }
+    },
+    {
+      "id": "STATSMODELS-391",
+      "actual": {
+        "n_total": 580,
+        "actual_power": 0.9502,
+        "critical": 1.9641,
+        "df": 579,
+        "ncp": 3.6125
+      }
+    },
+    {
+      "id": "STATSMODELS-392",
+      "actual": {
+        "n_total": 204,
+        "actual_power": 0.6016,
+        "critical": 2.6003,
+        "df": 203,
+        "ncp": 2.8566
+      }
+    },
+    {
+      "id": "STATSMODELS-393",
+      "actual": {
+        "n_total": 204,
+        "actual_power": 0.6016,
+        "critical": 2.6003,
+        "df": 203,
+        "ncp": 2.8566
+      }
+    },
+    {
+      "id": "STATSMODELS-394",
+      "actual": {
+        "n_total": 244,
+        "actual_power": 0.7009,
+        "critical": 2.5962,
+        "df": 243,
+        "ncp": 3.1241
+      }
+    },
+    {
+      "id": "STATSMODELS-395",
+      "actual": {
+        "n_total": 244,
+        "actual_power": 0.7009,
+        "critical": 2.5962,
+        "df": 243,
+        "ncp": 3.1241
+      }
+    },
+    {
+      "id": "STATSMODELS-396",
+      "actual": {
+        "n_total": 296,
+        "actual_power": 0.8011,
+        "critical": 2.5926,
+        "df": 295,
+        "ncp": 3.4409
+      }
+    },
+    {
+      "id": "STATSMODELS-397",
+      "actual": {
+        "n_total": 296,
+        "actual_power": 0.8011,
+        "critical": 2.5926,
+        "df": 295,
+        "ncp": 3.4409
+      }
+    },
+    {
+      "id": "STATSMODELS-398",
+      "actual": {
+        "n_total": 376,
+        "actual_power": 0.9006,
+        "critical": 2.589,
+        "df": 375,
+        "ncp": 3.8781
+      }
+    },
+    {
+      "id": "STATSMODELS-399",
+      "actual": {
+        "n_total": 376,
+        "actual_power": 0.9006,
+        "critical": 2.589,
+        "df": 375,
+        "ncp": 3.8781
+      }
+    },
+    {
+      "id": "STATSMODELS-400",
+      "actual": {
+        "n_total": 449,
+        "actual_power": 0.9502,
+        "critical": 2.5868,
+        "df": 448,
+        "ncp": 4.2379
+      }
+    },
+    {
+      "id": "STATSMODELS-401",
+      "actual": {
+        "n_total": 449,
+        "actual_power": 0.9502,
+        "critical": 2.5868,
+        "df": 448,
+        "ncp": 4.2379
+      }
+    },
+    {
+      "id": "STATSMODELS-402",
+      "actual": {
+        "n_total": 159,
+        "actual_power": 0.6027,
+        "critical": 2.263,
+        "df": 158,
+        "ncp": 2.5219
+      }
+    },
+    {
+      "id": "STATSMODELS-403",
+      "actual": {
+        "n_total": 159,
+        "actual_power": 0.6027,
+        "critical": 2.263,
+        "df": 158,
+        "ncp": 2.5219
+      }
+    },
+    {
+      "id": "STATSMODELS-404",
+      "actual": {
+        "n_total": 194,
+        "actual_power": 0.7006,
+        "critical": 2.259,
+        "df": 193,
+        "ncp": 2.7857
+      }
+    },
+    {
+      "id": "STATSMODELS-405",
+      "actual": {
+        "n_total": 194,
+        "actual_power": 0.7006,
+        "critical": 2.259,
+        "df": 193,
+        "ncp": 2.7857
+      }
+    },
+    {
+      "id": "STATSMODELS-406",
+      "actual": {
+        "n_total": 241,
+        "actual_power": 0.8015,
+        "critical": 2.2556,
+        "df": 240,
+        "ncp": 3.1048
+      }
+    },
+    {
+      "id": "STATSMODELS-407",
+      "actual": {
+        "n_total": 241,
+        "actual_power": 0.8015,
+        "critical": 2.2556,
+        "df": 240,
+        "ncp": 3.1048
+      }
+    },
+    {
+      "id": "STATSMODELS-408",
+      "actual": {
+        "n_total": 313,
+        "actual_power": 0.9002,
+        "critical": 2.2523,
+        "df": 312,
+        "ncp": 3.5384
+      }
+    },
+    {
+      "id": "STATSMODELS-409",
+      "actual": {
+        "n_total": 313,
+        "actual_power": 0.9002,
+        "critical": 2.2523,
+        "df": 312,
+        "ncp": 3.5384
+      }
+    },
+    {
+      "id": "STATSMODELS-410",
+      "actual": {
+        "n_total": 381,
+        "actual_power": 0.9505,
+        "critical": 2.2503,
+        "df": 380,
+        "ncp": 3.9038
+      }
+    },
+    {
+      "id": "STATSMODELS-411",
+      "actual": {
+        "n_total": 381,
+        "actual_power": 0.9505,
+        "critical": 2.2503,
+        "df": 380,
+        "ncp": 3.9038
+      }
+    },
+    {
+      "id": "STATSMODELS-412",
+      "actual": {
+        "n_total": 125,
+        "actual_power": 0.6021,
+        "critical": 1.9793,
+        "df": 124,
+        "ncp": 2.2361
+      }
+    },
+    {
+      "id": "STATSMODELS-413",
+      "actual": {
+        "n_total": 125,
+        "actual_power": 0.6021,
+        "critical": 1.9793,
+        "df": 124,
+        "ncp": 2.2361
+      }
+    },
+    {
+      "id": "STATSMODELS-414",
+      "actual": {
+        "n_total": 157,
+        "actual_power": 0.7021,
+        "critical": 1.9753,
+        "df": 156,
+        "ncp": 2.506
+      }
+    },
+    {
+      "id": "STATSMODELS-415",
+      "actual": {
+        "n_total": 157,
+        "actual_power": 0.7021,
+        "critical": 1.9753,
+        "df": 156,
+        "ncp": 2.506
+      }
+    },
+    {
+      "id": "STATSMODELS-416",
+      "actual": {
+        "n_total": 199,
+        "actual_power": 0.8017,
+        "critical": 1.972,
+        "df": 198,
+        "ncp": 2.8213
+      }
+    },
+    {
+      "id": "STATSMODELS-417",
+      "actual": {
+        "n_total": 199,
+        "actual_power": 0.8017,
+        "critical": 1.972,
+        "df": 198,
+        "ncp": 2.8213
+      }
+    },
+    {
+      "id": "STATSMODELS-418",
+      "actual": {
+        "n_total": 265,
+        "actual_power": 0.9004,
+        "critical": 1.969,
+        "df": 264,
+        "ncp": 3.2558
+      }
+    },
+    {
+      "id": "STATSMODELS-419",
+      "actual": {
+        "n_total": 265,
+        "actual_power": 0.9004,
+        "critical": 1.969,
+        "df": 264,
+        "ncp": 3.2558
+      }
+    },
+    {
+      "id": "STATSMODELS-420",
+      "actual": {
+        "n_total": 327,
+        "actual_power": 0.9501,
+        "critical": 1.9673,
+        "df": 326,
+        "ncp": 3.6166
+      }
+    },
+    {
+      "id": "STATSMODELS-421",
+      "actual": {
+        "n_total": 327,
+        "actual_power": 0.9501,
+        "critical": 1.9673,
+        "df": 326,
+        "ncp": 3.6166
+      }
+    },
+    {
+      "id": "STATSMODELS-422",
+      "actual": {
+        "n_total": 93,
+        "actual_power": 0.6045,
+        "critical": 2.6303,
+        "df": 92,
+        "ncp": 2.8931
+      }
+    },
+    {
+      "id": "STATSMODELS-423",
+      "actual": {
+        "n_total": 93,
+        "actual_power": 0.6045,
+        "critical": 2.6303,
+        "df": 92,
+        "ncp": 2.8931
+      }
+    },
+    {
+      "id": "STATSMODELS-424",
+      "actual": {
+        "n_total": 111,
+        "actual_power": 0.7044,
+        "critical": 2.6213,
+        "df": 110,
+        "ncp": 3.1607
+      }
+    },
+    {
+      "id": "STATSMODELS-425",
+      "actual": {
+        "n_total": 111,
+        "actual_power": 0.7044,
+        "critical": 2.6213,
+        "df": 110,
+        "ncp": 3.1607
+      }
+    },
+    {
+      "id": "STATSMODELS-426",
+      "actual": {
+        "n_total": 134,
+        "actual_power": 0.8033,
+        "critical": 2.6133,
+        "df": 133,
+        "ncp": 3.4728
+      }
+    },
+    {
+      "id": "STATSMODELS-427",
+      "actual": {
+        "n_total": 134,
+        "actual_power": 0.8033,
+        "critical": 2.6133,
+        "df": 133,
+        "ncp": 3.4728
+      }
+    },
+    {
+      "id": "STATSMODELS-428",
+      "actual": {
+        "n_total": 169,
+        "actual_power": 0.9007,
+        "critical": 2.6054,
+        "df": 168,
+        "ncp": 3.9
+      }
+    },
+    {
+      "id": "STATSMODELS-429",
+      "actual": {
+        "n_total": 169,
+        "actual_power": 0.9007,
+        "critical": 2.6054,
+        "df": 168,
+        "ncp": 3.9
+      }
+    },
+    {
+      "id": "STATSMODELS-430",
+      "actual": {
+        "n_total": 202,
+        "actual_power": 0.9508,
+        "critical": 2.6005,
+        "df": 201,
+        "ncp": 4.2638
+      }
+    },
+    {
+      "id": "STATSMODELS-431",
+      "actual": {
+        "n_total": 202,
+        "actual_power": 0.9508,
+        "critical": 2.6005,
+        "df": 201,
+        "ncp": 4.2638
+      }
+    },
+    {
+      "id": "STATSMODELS-432",
+      "actual": {
+        "n_total": 72,
+        "actual_power": 0.6022,
+        "critical": 2.2899,
+        "df": 71,
+        "ncp": 2.5456
+      }
+    },
+    {
+      "id": "STATSMODELS-433",
+      "actual": {
+        "n_total": 72,
+        "actual_power": 0.6022,
+        "critical": 2.2899,
+        "df": 71,
+        "ncp": 2.5456
+      }
+    },
+    {
+      "id": "STATSMODELS-434",
+      "actual": {
+        "n_total": 88,
+        "actual_power": 0.7027,
+        "critical": 2.2809,
+        "df": 87,
+        "ncp": 2.8142
+      }
+    },
+    {
+      "id": "STATSMODELS-435",
+      "actual": {
+        "n_total": 88,
+        "actual_power": 0.7027,
+        "critical": 2.2809,
+        "df": 87,
+        "ncp": 2.8142
+      }
+    },
+    {
+      "id": "STATSMODELS-436",
+      "actual": {
+        "n_total": 109,
+        "actual_power": 0.8035,
+        "critical": 2.2731,
+        "df": 108,
+        "ncp": 3.1321
+      }
+    },
+    {
+      "id": "STATSMODELS-437",
+      "actual": {
+        "n_total": 109,
+        "actual_power": 0.8035,
+        "critical": 2.2731,
+        "df": 108,
+        "ncp": 3.1321
+      }
+    },
+    {
+      "id": "STATSMODELS-438",
+      "actual": {
+        "n_total": 141,
+        "actual_power": 0.9013,
+        "critical": 2.2658,
+        "df": 140,
+        "ncp": 3.5623
+      }
+    },
+    {
+      "id": "STATSMODELS-439",
+      "actual": {
+        "n_total": 141,
+        "actual_power": 0.9013,
+        "critical": 2.2658,
+        "df": 140,
+        "ncp": 3.5623
+      }
+    },
+    {
+      "id": "STATSMODELS-440",
+      "actual": {
+        "n_total": 171,
+        "actual_power": 0.9508,
+        "critical": 2.2614,
+        "df": 170,
+        "ncp": 3.923
+      }
+    },
+    {
+      "id": "STATSMODELS-441",
+      "actual": {
+        "n_total": 171,
+        "actual_power": 0.9508,
+        "critical": 2.2614,
+        "df": 170,
+        "ncp": 3.923
+      }
+    },
+    {
+      "id": "STATSMODELS-442",
+      "actual": {
+        "n_total": 57,
+        "actual_power": 0.6049,
+        "critical": 2.0032,
+        "df": 56,
+        "ncp": 2.265
+      }
+    },
+    {
+      "id": "STATSMODELS-443",
+      "actual": {
+        "n_total": 57,
+        "actual_power": 0.6049,
+        "critical": 2.0032,
+        "df": 56,
+        "ncp": 2.265
+      }
+    },
+    {
+      "id": "STATSMODELS-444",
+      "actual": {
+        "n_total": 71,
+        "actual_power": 0.703,
+        "critical": 1.9944,
+        "df": 70,
+        "ncp": 2.5278
+      }
+    },
+    {
+      "id": "STATSMODELS-445",
+      "actual": {
+        "n_total": 71,
+        "actual_power": 0.703,
+        "critical": 1.9944,
+        "df": 70,
+        "ncp": 2.5278
+      }
+    },
+    {
+      "id": "STATSMODELS-446",
+      "actual": {
+        "n_total": 90,
+        "actual_power": 0.8038,
+        "critical": 1.987,
+        "df": 89,
+        "ncp": 2.846
+      }
+    },
+    {
+      "id": "STATSMODELS-447",
+      "actual": {
+        "n_total": 90,
+        "actual_power": 0.8038,
+        "critical": 1.987,
+        "df": 89,
+        "ncp": 2.846
+      }
+    },
+    {
+      "id": "STATSMODELS-448",
+      "actual": {
+        "n_total": 119,
+        "actual_power": 0.9008,
+        "critical": 1.9803,
+        "df": 118,
+        "ncp": 3.2726
+      }
+    },
+    {
+      "id": "STATSMODELS-449",
+      "actual": {
+        "n_total": 119,
+        "actual_power": 0.9008,
+        "critical": 1.9803,
+        "df": 118,
+        "ncp": 3.2726
+      }
+    },
+    {
+      "id": "STATSMODELS-450",
+      "actual": {
+        "n_total": 147,
+        "actual_power": 0.9509,
+        "critical": 1.9763,
+        "df": 146,
+        "ncp": 3.6373
+      }
+    },
+    {
+      "id": "STATSMODELS-451",
+      "actual": {
+        "n_total": 147,
+        "actual_power": 0.9509,
+        "critical": 1.9763,
+        "df": 146,
+        "ncp": 3.6373
+      }
+    },
+    {
+      "id": "STATSMODELS-452",
+      "actual": {
+        "n_total": 54,
+        "actual_power": 0.607,
+        "critical": 2.6718,
+        "df": 53,
+        "ncp": 2.9394
+      }
+    },
+    {
+      "id": "STATSMODELS-453",
+      "actual": {
+        "n_total": 54,
+        "actual_power": 0.607,
+        "critical": 2.6718,
+        "df": 53,
+        "ncp": 2.9394
+      }
+    },
+    {
+      "id": "STATSMODELS-454",
+      "actual": {
+        "n_total": 64,
+        "actual_power": 0.7053,
+        "critical": 2.6561,
+        "df": 63,
+        "ncp": 3.2
+      }
+    },
+    {
+      "id": "STATSMODELS-455",
+      "actual": {
+        "n_total": 64,
+        "actual_power": 0.7053,
+        "critical": 2.6561,
+        "df": 63,
+        "ncp": 3.2
+      }
+    },
+    {
+      "id": "STATSMODELS-456",
+      "actual": {
+        "n_total": 77,
+        "actual_power": 0.8043,
+        "critical": 2.6421,
+        "df": 76,
+        "ncp": 3.51
+      }
+    },
+    {
+      "id": "STATSMODELS-457",
+      "actual": {
+        "n_total": 77,
+        "actual_power": 0.8043,
+        "critical": 2.6421,
+        "df": 76,
+        "ncp": 3.51
+      }
+    },
+    {
+      "id": "STATSMODELS-458",
+      "actual": {
+        "n_total": 97,
+        "actual_power": 0.9024,
+        "critical": 2.628,
+        "df": 96,
+        "ncp": 3.9395
+      }
+    },
+    {
+      "id": "STATSMODELS-459",
+      "actual": {
+        "n_total": 97,
+        "actual_power": 0.9024,
+        "critical": 2.628,
+        "df": 96,
+        "ncp": 3.9395
+      }
+    },
+    {
+      "id": "STATSMODELS-460",
+      "actual": {
+        "n_total": 115,
+        "actual_power": 0.9506,
+        "critical": 2.6196,
+        "df": 114,
+        "ncp": 4.2895
+      }
+    },
+    {
+      "id": "STATSMODELS-461",
+      "actual": {
+        "n_total": 115,
+        "actual_power": 0.9506,
+        "critical": 2.6196,
+        "df": 114,
+        "ncp": 4.2895
+      }
+    },
+    {
+      "id": "STATSMODELS-462",
+      "actual": {
+        "n_total": 42,
+        "actual_power": 0.6069,
+        "critical": 2.3267,
+        "df": 41,
+        "ncp": 2.5923
+      }
+    },
+    {
+      "id": "STATSMODELS-463",
+      "actual": {
+        "n_total": 42,
+        "actual_power": 0.6069,
+        "critical": 2.3267,
+        "df": 41,
+        "ncp": 2.5923
+      }
+    },
+    {
+      "id": "STATSMODELS-464",
+      "actual": {
+        "n_total": 51,
+        "actual_power": 0.7065,
+        "critical": 2.3109,
+        "df": 50,
+        "ncp": 2.8566
+      }
+    },
+    {
+      "id": "STATSMODELS-465",
+      "actual": {
+        "n_total": 51,
+        "actual_power": 0.7065,
+        "critical": 2.3109,
+        "df": 50,
+        "ncp": 2.8566
+      }
+    },
+    {
+      "id": "STATSMODELS-466",
+      "actual": {
+        "n_total": 62,
+        "actual_power": 0.8004,
+        "critical": 2.2981,
+        "df": 61,
+        "ncp": 3.1496
+      }
+    },
+    {
+      "id": "STATSMODELS-467",
+      "actual": {
+        "n_total": 62,
+        "actual_power": 0.8004,
+        "critical": 2.2981,
+        "df": 61,
+        "ncp": 3.1496
+      }
+    },
+    {
+      "id": "STATSMODELS-468",
+      "actual": {
+        "n_total": 81,
+        "actual_power": 0.9035,
+        "critical": 2.2844,
+        "df": 80,
+        "ncp": 3.6
+      }
+    },
+    {
+      "id": "STATSMODELS-469",
+      "actual": {
+        "n_total": 81,
+        "actual_power": 0.9035,
+        "critical": 2.2844,
+        "df": 80,
+        "ncp": 3.6
+      }
+    },
+    {
+      "id": "STATSMODELS-470",
+      "actual": {
+        "n_total": 97,
+        "actual_power": 0.9501,
+        "critical": 2.2771,
+        "df": 96,
+        "ncp": 3.9395
+      }
+    },
+    {
+      "id": "STATSMODELS-471",
+      "actual": {
+        "n_total": 97,
+        "actual_power": 0.9501,
+        "critical": 2.2771,
+        "df": 96,
+        "ncp": 3.9395
+      }
+    },
+    {
+      "id": "STATSMODELS-472",
+      "actual": {
+        "n_total": 33,
+        "actual_power": 0.6059,
+        "critical": 2.0369,
+        "df": 32,
+        "ncp": 2.2978
+      }
+    },
+    {
+      "id": "STATSMODELS-473",
+      "actual": {
+        "n_total": 33,
+        "actual_power": 0.6059,
+        "critical": 2.0369,
+        "df": 32,
+        "ncp": 2.2978
+      }
+    },
+    {
+      "id": "STATSMODELS-474",
+      "actual": {
+        "n_total": 41,
+        "actual_power": 0.7052,
+        "critical": 2.0211,
+        "df": 40,
+        "ncp": 2.5612
+      }
+    },
+    {
+      "id": "STATSMODELS-475",
+      "actual": {
+        "n_total": 41,
+        "actual_power": 0.7052,
+        "critical": 2.0211,
+        "df": 40,
+        "ncp": 2.5612
+      }
+    },
+    {
+      "id": "STATSMODELS-476",
+      "actual": {
+        "n_total": 52,
+        "actual_power": 0.8078,
+        "critical": 2.0076,
+        "df": 51,
+        "ncp": 2.8844
+      }
+    },
+    {
+      "id": "STATSMODELS-477",
+      "actual": {
+        "n_total": 52,
+        "actual_power": 0.8078,
+        "critical": 2.0076,
+        "df": 51,
+        "ncp": 2.8844
+      }
+    },
+    {
+      "id": "STATSMODELS-478",
+      "actual": {
+        "n_total": 68,
+        "actual_power": 0.9016,
+        "critical": 1.996,
+        "df": 67,
+        "ncp": 3.2985
+      }
+    },
+    {
+      "id": "STATSMODELS-479",
+      "actual": {
+        "n_total": 68,
+        "actual_power": 0.9016,
+        "critical": 1.996,
+        "df": 67,
+        "ncp": 3.2985
+      }
+    },
+    {
+      "id": "STATSMODELS-480",
+      "actual": {
+        "n_total": 84,
+        "actual_power": 0.9519,
+        "critical": 1.989,
+        "df": 83,
+        "ncp": 3.6661
+      }
+    },
+    {
+      "id": "STATSMODELS-481",
+      "actual": {
+        "n_total": 84,
+        "actual_power": 0.9519,
+        "critical": 1.989,
+        "df": 83,
+        "ncp": 3.6661
+      }
+    },
+    {
+      "id": "STATSMODELS-482",
+      "actual": {
+        "n_total": 36,
+        "actual_power": 0.6109,
+        "critical": 2.7238,
+        "df": 35,
+        "ncp": 3
+      }
+    },
+    {
+      "id": "STATSMODELS-483",
+      "actual": {
+        "n_total": 36,
+        "actual_power": 0.6109,
+        "critical": 2.7238,
+        "df": 35,
+        "ncp": 3
+      }
+    },
+    {
+      "id": "STATSMODELS-484",
+      "actual": {
+        "n_total": 42,
+        "actual_power": 0.7029,
+        "critical": 2.7012,
+        "df": 41,
+        "ncp": 3.2404
+      }
+    },
+    {
+      "id": "STATSMODELS-485",
+      "actual": {
+        "n_total": 42,
+        "actual_power": 0.7029,
+        "critical": 2.7012,
+        "df": 41,
+        "ncp": 3.2404
+      }
+    },
+    {
+      "id": "STATSMODELS-486",
+      "actual": {
+        "n_total": 51,
+        "actual_power": 0.8094,
+        "critical": 2.6778,
+        "df": 50,
+        "ncp": 3.5707
+      }
+    },
+    {
+      "id": "STATSMODELS-487",
+      "actual": {
+        "n_total": 51,
+        "actual_power": 0.8094,
+        "critical": 2.6778,
+        "df": 50,
+        "ncp": 3.5707
+      }
+    },
+    {
+      "id": "STATSMODELS-488",
+      "actual": {
+        "n_total": 63,
+        "actual_power": 0.9007,
+        "critical": 2.6575,
+        "df": 62,
+        "ncp": 3.9686
+      }
+    },
+    {
+      "id": "STATSMODELS-489",
+      "actual": {
+        "n_total": 63,
+        "actual_power": 0.9007,
+        "critical": 2.6575,
+        "df": 62,
+        "ncp": 3.9686
+      }
+    },
+    {
+      "id": "STATSMODELS-490",
+      "actual": {
+        "n_total": 75,
+        "actual_power": 0.9512,
+        "critical": 2.6439,
+        "df": 74,
+        "ncp": 4.3301
+      }
+    },
+    {
+      "id": "STATSMODELS-491",
+      "actual": {
+        "n_total": 75,
+        "actual_power": 0.9512,
+        "critical": 2.6439,
+        "df": 74,
+        "ncp": 4.3301
+      }
+    },
+    {
+      "id": "STATSMODELS-492",
+      "actual": {
+        "n_total": 28,
+        "actual_power": 0.6105,
+        "critical": 2.3734,
+        "df": 27,
+        "ncp": 2.6458
+      }
+    },
+    {
+      "id": "STATSMODELS-493",
+      "actual": {
+        "n_total": 28,
+        "actual_power": 0.6105,
+        "critical": 2.3734,
+        "df": 27,
+        "ncp": 2.6458
+      }
+    },
+    {
+      "id": "STATSMODELS-494",
+      "actual": {
+        "n_total": 34,
+        "actual_power": 0.7131,
+        "critical": 2.3483,
+        "df": 33,
+        "ncp": 2.9155
+      }
+    },
+    {
+      "id": "STATSMODELS-495",
+      "actual": {
+        "n_total": 34,
+        "actual_power": 0.7131,
+        "critical": 2.3483,
+        "df": 33,
+        "ncp": 2.9155
+      }
+    },
+    {
+      "id": "STATSMODELS-496",
+      "actual": {
+        "n_total": 41,
+        "actual_power": 0.8048,
+        "critical": 2.3289,
+        "df": 40,
+        "ncp": 3.2016
+      }
+    },
+    {
+      "id": "STATSMODELS-497",
+      "actual": {
+        "n_total": 41,
+        "actual_power": 0.8048,
+        "critical": 2.3289,
+        "df": 40,
+        "ncp": 3.2016
+      }
+    },
+    {
+      "id": "STATSMODELS-498",
+      "actual": {
+        "n_total": 53,
+        "actual_power": 0.9049,
+        "critical": 2.3082,
+        "df": 52,
+        "ncp": 3.6401
+      }
+    },
+    {
+      "id": "STATSMODELS-499",
+      "actual": {
+        "n_total": 53,
+        "actual_power": 0.9049,
+        "critical": 2.3082,
+        "df": 52,
+        "ncp": 3.6401
+      }
+    },
+    {
+      "id": "STATSMODELS-500",
+      "actual": {
+        "n_total": 63,
+        "actual_power": 0.9501,
+        "critical": 2.2971,
+        "df": 62,
+        "ncp": 3.9686
+      }
+    },
+    {
+      "id": "STATSMODELS-501",
+      "actual": {
+        "n_total": 63,
+        "actual_power": 0.9501,
+        "critical": 2.2971,
+        "df": 62,
+        "ncp": 3.9686
+      }
+    },
+    {
+      "id": "STATSMODELS-502",
+      "actual": {
+        "n_total": 22,
+        "actual_power": 0.6092,
+        "critical": 2.0796,
+        "df": 21,
+        "ncp": 2.3452
+      }
+    },
+    {
+      "id": "STATSMODELS-503",
+      "actual": {
+        "n_total": 22,
+        "actual_power": 0.6092,
+        "critical": 2.0796,
+        "df": 21,
+        "ncp": 2.3452
+      }
+    },
+    {
+      "id": "STATSMODELS-504",
+      "actual": {
+        "n_total": 27,
+        "actual_power": 0.7058,
+        "critical": 2.0555,
+        "df": 26,
+        "ncp": 2.5981
+      }
+    },
+    {
+      "id": "STATSMODELS-505",
+      "actual": {
+        "n_total": 27,
+        "actual_power": 0.7058,
+        "critical": 2.0555,
+        "df": 26,
+        "ncp": 2.5981
+      }
+    },
+    {
+      "id": "STATSMODELS-506",
+      "actual": {
+        "n_total": 34,
+        "actual_power": 0.8078,
+        "critical": 2.0345,
+        "df": 33,
+        "ncp": 2.9155
+      }
+    },
+    {
+      "id": "STATSMODELS-507",
+      "actual": {
+        "n_total": 34,
+        "actual_power": 0.8078,
+        "critical": 2.0345,
+        "df": 33,
+        "ncp": 2.9155
+      }
+    },
+    {
+      "id": "STATSMODELS-508",
+      "actual": {
+        "n_total": 44,
+        "actual_power": 0.9,
+        "critical": 2.0167,
+        "df": 43,
+        "ncp": 3.3166
+      }
+    },
+    {
+      "id": "STATSMODELS-509",
+      "actual": {
+        "n_total": 44,
+        "actual_power": 0.9,
+        "critical": 2.0167,
+        "df": 43,
+        "ncp": 3.3166
+      }
+    },
+    {
+      "id": "STATSMODELS-510",
+      "actual": {
+        "n_total": 54,
+        "actual_power": 0.9502,
+        "critical": 2.0057,
+        "df": 53,
+        "ncp": 3.6742
+      }
+    },
+    {
+      "id": "STATSMODELS-511",
+      "actual": {
+        "n_total": 54,
+        "actual_power": 0.9502,
+        "critical": 2.0057,
+        "df": 53,
+        "ncp": 3.6742
+      }
+    },
+    {
+      "id": "STATSMODELS-512",
+      "actual": {
+        "n_total": 23,
+        "actual_power": 0.6201,
+        "critical": 2.8188,
+        "df": 22,
+        "ncp": 3.1173
+      }
+    },
+    {
+      "id": "STATSMODELS-513",
+      "actual": {
+        "n_total": 23,
+        "actual_power": 0.6201,
+        "critical": 2.8188,
+        "df": 22,
+        "ncp": 3.1173
+      }
+    },
+    {
+      "id": "STATSMODELS-514",
+      "actual": {
+        "n_total": 27,
+        "actual_power": 0.7206,
+        "critical": 2.7787,
+        "df": 26,
+        "ncp": 3.3775
+      }
+    },
+    {
+      "id": "STATSMODELS-515",
+      "actual": {
+        "n_total": 27,
+        "actual_power": 0.7206,
+        "critical": 2.7787,
+        "df": 26,
+        "ncp": 3.3775
+      }
+    },
+    {
+      "id": "STATSMODELS-516",
+      "actual": {
+        "n_total": 32,
+        "actual_power": 0.8166,
+        "critical": 2.744,
+        "df": 31,
+        "ncp": 3.677
+      }
+    },
+    {
+      "id": "STATSMODELS-517",
+      "actual": {
+        "n_total": 32,
+        "actual_power": 0.8166,
+        "critical": 2.744,
+        "df": 31,
+        "ncp": 3.677
+      }
+    },
+    {
+      "id": "STATSMODELS-518",
+      "actual": {
+        "n_total": 39,
+        "actual_power": 0.9039,
+        "critical": 2.7116,
+        "df": 38,
+        "ncp": 4.0592
+      }
+    },
+    {
+      "id": "STATSMODELS-519",
+      "actual": {
+        "n_total": 39,
+        "actual_power": 0.9039,
+        "critical": 2.7116,
+        "df": 38,
+        "ncp": 4.0592
+      }
+    },
+    {
+      "id": "STATSMODELS-520",
+      "actual": {
+        "n_total": 46,
+        "actual_power": 0.9523,
+        "critical": 2.6896,
+        "df": 45,
+        "ncp": 4.4085
+      }
+    },
+    {
+      "id": "STATSMODELS-521",
+      "actual": {
+        "n_total": 46,
+        "actual_power": 0.9523,
+        "critical": 2.6896,
+        "df": 45,
+        "ncp": 4.4085
+      }
+    },
+    {
+      "id": "STATSMODELS-522",
+      "actual": {
+        "n_total": 18,
+        "actual_power": 0.6221,
+        "critical": 2.4581,
+        "df": 17,
+        "ncp": 2.7577
+      }
+    },
+    {
+      "id": "STATSMODELS-523",
+      "actual": {
+        "n_total": 18,
+        "actual_power": 0.6221,
+        "critical": 2.4581,
+        "df": 17,
+        "ncp": 2.7577
+      }
+    },
+    {
+      "id": "STATSMODELS-524",
+      "actual": {
+        "n_total": 21,
+        "actual_power": 0.7082,
+        "critical": 2.4231,
+        "df": 20,
+        "ncp": 2.9787
+      }
+    },
+    {
+      "id": "STATSMODELS-525",
+      "actual": {
+        "n_total": 21,
+        "actual_power": 0.7082,
+        "critical": 2.4231,
+        "df": 20,
+        "ncp": 2.9787
+      }
+    },
+    {
+      "id": "STATSMODELS-526",
+      "actual": {
+        "n_total": 26,
+        "actual_power": 0.817,
+        "critical": 2.3846,
+        "df": 25,
+        "ncp": 3.3144
+      }
+    },
+    {
+      "id": "STATSMODELS-527",
+      "actual": {
+        "n_total": 26,
+        "actual_power": 0.817,
+        "critical": 2.3846,
+        "df": 25,
+        "ncp": 3.3144
+      }
+    },
+    {
+      "id": "STATSMODELS-528",
+      "actual": {
+        "n_total": 32,
+        "actual_power": 0.9005,
+        "critical": 2.3556,
+        "df": 31,
+        "ncp": 3.677
+      }
+    },
+    {
+      "id": "STATSMODELS-529",
+      "actual": {
+        "n_total": 32,
+        "actual_power": 0.9005,
+        "critical": 2.3556,
+        "df": 31,
+        "ncp": 3.677
+      }
+    },
+    {
+      "id": "STATSMODELS-530",
+      "actual": {
+        "n_total": 39,
+        "actual_power": 0.9537,
+        "critical": 2.3337,
+        "df": 38,
+        "ncp": 4.0592
+      }
+    },
+    {
+      "id": "STATSMODELS-531",
+      "actual": {
+        "n_total": 39,
+        "actual_power": 0.9537,
+        "critical": 2.3337,
+        "df": 38,
+        "ncp": 4.0592
+      }
+    },
+    {
+      "id": "STATSMODELS-532",
+      "actual": {
+        "n_total": 14,
+        "actual_power": 0.6142,
+        "critical": 2.1604,
+        "df": 13,
+        "ncp": 2.4321
+      }
+    },
+    {
+      "id": "STATSMODELS-533",
+      "actual": {
+        "n_total": 14,
+        "actual_power": 0.6142,
+        "critical": 2.1604,
+        "df": 13,
+        "ncp": 2.4321
+      }
+    },
+    {
+      "id": "STATSMODELS-534",
+      "actual": {
+        "n_total": 17,
+        "actual_power": 0.7111,
+        "critical": 2.1199,
+        "df": 16,
+        "ncp": 2.68
+      }
+    },
+    {
+      "id": "STATSMODELS-535",
+      "actual": {
+        "n_total": 17,
+        "actual_power": 0.7111,
+        "critical": 2.1199,
+        "df": 16,
+        "ncp": 2.68
+      }
+    },
+    {
+      "id": "STATSMODELS-536",
+      "actual": {
+        "n_total": 21,
+        "actual_power": 0.8087,
+        "critical": 2.086,
+        "df": 20,
+        "ncp": 2.9787
+      }
+    },
+    {
+      "id": "STATSMODELS-537",
+      "actual": {
+        "n_total": 21,
+        "actual_power": 0.8087,
+        "critical": 2.086,
+        "df": 20,
+        "ncp": 2.9787
+      }
+    },
+    {
+      "id": "STATSMODELS-538",
+      "actual": {
+        "n_total": 27,
+        "actual_power": 0.9015,
+        "critical": 2.0555,
+        "df": 26,
+        "ncp": 3.3775
+      }
+    },
+    {
+      "id": "STATSMODELS-539",
+      "actual": {
+        "n_total": 27,
+        "actual_power": 0.9015,
+        "critical": 2.0555,
+        "df": 26,
+        "ncp": 3.3775
+      }
+    },
+    {
+      "id": "STATSMODELS-540",
+      "actual": {
+        "n_total": 33,
+        "actual_power": 0.9515,
+        "critical": 2.0369,
+        "df": 32,
+        "ncp": 3.734
+      }
+    },
+    {
+      "id": "STATSMODELS-541",
+      "actual": {
+        "n_total": 33,
+        "actual_power": 0.9515,
+        "critical": 2.0369,
+        "df": 32,
+        "ncp": 3.734
+      }
+    },
+    {
+      "id": "STATSMODELS-542",
+      "actual": {
+        "n_total": 16,
+        "actual_power": 0.6062,
+        "critical": 2.9467,
+        "df": 15,
+        "ncp": 3.2
+      }
+    },
+    {
+      "id": "STATSMODELS-543",
+      "actual": {
+        "n_total": 16,
+        "actual_power": 0.6062,
+        "critical": 2.9467,
+        "df": 15,
+        "ncp": 3.2
+      }
+    },
+    {
+      "id": "STATSMODELS-544",
+      "actual": {
+        "n_total": 19,
+        "actual_power": 0.7213,
+        "critical": 2.8784,
+        "df": 18,
+        "ncp": 3.4871
+      }
+    },
+    {
+      "id": "STATSMODELS-545",
+      "actual": {
+        "n_total": 19,
+        "actual_power": 0.7213,
+        "critical": 2.8784,
+        "df": 18,
+        "ncp": 3.4871
+      }
+    },
+    {
+      "id": "STATSMODELS-546",
+      "actual": {
+        "n_total": 22,
+        "actual_power": 0.8095,
+        "critical": 2.8314,
+        "df": 21,
+        "ncp": 3.7523
+      }
+    },
+    {
+      "id": "STATSMODELS-547",
+      "actual": {
+        "n_total": 22,
+        "actual_power": 0.8095,
+        "critical": 2.8314,
+        "df": 21,
+        "ncp": 3.7523
+      }
+    },
+    {
+      "id": "STATSMODELS-548",
+      "actual": {
+        "n_total": 27,
+        "actual_power": 0.9051,
+        "critical": 2.7787,
+        "df": 26,
+        "ncp": 4.1569
+      }
+    },
+    {
+      "id": "STATSMODELS-549",
+      "actual": {
+        "n_total": 27,
+        "actual_power": 0.9051,
+        "critical": 2.7787,
+        "df": 26,
+        "ncp": 4.1569
+      }
+    },
+    {
+      "id": "STATSMODELS-550",
+      "actual": {
+        "n_total": 32,
+        "actual_power": 0.9557,
+        "critical": 2.744,
+        "df": 31,
+        "ncp": 4.5255
+      }
+    },
+    {
+      "id": "STATSMODELS-551",
+      "actual": {
+        "n_total": 32,
+        "actual_power": 0.9557,
+        "critical": 2.744,
+        "df": 31,
+        "ncp": 4.5255
+      }
+    },
+    {
+      "id": "STATSMODELS-552",
+      "actual": {
+        "n_total": 13,
+        "actual_power": 0.6324,
+        "critical": 2.56,
+        "df": 12,
+        "ncp": 2.8844
+      }
+    },
+    {
+      "id": "STATSMODELS-553",
+      "actual": {
+        "n_total": 13,
+        "actual_power": 0.6324,
+        "critical": 2.56,
+        "df": 12,
+        "ncp": 2.8844
+      }
+    },
+    {
+      "id": "STATSMODELS-554",
+      "actual": {
+        "n_total": 15,
+        "actual_power": 0.7173,
+        "critical": 2.5096,
+        "df": 14,
+        "ncp": 3.0984
+      }
+    },
+    {
+      "id": "STATSMODELS-555",
+      "actual": {
+        "n_total": 15,
+        "actual_power": 0.7173,
+        "critical": 2.5096,
+        "df": 14,
+        "ncp": 3.0984
+      }
+    },
+    {
+      "id": "STATSMODELS-556",
+      "actual": {
+        "n_total": 18,
+        "actual_power": 0.8151,
+        "critical": 2.4581,
+        "df": 17,
+        "ncp": 3.3941
+      }
+    },
+    {
+      "id": "STATSMODELS-557",
+      "actual": {
+        "n_total": 18,
+        "actual_power": 0.8151,
+        "critical": 2.4581,
+        "df": 17,
+        "ncp": 3.3941
+      }
+    },
+    {
+      "id": "STATSMODELS-558",
+      "actual": {
+        "n_total": 23,
+        "actual_power": 0.9148,
+        "critical": 2.4055,
+        "df": 22,
+        "ncp": 3.8367
+      }
+    },
+    {
+      "id": "STATSMODELS-559",
+      "actual": {
+        "n_total": 23,
+        "actual_power": 0.9148,
+        "critical": 2.4055,
+        "df": 22,
+        "ncp": 3.8367
+      }
+    },
+    {
+      "id": "STATSMODELS-560",
+      "actual": {
+        "n_total": 27,
+        "actual_power": 0.9563,
+        "critical": 2.3788,
+        "df": 26,
+        "ncp": 4.1569
+      }
+    },
+    {
+      "id": "STATSMODELS-561",
+      "actual": {
+        "n_total": 27,
+        "actual_power": 0.9563,
+        "critical": 2.3788,
+        "df": 26,
+        "ncp": 4.1569
+      }
+    },
+    {
+      "id": "STATSMODELS-562",
+      "actual": {
+        "n_total": 10,
+        "actual_power": 0.6162,
+        "critical": 2.2622,
+        "df": 9,
+        "ncp": 2.5298
+      }
+    },
+    {
+      "id": "STATSMODELS-563",
+      "actual": {
+        "n_total": 10,
+        "actual_power": 0.6162,
+        "critical": 2.2622,
+        "df": 9,
+        "ncp": 2.5298
+      }
+    },
+    {
+      "id": "STATSMODELS-564",
+      "actual": {
+        "n_total": 12,
+        "actual_power": 0.7137,
+        "critical": 2.201,
+        "df": 11,
+        "ncp": 2.7713
+      }
+    },
+    {
+      "id": "STATSMODELS-565",
+      "actual": {
+        "n_total": 12,
+        "actual_power": 0.7137,
+        "critical": 2.201,
+        "df": 11,
+        "ncp": 2.7713
+      }
+    },
+    {
+      "id": "STATSMODELS-566",
+      "actual": {
+        "n_total": 15,
+        "actual_power": 0.8213,
+        "critical": 2.1448,
+        "df": 14,
+        "ncp": 3.0984
+      }
+    },
+    {
+      "id": "STATSMODELS-567",
+      "actual": {
+        "n_total": 15,
+        "actual_power": 0.8213,
+        "critical": 2.1448,
+        "df": 14,
+        "ncp": 3.0984
+      }
+    },
+    {
+      "id": "STATSMODELS-568",
+      "actual": {
+        "n_total": 19,
+        "actual_power": 0.9092,
+        "critical": 2.1009,
+        "df": 18,
+        "ncp": 3.4871
+      }
+    },
+    {
+      "id": "STATSMODELS-569",
+      "actual": {
+        "n_total": 19,
+        "actual_power": 0.9092,
+        "critical": 2.1009,
+        "df": 18,
+        "ncp": 3.4871
+      }
+    },
+    {
+      "id": "STATSMODELS-570",
+      "actual": {
+        "n_total": 23,
+        "actual_power": 0.9558,
+        "critical": 2.0739,
+        "df": 22,
+        "ncp": 3.8367
+      }
+    },
+    {
+      "id": "STATSMODELS-571",
+      "actual": {
+        "n_total": 23,
+        "actual_power": 0.9558,
+        "critical": 2.0739,
+        "df": 22,
+        "ncp": 3.8367
+      }
+    },
+    {
+      "id": "STATSMODELS-572",
+      "actual": {
+        "n_total": 12,
+        "actual_power": 0.6419,
+        "critical": 3.1058,
+        "df": 11,
+        "ncp": 3.4641
+      }
+    },
+    {
+      "id": "STATSMODELS-573",
+      "actual": {
+        "n_total": 12,
+        "actual_power": 0.6419,
+        "critical": 3.1058,
+        "df": 11,
+        "ncp": 3.4641
+      }
+    },
+    {
+      "id": "STATSMODELS-574",
+      "actual": {
+        "n_total": 13,
+        "actual_power": 0.7006,
+        "critical": 3.0545,
+        "df": 12,
+        "ncp": 3.6056
+      }
+    },
+    {
+      "id": "STATSMODELS-575",
+      "actual": {
+        "n_total": 13,
+        "actual_power": 0.7006,
+        "critical": 3.0545,
+        "df": 12,
+        "ncp": 3.6056
+      }
+    },
+    {
+      "id": "STATSMODELS-576",
+      "actual": {
+        "n_total": 16,
+        "actual_power": 0.8346,
+        "critical": 2.9467,
+        "df": 15,
+        "ncp": 4
+      }
+    },
+    {
+      "id": "STATSMODELS-577",
+      "actual": {
+        "n_total": 16,
+        "actual_power": 0.8346,
+        "critical": 2.9467,
+        "df": 15,
+        "ncp": 4
+      }
+    },
+    {
+      "id": "STATSMODELS-578",
+      "actual": {
+        "n_total": 19,
+        "actual_power": 0.9147,
+        "critical": 2.8784,
+        "df": 18,
+        "ncp": 4.3589
+      }
+    },
+    {
+      "id": "STATSMODELS-579",
+      "actual": {
+        "n_total": 19,
+        "actual_power": 0.9147,
+        "critical": 2.8784,
+        "df": 18,
+        "ncp": 4.3589
+      }
+    },
+    {
+      "id": "STATSMODELS-580",
+      "actual": {
+        "n_total": 22,
+        "actual_power": 0.9584,
+        "critical": 2.8314,
+        "df": 21,
+        "ncp": 4.6904
+      }
+    },
+    {
+      "id": "STATSMODELS-581",
+      "actual": {
+        "n_total": 22,
+        "actual_power": 0.9584,
+        "critical": 2.8314,
+        "df": 21,
+        "ncp": 4.6904
+      }
+    },
+    {
+      "id": "STATSMODELS-582",
+      "actual": {
+        "n_total": 9,
+        "actual_power": 0.6114,
+        "critical": 2.7515,
+        "df": 8,
+        "ncp": 3
+      }
+    },
+    {
+      "id": "STATSMODELS-583",
+      "actual": {
+        "n_total": 9,
+        "actual_power": 0.6114,
+        "critical": 2.7515,
+        "df": 8,
+        "ncp": 3
+      }
+    },
+    {
+      "id": "STATSMODELS-584",
+      "actual": {
+        "n_total": 11,
+        "actual_power": 0.742,
+        "critical": 2.6338,
+        "df": 10,
+        "ncp": 3.3166
+      }
+    },
+    {
+      "id": "STATSMODELS-585",
+      "actual": {
+        "n_total": 11,
+        "actual_power": 0.742,
+        "critical": 2.6338,
+        "df": 10,
+        "ncp": 3.3166
+      }
+    },
+    {
+      "id": "STATSMODELS-586",
+      "actual": {
+        "n_total": 13,
+        "actual_power": 0.8354,
+        "critical": 2.56,
+        "df": 12,
+        "ncp": 3.6056
+      }
+    },
+    {
+      "id": "STATSMODELS-587",
+      "actual": {
+        "n_total": 13,
+        "actual_power": 0.8354,
+        "critical": 2.56,
+        "df": 12,
+        "ncp": 3.6056
+      }
+    },
+    {
+      "id": "STATSMODELS-588",
+      "actual": {
+        "n_total": 16,
+        "actual_power": 0.921,
+        "critical": 2.4899,
+        "df": 15,
+        "ncp": 4
+      }
+    },
+    {
+      "id": "STATSMODELS-589",
+      "actual": {
+        "n_total": 16,
+        "actual_power": 0.921,
+        "critical": 2.4899,
+        "df": 15,
+        "ncp": 4
+      }
+    },
+    {
+      "id": "STATSMODELS-590",
+      "actual": {
+        "n_total": 18,
+        "actual_power": 0.9532,
+        "critical": 2.4581,
+        "df": 17,
+        "ncp": 4.2426
+      }
+    },
+    {
+      "id": "STATSMODELS-591",
+      "actual": {
+        "n_total": 18,
+        "actual_power": 0.9532,
+        "critical": 2.4581,
+        "df": 17,
+        "ncp": 4.2426
+      }
+    },
+    {
+      "id": "STATSMODELS-592",
+      "actual": {
+        "n_total": 7,
+        "actual_power": 0.6005,
+        "critical": 2.4469,
+        "df": 6,
+        "ncp": 2.6458
+      }
+    },
+    {
+      "id": "STATSMODELS-593",
+      "actual": {
+        "n_total": 7,
+        "actual_power": 0.6005,
+        "critical": 2.4469,
+        "df": 6,
+        "ncp": 2.6458
+      }
+    },
+    {
+      "id": "STATSMODELS-594",
+      "actual": {
+        "n_total": 9,
+        "actual_power": 0.748,
+        "critical": 2.306,
+        "df": 8,
+        "ncp": 3
+      }
+    },
+    {
+      "id": "STATSMODELS-595",
+      "actual": {
+        "n_total": 9,
+        "actual_power": 0.748,
+        "critical": 2.306,
+        "df": 8,
+        "ncp": 3
+      }
+    },
+    {
+      "id": "STATSMODELS-596",
+      "actual": {
+        "n_total": 10,
+        "actual_power": 0.8031,
+        "critical": 2.2622,
+        "df": 9,
+        "ncp": 3.1623
+      }
+    },
+    {
+      "id": "STATSMODELS-597",
+      "actual": {
+        "n_total": 10,
+        "actual_power": 0.8031,
+        "critical": 2.2622,
+        "df": 9,
+        "ncp": 3.1623
+      }
+    },
+    {
+      "id": "STATSMODELS-598",
+      "actual": {
+        "n_total": 13,
+        "actual_power": 0.9107,
+        "critical": 2.1788,
+        "df": 12,
+        "ncp": 3.6056
+      }
+    },
+    {
+      "id": "STATSMODELS-599",
+      "actual": {
+        "n_total": 13,
+        "actual_power": 0.9107,
+        "critical": 2.1788,
+        "df": 12,
+        "ncp": 3.6056
+      }
+    },
+    {
+      "id": "STATSMODELS-600",
+      "actual": {
+        "n_total": 16,
+        "actual_power": 0.9619,
+        "critical": 2.1314,
+        "df": 15,
+        "ncp": 4
+      }
+    },
+    {
+      "id": "STATSMODELS-601",
+      "actual": {
+        "n_total": 16,
+        "actual_power": 0.9619,
+        "critical": 2.1314,
+        "df": 15,
+        "ncp": 4
+      }
+    },
+    {
+      "id": "STATSMODELS-602",
+      "actual": {
+        "n_total": 7,
+        "actual_power": 0.619,
+        "critical": 3.7074,
+        "df": 6,
+        "ncp": 3.9686
+      }
+    },
+    {
+      "id": "STATSMODELS-603",
+      "actual": {
+        "n_total": 7,
+        "actual_power": 0.619,
+        "critical": 3.7074,
+        "df": 6,
+        "ncp": 3.9686
+      }
+    },
+    {
+      "id": "STATSMODELS-604",
+      "actual": {
+        "n_total": 8,
+        "actual_power": 0.7409,
+        "critical": 3.4995,
+        "df": 7,
+        "ncp": 4.2426
+      }
+    },
+    {
+      "id": "STATSMODELS-605",
+      "actual": {
+        "n_total": 8,
+        "actual_power": 0.7409,
+        "critical": 3.4995,
+        "df": 7,
+        "ncp": 4.2426
+      }
+    },
+    {
+      "id": "STATSMODELS-606",
+      "actual": {
+        "n_total": 9,
+        "actual_power": 0.8322,
+        "critical": 3.3554,
+        "df": 8,
+        "ncp": 4.5
+      }
+    },
+    {
+      "id": "STATSMODELS-607",
+      "actual": {
+        "n_total": 9,
+        "actual_power": 0.8322,
+        "critical": 3.3554,
+        "df": 8,
+        "ncp": 4.5
+      }
+    },
+    {
+      "id": "STATSMODELS-608",
+      "actual": {
+        "n_total": 11,
+        "actual_power": 0.9374,
+        "critical": 3.1693,
+        "df": 10,
+        "ncp": 4.9749
+      }
+    },
+    {
+      "id": "STATSMODELS-609",
+      "actual": {
+        "n_total": 11,
+        "actual_power": 0.9374,
+        "critical": 3.1693,
+        "df": 10,
+        "ncp": 4.9749
+      }
+    },
+    {
+      "id": "STATSMODELS-610",
+      "actual": {
+        "n_total": 12,
+        "actual_power": 0.9636,
+        "critical": 3.1058,
+        "df": 11,
+        "ncp": 5.1962
+      }
+    },
+    {
+      "id": "STATSMODELS-611",
+      "actual": {
+        "n_total": 12,
+        "actual_power": 0.9636,
+        "critical": 3.1058,
+        "df": 11,
+        "ncp": 5.1962
+      }
+    },
+    {
+      "id": "STATSMODELS-612",
+      "actual": {
+        "n_total": 6,
+        "actual_power": 0.6883,
+        "critical": 3.1634,
+        "df": 5,
+        "ncp": 3.6742
+      }
+    },
+    {
+      "id": "STATSMODELS-613",
+      "actual": {
+        "n_total": 6,
+        "actual_power": 0.6883,
+        "critical": 3.1634,
+        "df": 5,
+        "ncp": 3.6742
+      }
+    },
+    {
+      "id": "STATSMODELS-614",
+      "actual": {
+        "n_total": 7,
+        "actual_power": 0.8057,
+        "critical": 2.9687,
+        "df": 6,
+        "ncp": 3.9686
+      }
+    },
+    {
+      "id": "STATSMODELS-615",
+      "actual": {
+        "n_total": 7,
+        "actual_power": 0.8057,
+        "critical": 2.9687,
+        "df": 6,
+        "ncp": 3.9686
+      }
+    },
+    {
+      "id": "STATSMODELS-616",
+      "actual": {
+        "n_total": 7,
+        "actual_power": 0.8057,
+        "critical": 2.9687,
+        "df": 6,
+        "ncp": 3.9686
+      }
+    },
+    {
+      "id": "STATSMODELS-617",
+      "actual": {
+        "n_total": 7,
+        "actual_power": 0.8057,
+        "critical": 2.9687,
+        "df": 6,
+        "ncp": 3.9686
+      }
+    },
+    {
+      "id": "STATSMODELS-618",
+      "actual": {
+        "n_total": 9,
+        "actual_power": 0.9342,
+        "critical": 2.7515,
+        "df": 8,
+        "ncp": 4.5
+      }
+    },
+    {
+      "id": "STATSMODELS-619",
+      "actual": {
+        "n_total": 9,
+        "actual_power": 0.9342,
+        "critical": 2.7515,
+        "df": 8,
+        "ncp": 4.5
+      }
+    },
+    {
+      "id": "STATSMODELS-620",
+      "actual": {
+        "n_total": 10,
+        "actual_power": 0.9637,
+        "critical": 2.685,
+        "df": 9,
+        "ncp": 4.7434
+      }
+    },
+    {
+      "id": "STATSMODELS-621",
+      "actual": {
+        "n_total": 10,
+        "actual_power": 0.9637,
+        "critical": 2.685,
+        "df": 9,
+        "ncp": 4.7434
+      }
+    },
+    {
+      "id": "STATSMODELS-622",
+      "actual": {
+        "n_total": 5,
+        "actual_power": 0.7107,
+        "critical": 2.7764,
+        "df": 4,
+        "ncp": 3.3541
+      }
+    },
+    {
+      "id": "STATSMODELS-623",
+      "actual": {
+        "n_total": 5,
+        "actual_power": 0.7107,
+        "critical": 2.7764,
+        "df": 4,
+        "ncp": 3.3541
+      }
+    },
+    {
+      "id": "STATSMODELS-624",
+      "actual": {
+        "n_total": 5,
+        "actual_power": 0.7107,
+        "critical": 2.7764,
+        "df": 4,
+        "ncp": 3.3541
+      }
+    },
+    {
+      "id": "STATSMODELS-625",
+      "actual": {
+        "n_total": 5,
+        "actual_power": 0.7107,
+        "critical": 2.7764,
+        "df": 4,
+        "ncp": 3.3541
+      }
+    },
+    {
+      "id": "STATSMODELS-626",
+      "actual": {
+        "n_total": 6,
+        "actual_power": 0.8325,
+        "critical": 2.5706,
+        "df": 5,
+        "ncp": 3.6742
+      }
+    },
+    {
+      "id": "STATSMODELS-627",
+      "actual": {
+        "n_total": 6,
+        "actual_power": 0.8325,
+        "critical": 2.5706,
+        "df": 5,
+        "ncp": 3.6742
+      }
+    },
+    {
+      "id": "STATSMODELS-628",
+      "actual": {
+        "n_total": 7,
+        "actual_power": 0.9077,
+        "critical": 2.4469,
+        "df": 6,
+        "ncp": 3.9686
+      }
+    },
+    {
+      "id": "STATSMODELS-629",
+      "actual": {
+        "n_total": 7,
+        "actual_power": 0.9077,
+        "critical": 2.4469,
+        "df": 6,
+        "ncp": 3.9686
+      }
+    },
+    {
+      "id": "STATSMODELS-630",
+      "actual": {
+        "n_total": 8,
+        "actual_power": 0.951,
+        "critical": 2.3646,
+        "df": 7,
+        "ncp": 4.2426
+      }
+    },
+    {
+      "id": "STATSMODELS-631",
+      "actual": {
+        "n_total": 8,
+        "actual_power": 0.951,
+        "critical": 2.3646,
+        "df": 7,
+        "ncp": 4.2426
+      }
+    }
+  ]
+}

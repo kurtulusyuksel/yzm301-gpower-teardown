@@ -1,0 +1,98 @@
+[
+  {
+    "command": [
+      "node",
+      "--import",
+      "tsx",
+      "src/cli.ts",
+      "--test",
+      "t-paired",
+      "--tails",
+      "2",
+      "--d",
+      ".5",
+      "--alpha",
+      ".05",
+      "--mode",
+      "a-priori",
+      "--power",
+      ".95"
+    ],
+    "exit": 0,
+    "stdout": "{\"n_total\":54,\"actual_power\":0.9502,\"critical\":2.0057,\"df\":53,\"ncp\":3.6742}\n",
+    "stderr": "",
+    "duration_ms": 470.1100999999999
+  },
+  {
+    "command": [
+      "node",
+      "--import",
+      "tsx",
+      "src/cli.ts",
+      "--test",
+      "t-paired",
+      "--tails",
+      "2",
+      "--d",
+      ".5",
+      "--alpha",
+      ".05",
+      "--mode",
+      "post-hoc",
+      "--n",
+      "54"
+    ],
+    "exit": 0,
+    "stdout": "{\"n_total\":54,\"actual_power\":0.9502,\"critical\":2.0057,\"df\":53,\"ncp\":3.6742}\n",
+    "stderr": "",
+    "duration_ms": 422.0714999999982
+  },
+  {
+    "command": [
+      "node",
+      "--import",
+      "tsx",
+      "cleanroom/cli.ts",
+      "--test",
+      "t-paired",
+      "--tails",
+      "2",
+      "--d",
+      ".5",
+      "--alpha",
+      ".05",
+      "--mode",
+      "a-priori",
+      "--power",
+      ".95"
+    ],
+    "exit": 0,
+    "stdout": "{\"n_total\":54,\"df\":53,\"ncp\":3.6742,\"critical\":2.0057,\"actual_power\":0.9502}\n",
+    "stderr": "",
+    "duration_ms": 688.4323000000004
+  },
+  {
+    "command": [
+      "node",
+      "--import",
+      "tsx",
+      "src/cli.ts",
+      "--test",
+      "t-paired",
+      "--tails",
+      "2",
+      "--d",
+      ".5",
+      "--alpha",
+      ".05",
+      "--mode",
+      "post-hoc",
+      "--n",
+      "2"
+    ],
+    "exit": 1,
+    "stdout": "",
+    "stderr": "{\"error\":\"Invalid sample size n (2). For post-hoc analysis, total pairs n must be an integer in [3, 2147483646].\"}\n",
+    "duration_ms": 397.38610000000335
+  }
+]

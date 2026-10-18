@@ -1,0 +1,55 @@
+﻿
+> gpower-paired-clone@1.0.0 test
+> tsx tests/differential.test.ts && tsx tests/gpower_gui.test.ts && tsx tests/mcp_equivalence.test.ts && tsx tests/cleanroom_equivalence.test.ts && npm run test:extended
+
+=========================================================================
+  YZM301 TEARDOWN SPRINT: DİFERANSİYEL TEST (ORACLE vs RE-IMPLEMENTATION) 
+=========================================================================
+
+Toplam Yüklenen Kâhin Vektör Sayısı: 106
+
+N=2 referansı: yalnız iç matematik testi; genel API girdiyi G*Power gibi reddeder.
+-------------------------------------------------------------------------
+Sonuç İstatistiği:
+• N Değeri Tam Eşleşme Oranı : 106/106 (%100.00)
+• Serbestlik Derecesi (df)    : 106/106 (%100.00)
+• Güç (Power <= 0.001 fark)  : 106/106 (%100.00)
+• Kritik t (<= 0.001 fark)    : 106/106 (%100.00)
+• NCP (<= 0.001 fark)         : 106/106 (%100.00)
+-------------------------------------------------------------------------
+🎉 BÜTÜN VEKTÖRLER (%100) REFERANS VERİSİYLE BELİRTİLEN TOLERANSTA UYUMLU!
+=========================================================================
+
+Dört ondalıkta bütün alanları kesin eşit vektör: 106/106
+Kaynak: SciPy referansı; G*Power GUI doğrulaması değildir.
+✅ KAPI ŞARTI BAŞARIYLA GEÇİLDİ (%100.00 >= %90.0)!
+
+G*Power GUI comparison: 11/12 matched; 1 explicitly recorded incompatibility outside the local search range.
+=========================================================================
+  YZM301 TEARDOWN SPRINT: CLI & MCP EŞDEĞERLİK TESTİ (THIN ADAPTER)       
+=========================================================================
+
+[PASS] Case 1 (a-priori, tails=2, dz=0.5): CLI ve MCP çıktıları birebir özdeş.
+[PASS] Case 2 (a-priori, tails=1, dz=0.8): CLI ve MCP çıktıları birebir özdeş.
+[PASS] Case 3 (a-priori, tails=2, dz=0.2): CLI ve MCP çıktıları birebir özdeş.
+[PASS] Case 4 (post-hoc, tails=2, dz=0.5): CLI ve MCP çıktıları birebir özdeş.
+[PASS] Case 5 (post-hoc, tails=1, dz=0.4): CLI ve MCP çıktıları birebir özdeş.
+[PASS] Case 6 (post-hoc, tails=2, dz=0.00001): CLI ve MCP çıktıları birebir özdeş.
+[PASS] Case 7 (post-hoc, tails=2, dz=0.000005): CLI ve MCP çıktıları birebir özdeş.
+[PASS] Case 8 (a-priori, tails=2, dz=20): CLI ve MCP çıktıları birebir özdeş.
+
+-------------------------------------------------------------------------
+Sonuç: 8/8 eşdeğerlik testi başarılı.
+Motor mimarisi: Tekil paylaşımlı hesaplama motoru (DRY ilkesi sağlandı).
+=========================================================================
+
+Independent clean-room comparison: 118/118 contract checks passed. Original G*Power range limitation remains explicit.
+
+> gpower-paired-clone@1.0.0 test:extended
+> tsx tests/statsmodels.test.ts && tsx tests/manual.test.ts && tsx tests/expanded_gui.test.ts && tsx tests/cli_validation.test.ts && tsx tests/spec_only.test.ts
+
+statsmodels: 600 vectors, both implementations exact at four decimals; N/df exact.
+Manual: 2 documented examples pass for both implementations.
+Expanded GUI: 31/32 matched per implementation; 31 screenshot-backed vectors.
+CLI validation: 10 malformed or boundary inputs rejected with JSON and exit 1.
+SPEC-only implementation: 632 held-out contract checks + 3 CLI checks passed (known limitation kept explicit).

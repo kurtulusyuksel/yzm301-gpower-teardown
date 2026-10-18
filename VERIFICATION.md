@@ -14,6 +14,20 @@ Ana CLI kaynağı ve JSON alanları korundu. Giriş kontrolleri gerçek GUI bulg
 | Klinik demo | 10/10; LLM değildir | evidence/clinical-demo-output.txt |
 | Hedefe özel REA/Ghidra sağlık | healthy=true | evidence/rea-doctor-ghidra.json |
 
+## Ayrıntılı yönerge sonrası ek doğrulama
+
+| Kontrol | Sonuç | Kanıt |
+|---|---|---|
+| Genişletilmiş gerçek G*Power GUI | 31/32 eşleşme (%96.875); 31 ekran görüntülü vaka | oracle/gpower-expanded.csv; evidence/expanded-gui-comparison.json |
+| statsmodels ölçek kümesi | 600 vektör; iki uygulamada dört ondalıkta tam eşleşme | evidence/statsmodels-comparison.json |
+| Kılavuz §19.3 | 2 örnek; iki uygulamada başarılı | evidence/manual-comparison.json |
+| Yalnız SPEC oturumu | 17 kendi kabul kontrolü; üst oturumda 632 dış sözleşme ve 3 CLI kontrolü başarılı | spec-only/SESSION.md; evidence/spec-only-comparison.json |
+| CLI geçersiz girdiler | 10/10 JSON hata ve exit=1 | tests/cli_validation.test.ts |
+| Video | FFprobe ile 60.000 saniye | demo/cli-demo.mp4; demo/commands.json |
+| REA + Ghidra + Antigravity kaydı | Seçili kapsamda healthy=true | evidence/rea-doctor-submission.json |
+
+Yeni testlerin komut kaydı evidence/submission-test-output.txt içindedir. Genişletilmiş GUI oranı beklenen giriş retlerini içerir; GUI-10 uyumsuzluğu başarılı sayılmaz. Hocanın gizli %90 N kapısı bu yerel oranla kanıtlanmış değildir. Açık teslim maddeleri SUBMISSION.md içindedir.
+
 N=2 SciPy satırı iç matematik testidir; post-hoc genel API bu girdiyi reddeder. A-priori ise GUI-12 gibi büyük etkide N=2 döndürebilir.
 
 GUI-10: orijinal N=129940148212; iki yerel uygulama 1.000.000 çift arama sınırı nedeniyle hata verir. Bu vaka başarılı eşleşme sayılmaz. `npm run test:gui:strict` tam eşdeğerliği istediği için bu bilinen farkta exit=1 verir. Normal testler beklenen çalışma sınırını da denetler; yeşil sonuç %100 G*Power eşdeğerliği anlamına gelmez.

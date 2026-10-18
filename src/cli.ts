@@ -39,20 +39,20 @@ function main() {
     if (!tailsStr) {
       throw new Error("Missing parameter: --tails (must be 1 or 2)");
     }
-    const tails = parseInt(tailsStr, 10) as 1 | 2;
+    const tails = Number(tailsStr) as 1 | 2;
 
     // Support both --dz and --d for Cohen's dz
     const dzStr = args['dz'] || args['d'];
     if (!dzStr) {
       throw new Error("Missing parameter: --dz or --d (effect size)");
     }
-    const dz = parseFloat(dzStr);
+    const dz = Number(dzStr);
 
     const alphaStr = args['alpha'];
     if (!alphaStr) {
       throw new Error("Missing parameter: --alpha (significance level)");
     }
-    const alpha = parseFloat(alphaStr);
+    const alpha = Number(alphaStr);
 
     let power: number | undefined;
     let n: number | undefined;
@@ -62,13 +62,13 @@ function main() {
       if (!powerStr) {
         throw new Error("Missing parameter: --power for a-priori mode (e.g. 0.95)");
       }
-      power = parseFloat(powerStr);
+      power = Number(powerStr);
     } else {
       const nStr = args['n'] || args['n-total'] || args['n_total'];
       if (!nStr) {
         throw new Error("Missing parameter: --n for post-hoc mode (total number of pairs)");
       }
-      n = parseInt(nStr, 10);
+      n = Number(nStr);
     }
 
     const input: PairedTTestInput = {

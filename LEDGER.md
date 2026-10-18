@@ -1,6 +1,19 @@
 # Kanıt defteri — eşleştirilmiş ortalama t-testi
 
-18 Ekim 2026. Etiketler: [REA] gerçek REA/Ghidra çıktısı; [GUI] orijinal programdan gözlem; [MAT] yeniden yazımın matematik modeli; [YEREL] uygulama sözleşmesi veya çalışma sınırı. Ham çıktılar evidence/ altında; kanonik REA kayıtlarının evidence_id alanları korunur. Fonksiyon metaveri projeksiyonlarında source_evidence_id kullanılır; bunlar tam kanonik çıktı diye sunulmaz.
+18 Ekim 2026. Ders etiketleri: **[DOK]** kılavuz/makale, **[REA]** adresli binary bulgusu, **[AJAN]** binary'den kanıtlanmamış çıkarım. Ek kaynak türleri: [GUI] program gözlemi; [MAT] matematik modeli; [YEREL] uygulama sözleşmesi. GUI gözlemi veya test başarısı kendiliğinden [REA] kanıtı sayılmaz. Ham çıktılar evidence/ altında; kanonik REA kayıtlarının evidence_id alanları korunur. Fonksiyon metaveri projeksiyonlarında source_evidence_id kullanılır; bunlar tam kanonik çıktı diye sunulmaz.
+
+## Ders etiketleriyle iddia ayrımı
+
+| Etiket | İddia | Kaynak / sınama |
+|---|---|---|
+| [DOK] | Eşleştirilmiş test farkların dz etkisini ve N çiftini kullanır; df=N-1, delta=dz*sqrt(N) | [Resmi kılavuz](https://www.psychologie.hhu.de/fileadmin/redaktion/Fakultaeten/Mathematisch-Naturwissenschaftliche_Fakultaet/Psychologie/AAP/gpower/GPowerManual.pdf), §19.1 ve §19.5, basılı s.48–49 |
+| [DOK] | §19.3 örnekleri N=50 için güç .832114 ve .500352 verir | tests/manual.test.ts; evidence/manual-comparison.json. Kılavuzdaki yuvarlanmış dz yerine belgelenen grup parametrelerinden tam dz kullanılır |
+| [REA] | TDist-Cdf hata dizeleri FUN_004fa7e0'da, 0x4fa7e0–0x4faa33 aralığında kullanılır | REA-06 ve çekirdek metaverisi |
+| [AJAN] | PowerTPairedMean RTTI pointer düzeni 0x5cac60 çevresinde bir dispatch tablosuna işaret eder | REA-13'te ham pointer kanıtı var; sınıf sınırı ve uçtan uca sanal çağrı yorumu kesin değildir. Girdi/çıktı eşdeğerliği GUI testleriyle sınanır; bunlar iç çağrı yolunu kanıtlamaz |
+| [AJAN] | Orijinal program ikili aramayla minimum N bulur | Doğrulanmadı; orijinal algoritma özelliği olarak kabul edilmez. GUI-02/03/04 yalnız sonuç eşiğini sınar |
+| [AJAN] | Yerel uygulamanın bütün G*Power girdilerinde eşdeğer olduğu varsayımı | Desteklenmiyor; GUI-10 çürütür. GUI ve statsmodels fark raporları sınanmış kapsamı gösterir |
+
+REA-01…REA-12 aşağıdaki adresli bulgu kimlikleridir. REA-13'teki pointer değerleri gözlemdir; pointer düzeninin sınıf/dispatch yorumu yukarıdaki [AJAN] satırına aittir. G*Power'ın arama sırası ve bütün dolaylı çağrı yolu çözüldü diye sunulmaz.
 
 ## Binary ve analiz kimliği
 
@@ -53,6 +66,10 @@ GUI-02/03/04 standart girdide en küçük N eşiğini destekler; orijinal araman
 [REA-13 / PE veri yorumu] PowerTPairedMean adının 0x60ce90 adresinden, 0x60ce88 tür tanımı adayına, 0x5ef6a0 RTTI locator adayına ve 0x5cac60 dispatch tablosu adayına uzanan pointer düzeni [paired-pointer-window.json](evidence/paired-pointer-window.json) içinde sayısal alanlarla kayıtlıdır. Bu yorumla seçilen 0x5cac6c slotu FUN_004dc9d0'ı gösterir. [FUN_004dc9d0 metaverisi](evidence/rea-paired-0x4dc9d0-metadata.json), 0x4dca4d çağrı yerinden FUN_004dc230'a doğrudan çağrıyı doğrular. [FUN_004dc0b0](evidence/rea-paired-0x4dc0b0-metadata.json) ve [FUN_004dbdc0](evidence/rea-paired-0x4dbdc0-metadata.json) sqrt çağrıları içerir. Bu gözlemler paired hesap bölgesini daraltır; dolaylı çağrıların tamamı çözülmediğinden dağılım çekirdeğine uçtan uca dinamik iz iddia edilmez.
 
 ## Son GUI ve temiz oda doğrulamaları
+
+Teslim denetimindeki ek GUI-13…GUI-32 vakaları `evidence/gui-expanded/` altında gerçek arayüz metni, yakalama zamanı ve ekran görüntüsü yollarıyla kayıtlıdır. `oracle/gpower-expanded.json` ham kayıt ve ekran görüntülerinin SHA-256 özetlerini taşır; `oracle/gpower-expanded.csv` dersin CSV teslimidir. `tests/expanded_gui.test.ts` her kaydın özetini ve iki uygulamanın bütün sayısal alanlarını denetler. 32 vakanın 31'i ekran görüntülüdür; GUI-01 yalnız metin kaydı olarak korunur. Eşleşme 31/32; GUI-10 başarı sayılmaz. Bu davranış kayıtları [GUI] kanıtıdır; binary fonksiyon ispatı diye [REA] etiketlenmez.
+
+Ek yalnız-SPEC oturumunun girdisi ve gerçek ilk prompt'u `evidence/spec-only-handoff.json` ve `spec-only/FIRST_PROMPT.md` içindedir. 632 dış sözleşme + 3 CLI kontrolü `evidence/spec-only-comparison.json` içinde kayıtlıdır. Yeni uygulayıcı oracle dosyalarını görmedi. Test başarısı uygulayıcı bağlam ayrımının yerine geçmez; ayrım ayrıca oturum ve devir kaydına dayanır.
 
 - GUI-11 / AC-12: [ham kayıt](evidence/gui-11-dz-upper-error.json), [ekran](evidence/gui-11-0.jpg). A-priori dz=100 reddedilir; aralık mesajı (-20,20).
 - GUI-12 / AC-13: [ham kayıt](evidence/gui-12-apriori-minimum.json), [ekran](evidence/gui-12-0.jpg). A-priori dz=20 kabul; N=2, df=1, power=.9735240, critical=12.7062047, ncp=28.2842712. Bu, post-hoc N alt sınırının a-priori aramaya taşınamayacağını kanıtlar.
