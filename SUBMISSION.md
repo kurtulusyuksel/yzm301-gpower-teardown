@@ -1,7 +1,5 @@
 # Yönergeye göre teslim kontrolü
 
-Kaynak: öğretim elemanının kullanıcı tarafından paylaşılan ödev metni. Bu kontrol not garantisi değildir.
-
 | Gereksinim | Kanıt / durum |
 |---|---|
 | Aile 2, eşleştirilmiş ortalama; a-priori ve post-hoc | CLI, SPEC ve G*Power GUI kayıtları |
