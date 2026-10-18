@@ -14,6 +14,19 @@ Ana CLI kaynağı ve JSON alanları korundu. Giriş kontrolleri gerçek GUI bulg
 | Klinik demo | 10/10; LLM değildir | evidence/clinical-demo-output.txt |
 | Hedefe özel REA/Ghidra sağlık | healthy=true | evidence/rea-doctor-ghidra.json |
 
+## Gerçek LLM ajanı ek teslimi
+
+| Kontrol | Sonuç | Kanıt |
+|---|---|---|
+| Ollama qwen3.5:9b → gerçek stdio MCP | 10/10 aile, parametre ve sayısal sonuç | evidence/ai-agent/evaluation.json |
+| Aynı kararlarla canlı G*Power GUI + görsel LLM | N 7/10; bütün alanlar 0/10. Orijinal GUI sonuçları doğru; model ekran okuma hataları ayrıca kayıtlı | evidence/ai-agent/live-comparison.json |
+| Ölçülmüş yerel model tokenı | MCP 11767; GUI 17363. Karakter tahmini değildir | evidence/ai-agent/RESULTS.md |
+| Canlı kapsam/eksik girdi kontrolleri | 2/2 açıklama istendi; hesap aracı çağrılmadı | evidence/ai-agent/live-negative-checks.json |
+| Ajan protokolü | 9 senaryo; model test çifti + gerçek MCP, canlı model başarı puanı değildir | evidence/ai-agent/protocol-test-output.txt |
+| Kanıt bütünlüğü | 10 gerçek GUI girdisi/sonucu, ekran SHA-256, MCP yanıtı, token ve başarı toplamları doğrulandı | tests/agent_evidence.test.ts |
+
+Tam hesaplama regresyonu evidence/ai-agent/regression-test-output.txt içinde başarılıdır; son ek protokol kontrolleri ayrı kaydedilir. İlk model hataları ve tamamlanmayan denemeler silinmedi. Canlı GUI sürücü süresi gözetim/toparlanma gecikmelerini içerir; hız sonuçları kontrollü deney değildir. AI_AGENT.md kapsamı ve yöntemi açıklar.
+
 ## Ayrıntılı yönerge sonrası ek doğrulama
 
 | Kontrol | Sonuç | Kanıt |

@@ -17,7 +17,7 @@
 | 60 saniyelik CLI videosu | demo/cli-demo.mp4: gerçek komut çıktılarının terminal kaydı görselleştirmesi; masaüstü çekimi değildir |
 | README: kurulum, sürüm, hash, atıf, video | README.md |
 | MCP bonus belgeleri ve testleri | README araç sözleşmesi; tests/mcp_equivalence.test.ts gerçek stdio denklik testi |
-| AI ajanı bonusu | Sunulmaz: kurallı demo, LLM/MCP ajanı veya ölçülmüş GUI-token karşılaştırması değildir |
+| AI ajanı bonus uygulaması | Yerel Ollama/Qwen ile Türkçe niyet ve parametre seçimi, gerçek MCP çağrısı; 10 soruluk değerlendirme, ham model/araç kayıtları ve ölçülmüş token/süre karşılaştırması AI_AGENT.md içinde. Puanlandırma öğretim elemanına aittir |
 
 ## Dış kayıt veya bilgi gerektiren açık maddeler
 

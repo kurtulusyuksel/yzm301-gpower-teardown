@@ -1,0 +1,251 @@
+{
+  "id": "ee73da90-dbc8-4822-896c-09af0e7aa9d9",
+  "createdAt": "2026-10-18T20:25:15.462Z",
+  "provider": "Ollama local",
+  "model": "qwen3.5:9b",
+  "host": "http://127.0.0.1:11434",
+  "query": "Aynı hastalarda önce ve sonra tansiyon farkını inceleyeceğiz. dz=0.5, çift yönlü test, alfa=0.05 ve hedef güç=0.95 için kaç hasta gerekir?",
+  "status": "answered",
+  "parameters": {
+    "test": "t-paired",
+    "mode": "a-priori",
+    "tails": 2,
+    "dz": 0.5,
+    "alpha": 0.05,
+    "power": 0.95
+  },
+  "result": {
+    "n_total": 54,
+    "actual_power": 0.9502,
+    "critical": 2.0057,
+    "df": 53,
+    "ncp": 3.6742
+  },
+  "physicianExplanation": "Hesaplamaya göre belirlenen örneklem sayısı ile hedeflenen güç sağlanmıştır.\nGerekli hasta/eşleşmiş çift sayısı: 54. Güç: 0.9502; kritik t: 2.0057; df: 53; ncp: 3.6742.",
+  "tokenUsage": {
+    "input": 1513,
+    "output": 119,
+    "total": 1632,
+    "source": "Ollama prompt_eval_count + eval_count; summed across requests"
+  },
+  "duration_ms": 8071.623099999999,
+  "toolCalls": [
+    {
+      "tool": "calculate_paired_power",
+      "arguments": {
+        "mode": "a-priori",
+        "tails": 2,
+        "dz": 0.5,
+        "alpha": 0.05,
+        "power": 0.95
+      },
+      "response": {
+        "content": [
+          {
+            "type": "text",
+            "text": "{\n  \"n_total\": 54,\n  \"actual_power\": 0.9502,\n  \"critical\": 2.0057,\n  \"df\": 53,\n  \"ncp\": 3.6742\n}"
+          }
+        ]
+      },
+      "duration_ms": 13.921200000000681
+    }
+  ],
+  "modelCalls": [
+    {
+      "request": {
+        "messages": [
+          {
+            "role": "system",
+            "content": "Sen PairedLab araştırma planlama ajanısın. Kullanıcı Türkçe kurgusal araştırma sorusu sorar.\nYalnız aynı kişilerde önce/sonra veya eşleştirilmiş ölçümlerin t-testi desteklenir.\nBağımsız gruplar, ANOVA, ki-kare ve belirsiz tasarımlar için hesap yapma; ask_researcher çağır.\nSayısal varsayımlar YAPMA: tails, dz, alpha ve hedef güç ya da çift sayısı eksikse ask_researcher çağır.\nA-priori örneklem sayısını; post-hoc verilen N'nin gücünü ister. Yüzdeleri olasılığa dönüştür; Türkçe ondalık virgülü anlayabilirsin.\nHesap, N, güç, df, kritik t, ncp ASLA kendinden gelmez. Her hesapta calculate_paired_power MCP aracını çağır.\nAraç çıktısından sonra kısa Türkçe sözel açıklama yap. Açıklamanda rakam veya yeni hesap olmasın; uygulama kesin sayısal raporu araç cevabından ekler.\nHasta/çift sayısı iki ölçüm sayısı değildir. Klinik tedavi önerisi verme. Araç hatasını başarı diye sunma."
+          },
+          {
+            "role": "user",
+            "content": "Aynı hastalarda önce ve sonra tansiyon farkını inceleyeceğiz. dz=0.5, çift yönlü test, alfa=0.05 ve hedef güç=0.95 için kaç hasta gerekir?"
+          }
+        ],
+        "tools": [
+          {
+            "type": "function",
+            "function": {
+              "name": "calculate_paired_power",
+              "description": "Calculates statistical power or required sample size (pairs) for dependent means t-tests (paired samples t-test, e.g. pre-post clinical studies) according to G*Power algorithms.",
+              "parameters": {
+                "type": "object",
+                "properties": {
+                  "mode": {
+                    "type": "string",
+                    "enum": [
+                      "a-priori",
+                      "post-hoc"
+                    ],
+                    "description": "'a-priori' to compute required sample size (pairs) for given power; 'post-hoc' to compute achieved power for given sample size."
+                  },
+                  "tails": {
+                    "type": "number",
+                    "enum": [
+                      1,
+                      2
+                    ],
+                    "description": "Direction of hypothesis: 1 for one-tailed (directional) or 2 for two-tailed (non-directional)."
+                  },
+                  "dz": {
+                    "type": "number",
+                    "description": "Cohen's dz effect size. Post-hoc: > 0; a-priori: [0.00001, 20]. Local a-priori search is limited to 1,000,000 pairs."
+                  },
+                  "alpha": {
+                    "type": "number",
+                    "description": "Type I error probability (alpha significance level, typically 0.05)."
+                  },
+                  "power": {
+                    "type": "number",
+                    "description": "Target statistical power (1 - beta) for a-priori analysis (e.g. 0.80 or 0.95)."
+                  },
+                  "n": {
+                    "type": "number",
+                    "description": "Total number of pairs for post-hoc analysis (integer in [3, 2147483646])."
+                  }
+                },
+                "required": [
+                  "mode",
+                  "tails",
+                  "dz",
+                  "alpha"
+                ]
+              }
+            }
+          },
+          {
+            "type": "function",
+            "function": {
+              "name": "ask_researcher",
+              "description": "Ask for missing parameters, clarify design, or explain unsupported family. No calculation.",
+              "parameters": {
+                "type": "object",
+                "properties": {
+                  "question": {
+                    "type": "string"
+                  },
+                  "reason": {
+                    "type": "string",
+                    "enum": [
+                      "ambiguous",
+                      "missing_parameters",
+                      "unsupported"
+                    ]
+                  }
+                },
+                "required": [
+                  "question",
+                  "reason"
+                ],
+                "additionalProperties": false
+              }
+            }
+          }
+        ]
+      },
+      "response": {
+        "model": "qwen3.5:9b",
+        "created_at": "2026-10-18T20:25:12.9953389Z",
+        "message": {
+          "role": "assistant",
+          "content": "",
+          "tool_calls": [
+            {
+              "id": "call_gkxiettq",
+              "function": {
+                "index": 0,
+                "name": "calculate_paired_power",
+                "arguments": {
+                  "mode": "a-priori",
+                  "tails": 2,
+                  "dz": 0.5,
+                  "alpha": 0.05,
+                  "power": 0.95
+                }
+              }
+            }
+          ]
+        },
+        "done": true,
+        "done_reason": "stop",
+        "total_duration": 4721355700,
+        "load_duration": 488241200,
+        "prompt_eval_count": 1012,
+        "prompt_eval_duration": 572505000,
+        "eval_count": 88,
+        "eval_duration": 3647630000
+      },
+      "wall_ms": 4785.9726
+    },
+    {
+      "request": {
+        "messages": [
+          {
+            "role": "system",
+            "content": "Sen PairedLab araştırma planlama ajanısın. Kullanıcı Türkçe kurgusal araştırma sorusu sorar.\nYalnız aynı kişilerde önce/sonra veya eşleştirilmiş ölçümlerin t-testi desteklenir.\nBağımsız gruplar, ANOVA, ki-kare ve belirsiz tasarımlar için hesap yapma; ask_researcher çağır.\nSayısal varsayımlar YAPMA: tails, dz, alpha ve hedef güç ya da çift sayısı eksikse ask_researcher çağır.\nA-priori örneklem sayısını; post-hoc verilen N'nin gücünü ister. Yüzdeleri olasılığa dönüştür; Türkçe ondalık virgülü anlayabilirsin.\nHesap, N, güç, df, kritik t, ncp ASLA kendinden gelmez. Her hesapta calculate_paired_power MCP aracını çağır.\nAraç çıktısından sonra kısa Türkçe sözel açıklama yap. Açıklamanda rakam veya yeni hesap olmasın; uygulama kesin sayısal raporu araç cevabından ekler.\nHasta/çift sayısı iki ölçüm sayısı değildir. Klinik tedavi önerisi verme. Araç hatasını başarı diye sunma."
+          },
+          {
+            "role": "user",
+            "content": "Aynı hastalarda önce ve sonra tansiyon farkını inceleyeceğiz. dz=0.5, çift yönlü test, alfa=0.05 ve hedef güç=0.95 için kaç hasta gerekir?"
+          },
+          {
+            "role": "assistant",
+            "content": "",
+            "tool_calls": [
+              {
+                "id": "call_gkxiettq",
+                "function": {
+                  "index": 0,
+                  "name": "calculate_paired_power",
+                  "arguments": {
+                    "mode": "a-priori",
+                    "tails": 2,
+                    "dz": 0.5,
+                    "alpha": 0.05,
+                    "power": 0.95
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "role": "tool",
+            "tool_name": "calculate_paired_power",
+            "content": "{\n  \"n_total\": 54,\n  \"actual_power\": 0.9502,\n  \"critical\": 2.0057,\n  \"df\": 53,\n  \"ncp\": 3.6742\n}"
+          }
+        ],
+        "format": {
+          "type": "object",
+          "properties": {
+            "explanation": {
+              "type": "string",
+              "pattern": "^[^0-9]*$"
+            }
+          },
+          "required": [
+            "explanation"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "response": {
+        "model": "qwen3.5:9b",
+        "created_at": "2026-10-18T20:25:15.4362042Z",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"explanation\": \"Hesaplamaya göre belirlenen örneklem sayısı ile hedeflenen güç sağlanmıştır.\"\n}"
+        },
+        "done": true,
+        "done_reason": "stop",
+        "total_duration": 2393187500,
+        "load_duration": 484713100,
+        "prompt_eval_count": 501,
+        "prompt_eval_duration": 390787000,
+        "eval_count": 31,
+        "eval_duration": 1430786000
+      },
+      "wall_ms": 2417.6985999999997
+    }
+  ]
+}

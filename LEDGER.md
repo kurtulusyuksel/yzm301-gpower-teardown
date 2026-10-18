@@ -4,6 +4,8 @@
 
 ## Ders etiketleriyle iddia ayrımı
 
+[YEREL / AI] Yerel Qwen modelinin Türkçe soru → MCP aracı seçimi `src/agent/llm_agent.ts` içinde uygulanır; hesap motoru bu dosyaya kopyalanmaz. `evidence/ai-agent/evaluation.json` ve `runs/` gerçek model istekleri, parametreler, stdio MCP cevapları ve Ollama kullanım sayaçlarını taşır. Canlı GUI kolunda `live-gui/*-capture.json` özgün arayüz metnini, tam LLM girdilerini, zamanları ve ekran SHA-256 özetlerini kaydeder. Bu çalışma zamanı kanıtıdır; binary'den çıkarılmış [REA] satırı değildir. Önceki kurallı demo hâlâ ayrı bir örnektir; onun tahminleri gerçek LLM tokenı sayılmaz.
+
 | Etiket | İddia | Kaynak / sınama |
 |---|---|---|
 | [DOK] | Eşleştirilmiş test farkların dz etkisini ve N çiftini kullanır; df=N-1, delta=dz*sqrt(N) | [Resmi kılavuz](https://www.psychologie.hhu.de/fileadmin/redaktion/Fakultaeten/Mathematisch-Naturwissenschaftliche_Fakultaet/Psychologie/AAP/gpower/GPowerManual.pdf), §19.1 ve §19.5, basılı s.48–49 |
@@ -52,7 +54,7 @@ GUI-02/03/04 standart girdide en küçük N eşiğini destekler; orijinal araman
 
 [YEREL] Sayısal motorun a-priori arama sınırı 1.000.000 çifttir. GUI-10 bu sınırı aşar: orijinal program sonuç üretirken yerel motor açıklayıcı hata verir. Bu vaka tam eşleşme sayılmaz. Ham değer farkları ve eşleşme sayısı [gui-differential-results.json](evidence/gui-differential-results.json) içindedir.
 
-[YEREL] CLI/MCP alan denklik testi gerçek stdio bağlantısı üzerinden yapılır; byte-for-byte serileştirme iddia edilmez. AI demosu kurallıdır; LLM bonusu değildir. Temiz oda geçmişinin sınırları [CLEANROOM.md](CLEANROOM.md) içindedir.
+[YEREL] CLI/MCP alan denklik testi gerçek stdio bağlantısı üzerinden yapılır; byte-for-byte serileştirme iddia edilmez. clinical_agent.ts demosu kurallıdır; llm_agent.ts ayrıca gerçek Ollama ve MCP kullanır. İkisinin ölçümleri karıştırılmaz. Temiz oda geçmişinin sınırları [CLEANROOM.md](CLEANROOM.md) içindedir.
 
 ## Ek statik izler
 

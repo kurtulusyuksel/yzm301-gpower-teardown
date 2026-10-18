@@ -1,0 +1,11 @@
+{
+  "startedAt": "2026-10-18T20:39:37.085Z",
+  "completedAt": "2026-10-18T20:41:25.356Z",
+  "duration_ms": 108268.49390000012,
+  "excludedFromTrials": true,
+  "notes": [
+    "GPower was launched with a different t-test selected.",
+    "Setting combo text did not commit the actual statistical selection. Real dropdown choices were clicked and Effect size dz verified.",
+    "Initial geometry refresh was required. All benchmark captures below use the corrected paired test."
+  ]
+}

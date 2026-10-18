@@ -6,7 +6,7 @@ import {calculatePairedTTest as reference} from '../src/engine/t_paired.js';
 import {calculate as calculatePairedTTest} from '../spec-only/engine.js';
 const handoff=JSON.parse(fs.readFileSync('evidence/spec-only-handoff.json','utf8'));
 for(const artifact of [...handoff.allowed_task_inputs,...handoff.independent_outputs])
-  assert.equal(createHash('sha256').update(fs.readFileSync(artifact.path)).digest('hex'),artifact.sha256,artifact.path);
+  assert.equal(createHash('sha256').update(fs.readFileSync(artifact.approved_snapshot ?? artifact.path)).digest('hex'),artifact.sha256,artifact.path);
 const vectors=JSON.parse(fs.readFileSync('oracle/gpower-expanded.json','utf8'));
 const [header,...lines]=fs.readFileSync('oracle/statsmodels-vectors.csv','utf8').trim().split(/\r?\n/);
 const fields=header.split(',');

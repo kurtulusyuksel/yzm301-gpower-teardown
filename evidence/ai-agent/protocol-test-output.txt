@@ -1,0 +1,5 @@
+﻿
+> gpower-paired-clone@1.0.0 test:agent
+> tsx tests/llm_agent.test.ts
+
+LLM agent protocol: 9 scenarios passed; real MCP transport, deterministic model test doubles (no live LLM score).

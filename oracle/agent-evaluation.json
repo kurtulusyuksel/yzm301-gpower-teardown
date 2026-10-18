@@ -1,0 +1,292 @@
+[
+  {
+    "id": "AI-01",
+    "question": "Tedavi öncesi ve sonrası sistolik tansiyonu aynı hastalarda karşılaştıracağız. Çift yönlü eşleştirilmiş t-testi, dz=0,5, alfa=0,05. Hedef güç %95 için kaç hasta/eşleşmiş çift gerekir?",
+    "synthetic": true,
+    "expectedFamily": "t-paired",
+    "expectedParameters": {
+      "test": "t-paired",
+      "mode": "a-priori",
+      "tails": 2,
+      "dz": 0.5,
+      "alpha": 0.05,
+      "power": 0.95
+    },
+    "expected": {
+      "n_total": 54,
+      "actual_power": 0.950212,
+      "critical": 2.005746,
+      "df": 53,
+      "ncp": 3.6742346
+    },
+    "guiEvidence": {
+      "id": "GUI-02",
+      "record": "evidence/gui-02-two-tail.json",
+      "sha256": "1fddec2f03025477c201d6f47c1911bbb6c9d488581f04873ae1de4fb9298027",
+      "screenshot": "oracle/screenshots/gui-02-0.jpg",
+      "screenshot_sha256": "3e8b66e444ae4b8d92378dc813117e33bffe0d3b1d536d6a58c991db267890b1",
+      "capturedAt": "2026-10-18T18:35:00.094Z"
+    }
+  },
+  {
+    "id": "AI-02",
+    "question": "Aynı kişilerin diyet öncesi ve sonrası tansiyon farkları için mevcut örneklemin gücünü öğrenmek istiyoruz. Çift yönlü eşleştirilmiş t-testi, dz=0,5, alfa=0,05. 54 hasta/eşleşmiş çift ile post-hoc güç nedir?",
+    "synthetic": true,
+    "expectedFamily": "t-paired",
+    "expectedParameters": {
+      "test": "t-paired",
+      "mode": "post-hoc",
+      "tails": 2,
+      "dz": 0.5,
+      "alpha": 0.05,
+      "n": 54
+    },
+    "expected": {
+      "n_total": 54,
+      "actual_power": 0.950212,
+      "critical": 2.005746,
+      "df": 53,
+      "ncp": 3.6742346
+    },
+    "guiEvidence": {
+      "id": "GUI-03",
+      "record": "evidence/gui-03-posthoc54.json",
+      "sha256": "dda010633354fd4e8a15a4efe11afbf3dc22ab98250b3a8c910df46a107cf599",
+      "screenshot": "oracle/screenshots/gui-03-0.jpg",
+      "screenshot_sha256": "2beef442804c717eca6f4101a5ad58f29f6a0f792b1e0fa6e9a46d133dc48b97",
+      "capturedAt": "2026-10-18T18:37:34.615Z"
+    }
+  },
+  {
+    "id": "AI-03",
+    "question": "Rehabilitasyon öncesi ve sonrası aynı kişilerin ölçümlerini eşleştirdik. Çift yönlü eşleştirilmiş t-testi, dz=0,5, alfa=0,05. 53 hasta/eşleşmiş çift ile post-hoc güç nedir?",
+    "synthetic": true,
+    "expectedFamily": "t-paired",
+    "expectedParameters": {
+      "test": "t-paired",
+      "mode": "post-hoc",
+      "tails": 2,
+      "dz": 0.5,
+      "alpha": 0.05,
+      "n": 53
+    },
+    "expected": {
+      "n_total": 53,
+      "actual_power": 0.9465273,
+      "critical": 2.0066468,
+      "df": 52,
+      "ncp": 3.6400549
+    },
+    "guiEvidence": {
+      "id": "GUI-04",
+      "record": "evidence/gui-04-posthoc53.json",
+      "sha256": "3332b7f47b3f3a7a3c5c2f10ff8cd0192d07d6a47101381bcdeaa3493c081a85",
+      "screenshot": "oracle/screenshots/gui-04-0.jpg",
+      "screenshot_sha256": "9bf7c11dd105c46029d81af8bcd80c81e170016935b2495749c5e0262968cfdf",
+      "capturedAt": "2026-10-18T18:38:36.052Z"
+    }
+  },
+  {
+    "id": "AI-04",
+    "question": "Kurgusal küçük bir pilotta her kişinin önce ve sonra ölçümü var. Çift yönlü eşleştirilmiş t-testi, dz=0,5, alfa=0,05. 3 hasta/eşleşmiş çift ile post-hoc güç nedir?",
+    "synthetic": true,
+    "expectedFamily": "t-paired",
+    "expectedParameters": {
+      "test": "t-paired",
+      "mode": "post-hoc",
+      "tails": 2,
+      "dz": 0.5,
+      "alpha": 0.05,
+      "n": 3
+    },
+    "expected": {
+      "n_total": 3,
+      "actual_power": 0.0841071,
+      "critical": 4.3026527,
+      "df": 2,
+      "ncp": 0.8660254
+    },
+    "guiEvidence": {
+      "id": "GUI-06",
+      "record": "evidence/gui-06-posthoc3.json",
+      "sha256": "c46ff9967a6c27eef6243f2db809b113ea9ab6118bea692a112227f2d4bf9b29",
+      "screenshot": "oracle/screenshots/gui-06-0.jpg",
+      "screenshot_sha256": "12c5704629dfca3f34fe0ed8383c402198182d876744248dcb4c2d175f4d0120",
+      "capturedAt": "2026-10-18T18:41:07.823Z"
+    }
+  },
+  {
+    "id": "AI-05",
+    "question": "Kurgusal bir sınır değer araştırmasında aynı kişilerin önce ve sonra ölçümlerini planlıyoruz. Standartlaştırılmış etki bu sınır testinde bilerek yirmidir; yüzde değildir ve aynen kullanılmalıdır. Çift yönlü eşleştirilmiş t-testi, dz=20, alfa=0,05. Hedef güç %95 için kaç hasta/eşleşmiş çift gerekir?",
+    "synthetic": true,
+    "expectedFamily": "t-paired",
+    "expectedParameters": {
+      "test": "t-paired",
+      "mode": "a-priori",
+      "tails": 2,
+      "dz": 20,
+      "alpha": 0.05,
+      "power": 0.95
+    },
+    "expected": {
+      "n_total": 2,
+      "actual_power": 0.973524,
+      "critical": 12.7062047,
+      "df": 1,
+      "ncp": 28.2842712
+    },
+    "guiEvidence": {
+      "id": "GUI-12",
+      "record": "evidence/gui-12-apriori-minimum.json",
+      "sha256": "9942c4bc006e84f99db06ee49713d0b77ba492d339555cb85921096467991b7c",
+      "screenshot": "oracle/screenshots/gui-12-0.jpg",
+      "screenshot_sha256": "54c79313e3e65d03c78d240968dc42c494499dc2337ab2f5df5a1f65cf2a830c",
+      "capturedAt": "2026-10-18T19:14:04.036Z"
+    }
+  },
+  {
+    "id": "AI-06",
+    "question": "Egzersiz öncesi ve sonrası tansiyonu aynı kişilerde karşılaştıracağız. Çift yönlü eşleştirilmiş t-testi, dz=0,1, alfa=0,05. Hedef güç %95 için kaç hasta/eşleşmiş çift gerekir?",
+    "synthetic": true,
+    "expectedFamily": "t-paired",
+    "expectedParameters": {
+      "test": "t-paired",
+      "mode": "a-priori",
+      "tails": 2,
+      "dz": 0.1,
+      "alpha": 0.05,
+      "power": 0.95
+    },
+    "expected": {
+      "n_total": 1302,
+      "actual_power": 0.9500867,
+      "critical": 1.9617891,
+      "df": 1301,
+      "ncp": 3.6083237
+    },
+    "guiEvidence": {
+      "id": "GUI-13",
+      "record": "evidence/gui-expanded/gui-13.json",
+      "sha256": "aaf760fdb6edd84a26da4d9c7be60df46356a380a080afa767a40c89067a9cef",
+      "screenshot": "oracle/screenshots/gui-13-0.jpg",
+      "screenshot_sha256": "4f0c860528037ab7ce4fefba5b69462b45c86c40aec519c755457cec5699f0d6",
+      "capturedAt": "2026-10-18T19:37:11.077Z"
+    }
+  },
+  {
+    "id": "AI-07",
+    "question": "Aynı hastaların eğitim öncesi ve sonrası ölçümlerini inceleyeceğiz. Çift yönlü eşleştirilmiş t-testi, dz=0,15, alfa=0,05. Hedef güç %95 için kaç hasta/eşleşmiş çift gerekir?",
+    "synthetic": true,
+    "expectedFamily": "t-paired",
+    "expectedParameters": {
+      "test": "t-paired",
+      "mode": "a-priori",
+      "tails": 2,
+      "dz": 0.15,
+      "alpha": 0.05,
+      "power": 0.95
+    },
+    "expected": {
+      "n_total": 580,
+      "actual_power": 0.9501712,
+      "critical": 1.9640696,
+      "df": 579,
+      "ncp": 3.6124784
+    },
+    "guiEvidence": {
+      "id": "GUI-14",
+      "record": "evidence/gui-expanded/gui-14.json",
+      "sha256": "63488345695263658eb195416fb75e79816fb8fe6727ac9eecb13f8ecff9bd5d",
+      "screenshot": "oracle/screenshots/gui-14-0.jpg",
+      "screenshot_sha256": "9ace385318bf283cead30aaad492d9b38a2da7fb0a0f09b76b7a2fe42b2cbe1e",
+      "capturedAt": "2026-10-18T19:37:50.036Z"
+    }
+  },
+  {
+    "id": "AI-08",
+    "question": "Aynı kişilerin takip öncesi ve sonrası farkını değerlendireceğiz. Çift yönlü eşleştirilmiş t-testi, dz=0,2, alfa=0,05. Hedef güç %95 için kaç hasta/eşleşmiş çift gerekir?",
+    "synthetic": true,
+    "expectedFamily": "t-paired",
+    "expectedParameters": {
+      "test": "t-paired",
+      "mode": "a-priori",
+      "tails": 2,
+      "dz": 0.2,
+      "alpha": 0.05,
+      "power": 0.95
+    },
+    "expected": {
+      "n_total": 327,
+      "actual_power": 0.9501171,
+      "critical": 1.9672675,
+      "df": 326,
+      "ncp": 3.6166283
+    },
+    "guiEvidence": {
+      "id": "GUI-15",
+      "record": "evidence/gui-expanded/gui-15.json",
+      "sha256": "538e370eacbdbc5644a561f3ef8f9e814665a7c1360ef2fcb158fa54bb00324e",
+      "screenshot": "oracle/screenshots/gui-15-0.jpg",
+      "screenshot_sha256": "3ac5a9a38934cd2b3db9d27964281c45567dca5bda618733a3ec2ae33e86e73a",
+      "capturedAt": "2026-10-18T19:38:30.896Z"
+    }
+  },
+  {
+    "id": "AI-09",
+    "question": "Tedavi öncesi ve sonrası kurgusal ağrı puanları eşleştirilmiş durumda. Çift yönlü eşleştirilmiş t-testi, dz=0,25, alfa=0,05. Hedef güç %95 için kaç hasta/eşleşmiş çift gerekir?",
+    "synthetic": true,
+    "expectedFamily": "t-paired",
+    "expectedParameters": {
+      "test": "t-paired",
+      "mode": "a-priori",
+      "tails": 2,
+      "dz": 0.25,
+      "alpha": 0.05,
+      "power": 0.95
+    },
+    "expected": {
+      "n_total": 210,
+      "actual_power": 0.950137,
+      "critical": 1.9713795,
+      "df": 209,
+      "ncp": 3.6228442
+    },
+    "guiEvidence": {
+      "id": "GUI-16",
+      "record": "evidence/gui-expanded/gui-16.json",
+      "sha256": "1336cfa04b1e622644c720643ea1560a542b8b437930a7c90bc574dee81426f9",
+      "screenshot": "oracle/screenshots/gui-16-0.jpg",
+      "screenshot_sha256": "64b3636e81100e578743dd39f6192c5057da162d705f636e594b5c4a2f22cadf",
+      "capturedAt": "2026-10-18T19:38:58.038Z"
+    }
+  },
+  {
+    "id": "AI-10",
+    "question": "Program öncesi ve sonrası aynı katılımcıların ölçümlerini karşılaştıracağız. Çift yönlü eşleştirilmiş t-testi, dz=0,3, alfa=0,05. Hedef güç %95 için kaç hasta/eşleşmiş çift gerekir?",
+    "synthetic": true,
+    "expectedFamily": "t-paired",
+    "expectedParameters": {
+      "test": "t-paired",
+      "mode": "a-priori",
+      "tails": 2,
+      "dz": 0.3,
+      "alpha": 0.05,
+      "power": 0.95
+    },
+    "expected": {
+      "n_total": 147,
+      "actual_power": 0.9508665,
+      "critical": 1.9763457,
+      "df": 146,
+      "ncp": 3.6373067
+    },
+    "guiEvidence": {
+      "id": "GUI-17",
+      "record": "evidence/gui-expanded/gui-17.json",
+      "sha256": "583ccbb450cc7c148ab044c173b38a711e1df8967d198dc229023f66bde0e921",
+      "screenshot": "oracle/screenshots/gui-17-0.jpg",
+      "screenshot_sha256": "1f2ecb67eb5a9086337a259f43268b8c48f5421fa19c49e6b07d554b1fcd0d18",
+      "capturedAt": "2026-10-18T19:39:29.766Z"
+    }
+  }
+]

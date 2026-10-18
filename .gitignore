@@ -7,6 +7,7 @@ cleanroom/build/
 spec-only/build/
 demo/frames/
 statsmodels-import-error.txt
+.test-agent-logs/
 
 # Binaries - NEVER COMMIT GPower.exe or other executables
 *.exe

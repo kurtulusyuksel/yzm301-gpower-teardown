@@ -55,7 +55,7 @@ A-priori etki aralığı: 0.00001 <= dz <= 20; GUI-09 eşik altını reddeder, G
 
 ## Temiz oda ve bonuslar
 
-Temiz oda için süreç ve sınırlamalar CLEANROOM.md içindedir. Süreç kanıtı cleanroom/ uygulamasını kapsar. Türkçe kurallı demo LLM ajanı değildir. Gerçek AI ajanı ve gerçek token maliyet ölçümü bonus hedefidir; kabul edilmiş özellik olarak sunulmaz.
+Temiz oda için süreç ve sınırlamalar CLEANROOM.md içindedir. Ayrı uygulamalar cleanroom/ ve yalnız SPEC okuyarak başlayan spec-only/ altında belgelenir. Türkçe kurallı demo LLM ajanı değildir; ayrıca gerçek Ollama LLM + MCP ajanı ve ölçülmüş kullanım karşılaştırması AI_AGENT.md içinde teslim edilir. Bu durum notu bağımsız uygulama tamamlandıktan sonra güncellendi. Yalnız-SPEC uygulayıcısının gördüğü özgün SPEC baytları ve SHA-256 kaydı evidence/spec-only-approved-spec.md ile evidence/spec-only-handoff.json içinde korunur; sayısal sözleşme değiştirilmedi.
 
 ## Gherkin kabul kriterleri — genişletilmiş teslim
 

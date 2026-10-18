@@ -6,7 +6,7 @@ YZM301 Teardown Sprint projesi. İncelenen hesap: **t tests → Means: Differenc
 
 ## Teslim özeti
 
-**Teslim katmanları:** CLI temel katmanı ve MCP bonus uygulaması vardır; AI ajanı bonusu sunulmaz. Puan ve gizli test kapısı öğretim elemanının değerlendirmesine bağlıdır. Açık teslim eksikleri [SUBMISSION.md](SUBMISSION.md) içinde belirtilir.
+**Teslim katmanları:** CLI, MCP ve Ollama üzerinden Türkçe soruyu yorumlayıp gerçek MCP aracını çağıran AI ajanı vardır. [AI ajanı kurulumu ve ölçüm yöntemi](AI_AGENT.md). Puan ve gizli test kapısı öğretim elemanının değerlendirmesine bağlıdır. Açık teslim maddeleri [SUBMISSION.md](SUBMISSION.md) içinde belirtilir.
 
 **Sürümler:** G*Power 3.1.9.7 Windows; REA 6.5.0; Ghidra 12.1.2; JDK 21; Node.js 22.23.2; PairedLab paket sürümü 1.0.0.
 
@@ -29,7 +29,7 @@ Aynı hastaların tedavi öncesi ve sonrası tansiyonu ölçülür. Örnek varsa
 | 3. SPEC | SPEC.md: gerçek GUI vakalarıyla bağlantılı kabul kriterleri ve çalışma sınırları. |
 | 4. Temiz oda yeniden yazım | spec-only/ uygulayıcısı yeni bağlamda yalnız SPEC okudu; gerçek ilk prompt ve oturum kayıtlı. cleanroom/ ayrıca SPEC ve vektörlerle geliştirilmiş önceki bağımsız uygulamadır. Ayrım ve özetler CLEANROOM.md içinde. |
 | 5. Diferansiyel test | Genişletilmiş 32 gerçek GUI vakası (31 ekran görüntülü): 31 eşleşme, 1 açık büyük-N sınır farkı. Ayrıca 600 statsmodels referansı, 106 SciPy referansı ve iki kılavuz örneği. |
-| 6. CLI ve bonuslar | CLI ve bağımsız temiz oda CLI'si çalışıyor. MCP gerçek stdio bağlantısıyla 8 vakada doğrulandı. Türkçe demo kural tabanlıdır; LLM ajanı bonusu kapsam dışındadır. |
+| 6. CLI ve bonuslar | CLI ve bağımsız CLI'ler; gerçek stdio MCP; yerel Qwen ile Türkçe LLM ajanı. 10 soruluk ölçüm, gerçek kullanım sayaçları ve çağrı kayıtları AI_AGENT.md içinde. Önceki kurallı demo ayrı komutlarla korunur. |
 
 ## Kurulum ve kullanım
 
@@ -53,7 +53,9 @@ npm run cleanroom:cli -- --test t-paired --mode a-priori --tails 2 --d 0.5 --alp
 npm run spec-only:cli -- --test t-paired --mode a-priori --tails 2 --d 0.5 --alpha 0.05 --power 0.95
 
 npm run mcp
-npm run agent -- "dz=0.5, alfa=0.05, %95 güç için kaç hasta gerekir?"
+ollama serve
+# Ayrı terminalde (qwen3.5:9b modelinin kurulu olması gerekir):
+npm run agent -- "Aynı hastalarda önce ve sonra tansiyon için çift yönlü eşleştirilmiş t-testi: dz=0.5, alfa=0.05, %95 güç için kaç hasta gerekir?"
 npm run eval
 ```
 
@@ -74,6 +76,7 @@ CLI ve MCP, `src/engine/` altındaki ortak hesaplama katmanını kullanır. `cle
 - Resmi kılavuz §19.3'ün iki örneği: [test](tests/manual.test.ts), [rapor](evidence/manual-comparison.json).
 - Yalnız-SPEC uygulaması: 32 GUI + 600 statsmodels girdisi üzerinden 632 sözleşme kontrolü ve 3 gerçek CLI kontrolü; [rapor](evidence/spec-only-comparison.json). Beklenen retler ve bilinen büyük-N sınırı sayıda bulunur; tüm girdilerde G*Power eşdeğerliği iddia edilmez.
 - CLI girdi doğrulaması: kesirli N, geçersiz sayı metni ve güç ≤ alpha dahil 10 hata vakası; [test](tests/cli_validation.test.ts).
+- Gerçek Türkçe LLM + MCP: **10/10** doğru aile, parametre ve sayısal sonuç. Aynı soruların canlı G*Power ekranını okuyan modelinde N doğruluğu 7/10; tam sayısal doğruluk 0/10. Ölçülen token toplamı **11.767 / 17.363**; yöntem ve süre sınırları [AI_AGENT.md](AI_AGENT.md) ve [sonuç tablosunda](evidence/ai-agent/RESULTS.md). Desteklenmeyen aile ve eksik parametrelerde iki ek canlı kontrolde hesap yerine açıklama istendi.
 
 Önceki temiz oda devrine ait dondurulmuş 12 vakalık küme ayrıca korunur:
 
@@ -81,7 +84,7 @@ CLI ve MCP, `src/engine/` altındaki ortak hesaplama katmanını kullanır. `cle
 - SciPy: 106/106 toleranslı ve dört ondalıkta kesin eşleşme. N=2 satırı matematiksel iç fonksiyon üzerinden, ayrıca post-hoc genel API reddiyle test edilir; diğer 105 satır genel API'den geçer.
 - MCP: gerçek stdio sunucusu ile CLI arasında 8/8 aynı sonuç.
 - `npm run test:cleanroom`: bağımsız motor, ana motor ve onaylı veriler arasında 118/118 sözleşme kontrolü; ayrıca üç bağımsız CLI kontrolü. Bu sayı beklenen retleri de içerir; %100 G*Power eşdeğerliği demek değildir.
-- `npm run eval`: 10/10 kurallı Türkçe demo. Token/GUI maliyetleri tahmin ve varsayımdır; sağlayıcı ölçümü değildir.
+- `npm run eval`: gerçek yerel LLM + MCP ölçümü ve kayıtlı ekran görüntülerinin okunması. Canlı GUI karşılaştırması ayrıca AI_AGENT.md içinde belgelenir. `npm run eval:demo` önceki kurallı örnektir; onun maliyetleri varsayımdır, gerçek ölçüm değildir.
 
 Tam eşdeğerlik denetimi: `npm run test:gui:strict`. Bilinen GUI-10 farkı sürdüğü için exit=1 verir. Normal test paketinin yeşil olması bütün G*Power girdilerinin eşdeğer olduğu anlamına gelmez.
 

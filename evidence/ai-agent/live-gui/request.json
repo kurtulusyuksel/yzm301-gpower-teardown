@@ -1,0 +1,14 @@
+{
+  "id": "AI-10",
+  "query": "Program öncesi ve sonrası aynı katılımcıların ölçümlerini karşılaştıracağız. Çift yönlü eşleştirilmiş t-testi, dz=0,3, alfa=0,05. Hedef güç %95 için kaç hasta/eşleşmiş çift gerekir?",
+  "parameters": {
+    "test": "t-paired",
+    "mode": "a-priori",
+    "tails": 2,
+    "dz": 0.3,
+    "alpha": 0.05,
+    "power": 0.95
+  },
+  "decisionLog": "evidence\\ai-agent\\runs\\2a0d7d8c-ab9e-481c-997f-f5f44eb1d22b.json",
+  "createdAt": "2026-10-18T20:50:09.009Z"
+}

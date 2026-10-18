@@ -5,7 +5,8 @@
   "allowed_task_inputs": [
     {
       "path": "SPEC.md",
-      "sha256": "b3849a0e6abbd4969d8321db7320ae53dfbeb985614934d33ac98c17ed9ca027"
+      "sha256": "b3849a0e6abbd4969d8321db7320ae53dfbeb985614934d33ac98c17ed9ca027",
+      "approved_snapshot": "evidence/spec-only-approved-spec.md"
     }
   ],
   "scope": "spec-only/",
@@ -52,5 +53,6 @@
     "report": "evidence/spec-only-comparison.json",
     "known_gpower_limitations": 1
   },
-  "completed_at_utc": "2026-10-18T19:52:35.963925+00:00"
+  "completed_at_utc": "2026-10-18T19:52:35.963925+00:00",
+  "post_completion_editorial_note": "AI agent delivery status updated in root SPEC after implementation. Original approved SPEC bytes and SHA-256 remain at approved_snapshot; independent output hashes unchanged."
 }

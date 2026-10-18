@@ -1,0 +1,28 @@
+﻿{
+    "ollama":  "0.32.1",
+    "model":  "qwen3.5:9b",
+    "capabilities":  [
+                         "completion",
+                         "vision",
+                         "tools",
+                         "thinking"
+                     ],
+    "details":  {
+                    "parent_model":  "",
+                    "format":  "gguf",
+                    "family":  "qwen35",
+                    "families":  [
+                                     "qwen35"
+                                 ],
+                    "parameter_size":  "9.7B",
+                    "quantization_level":  "Q4_K_M"
+                },
+    "digest":  "6488c96fa5faab64bb65cbd30d4289e20e6130ef535a93ef9a49f42eda893ea7",
+    "gpu":  "NVIDIA GeForce RTX 4070 Laptop GPU, 8 GB",
+    "options":  {
+                    "num_ctx":  8192,
+                    "think":  false,
+                    "seed":  301,
+                    "temperature":  0
+                }
+}

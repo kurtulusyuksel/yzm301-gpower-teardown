@@ -1,0 +1,1371 @@
+{
+  "createdAt": "2026-10-18T20:28:59.657Z",
+  "model": "qwen3.5:9b",
+  "provider": "Ollama local",
+  "temperature": 0,
+  "thinking": false,
+  "count": 10,
+  "mcpCorrect": 9,
+  "guiReadingCorrect": 0,
+  "mcp": {
+    "inputTokens": 15398,
+    "outputTokens": 1150,
+    "totalTokens": 16548,
+    "duration_ms": 94711.28200000002
+  },
+  "guiReading": {
+    "inputTokens": 4861,
+    "outputTokens": 725,
+    "totalTokens": 5586,
+    "duration_ms": 50583.113399999995
+  },
+  "tokenSource": "Actual Ollama prompt_eval_count and eval_count, summed over every request; no character estimates",
+  "limitations": [
+    "GUI arm replays already recorded screenshots; it does not drive G*Power or measure input/capture latency.",
+    "Model decoding/tool output generation differs between arms; this is a workflow comparison, not an isolated causal estimate.",
+    "Ten supported synthetic Turkish questions, two-sided tests only; not general medical or family-classification accuracy.",
+    "Local inference: no provider invoice cost, energy/hardware cost not measured. Cold model load and warm-cache conditions affect timings."
+  ],
+  "rows": [
+    {
+      "id": "AI-01",
+      "question": "Tedavi öncesi ve sonrası sistolik tansiyonu aynı hastalarda karşılaştıracağız. Çift yönlü eşleştirilmiş t-testi, dz=0,5, alfa=0,05. Hedef güç %95 için kaç hasta/eşleşmiş çift gerekir?",
+      "expectedFamily": "t-paired",
+      "expectedParameters": {
+        "test": "t-paired",
+        "mode": "a-priori",
+        "tails": 2,
+        "dz": 0.5,
+        "alpha": 0.05,
+        "power": 0.95
+      },
+      "expected": {
+        "n_total": 54,
+        "actual_power": 0.950212,
+        "critical": 2.005746,
+        "df": 53,
+        "ncp": 3.6742346
+      },
+      "mcp": {
+        "status": "answered",
+        "parameterMatch": true,
+        "numericMatch": true,
+        "correct": true,
+        "parameters": {
+          "test": "t-paired",
+          "mode": "a-priori",
+          "power": 0.95,
+          "dz": 0.5,
+          "alpha": 0.05,
+          "tails": 2
+        },
+        "result": {
+          "n_total": 54,
+          "actual_power": 0.9502,
+          "critical": 2.0057,
+          "df": 53,
+          "ncp": 3.6742
+        },
+        "tokenUsage": {
+          "input": 1537,
+          "output": 113,
+          "total": 1650,
+          "source": "Ollama prompt_eval_count + eval_count; summed across requests"
+        },
+        "duration_ms": 8379.063,
+        "logFile": "evidence\\ai-agent\\runs\\650b7312-78ff-48ce-8960-5f2ee45ddd5f.json"
+      },
+      "gui": {
+        "model": "qwen3.5:9b",
+        "response": {
+          "model": "qwen3.5:9b",
+          "created_at": "2026-10-18T20:26:53.1187758Z",
+          "message": {
+            "role": "assistant",
+            "content": "{\n  \"n_total\": 34,\n  \"actual_power\": 0.8762120,\n  \"critical\": 2.057450,\n  \"df\": 53,\n  \"ncp\": 3.9767346\n}"
+          },
+          "done": true,
+          "done_reason": "stop",
+          "total_duration": 10419250300,
+          "load_duration": 502122800,
+          "prompt_eval_count": 378,
+          "prompt_eval_duration": 6722468000,
+          "eval_count": 71,
+          "eval_duration": 3136957000
+        },
+        "result": {
+          "n_total": 34,
+          "actual_power": 0.876212,
+          "critical": 2.05745,
+          "df": 53,
+          "ncp": 3.9767346
+        },
+        "tokenUsage": {
+          "input": 378,
+          "output": 71,
+          "total": 449
+        },
+        "duration_ms": 10430.7088,
+        "numericMatch": false,
+        "source": {
+          "id": "GUI-02",
+          "record": "evidence/gui-02-two-tail.json",
+          "sha256": "1fddec2f03025477c201d6f47c1911bbb6c9d488581f04873ae1de4fb9298027",
+          "screenshot": "oracle/screenshots/gui-02-0.jpg",
+          "screenshot_sha256": "3e8b66e444ae4b8d92378dc813117e33bffe0d3b1d536d6a58c991db267890b1",
+          "capturedAt": "2026-10-18T18:35:00.094Z"
+        },
+        "request": {
+          "messages": [
+            {
+              "role": "system",
+              "content": "Read the attached real G*Power result screenshot for the Turkish research question. Do NOT calculate or infer missing values. Copy the five output fields from the screenshot as numbers. n_total is total matched pairs (for post hoc it is the input Total sample size). Critical t, Df, Noncentrality parameter and Actual power/Power are visible. Return only the requested JSON."
+            },
+            {
+              "role": "user",
+              "content": "Tedavi öncesi ve sonrası sistolik tansiyonu aynı hastalarda karşılaştıracağız. Çift yönlü eşleştirilmiş t-testi, dz=0,5, alfa=0,05. Hedef güç %95 için kaç hasta/eşleşmiş çift gerekir?",
+              "images": [
+                "[base64 omitted; exact screenshot path and SHA-256 above]"
+              ]
+            }
+          ],
+          "format": {
+            "type": "object",
+            "properties": {
+              "n_total": {
+                "type": "number"
+              },
+              "actual_power": {
+                "type": "number"
+              },
+              "critical": {
+                "type": "number"
+              },
+              "df": {
+                "type": "number"
+              },
+              "ncp": {
+                "type": "number"
+              }
+            },
+            "required": [
+              "n_total",
+              "actual_power",
+              "critical",
+              "df",
+              "ncp"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "scope": "Recorded real G*Power screenshot replay: model visual reading only. GUI input/capture time is NOT included."
+      }
+    },
+    {
+      "id": "AI-02",
+      "question": "Aynı kişilerin diyet öncesi ve sonrası tansiyon farkları için mevcut örneklemin gücünü öğrenmek istiyoruz. Çift yönlü eşleştirilmiş t-testi, dz=0,5, alfa=0,05. 54 hasta/eşleşmiş çift ile post-hoc güç nedir?",
+      "expectedFamily": "t-paired",
+      "expectedParameters": {
+        "test": "t-paired",
+        "mode": "post-hoc",
+        "tails": 2,
+        "dz": 0.5,
+        "alpha": 0.05,
+        "n": 54
+      },
+      "expected": {
+        "n_total": 54,
+        "actual_power": 0.950212,
+        "critical": 2.005746,
+        "df": 53,
+        "ncp": 3.6742346
+      },
+      "mcp": {
+        "status": "answered",
+        "parameterMatch": true,
+        "numericMatch": true,
+        "correct": true,
+        "parameters": {
+          "test": "t-paired",
+          "mode": "post-hoc",
+          "tails": 2,
+          "dz": 0.5,
+          "alpha": 0.05,
+          "n": 54
+        },
+        "result": {
+          "n_total": 54,
+          "actual_power": 0.9502,
+          "critical": 2.0057,
+          "df": 53,
+          "ncp": 3.6742
+        },
+        "tokenUsage": {
+          "input": 1557,
+          "output": 112,
+          "total": 1669,
+          "source": "Ollama prompt_eval_count + eval_count; summed across requests"
+        },
+        "duration_ms": 22129.45,
+        "logFile": "evidence\\ai-agent\\runs\\8dee736f-ba10-4c35-ab16-df324ebe1976.json"
+      },
+      "gui": {
+        "model": "qwen3.5:9b",
+        "response": {
+          "model": "qwen3.5:9b",
+          "created_at": "2026-10-18T20:27:19.2995448Z",
+          "message": {
+            "role": "assistant",
+            "content": "{\n  \"n_total\": 54,\n  \"actual_power\": 0.9302120,\n  \"critical\": 2.00678,\n  \"df\": 53,\n  \"ncp\": -0.5 }"
+          },
+          "done": true,
+          "done_reason": "stop",
+          "total_duration": 4028280300,
+          "load_duration": 527036100,
+          "prompt_eval_count": 508,
+          "prompt_eval_duration": 556067000,
+          "eval_count": 63,
+          "eval_duration": 2888442000
+        },
+        "result": {
+          "n_total": 54,
+          "actual_power": 0.930212,
+          "critical": 2.00678,
+          "df": 53,
+          "ncp": -0.5
+        },
+        "tokenUsage": {
+          "input": 508,
+          "output": 63,
+          "total": 571
+        },
+        "duration_ms": 4044.890099999997,
+        "numericMatch": false,
+        "source": {
+          "id": "GUI-03",
+          "record": "evidence/gui-03-posthoc54.json",
+          "sha256": "dda010633354fd4e8a15a4efe11afbf3dc22ab98250b3a8c910df46a107cf599",
+          "screenshot": "oracle/screenshots/gui-03-0.jpg",
+          "screenshot_sha256": "2beef442804c717eca6f4101a5ad58f29f6a0f792b1e0fa6e9a46d133dc48b97",
+          "capturedAt": "2026-10-18T18:37:34.615Z"
+        },
+        "request": {
+          "messages": [
+            {
+              "role": "system",
+              "content": "Read the attached real G*Power result screenshot for the Turkish research question. Do NOT calculate or infer missing values. Copy the five output fields from the screenshot as numbers. n_total is total matched pairs (for post hoc it is the input Total sample size). Critical t, Df, Noncentrality parameter and Actual power/Power are visible. Return only the requested JSON."
+            },
+            {
+              "role": "user",
+              "content": "Aynı kişilerin diyet öncesi ve sonrası tansiyon farkları için mevcut örneklemin gücünü öğrenmek istiyoruz. Çift yönlü eşleştirilmiş t-testi, dz=0,5, alfa=0,05. 54 hasta/eşleşmiş çift ile post-hoc güç nedir?",
+              "images": [
+                "[base64 omitted; exact screenshot path and SHA-256 above]"
+              ]
+            }
+          ],
+          "format": {
+            "type": "object",
+            "properties": {
+              "n_total": {
+                "type": "number"
+              },
+              "actual_power": {
+                "type": "number"
+              },
+              "critical": {
+                "type": "number"
+              },
+              "df": {
+                "type": "number"
+              },
+              "ncp": {
+                "type": "number"
+              }
+            },
+            "required": [
+              "n_total",
+              "actual_power",
+              "critical",
+              "df",
+              "ncp"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "scope": "Recorded real G*Power screenshot replay: model visual reading only. GUI input/capture time is NOT included."
+      }
+    },
+    {
+      "id": "AI-03",
+      "question": "Rehabilitasyon öncesi ve sonrası aynı kişilerin ölçümlerini eşleştirdik. Çift yönlü eşleştirilmiş t-testi, dz=0,5, alfa=0,05. 53 hasta/eşleşmiş çift ile post-hoc güç nedir?",
+      "expectedFamily": "t-paired",
+      "expectedParameters": {
+        "test": "t-paired",
+        "mode": "post-hoc",
+        "tails": 2,
+        "dz": 0.5,
+        "alpha": 0.05,
+        "n": 53
+      },
+      "expected": {
+        "n_total": 53,
+        "actual_power": 0.9465273,
+        "critical": 2.0066468,
+        "df": 52,
+        "ncp": 3.6400549
+      },
+      "mcp": {
+        "status": "answered",
+        "parameterMatch": true,
+        "numericMatch": true,
+        "correct": true,
+        "parameters": {
+          "test": "t-paired",
+          "mode": "post-hoc",
+          "tails": 2,
+          "dz": 0.5,
+          "alpha": 0.05,
+          "n": 53
+        },
+        "result": {
+          "n_total": 53,
+          "actual_power": 0.9465,
+          "critical": 2.0066,
+          "df": 52,
+          "ncp": 3.6401
+        },
+        "tokenUsage": {
+          "input": 1539,
+          "output": 125,
+          "total": 1664,
+          "source": "Ollama prompt_eval_count + eval_count; summed across requests"
+        },
+        "duration_ms": 8795.783299999996,
+        "logFile": "evidence\\ai-agent\\runs\\008f03b3-7020-4ed1-a44f-d911664f4f60.json"
+      },
+      "gui": {
+        "model": "qwen3.5:9b",
+        "response": {
+          "model": "qwen3.5:9b",
+          "created_at": "2026-10-18T20:27:32.4604393Z",
+          "message": {
+            "role": "assistant",
+            "content": "{\n  \"n_total\": 53,\n  \"actual_power\": 0.946278,\n  \"critical\": 2.0066458,\n  \"df\": 52,\n  \"ncp\": 3.5400149\n}"
+          },
+          "done": true,
+          "done_reason": "stop",
+          "total_duration": 4349359400,
+          "load_duration": 560429100,
+          "prompt_eval_count": 499,
+          "prompt_eval_duration": 534480000,
+          "eval_count": 71,
+          "eval_duration": 3195169000
+        },
+        "result": {
+          "n_total": 53,
+          "actual_power": 0.946278,
+          "critical": 2.0066458,
+          "df": 52,
+          "ncp": 3.5400149
+        },
+        "tokenUsage": {
+          "input": 499,
+          "output": 71,
+          "total": 570
+        },
+        "duration_ms": 4358.000399999997,
+        "numericMatch": false,
+        "source": {
+          "id": "GUI-04",
+          "record": "evidence/gui-04-posthoc53.json",
+          "sha256": "3332b7f47b3f3a7a3c5c2f10ff8cd0192d07d6a47101381bcdeaa3493c081a85",
+          "screenshot": "oracle/screenshots/gui-04-0.jpg",
+          "screenshot_sha256": "9bf7c11dd105c46029d81af8bcd80c81e170016935b2495749c5e0262968cfdf",
+          "capturedAt": "2026-10-18T18:38:36.052Z"
+        },
+        "request": {
+          "messages": [
+            {
+              "role": "system",
+              "content": "Read the attached real G*Power result screenshot for the Turkish research question. Do NOT calculate or infer missing values. Copy the five output fields from the screenshot as numbers. n_total is total matched pairs (for post hoc it is the input Total sample size). Critical t, Df, Noncentrality parameter and Actual power/Power are visible. Return only the requested JSON."
+            },
+            {
+              "role": "user",
+              "content": "Rehabilitasyon öncesi ve sonrası aynı kişilerin ölçümlerini eşleştirdik. Çift yönlü eşleştirilmiş t-testi, dz=0,5, alfa=0,05. 53 hasta/eşleşmiş çift ile post-hoc güç nedir?",
+              "images": [
+                "[base64 omitted; exact screenshot path and SHA-256 above]"
+              ]
+            }
+          ],
+          "format": {
+            "type": "object",
+            "properties": {
+              "n_total": {
+                "type": "number"
+              },
+              "actual_power": {
+                "type": "number"
+              },
+              "critical": {
+                "type": "number"
+              },
+              "df": {
+                "type": "number"
+              },
+              "ncp": {
+                "type": "number"
+              }
+            },
+            "required": [
+              "n_total",
+              "actual_power",
+              "critical",
+              "df",
+              "ncp"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "scope": "Recorded real G*Power screenshot replay: model visual reading only. GUI input/capture time is NOT included."
+      }
+    },
+    {
+      "id": "AI-04",
+      "question": "Kurgusal küçük bir pilotta her kişinin önce ve sonra ölçümü var. Çift yönlü eşleştirilmiş t-testi, dz=0,5, alfa=0,05. 3 hasta/eşleşmiş çift ile post-hoc güç nedir?",
+      "expectedFamily": "t-paired",
+      "expectedParameters": {
+        "test": "t-paired",
+        "mode": "post-hoc",
+        "tails": 2,
+        "dz": 0.5,
+        "alpha": 0.05,
+        "n": 3
+      },
+      "expected": {
+        "n_total": 3,
+        "actual_power": 0.0841071,
+        "critical": 4.3026527,
+        "df": 2,
+        "ncp": 0.8660254
+      },
+      "mcp": {
+        "status": "answered",
+        "parameterMatch": true,
+        "numericMatch": true,
+        "correct": true,
+        "parameters": {
+          "test": "t-paired",
+          "mode": "post-hoc",
+          "tails": 2,
+          "dz": 0.5,
+          "alpha": 0.05,
+          "n": 3
+        },
+        "result": {
+          "n_total": 3,
+          "actual_power": 0.0841,
+          "critical": 4.3027,
+          "df": 2,
+          "ncp": 0.866
+        },
+        "tokenUsage": {
+          "input": 1521,
+          "output": 114,
+          "total": 1635,
+          "source": "Ollama prompt_eval_count + eval_count; summed across requests"
+        },
+        "duration_ms": 7866.9723000000085,
+        "logFile": "evidence\\ai-agent\\runs\\5ef9435c-bf41-4065-ab1c-db1495c9ac2a.json"
+      },
+      "gui": {
+        "model": "qwen3.5:9b",
+        "response": {
+          "model": "qwen3.5:9b",
+          "created_at": "2026-10-18T20:27:45.5058468Z",
+          "message": {
+            "role": "assistant",
+            "content": "{\n\"n_total\": 3,\n\"actual_power\": 0.2841076923076923,\n\"critical\": 4.3026527,\n\"df\": 2,\n\"ncp\": 0.8660254037844386\n}"
+          },
+          "done": true,
+          "done_reason": "stop",
+          "total_duration": 5159786700,
+          "load_duration": 496365200,
+          "prompt_eval_count": 493,
+          "prompt_eval_duration": 547640000,
+          "eval_count": 83,
+          "eval_duration": 4053755000
+        },
+        "result": {
+          "n_total": 3,
+          "actual_power": 0.2841076923076923,
+          "critical": 4.3026527,
+          "df": 2,
+          "ncp": 0.8660254037844386
+        },
+        "tokenUsage": {
+          "input": 493,
+          "output": 83,
+          "total": 576
+        },
+        "duration_ms": 5172.1408999999985,
+        "numericMatch": false,
+        "source": {
+          "id": "GUI-06",
+          "record": "evidence/gui-06-posthoc3.json",
+          "sha256": "c46ff9967a6c27eef6243f2db809b113ea9ab6118bea692a112227f2d4bf9b29",
+          "screenshot": "oracle/screenshots/gui-06-0.jpg",
+          "screenshot_sha256": "12c5704629dfca3f34fe0ed8383c402198182d876744248dcb4c2d175f4d0120",
+          "capturedAt": "2026-10-18T18:41:07.823Z"
+        },
+        "request": {
+          "messages": [
+            {
+              "role": "system",
+              "content": "Read the attached real G*Power result screenshot for the Turkish research question. Do NOT calculate or infer missing values. Copy the five output fields from the screenshot as numbers. n_total is total matched pairs (for post hoc it is the input Total sample size). Critical t, Df, Noncentrality parameter and Actual power/Power are visible. Return only the requested JSON."
+            },
+            {
+              "role": "user",
+              "content": "Kurgusal küçük bir pilotta her kişinin önce ve sonra ölçümü var. Çift yönlü eşleştirilmiş t-testi, dz=0,5, alfa=0,05. 3 hasta/eşleşmiş çift ile post-hoc güç nedir?",
+              "images": [
+                "[base64 omitted; exact screenshot path and SHA-256 above]"
+              ]
+            }
+          ],
+          "format": {
+            "type": "object",
+            "properties": {
+              "n_total": {
+                "type": "number"
+              },
+              "actual_power": {
+                "type": "number"
+              },
+              "critical": {
+                "type": "number"
+              },
+              "df": {
+                "type": "number"
+              },
+              "ncp": {
+                "type": "number"
+              }
+            },
+            "required": [
+              "n_total",
+              "actual_power",
+              "critical",
+              "df",
+              "ncp"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "scope": "Recorded real G*Power screenshot replay: model visual reading only. GUI input/capture time is NOT included."
+      }
+    },
+    {
+      "id": "AI-05",
+      "question": "Kurgusal bir sınır değer araştırmasında aynı kişilerin önce ve sonra ölçümlerini planlıyoruz. Çift yönlü eşleştirilmiş t-testi, dz=20, alfa=0,05. Hedef güç %95 için kaç hasta/eşleşmiş çift gerekir?",
+      "expectedFamily": "t-paired",
+      "expectedParameters": {
+        "test": "t-paired",
+        "mode": "a-priori",
+        "tails": 2,
+        "dz": 20,
+        "alpha": 0.05,
+        "power": 0.95
+      },
+      "expected": {
+        "n_total": 2,
+        "actual_power": 0.973524,
+        "critical": 12.7062047,
+        "df": 1,
+        "ncp": 28.2842712
+      },
+      "mcp": {
+        "status": "answered",
+        "parameterMatch": false,
+        "numericMatch": false,
+        "correct": false,
+        "parameters": {
+          "test": "t-paired",
+          "mode": "a-priori",
+          "tails": 2,
+          "dz": 0.2,
+          "alpha": 0.05,
+          "power": 0.95
+        },
+        "result": {
+          "n_total": 327,
+          "actual_power": 0.9501,
+          "critical": 1.9673,
+          "df": 326,
+          "ncp": 3.6166
+        },
+        "tokenUsage": {
+          "input": 1547,
+          "output": 113,
+          "total": 1660,
+          "source": "Ollama prompt_eval_count + eval_count; summed across requests"
+        },
+        "duration_ms": 7956.355100000001,
+        "logFile": "evidence\\ai-agent\\runs\\ce8fb896-976b-4cd1-a789-7ddbd30029df.json"
+      },
+      "gui": {
+        "model": "qwen3.5:9b",
+        "response": {
+          "model": "qwen3.5:9b",
+          "created_at": "2026-10-18T20:27:57.8299948Z",
+          "message": {
+            "role": "assistant",
+            "content": "{\n  \"n_total\": 2,\n  \"actual_power\": 0.973524,\n  \"critical\": 12.7062047,\n  \"df\": 1,\n  \"ncp\": 78.2847717\n}"
+          },
+          "done": true,
+          "done_reason": "stop",
+          "total_duration": 4357170700,
+          "load_duration": 554930900,
+          "prompt_eval_count": 501,
+          "prompt_eval_duration": 556028000,
+          "eval_count": 71,
+          "eval_duration": 3183470000
+        },
+        "result": {
+          "n_total": 2,
+          "actual_power": 0.973524,
+          "critical": 12.7062047,
+          "df": 1,
+          "ncp": 78.2847717
+        },
+        "tokenUsage": {
+          "input": 501,
+          "output": 71,
+          "total": 572
+        },
+        "duration_ms": 4365.576199999996,
+        "numericMatch": false,
+        "source": {
+          "id": "GUI-12",
+          "record": "evidence/gui-12-apriori-minimum.json",
+          "sha256": "9942c4bc006e84f99db06ee49713d0b77ba492d339555cb85921096467991b7c",
+          "screenshot": "oracle/screenshots/gui-12-0.jpg",
+          "screenshot_sha256": "54c79313e3e65d03c78d240968dc42c494499dc2337ab2f5df5a1f65cf2a830c",
+          "capturedAt": "2026-10-18T19:14:04.036Z"
+        },
+        "request": {
+          "messages": [
+            {
+              "role": "system",
+              "content": "Read the attached real G*Power result screenshot for the Turkish research question. Do NOT calculate or infer missing values. Copy the five output fields from the screenshot as numbers. n_total is total matched pairs (for post hoc it is the input Total sample size). Critical t, Df, Noncentrality parameter and Actual power/Power are visible. Return only the requested JSON."
+            },
+            {
+              "role": "user",
+              "content": "Kurgusal bir sınır değer araştırmasında aynı kişilerin önce ve sonra ölçümlerini planlıyoruz. Çift yönlü eşleştirilmiş t-testi, dz=20, alfa=0,05. Hedef güç %95 için kaç hasta/eşleşmiş çift gerekir?",
+              "images": [
+                "[base64 omitted; exact screenshot path and SHA-256 above]"
+              ]
+            }
+          ],
+          "format": {
+            "type": "object",
+            "properties": {
+              "n_total": {
+                "type": "number"
+              },
+              "actual_power": {
+                "type": "number"
+              },
+              "critical": {
+                "type": "number"
+              },
+              "df": {
+                "type": "number"
+              },
+              "ncp": {
+                "type": "number"
+              }
+            },
+            "required": [
+              "n_total",
+              "actual_power",
+              "critical",
+              "df",
+              "ncp"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "scope": "Recorded real G*Power screenshot replay: model visual reading only. GUI input/capture time is NOT included."
+      }
+    },
+    {
+      "id": "AI-06",
+      "question": "Egzersiz öncesi ve sonrası tansiyonu aynı kişilerde karşılaştıracağız. Çift yönlü eşleştirilmiş t-testi, dz=0,1, alfa=0,05. Hedef güç %95 için kaç hasta/eşleşmiş çift gerekir?",
+      "expectedFamily": "t-paired",
+      "expectedParameters": {
+        "test": "t-paired",
+        "mode": "a-priori",
+        "tails": 2,
+        "dz": 0.1,
+        "alpha": 0.05,
+        "power": 0.95
+      },
+      "expected": {
+        "n_total": 1302,
+        "actual_power": 0.9500867,
+        "critical": 1.9617891,
+        "df": 1301,
+        "ncp": 3.6083237
+      },
+      "mcp": {
+        "status": "answered",
+        "parameterMatch": true,
+        "numericMatch": true,
+        "correct": true,
+        "parameters": {
+          "test": "t-paired",
+          "mode": "a-priori",
+          "power": 0.95,
+          "dz": 0.1,
+          "alpha": 0.05,
+          "tails": 2
+        },
+        "result": {
+          "n_total": 1302,
+          "actual_power": 0.9501,
+          "critical": 1.9618,
+          "df": 1301,
+          "ncp": 3.6083
+        },
+        "tokenUsage": {
+          "input": 1539,
+          "output": 113,
+          "total": 1652,
+          "source": "Ollama prompt_eval_count + eval_count; summed across requests"
+        },
+        "duration_ms": 7825.699800000002,
+        "logFile": "evidence\\ai-agent\\runs\\010c011b-9b21-4566-89c0-1050df297fee.json"
+      },
+      "gui": {
+        "model": "qwen3.5:9b",
+        "response": {
+          "model": "qwen3.5:9b",
+          "created_at": "2026-10-18T20:28:10.3073236Z",
+          "message": {
+            "role": "assistant",
+            "content": "{\n  \"n_total\": 1302,\n  \"actual_power\": 0.5500857,\n  \"critical\": 1.9617891,\n  \"df\": 1301,\n  \"ncp\": 3.5083297\n}"
+          },
+          "done": true,
+          "done_reason": "stop",
+          "total_duration": 4620963400,
+          "load_duration": 583664000,
+          "prompt_eval_count": 496,
+          "prompt_eval_duration": 552731000,
+          "eval_count": 76,
+          "eval_duration": 3415606000
+        },
+        "result": {
+          "n_total": 1302,
+          "actual_power": 0.5500857,
+          "critical": 1.9617891,
+          "df": 1301,
+          "ncp": 3.5083297
+        },
+        "tokenUsage": {
+          "input": 496,
+          "output": 76,
+          "total": 572
+        },
+        "duration_ms": 4642.185500000007,
+        "numericMatch": false,
+        "source": {
+          "id": "GUI-13",
+          "record": "evidence/gui-expanded/gui-13.json",
+          "sha256": "aaf760fdb6edd84a26da4d9c7be60df46356a380a080afa767a40c89067a9cef",
+          "screenshot": "oracle/screenshots/gui-13-0.jpg",
+          "screenshot_sha256": "4f0c860528037ab7ce4fefba5b69462b45c86c40aec519c755457cec5699f0d6",
+          "capturedAt": "2026-10-18T19:37:11.077Z"
+        },
+        "request": {
+          "messages": [
+            {
+              "role": "system",
+              "content": "Read the attached real G*Power result screenshot for the Turkish research question. Do NOT calculate or infer missing values. Copy the five output fields from the screenshot as numbers. n_total is total matched pairs (for post hoc it is the input Total sample size). Critical t, Df, Noncentrality parameter and Actual power/Power are visible. Return only the requested JSON."
+            },
+            {
+              "role": "user",
+              "content": "Egzersiz öncesi ve sonrası tansiyonu aynı kişilerde karşılaştıracağız. Çift yönlü eşleştirilmiş t-testi, dz=0,1, alfa=0,05. Hedef güç %95 için kaç hasta/eşleşmiş çift gerekir?",
+              "images": [
+                "[base64 omitted; exact screenshot path and SHA-256 above]"
+              ]
+            }
+          ],
+          "format": {
+            "type": "object",
+            "properties": {
+              "n_total": {
+                "type": "number"
+              },
+              "actual_power": {
+                "type": "number"
+              },
+              "critical": {
+                "type": "number"
+              },
+              "df": {
+                "type": "number"
+              },
+              "ncp": {
+                "type": "number"
+              }
+            },
+            "required": [
+              "n_total",
+              "actual_power",
+              "critical",
+              "df",
+              "ncp"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "scope": "Recorded real G*Power screenshot replay: model visual reading only. GUI input/capture time is NOT included."
+      }
+    },
+    {
+      "id": "AI-07",
+      "question": "Aynı hastaların eğitim öncesi ve sonrası ölçümlerini inceleyeceğiz. Çift yönlü eşleştirilmiş t-testi, dz=0,15, alfa=0,05. Hedef güç %95 için kaç hasta/eşleşmiş çift gerekir?",
+      "expectedFamily": "t-paired",
+      "expectedParameters": {
+        "test": "t-paired",
+        "mode": "a-priori",
+        "tails": 2,
+        "dz": 0.15,
+        "alpha": 0.05,
+        "power": 0.95
+      },
+      "expected": {
+        "n_total": 580,
+        "actual_power": 0.9501712,
+        "critical": 1.9640696,
+        "df": 579,
+        "ncp": 3.6124784
+      },
+      "mcp": {
+        "status": "answered",
+        "parameterMatch": true,
+        "numericMatch": true,
+        "correct": true,
+        "parameters": {
+          "test": "t-paired",
+          "mode": "a-priori",
+          "tails": 2,
+          "dz": 0.15,
+          "alpha": 0.05,
+          "power": 0.95
+        },
+        "result": {
+          "n_total": 580,
+          "actual_power": 0.9502,
+          "critical": 1.9641,
+          "df": 579,
+          "ncp": 3.6125
+        },
+        "tokenUsage": {
+          "input": 1540,
+          "output": 110,
+          "total": 1650,
+          "source": "Ollama prompt_eval_count + eval_count; summed across requests"
+        },
+        "duration_ms": 7716.625300000014,
+        "logFile": "evidence\\ai-agent\\runs\\788196bc-5a7c-4653-ba58-98f44bee87c0.json"
+      },
+      "gui": {
+        "model": "qwen3.5:9b",
+        "response": {
+          "model": "qwen3.5:9b",
+          "created_at": "2026-10-18T20:28:22.4694556Z",
+          "message": {
+            "role": "assistant",
+            "content": "{\n  \"n_total\": 360,\n  \"actual_power\": 0.8472,\n  \"critical\": 1.9660656,\n  \"df\": 579,\n  \"ncp\": 3.6124764\n}"
+          },
+          "done": true,
+          "done_reason": "stop",
+          "total_duration": 4434408500,
+          "load_duration": 531164500,
+          "prompt_eval_count": 496,
+          "prompt_eval_duration": 565809000,
+          "eval_count": 71,
+          "eval_duration": 3262303000
+        },
+        "result": {
+          "n_total": 360,
+          "actual_power": 0.8472,
+          "critical": 1.9660656,
+          "df": 579,
+          "ncp": 3.6124764
+        },
+        "tokenUsage": {
+          "input": 496,
+          "output": 71,
+          "total": 567
+        },
+        "duration_ms": 4444.710600000006,
+        "numericMatch": false,
+        "source": {
+          "id": "GUI-14",
+          "record": "evidence/gui-expanded/gui-14.json",
+          "sha256": "63488345695263658eb195416fb75e79816fb8fe6727ac9eecb13f8ecff9bd5d",
+          "screenshot": "oracle/screenshots/gui-14-0.jpg",
+          "screenshot_sha256": "9ace385318bf283cead30aaad492d9b38a2da7fb0a0f09b76b7a2fe42b2cbe1e",
+          "capturedAt": "2026-10-18T19:37:50.036Z"
+        },
+        "request": {
+          "messages": [
+            {
+              "role": "system",
+              "content": "Read the attached real G*Power result screenshot for the Turkish research question. Do NOT calculate or infer missing values. Copy the five output fields from the screenshot as numbers. n_total is total matched pairs (for post hoc it is the input Total sample size). Critical t, Df, Noncentrality parameter and Actual power/Power are visible. Return only the requested JSON."
+            },
+            {
+              "role": "user",
+              "content": "Aynı hastaların eğitim öncesi ve sonrası ölçümlerini inceleyeceğiz. Çift yönlü eşleştirilmiş t-testi, dz=0,15, alfa=0,05. Hedef güç %95 için kaç hasta/eşleşmiş çift gerekir?",
+              "images": [
+                "[base64 omitted; exact screenshot path and SHA-256 above]"
+              ]
+            }
+          ],
+          "format": {
+            "type": "object",
+            "properties": {
+              "n_total": {
+                "type": "number"
+              },
+              "actual_power": {
+                "type": "number"
+              },
+              "critical": {
+                "type": "number"
+              },
+              "df": {
+                "type": "number"
+              },
+              "ncp": {
+                "type": "number"
+              }
+            },
+            "required": [
+              "n_total",
+              "actual_power",
+              "critical",
+              "df",
+              "ncp"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "scope": "Recorded real G*Power screenshot replay: model visual reading only. GUI input/capture time is NOT included."
+      }
+    },
+    {
+      "id": "AI-08",
+      "question": "Aynı kişilerin takip öncesi ve sonrası farkını değerlendireceğiz. Çift yönlü eşleştirilmiş t-testi, dz=0,2, alfa=0,05. Hedef güç %95 için kaç hasta/eşleşmiş çift gerekir?",
+      "expectedFamily": "t-paired",
+      "expectedParameters": {
+        "test": "t-paired",
+        "mode": "a-priori",
+        "tails": 2,
+        "dz": 0.2,
+        "alpha": 0.05,
+        "power": 0.95
+      },
+      "expected": {
+        "n_total": 327,
+        "actual_power": 0.9501171,
+        "critical": 1.9672675,
+        "df": 326,
+        "ncp": 3.6166283
+      },
+      "mcp": {
+        "status": "answered",
+        "parameterMatch": true,
+        "numericMatch": true,
+        "correct": true,
+        "parameters": {
+          "test": "t-paired",
+          "mode": "a-priori",
+          "power": 0.95,
+          "dz": 0.2,
+          "alpha": 0.05,
+          "tails": 2
+        },
+        "result": {
+          "n_total": 327,
+          "actual_power": 0.9501,
+          "critical": 1.9673,
+          "df": 326,
+          "ncp": 3.6166
+        },
+        "tokenUsage": {
+          "input": 1537,
+          "output": 113,
+          "total": 1650,
+          "source": "Ollama prompt_eval_count + eval_count; summed across requests"
+        },
+        "duration_ms": 7829.207600000009,
+        "logFile": "evidence\\ai-agent\\runs\\228b82b9-1099-48c4-b1c0-b83c2b55edb9.json"
+      },
+      "gui": {
+        "model": "qwen3.5:9b",
+        "response": {
+          "model": "qwen3.5:9b",
+          "created_at": "2026-10-18T20:28:34.7747775Z",
+          "message": {
+            "role": "assistant",
+            "content": "{\n  \"n_total\": 347,\n  \"actual_power\": 0.5501171,\n  \"critical\": 1.9672675,\n  \"df\": 326,\n  \"ncp\": 3.81166283\n}"
+          },
+          "done": true,
+          "done_reason": "stop",
+          "total_duration": 4451325300,
+          "load_duration": 494278200,
+          "prompt_eval_count": 495,
+          "prompt_eval_duration": 551868000,
+          "eval_count": 75,
+          "eval_duration": 3341036000
+        },
+        "result": {
+          "n_total": 347,
+          "actual_power": 0.5501171,
+          "critical": 1.9672675,
+          "df": 326,
+          "ncp": 3.81166283
+        },
+        "tokenUsage": {
+          "input": 495,
+          "output": 75,
+          "total": 570
+        },
+        "duration_ms": 4467.3080000000045,
+        "numericMatch": false,
+        "source": {
+          "id": "GUI-15",
+          "record": "evidence/gui-expanded/gui-15.json",
+          "sha256": "538e370eacbdbc5644a561f3ef8f9e814665a7c1360ef2fcb158fa54bb00324e",
+          "screenshot": "oracle/screenshots/gui-15-0.jpg",
+          "screenshot_sha256": "3ac5a9a38934cd2b3db9d27964281c45567dca5bda618733a3ec2ae33e86e73a",
+          "capturedAt": "2026-10-18T19:38:30.896Z"
+        },
+        "request": {
+          "messages": [
+            {
+              "role": "system",
+              "content": "Read the attached real G*Power result screenshot for the Turkish research question. Do NOT calculate or infer missing values. Copy the five output fields from the screenshot as numbers. n_total is total matched pairs (for post hoc it is the input Total sample size). Critical t, Df, Noncentrality parameter and Actual power/Power are visible. Return only the requested JSON."
+            },
+            {
+              "role": "user",
+              "content": "Aynı kişilerin takip öncesi ve sonrası farkını değerlendireceğiz. Çift yönlü eşleştirilmiş t-testi, dz=0,2, alfa=0,05. Hedef güç %95 için kaç hasta/eşleşmiş çift gerekir?",
+              "images": [
+                "[base64 omitted; exact screenshot path and SHA-256 above]"
+              ]
+            }
+          ],
+          "format": {
+            "type": "object",
+            "properties": {
+              "n_total": {
+                "type": "number"
+              },
+              "actual_power": {
+                "type": "number"
+              },
+              "critical": {
+                "type": "number"
+              },
+              "df": {
+                "type": "number"
+              },
+              "ncp": {
+                "type": "number"
+              }
+            },
+            "required": [
+              "n_total",
+              "actual_power",
+              "critical",
+              "df",
+              "ncp"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "scope": "Recorded real G*Power screenshot replay: model visual reading only. GUI input/capture time is NOT included."
+      }
+    },
+    {
+      "id": "AI-09",
+      "question": "Tedavi öncesi ve sonrası kurgusal ağrı puanları eşleştirilmiş durumda. Çift yönlü eşleştirilmiş t-testi, dz=0,25, alfa=0,05. Hedef güç %95 için kaç hasta/eşleşmiş çift gerekir?",
+      "expectedFamily": "t-paired",
+      "expectedParameters": {
+        "test": "t-paired",
+        "mode": "a-priori",
+        "tails": 2,
+        "dz": 0.25,
+        "alpha": 0.05,
+        "power": 0.95
+      },
+      "expected": {
+        "n_total": 210,
+        "actual_power": 0.950137,
+        "critical": 1.9713795,
+        "df": 209,
+        "ncp": 3.6228442
+      },
+      "mcp": {
+        "status": "answered",
+        "parameterMatch": true,
+        "numericMatch": true,
+        "correct": true,
+        "parameters": {
+          "test": "t-paired",
+          "mode": "a-priori",
+          "power": 0.95,
+          "dz": 0.25,
+          "alpha": 0.05,
+          "tails": 2
+        },
+        "result": {
+          "n_total": 210,
+          "actual_power": 0.9501,
+          "critical": 1.9714,
+          "df": 209,
+          "ncp": 3.6228
+        },
+        "tokenUsage": {
+          "input": 1540,
+          "output": 114,
+          "total": 1654,
+          "source": "Ollama prompt_eval_count + eval_count; summed across requests"
+        },
+        "duration_ms": 7983.955099999992,
+        "logFile": "evidence\\ai-agent\\runs\\60636675-2e1b-4c32-a079-fae98aaa8164.json"
+      },
+      "gui": {
+        "model": "qwen3.5:9b",
+        "response": {
+          "model": "qwen3.5:9b",
+          "created_at": "2026-10-18T20:28:47.1448021Z",
+          "message": {
+            "role": "assistant",
+            "content": "{\n  \"n_total\": 210,\n  \"actual_power\": 0.550137,\n  \"critical\": 1.9713795,\n  \"df\": 209,\n  \"ncp\": 3.6728442\n}"
+          },
+          "done": true,
+          "done_reason": "stop",
+          "total_duration": 4378160100,
+          "load_duration": 494229600,
+          "prompt_eval_count": 497,
+          "prompt_eval_duration": 549426000,
+          "eval_count": 73,
+          "eval_duration": 3265044000
+        },
+        "result": {
+          "n_total": 210,
+          "actual_power": 0.550137,
+          "critical": 1.9713795,
+          "df": 209,
+          "ncp": 3.6728442
+        },
+        "tokenUsage": {
+          "input": 497,
+          "output": 73,
+          "total": 570
+        },
+        "duration_ms": 4386.839399999997,
+        "numericMatch": false,
+        "source": {
+          "id": "GUI-16",
+          "record": "evidence/gui-expanded/gui-16.json",
+          "sha256": "1336cfa04b1e622644c720643ea1560a542b8b437930a7c90bc574dee81426f9",
+          "screenshot": "oracle/screenshots/gui-16-0.jpg",
+          "screenshot_sha256": "64b3636e81100e578743dd39f6192c5057da162d705f636e594b5c4a2f22cadf",
+          "capturedAt": "2026-10-18T19:38:58.038Z"
+        },
+        "request": {
+          "messages": [
+            {
+              "role": "system",
+              "content": "Read the attached real G*Power result screenshot for the Turkish research question. Do NOT calculate or infer missing values. Copy the five output fields from the screenshot as numbers. n_total is total matched pairs (for post hoc it is the input Total sample size). Critical t, Df, Noncentrality parameter and Actual power/Power are visible. Return only the requested JSON."
+            },
+            {
+              "role": "user",
+              "content": "Tedavi öncesi ve sonrası kurgusal ağrı puanları eşleştirilmiş durumda. Çift yönlü eşleştirilmiş t-testi, dz=0,25, alfa=0,05. Hedef güç %95 için kaç hasta/eşleşmiş çift gerekir?",
+              "images": [
+                "[base64 omitted; exact screenshot path and SHA-256 above]"
+              ]
+            }
+          ],
+          "format": {
+            "type": "object",
+            "properties": {
+              "n_total": {
+                "type": "number"
+              },
+              "actual_power": {
+                "type": "number"
+              },
+              "critical": {
+                "type": "number"
+              },
+              "df": {
+                "type": "number"
+              },
+              "ncp": {
+                "type": "number"
+              }
+            },
+            "required": [
+              "n_total",
+              "actual_power",
+              "critical",
+              "df",
+              "ncp"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "scope": "Recorded real G*Power screenshot replay: model visual reading only. GUI input/capture time is NOT included."
+      }
+    },
+    {
+      "id": "AI-10",
+      "question": "Program öncesi ve sonrası aynı katılımcıların ölçümlerini karşılaştıracağız. Çift yönlü eşleştirilmiş t-testi, dz=0,3, alfa=0,05. Hedef güç %95 için kaç hasta/eşleşmiş çift gerekir?",
+      "expectedFamily": "t-paired",
+      "expectedParameters": {
+        "test": "t-paired",
+        "mode": "a-priori",
+        "tails": 2,
+        "dz": 0.3,
+        "alpha": 0.05,
+        "power": 0.95
+      },
+      "expected": {
+        "n_total": 147,
+        "actual_power": 0.9508665,
+        "critical": 1.9763457,
+        "df": 146,
+        "ncp": 3.6373067
+      },
+      "mcp": {
+        "status": "answered",
+        "parameterMatch": true,
+        "numericMatch": true,
+        "correct": true,
+        "parameters": {
+          "test": "t-paired",
+          "mode": "a-priori",
+          "tails": 2,
+          "dz": 0.3,
+          "alpha": 0.05,
+          "power": 0.95
+        },
+        "result": {
+          "n_total": 147,
+          "actual_power": 0.9509,
+          "critical": 1.9763,
+          "df": 146,
+          "ncp": 3.6373
+        },
+        "tokenUsage": {
+          "input": 1541,
+          "output": 123,
+          "total": 1664,
+          "source": "Ollama prompt_eval_count + eval_count; summed across requests"
+        },
+        "duration_ms": 8228.170500000007,
+        "logFile": "evidence\\ai-agent\\runs\\d401041c-a0e4-4719-8c8f-1a6275d0fc58.json"
+      },
+      "gui": {
+        "model": "qwen3.5:9b",
+        "response": {
+          "model": "qwen3.5:9b",
+          "created_at": "2026-10-18T20:28:59.6492113Z",
+          "message": {
+            "role": "assistant",
+            "content": "{\n  \"n_total\": 147,\n  \"actual_power\": 0.8625,\n  \"critical\": 1.9763457,\n  \"df\": 146,\n  \"ncp\": 3.0373057\n}"
+          },
+          "done": true,
+          "done_reason": "stop",
+          "total_duration": 4248742700,
+          "load_duration": 493569300,
+          "prompt_eval_count": 498,
+          "prompt_eval_duration": 559334000,
+          "eval_count": 71,
+          "eval_duration": 3133839000
+        },
+        "result": {
+          "n_total": 147,
+          "actual_power": 0.8625,
+          "critical": 1.9763457,
+          "df": 146,
+          "ncp": 3.0373057
+        },
+        "tokenUsage": {
+          "input": 498,
+          "output": 71,
+          "total": 569
+        },
+        "duration_ms": 4270.753499999992,
+        "numericMatch": false,
+        "source": {
+          "id": "GUI-17",
+          "record": "evidence/gui-expanded/gui-17.json",
+          "sha256": "583ccbb450cc7c148ab044c173b38a711e1df8967d198dc229023f66bde0e921",
+          "screenshot": "oracle/screenshots/gui-17-0.jpg",
+          "screenshot_sha256": "1f2ecb67eb5a9086337a259f43268b8c48f5421fa19c49e6b07d554b1fcd0d18",
+          "capturedAt": "2026-10-18T19:39:29.766Z"
+        },
+        "request": {
+          "messages": [
+            {
+              "role": "system",
+              "content": "Read the attached real G*Power result screenshot for the Turkish research question. Do NOT calculate or infer missing values. Copy the five output fields from the screenshot as numbers. n_total is total matched pairs (for post hoc it is the input Total sample size). Critical t, Df, Noncentrality parameter and Actual power/Power are visible. Return only the requested JSON."
+            },
+            {
+              "role": "user",
+              "content": "Program öncesi ve sonrası aynı katılımcıların ölçümlerini karşılaştıracağız. Çift yönlü eşleştirilmiş t-testi, dz=0,3, alfa=0,05. Hedef güç %95 için kaç hasta/eşleşmiş çift gerekir?",
+              "images": [
+                "[base64 omitted; exact screenshot path and SHA-256 above]"
+              ]
+            }
+          ],
+          "format": {
+            "type": "object",
+            "properties": {
+              "n_total": {
+                "type": "number"
+              },
+              "actual_power": {
+                "type": "number"
+              },
+              "critical": {
+                "type": "number"
+              },
+              "df": {
+                "type": "number"
+              },
+              "ncp": {
+                "type": "number"
+              }
+            },
+            "required": [
+              "n_total",
+              "actual_power",
+              "critical",
+              "df",
+              "ncp"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "scope": "Recorded real G*Power screenshot replay: model visual reading only. GUI input/capture time is NOT included."
+      }
+    }
+  ]
+}

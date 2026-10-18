@@ -1,0 +1,20 @@
+{
+  "id": "AI-02",
+  "parameters": {
+    "test": "t-paired",
+    "mode": "post-hoc",
+    "tails": 2,
+    "dz": 0.5,
+    "alpha": 0.05,
+    "n": 54
+  },
+  "startedAt": "2026-10-18T20:42:08.063Z",
+  "capturedAt": "2026-10-18T20:42:42.519Z",
+  "duration_ms": 34457.07949999999,
+  "driver": "supervised computer-use @oai/sky, one action per observed state",
+  "screenshot": "evidence/ai-agent/live-gui/AI-02-screen.jpg",
+  "screenshot_sha256": "e3e7b65830243b5b631f1dab3f06d3112d1a35263673dc9aa188beb455f0e07a",
+  "accessibility": {
+    "tree": "Window: \"G*Power 3.1.9.7\", App: GPowerNT.exe.\n\t0 pencere G*Power 3.1.9.7 Secondary Actions: Raise\n\t\t1 düzenle (settable, string) Value: 0.5 ID: 1021\n\t\t2 düzenle (settable, string) Value: 0.05 ID: 1022\n\t\t3 düzenle (settable, string) Value: 54 ID: 1023\n\t\t4 grup Output Parameters\n\t\t5 grup Input Parameters\n\t\t6 metin Tail(s) ID: 1004\n\t\t7 metin Effect size dz ID: 1005\n\t\t8 metin α err prob ID: 1006\n\t\t9 metin Total sample size ID: 1007\n\t\t10 düğme Determine => ID: 1031\n\t\t11 metin Noncentrality parameter δ ID: 1060\n\t\t12 metin Critical t ID: 1061\n\t\t13 metin Df ID: 1062\n\t\t14 metin Power (1-β err prob) ID: 1063\n\t\t16 düzenle Parameter 11 Value: 3.6742346 ID: 1050\n\t\t17 düzenle Value: 2.0057460 ID: 1051\n\t\t18 düzenle Value: 53 ID: 1052\n\t\t19 düzenle Value: 0.9502120 ID: 1053\n\t\t21 birleşik giriş kutusu (settable, string) Value: Two ID: 1040\n\t\t\t22 metin (settable, string) Value: Two\n\t\t\t23 düğme Aç ID: DropDown\n\t\t24 düğme Calculate ID: 1009\n\t\t25 düğme X-Y plot for a range of values ID: 1020\n\t\t26 grup Test family\n\t\t27 grup Type of power analysis\n\t\t28 grup Statistical test\n\t\t29 birleşik giriş kutusu (settable, string) Statistical test Value: t tests ID: 1000\n\t\t\t30 metin (settable, string) Statistical test Value: t tests\n\t\t\t31 düğme Aç ID: DropDown\n\t\t32 birleşik giriş kutusu (settable, string) Value: Means: Difference between two dependent means (matched pairs) ID: 1001\n\t\t\t33 metin (settable, string) Value: Means: Difference between two dependent means (matched pairs)\n\t\t\t34 düğme Aç ID: DropDown\n\t\t35 birleşik giriş kutusu (settable, string) Value: Post hoc: Compute achieved power - given α, sample size, and effect size ID: 1002\n\t\t\t36 metin (settable, string) Value: Post hoc: Compute achieved power - given α, sample size, and effect size\n\t\t\t37 düğme Aç ID: DropDown\n\t\t38 sek. ID: 1041\n\t\t\t39 sekme öğesi (selectable) Central and noncentral distributions\n\t\t\t40 sekme öğesi (selectable) Protocol of power analyses\n\t\t41 resim ID: 1042\n\t\t\t42 bölme\n\t\t43 başlık çubuğu (settable, string) Value: G*Power 3.1.9.7\n\t\t\t44 menü çubuğu Sistem ID: MenuBar\n\t\t\t\t45 menü öğesi Sistem\n\t\t\t46 düğme Simge Durumuna Küçült\n\t\t\t47 düğme (disabled) Ekranı Kapla\n\t\t\t48 düğme Kapat\n\t\t49 menü çubuğu Uygulama ID: MenuBar\n\t\t\t50 menü öğesi File\n\t\t\t51 menü öğesi Edit\n\t\t\t52 menü öğesi View\n\t\t\t53 menü öğesi Tests\n\t\t\t54 menü öğesi Calculator\n\t\t\t55 menü öğesi Help"
+  }
+}
